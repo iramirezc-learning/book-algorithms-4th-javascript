@@ -22,7 +22,8 @@
       "it",
       "expect",
       "beforeEach",
-      "afterEach"
+      "afterEach",
+      "TestCase"
     ]
   },
   "dependencies": {

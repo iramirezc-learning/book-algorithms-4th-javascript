@@ -1,5 +1,4 @@
 const Euclidean = require('./euclidean')
-const { TestCase } = require('../../spec')
 
 describe('Unit Tests: Euclidean Algorithm', () => {
   describe('static gcd method', () => {
