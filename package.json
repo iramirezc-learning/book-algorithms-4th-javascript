@@ -1,0 +1,31 @@
+{
+  "name": "algorithms-4th-javascript",
+  "version": "1.0.0",
+  "description": "Personal notes & JavaScript code for the book: Algorithms 4th edition by Robert Sedgewick and Kevin Wayne.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine --config=jasmine.json"
+  },
+  "keywords": [
+    "algorithms",
+    "javascript",
+    "robert-sedgewick",
+    "kevin-wayne"
+  ],
+  "author": "Isaac Ramírez <iramirezc@live.com.mx>",
+  "license": "ISC",
+  "standard": {
+    "globals": [
+      "jasmine",
+      "spyOn",
+      "describe",
+      "it",
+      "expect",
+      "beforeEach",
+      "afterEach"
+    ]
+  },
+  "dependencies": {
+    "jasmine": "^3.5.0"
+  }
+}
