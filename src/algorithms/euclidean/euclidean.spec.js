@@ -4,16 +4,16 @@ describe('Unit Tests: Euclidean Algorithm', () => {
   describe('static gcd method', () => {
     it('should return the greatest common divisor of two given numbers', () => {
       const testCases = [
-        new TestCase({ input: [3, 0], output: 3 }),
-        new TestCase({ input: [0, 5], output: 5 }),
-        new TestCase({ input: [54, 24], output: 6 }),
-        new TestCase({ input: [180, 48], output: 12 }),
-        new TestCase({ input: [1701, 3768], output: 3 }),
-        new TestCase({ input: [15996751, 3870378], output: 4057 })
+        new TestCase({ args: [3, 0], expected: 3 }),
+        new TestCase({ args: [0, 5], expected: 5 }),
+        new TestCase({ args: [54, 24], expected: 6 }),
+        new TestCase({ args: [180, 48], expected: 12 }),
+        new TestCase({ args: [1701, 3768], expected: 3 }),
+        new TestCase({ args: [15996751, 3870378], expected: 4057 })
       ]
 
-      testCases.forEach(({ input, output }) => {
-        expect(Euclidean.gcd(...input)).toBe(output)
+      testCases.forEach(({ args, expected }) => {
+        expect(Euclidean.gcd(...args)).toBe(expected)
       })
     })
   })
