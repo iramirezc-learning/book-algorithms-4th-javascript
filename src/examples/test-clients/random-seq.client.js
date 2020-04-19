@@ -19,6 +19,10 @@ class RandomSeq {
    * 159.78
    * 165.14
    * ```
+   * @example
+   * ```sh
+   * $ node random-seq.client.js 1000 100.0 199.99 > data.txt
+   * ```
    */
   static main (args) {
     const n = parseInt(args[0], 10)
