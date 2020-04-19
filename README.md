@@ -18,3 +18,7 @@ Personal notes and JavaScript code for the book Algorithms (4th edition) by Robe
 * [StdIn](/src/libs/std-in/std-in.js)
 * [StdOut](/src/libs/std-out/std-out.js)
 * [StdRandom](/src/libs/std-random/std-random.js)
+
+## Benchmarks
+
+* [linear-vs-binary-search](/src/benchmarks/searching/linear-vs-binary-search.js)
