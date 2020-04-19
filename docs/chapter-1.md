@@ -5,12 +5,14 @@
 ### Algorithms
 
 * [Euclid's - Algorithm - p. 4](/src/algorithms/euclidean/euclidean.js)
+* [BinarySearch - Algorithm - p.47](/src/algorithms/binary-search/binary-search.js)
 
 ### Examples & Code Snippets
 
 * [StdRandom - TestClient - p. 32](/src/examples/test-clients/std-random.client.js)
 * [RandomSeq - TestClient - p. 37](/src/examples/test-clients/random-seq.client.js)
 * [Average - TestClient - p. 39](/src/examples/test-clients/average.client.js)
+* [BinarySearch - TestClient - p.47](/src/examples/test-clients/binary-search.client.js)
 
 ### Key Concepts
 

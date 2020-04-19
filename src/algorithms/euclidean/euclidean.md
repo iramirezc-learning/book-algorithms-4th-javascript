@@ -2,7 +2,7 @@
 
 Finds the Greatest Common Divisor of two numbers.
 
-## Code
+## JS Code
 
 ```js
 class Euclidean {
@@ -17,6 +17,10 @@ class Euclidean {
   }
 }
 ```
+
+## Use Cases
+
+* None
 
 ## Learning Resources
 
