@@ -34,10 +34,11 @@ class RandomSeq {
 
       StdOut.printf('%f\n', x.toFixed(2))
     }
+
+    process.exit(0) // sometimes it gets stuck.
   }
 }
 
 // Execution
 // ==============================
 RandomSeq.main(process.argv.slice(2))
-process.exit(0)
