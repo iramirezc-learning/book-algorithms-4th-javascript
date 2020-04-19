@@ -4,7 +4,12 @@
 
 ### Algorithms
 
-* [Euclid's algorithm](/src/algorithms/euclidean/euclidean.js)
+* [Euclid's - Algorithm - p. 4](/src/algorithms/euclidean/euclidean.js)
+
+### Examples & Code Snippets
+
+* [StdRandom - TestClient - p. 32](/src/examples/test-clients/std-random.client.js)
+* [RandomSeq - TestClient - p. 37](/src/examples/test-clients/random-seq.client.js)
 
 ### Key Concepts
 
