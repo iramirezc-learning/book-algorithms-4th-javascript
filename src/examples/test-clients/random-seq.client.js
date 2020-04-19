@@ -28,7 +28,7 @@ class RandomSeq {
     for (let i = 0; i < n; i++) {
       const x = StdRandom.uniform(lo, hi)
 
-      StdOut.printf('%f', x.toFixed(2))
+      StdOut.printf('%f\n', x.toFixed(2))
     }
   }
 }
