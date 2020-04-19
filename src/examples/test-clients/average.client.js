@@ -20,6 +20,11 @@ class Average {
    * $ <ctrl-d>
    * Average is 2.90123
    * ```
+   * @example
+   * ```sh
+   * $ node random-seq.client.js 1000 100 199.99 | node average.client.js
+   * Average is 150.25505
+   * ```
    */
   static main () {
     let sum = 0
