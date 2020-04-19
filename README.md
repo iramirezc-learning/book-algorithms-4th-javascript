@@ -10,3 +10,7 @@ Personal notes and JavaScript code for the book Algorithms (4th edition) by Robe
 * Chapter 4. Graphs
 * Chapter 5. Strings
 * Chapter 6. Context
+
+## Standard Libraries for JavaScript
+
+* [StdRandom](/src/libs/std-random/std-random.js)
