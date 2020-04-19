@@ -36,3 +36,4 @@ class RandomSeq {
 // Execution
 // ==============================
 RandomSeq.main(process.argv.slice(2))
+process.exit(0)
