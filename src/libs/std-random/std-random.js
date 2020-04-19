@@ -76,17 +76,40 @@ class StdRandom {
   }
 
   /**
-   * @todo implementation
+   * Discrete
+   * @desc Returns a random integer from the specified discrete distribution.
+   * @param {[]} a Array of non-negative numbers that sum 1.
+   * @returns {number} A random integer from a discrete distribution:
+   * `i` with probability proportional to `frequencies[i]`.
    */
-  static discrete () {
-    throw new SyntaxError('method discrete not implemented')
+  static discrete (a) {
+    const r = StdRandom.uniform()
+    let sum = 0
+
+    for (let i = 0; i < a.length; i++) {
+      sum += a[i]
+      if (sum >= r) return i
+    }
+
+    return -1
   }
 
   /**
-   * @todo implementation
+   * Shuffle
+   * @desc Rearranges the elements of the specified array in uniformly random order.
+   * @param {[]} a The array to shuffle
    */
-  static shuffle () {
-    throw new SyntaxError('method shuffle not implemented')
+  static shuffle (a) {
+    const n = a.length
+
+    for (let i = 0; i < n; i++) {
+      // exchange a[i] with random element in a[i..n-1]
+      const r = i + StdRandom.uniform(n - i)
+      const temp = a[i]
+
+      a[i] = a[r]
+      a[r] = temp
+    }
   }
 }
 

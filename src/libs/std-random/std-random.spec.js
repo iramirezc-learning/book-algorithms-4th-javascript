@@ -1,11 +1,11 @@
 const StdRandom = require('./std-random')
 
 describe('StRandom Library', () => {
-  describe('static uniform method', () => {
-    beforeEach(() => {
-      this.iterations = 100
-    })
+  beforeEach(() => {
+    this.iterations = 500
+  })
 
+  describe('static uniform method', () => {
     it('should return a real number between 0 and 1', () => {
       while (this.iterations--) {
         const result = StdRandom.uniform()
@@ -56,10 +56,6 @@ describe('StRandom Library', () => {
   })
 
   describe('static bernoulli method', () => {
-    beforeEach(() => {
-      this.iterations = 1000
-    })
-
     it('should return a boolean', () => {
       while (this.iterations--) {
         expect(StdRandom.bernoulli()).toBeInstanceOf(Boolean)
@@ -86,6 +82,35 @@ describe('StRandom Library', () => {
       }
 
       expect(pTrue).toBeLessThan(pFalse)
+    })
+  })
+
+  describe('static discrete method', () => {
+    it('should return a random integer number between 0 and the array.length - 1', () => {
+      const a = [0.1, 0.3, 0.0, 0.4, 0.1, 0.05, 0.05]
+      const len = a.length
+
+      while (this.iterations--) {
+        const result = StdRandom.discrete(a)
+
+        expect(result).toBeGreaterThanOrEqual(0)
+        expect(result).toBeLessThan(len)
+        expect(Number.isInteger(result)).toBeTrue('should be an integer number.')
+      }
+    })
+  })
+
+  describe('static shuffle method', () => {
+    it('should shuffle the array of numbers', () => {
+      const original = [1, 2, 3, 4, 5]
+      const copy = original.slice(0)
+      const expectedSum = 15
+
+      StdRandom.shuffle(original)
+
+      const sum = original.reduce((acc, n) => (acc += n))
+      expect(sum).toBe(expectedSum)
+      expect(original).not.toEqual(copy)
     })
   })
 })
