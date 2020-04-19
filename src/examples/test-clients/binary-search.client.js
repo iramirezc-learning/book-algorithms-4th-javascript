@@ -18,6 +18,17 @@ class BSClient {
    * 99
    * 13
    * ```
+   * @example
+   * ```sh
+   * $ node binary-search.client.js ~/algs4-data/largeW.txt < ~/algs4-data/largeT.txt | more
+   * 499569
+   * 984875
+   * 295754
+   * 207807
+   * 140925
+   * 161828
+   * ...
+   * ```
    */
   static main (args) {
     const input = new In(args[0])
