@@ -10,6 +10,7 @@
 
 * [StdRandom - TestClient - p. 32](/src/examples/test-clients/std-random.client.js)
 * [RandomSeq - TestClient - p. 37](/src/examples/test-clients/random-seq.client.js)
+* [Average - TestClient - p. 39](/src/examples/test-clients/average.client.js)
 
 ### Key Concepts
 
