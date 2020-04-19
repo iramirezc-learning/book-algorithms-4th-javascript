@@ -2,7 +2,7 @@ const StdRandom = require('./std-random')
 
 describe('StRandom Library', () => {
   beforeEach(() => {
-    this.iterations = 500
+    this.iterations = 100
   })
 
   describe('static uniform method', () => {

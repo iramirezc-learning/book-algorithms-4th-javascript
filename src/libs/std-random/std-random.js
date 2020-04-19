@@ -11,6 +11,14 @@ function getRandomInt (min, max) {
   return Math.floor(Math.random() * (max - min)) + min
 }
 
+/**
+ * Returns if a number is integer
+ * @param {number} n Number to be tested
+ */
+function isInteger (n) {
+  return Number.isInteger(n)
+}
+
 class StdRandom {
   /**
    * Uniform
@@ -44,12 +52,12 @@ class StdRandom {
   */
   static uniform (lo, hi) {
     if (typeof lo === 'number' && typeof hi === 'number') {
-      if (Number.isInteger(lo) && Number.isInteger(hi)) {
+      if (isInteger(lo) && isInteger(hi)) {
         return getRandomInt(lo, hi)
       } else {
         return Math.random() * (hi - lo) + lo
       }
-    } else if (Number.isInteger(lo)) {
+    } else if (isInteger(lo)) {
       return getRandomInt(0, lo)
     }
 
