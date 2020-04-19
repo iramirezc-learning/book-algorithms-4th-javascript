@@ -6,6 +6,7 @@
 
 * [Euclid's - Algorithm - p. 4](/src/algorithms/euclidean/euclidean.js)
 * [BinarySearch - Algorithm - p.47](/src/algorithms/binary-search/binary-search.js)
+* [LinearSearch - Algorithm - p.48](/src/algorithms/linear-search/linear-search.js)
 
 ### Examples & Code Snippets
 
@@ -13,6 +14,7 @@
 * [RandomSeq - TestClient - p. 37](/src/examples/test-clients/random-seq.client.js)
 * [Average - TestClient - p. 39](/src/examples/test-clients/average.client.js)
 * [BinarySearch - TestClient - p.47](/src/examples/test-clients/binary-search.client.js)
+* [LinearSearch - TestClient - p.48](/src/examples/test-clients/linear-search.client.js)
 
 ### Key Concepts
 
