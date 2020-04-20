@@ -4,6 +4,7 @@ const { StdIn, StdOut } = require('../../libs')
  * Average
  * @desc Sample StdIn client
  * @see p. 39
+ * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Average.java.html}
  */
 class Average {
   /**

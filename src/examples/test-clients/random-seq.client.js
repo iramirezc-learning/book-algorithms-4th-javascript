@@ -4,6 +4,7 @@ const { StdRandom, StdOut } = require('../../libs')
  * RandomSeq
  * @desc Sample StdOut client
  * @see p. 37
+ * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/RandomSeq.java.html}
  */
 class RandomSeq {
   /**

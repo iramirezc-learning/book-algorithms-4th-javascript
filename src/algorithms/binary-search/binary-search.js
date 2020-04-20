@@ -2,6 +2,7 @@
  * BinarySearch
  * @classdesc Finds the index of a number in an array.
  * @see p. 25, p. 47
+ * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/BinarySearch.java.html}
  */
 class BinarySearch {
   /**
