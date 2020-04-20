@@ -19,6 +19,11 @@ function isInteger (n) {
   return Number.isInteger(n)
 }
 
+/**
+ * StdRandom
+ * @classdesc JavaScript implementation of StdRandom.
+ * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/StdRandom.java.html}
+ */
 class StdRandom {
   /**
    * Uniform

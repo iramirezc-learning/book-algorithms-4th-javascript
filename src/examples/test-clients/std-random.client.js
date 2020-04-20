@@ -2,13 +2,12 @@ const { StdRandom, StdOut } = require('../../libs')
 
 /**
  * StdRandomClient
- * @desc Test Client for StdRandom library.
+ * @classdesc Test Client for StdRandom library.
  * @see p. 32
  */
 class StdRandomClient {
   /**
-   * main
-   * @desc Prints results of StdRandom methods
+   * Prints results of various StdRandom methods
    * @example
    * ```sh
    * $ node std-random.client.js

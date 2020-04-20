@@ -10,7 +10,8 @@ const toInt = (line) => parseInt(line, 10)
 
 /**
  * In
- * @classdesc File reader.
+ * @classdesc JavaScript implementation of In.
+ * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/In.java.html}
  */
 class In {
   /**

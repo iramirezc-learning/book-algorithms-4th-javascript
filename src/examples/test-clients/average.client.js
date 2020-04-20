@@ -2,16 +2,15 @@ const { StdIn, StdOut } = require('../../libs')
 
 /**
  * Average
- * @desc Sample StdIn client
+ * @classdesc Sample StdIn client
  * @see p. 39
  * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Average.java.html}
  */
 class Average {
   /**
-   * main
-   * @desc Computes the average of the numbers
+   * Computes the average of the numbers
    * read from the StdIn.
-   * @example
+   * @example <caption>Manual input from StdIn</caption>
    * ```sh
    * $ node average.client.js
    * > 1.23456
@@ -21,7 +20,12 @@ class Average {
    * $ <ctrl-d>
    * Average is 2.90123
    * ```
-   * @example
+   * @example <caption>Streaming from a file</caption>
+   * ```sh
+   * $ node average.client.js < data.txt
+   * Average is 152.17971
+   * ```
+   * @example <caption>Piping from another process</caption>
    * ```sh
    * $ node random-seq.client.js 1000 100 199.99 | node average.client.js
    * Average is 150.25505
@@ -31,16 +35,16 @@ class Average {
     let sum = 0
     let count = 0
 
-    StdIn.on('line', line => {
-      sum += parseFloat(line)
-      count++
-    })
+    StdIn.read()
+      .on('line', line => {
+        sum += parseFloat(line)
+        count++
+      })
+      .on('close', () => {
+        const avg = sum / count
 
-    StdIn.on('close', () => {
-      const avg = sum / count
-
-      StdOut.printf('Average is %f\n', avg.toFixed(5))
-    })
+        StdOut.printf('Average is %f\n', avg.toFixed(5))
+      })
   }
 }
 

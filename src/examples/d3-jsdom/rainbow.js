@@ -6,7 +6,7 @@ const PORT = 8083
 
 /**
  * D3JSDOM
- * @desc Example of a D3 drawing + JSDOM
+ * @classdesc Example of a D3 drawing + JSDOM
  * @see {@link https://gist.github.com/palanik/ba5e15dbbc7ea0574ae0d38252563b0d}
  */
 class D3JSDOM {

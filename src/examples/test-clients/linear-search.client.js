@@ -3,22 +3,21 @@ const { LinearSearch } = require('../../algorithms')
 
 /**
  * LSClient
- * @desc LinearSearch Test client.
+ * @classdesc LinearSearch Test client.
  * @see p. 47
  */
 class LSClient {
   /**
-   * main
-   * @desc Prints the keys from the StdIn that are not in the whitelist File.
+   * Prints the keys from the StdIn that are not in the whitelist Input File.
    * @param {[]} args [whitelistFilePath]
-   * @example
+   * @example <caption>Filtering a tiny whitelist</caption>
    * ```sh
    * $ node linear-search.client.js ~/algs4-data/tinyW.txt < ~/algs4-data/tinyT.txt | more
    * 50
    * 99
    * 13
    * ```
-   * @example
+   * @example <caption>Filtering a large whitelist</caption>
    * ```sh
    * $ node linear-search.client.js ~/algs4-data/largeW.txt < ~/algs4-data/largeT.txt | more
    * 499569
@@ -34,15 +33,13 @@ class LSClient {
     const input = new In(args[0])
     const whitelist = input.readAllInts()
 
-    StdIn.on('line', line => {
+    StdIn.read().on('line', line => {
       const key = StdIn.readInt(line)
 
       if (LinearSearch.indexOf(whitelist, key) === -1) {
         StdOut.println(key)
       }
     })
-
-    StdIn.on('close', () => process.exit(0))
   }
 }
 

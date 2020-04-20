@@ -2,16 +2,15 @@ const { StdRandom, StdOut } = require('../../libs')
 
 /**
  * RandomSeq
- * @desc Sample StdOut client
+ * @classdesc Sample StdOut client
  * @see p. 37
  * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/RandomSeq.java.html}
  */
 class RandomSeq {
   /**
-   * main
-   * @desc Prints `n` random real numbers in range [lo, hi).
+   * Prints `n` random real numbers in range [lo, hi).
    * @param {[]} args [n, lo, hi]
-   * @example
+   * @example <caption>Generating 5 random doubles between 100-199.99</caption>
    * ```sh
    * $ node random-seq.client.js 5 100.0 199.99
    * 166.29
@@ -20,7 +19,7 @@ class RandomSeq {
    * 159.78
    * 165.14
    * ```
-   * @example
+   * @example <caption>Streaming the StdOut to a file</caption>
    * ```sh
    * $ node random-seq.client.js 1000 100.0 199.99 > data.txt
    * ```
@@ -35,8 +34,6 @@ class RandomSeq {
 
       StdOut.printf('%f\n', x.toFixed(2))
     }
-
-    process.exit(0) // sometimes it gets stuck.
   }
 }
 
