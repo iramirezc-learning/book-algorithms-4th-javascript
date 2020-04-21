@@ -1,10 +1,7 @@
-# Templates
+/**
+ * NOTE: This is a Code Template!
+ */
 
-## Code
-
-### Exercise Class
-
-```js
 const { StdOut } = require('../../../libs')
 
 /**
@@ -35,24 +32,3 @@ module.exports = Exercise
 // Execution
 // ==============================
 if (require.main === module) Exercise.solution(process.argv.slice(2))
-```
-
-## Markdown
-
-### Exercise Answer
-
-### [Exercise 1.1.x](./ex-1.1.x.js)
-
-:pencil2: **Answer**
-
-> your answer here
-
-:computer: **Output**
-
-```sh
-# your output here
-```
-
-:warning: **Note**
-
-> your notes here
