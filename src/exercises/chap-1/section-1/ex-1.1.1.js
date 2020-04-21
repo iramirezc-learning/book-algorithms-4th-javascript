@@ -25,7 +25,6 @@ class Exercise {
    * b) 200.0000002
    * c) true
    * ```
-   * NOTE: a) Java returns integer `7`.
    */
   static solution () {
     StdOut.println(`a) ${Exercise.a()}`)

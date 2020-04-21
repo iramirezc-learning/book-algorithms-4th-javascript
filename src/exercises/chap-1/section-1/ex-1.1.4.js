@@ -14,7 +14,6 @@ class Exercise {
    * c) if (a > b) c = 0; | 0
    * d) if (a > b) c = 0 else b = 0; | SyntaxError: Unexpected token else
    * ```
-   * NOTE: Java also throws SyntaxError for a), b) and d).
    */
   static solution () {
     // values

@@ -30,9 +30,6 @@ class Exercise {
    * c) true (boolean)
    * d) 33 (string)
    * ```
-   * NOTE: a) Java returns `1.618 (double)`
-   * NOTE: b) Java returns `10.0 (double)`
-   * NOTE: d) Java returns `6 (int)`
    */
   static solution () {
     const a = Exercise.a()
