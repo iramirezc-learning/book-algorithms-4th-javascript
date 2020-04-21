@@ -91,7 +91,7 @@ false
 
 > Prints the first 15th numbers of the Fibonacci series.
 
-#### Iteration Table
+:clipboard: **Iteration Table**
 
 > Variables: `i`, `f = 0`, `g = 1`
 >
@@ -167,4 +167,126 @@ $ node ex-1.1.7.js
 a) 3.00009
 b) 499500
 c) 10000
+```
+
+### [Exercise 1.1.8](./ex-1.1.8.js)
+
+:pencil2: **Answer**
+
+> a) prints `b`
+>
+> b) prints `bc`
+>
+> c) JS prints `a4` | Java prints `e`
+
+:computer: **Output**
+
+```sh
+$ node ex-1.1.8.js
+b
+bc
+a4
+```
+
+### [Exercise 1.1.9](./ex-1.1.9.js)
+
+:computer: **Output**
+
+```sh
+$ node ex-1.1.9.js 50
+50 to binary -> 110010
+```
+
+### [Exercise 1.1.10](./ex-1.1.10.js)
+
+:pencil2: **Answer**
+
+> In Java code won't compile because variable `a` is not initialized with a size.
+>
+> `The local variable a may not have been initialized`
+>
+> JavaScript will execute the code correctly.
+
+:computer: **Output**
+
+```sh
+$ node ex-1.1.10.js
+[ 0, 1, 4, 9, 16, 25, 36, 49, 64, 81 ]
+```
+
+### [Exercise 1.1.11](./ex-1.1.11.js)
+
+:computer: **Output**
+
+```sh
+$ node ex-1.1.11.js 5 5
+  1  2  3  4  5
+1 *        *
+2    *     *
+3    *  *  *  *
+4       *  *  *
+5 *  *        *
+```
+
+### [Exercise 1.1.12](./ex-1.1.12.js)
+
+:pencil2: **Answer**
+
+> `[0, 1, 2, 3, 4, 4, 3, 2, 1, 0]`
+
+:clipboard: **Iteration Table**
+
+> Table is truncated as values `a[5]` to `a[9]` won't change.
+
+| a[0] | a[1] | a[2] | a[3] | a[4] | a[5] | a[6] | a[7] | a[8] | a[9] | i |
+|------|------|------|------|------|------|------|------|------|------|---|
+|     9|     0|     0|     0|     0|     0|     0|     0|     0|     0|  0|
+|     9|     8|     0|     0|     0|     0|     0|     0|     0|     0|  1|
+|     9|     8|     7|     0|     0|     0|     0|     0|     0|     0|  2|
+|     9|     8|     7|     6|     0|     0|     0|     0|     0|     0|  3|
+|     9|     8|     7|     6|     5|     0|     0|     0|     0|     0|  4|
+|     9|     8|     7|     6|     5|     4|     0|     0|     0|     0|  5|
+|     9|     8|     7|     6|     5|     4|     3|     0|     0|     0|  6|
+|     9|     8|     7|     6|     5|     4|     3|     2|     0|     0|  7|
+|     9|     8|     7|     6|     5|     4|     3|     2|     1|     0|  8|
+|     9|     8|     7|     6|     5|     4|     3|     2|     1|     0|  9|
+|     0|     8|     7|     6|     5|     4|     3|     2|     1|     0|  0|
+|     0|     1|     7|     6|     5|     4|     3|     2|     1|     0|  1|
+|     0|     1|     2|     6|     5|     4|     3|     2|     1|     0|  2|
+|     0|     1|     2|     3|     5|     4|     3|     2|     1|     0|  3|
+|     0|     1|     2|     3|     4|     4|     3|     2|     1|     0|  4|
+|     0|     1|     2|     3|     4|     4|     3|     2|     1|     0|  5|
+
+:computer: **Output**
+
+```sh
+$ node ex-1.1.12.js
+[ 0, 1, 2, 3, 4, 4, 3, 2, 1, 0 ]
+```
+
+### [Exercise 1.1.13](./ex-1.1.13.js)
+
+:computer: **Output**
+
+```sh
+$ node ex-1.1.13.js 4 3
+[before]
+0,1,2,3
+1,3,0,2
+2,3,0,1
+
+[after]
+0,1,2
+1,3,3
+2,0,0
+3,2,1
+```
+
+### [Exercise 1.1.14](./ex-1.1.14.js)
+
+:computer: **Output**
+
+```sh
+$ node ex-1.1.14.js 123456789
+123456789 -> 26
 ```
