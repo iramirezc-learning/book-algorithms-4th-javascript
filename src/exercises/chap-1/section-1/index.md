@@ -290,3 +290,65 @@ $ node ex-1.1.13.js 4 3
 $ node ex-1.1.14.js 123456789
 123456789 -> 26
 ```
+
+### [Exercise 1.1.15](./ex-1.1.15.js)
+
+:computer: **Output**
+
+```sh
+$ node ex-1.1.15.js 5
+array: 4,0,1,4,3
+array.length: 5
+histogram: 1,1,0,1,2
+sum(histogram): 5
+```
+
+### [Exercise 1.1.16](./ex-1.1.16.js)
+
+:computer: **Output**
+
+```sh
+$ node ex-1.1.16.js 6
+exR1(6) = 311361142246
+```
+
+### [Exercise 1.1.17](./ex-1.1.17.js)
+
+:pencil2: **Answer**
+
+> Base case will never be reached, causing an stack overflow error.
+
+:computer: **Output**
+
+```sh
+$ node ex-1.1.17.js 6
+RangeError: Maximum call stack size exceeded
+```
+
+### [Exercise 1.1.18](./ex-1.1.18.js)
+
+:pencil2: **Answer**
+
+> `mystery` returns the product of `a * b`:
+>
+> > `mystery(2, 25) = 50`
+> >
+> > `mystery(3, 11) = 33`
+>
+> `mystery2` (`*` version) returns the power of base `a` to exponent `b`, `Math.pow(a, b)`:
+>
+> > `mystery2(2, 25) = 33554432`
+> >
+> > `mystery2(3, 11) = 177147`
+
+:computer: **Output**
+
+```sh
+$ node ex-1.1.18.js 2 25
+mystery(2, 25) = 50
+mystery2(2, 25) = 33554432
+
+$ node ex-1.1.18.js 3 11
+mystery(3, 11) = 33
+mystery2(3, 11) = 177147
+```
