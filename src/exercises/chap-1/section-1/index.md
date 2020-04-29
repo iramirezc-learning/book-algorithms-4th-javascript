@@ -425,7 +425,7 @@ ln(10!) = 15
 
 ### [Exercise 1.1.21](./ex-1.1.21.js)
 
-:file_folder: **File**
+:file_folder: **Files**
 
 > /custom/names.txt
 
@@ -448,4 +448,31 @@ haskell    10     2    5.000
 rubi        7     3    2.333
 python      9     5    1.800
 node        3     2    1.500
+```
+
+### [Exercise 1.1.22](./ex-1.1.22.js)
+
+:file_folder: **Files**
+
+> /tinyW.txt
+>
+> /tinyT.txt
+
+:computer: **Output**
+
+```sh
+$ node ex-1.1.22.js ~/algs4-data/tinyW.txt < ~/algs4-data/tinyT.txt | more
+key = 23
+ 1[0,14]
+  2[0,6]
+   3[4,6]
+index = 5
+key = 50
+ 1[0,14]
+  2[8,14]
+   3[8,10]
+    4[8,8]
+     5[9,8]
+index = -1
+...
 ```
