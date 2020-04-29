@@ -422,3 +422,30 @@ $ node ex-1.1.19.js
 $ node ex-1.1.20.js 10
 ln(10!) = 15
 ```
+
+### [Exercise 1.1.21](./ex-1.1.21.js)
+
+:file_folder: **File**
+
+> /custom/names.txt
+
+```txt
+java 10 10
+c 8 4
+haskell 10 2
+rubi 7 3
+python 9 5
+node 3 2
+```
+
+:computer: **Output**
+
+```sh
+$ node ex-1.1.21.js < ~/algs4-data/custom/names.txt
+java       10    10    1.000
+c           8     4    2.000
+haskell    10     2    5.000
+rubi        7     3    2.333
+python      9     5    1.800
+node        3     2    1.500
+```
