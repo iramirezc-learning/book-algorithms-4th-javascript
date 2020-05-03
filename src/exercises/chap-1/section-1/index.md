@@ -452,12 +452,6 @@ node        3     2    1.500
 
 ### [Exercise 1.1.22](./ex-1.1.22.js)
 
-:file_folder: **Files**
-
-> /tinyW.txt
->
-> /tinyT.txt
-
 :computer: **Output**
 
 ```sh
@@ -475,4 +469,62 @@ key = 50
      5[9,8]
 index = -1
 ...
+```
+
+### [Exercise 1.1.23](./ex-1.1.23.js)
+
+:computer: **Output**
+
+```sh
+$ node ex-1.1.23.js ~/algs4-data/tinyW.txt + < ~/algs4-data/tinyT.txt
+50
+99
+13
+
+$ node ex-1.1.23.js ~/algs4-data/tinyW.txt - < ~/algs4-data/tinyT.txt
+23
+10
+18
+23
+98
+84
+11
+10
+48
+77
+54
+98
+77
+77
+68
+```
+
+### [Exercise 1.1.24](./ex-1.1.24.js)
+
+:pencil2: **Answer**
+
+> `p = 105`; `q = 24`; `p % q = 9`
+>
+> `p = 24`; `q = 9`; `p % q = 6`
+>
+> `p = 9`; `q = 6`; `p % q = 3`
+>
+> `p = 6`; `q = 3`; `p % q = 0`
+>
+> **`gcd = 3`**
+
+:computer: **Output**
+
+```sh
+$ node ex-1.1.24.js 1111111 1234567
+p = 1111111; q = 1234567; r = 1111111
+p = 1234567; q = 1111111; r = 123456
+p = 1111111; q = 123456; r = 7
+p = 123456; q = 7; r = 4
+p = 7; q = 4; r = 3
+p = 4; q = 3; r = 1
+p = 3; q = 1; r = 0
+p = 1; q = 0
+
+gcd(1111111, 1234567) = 1
 ```
