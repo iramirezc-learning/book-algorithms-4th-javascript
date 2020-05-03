@@ -528,3 +528,9 @@ p = 1; q = 0
 
 gcd(1111111, 1234567) = 1
 ```
+
+### Exercise 1.1.25
+
+:pencil2: **Answer**
+
+> :exclamation:TODO
