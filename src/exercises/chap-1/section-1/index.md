@@ -576,3 +576,24 @@ $ node ex-1.1.26.js 3 2 1
 a = 3; b = 2; c = 1
 a = 1; b = 2; c = 3
 ```
+
+### [Exercise 1.1.27](./ex-1.1.27.js)
+
+:pencil2: **Answer**
+
+> :exclamation:TODO: estimation of recursive calls
+>
+> :exclamation:TODO: better implementation of binomial
+
+:computer: **Output**
+
+```sh
+$ node ex-1.1.27.js 100 50 0.25
+{ n: 100, k: 50, p: 0.25 }
+# will take a while
+binomial(100, 50, 0.25) = ???
+
+$ node ex-1.1.27.js 10 5 0.25
+{ n: 10, k: 5, p: 0.25 }
+binomial(10, 5, 0.25) = 0.058399200439453125
+```
