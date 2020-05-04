@@ -47,6 +47,10 @@ if (require.main === module) Exercise.solution(process.argv.slice(2))
 
 > your answer here
 
+:memo: **Example**
+
+> your example here
+
 :computer: **Output**
 
 ```sh
