@@ -597,3 +597,26 @@ $ node ex-1.1.27.js 10 5 0.25
 { n: 10, k: 5, p: 0.25 }
 binomial(10, 5, 0.25) = 0.058399200439453125
 ```
+
+### [Exercise 1.1.28](./ex-1.1.28.js)
+
+:computer: **Output**
+
+```sh
+$ node ex-1.1.28.js ~/algs4-data/largeW.txt < ~/algs4-data/largeT.txt | more
+Whitelist length: 1000000
+Unique length: 632469
+
+499569
+984875
+295754
+207807
+140925
+161828
+17672230
+51849195
+40363603
+1820537
+57187544
+... # truncated
+```
