@@ -620,3 +620,47 @@ Unique length: 632469
 57187544
 ... # truncated
 ```
+
+### [Exercise 1.1.29](./ex-1.1.29.js)
+
+:memo: **Example**
+
+```js
+// consider sorted array with duplicated keys
+const a = [1, 2, 3, 4, 5, 5, 5, 6, 7, 8]
+//  index [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+// consider key
+const k = 5
+
+// there are 4 items less than key `5`
+const i = BinarySearch.rank(a, k) // returns 4
+// there are 3 duplicated items for key `5`
+const j = BinarySearch.count(a, k) // returns 3
+
+// the book states that `[i..i+j-1]` are
+// the values in the array that are equal to `k`
+// if `i` = 4 and `j` = 3
+// then
+// a[4..4 + 3 - 1]
+// a[4..6]
+// a[4, 5, 6] (indexes) = [5, 5, 5] (values)
+```
+
+:warning: **Note**
+
+> I decided to make a much more fun exercise by getting the key that is the most duplicated in a whitelist file using the `rank` and `count` methods for this exercise.
+>
+> I actually created 2 implementations of the same method for comparison purposes.
+
+:computer: **Output**
+
+```sh
+$ node ex-1.1.29.js ~/algs4-data/tinyW.txt
+mostDuplicatedKey (v1): { key: 10, rank: 0, count: 1, length: 15 }
+mostDuplicatedKey (v2): { key: 10, rank: 0, count: 1, length: 15 }
+
+$ node ex-1.1.29.js ~/algs4-data/largeW.txt
+mostDuplicatedKey (v1): { key: 471981, rank: 471499, count: 9, length: 1000000 }
+mostDuplicatedKey (v2): { key: 471981, rank: 471499, count: 9, length: 1000000 }
+```
