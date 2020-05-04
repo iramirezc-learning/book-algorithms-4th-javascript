@@ -98,4 +98,91 @@ describe('Unit Tests: BinarySearch Algorithm', () => {
       expect(BinarySearch._recursiveIndexOf).toHaveBeenCalledWith(this.sortedArray, targetKey, lo, hi)
     })
   })
+
+  describe('static rank method', () => {
+    it('should return the number of values less than the key', () => {
+      const testCases = [
+        new TestCase({
+          description: 'should return 0',
+          args: [[3, 3, 3, 4, 5], 3],
+          expected: 0
+        }),
+        new TestCase({
+          description: 'should return 1',
+          args: [[1, 3, 3, 3, 4, 5], 3],
+          expected: 1
+        }),
+        new TestCase({
+          description: 'should return 2',
+          args: [[1, 2, 3, 3, 3, 4, 5], 3],
+          expected: 2
+        }),
+        new TestCase({
+          description: 'should return 3',
+          args: [[1, 2, 2, 3, 3, 4, 5], 3],
+          expected: 3
+        }),
+        new TestCase({
+          description: 'should return 4',
+          args: [[1, 1, 2, 2, 3, 3, 4, 4, 5, 5], 3],
+          expected: 4
+        }),
+        new TestCase({
+          description: 'should return 5',
+          args: [[1, 1, 2, 2, 2, 4, 4, 4, 5, 5], 3],
+          expected: 5
+        })
+      ]
+
+      testCases.forEach(({ args, expected, description }) => {
+        expect(BinarySearch.rank(...args)).toBe(expected, description)
+      })
+    })
+  })
+
+  describe('static count method', () => {
+    it('should return count of items that are equal to the key', () => {
+      const testCases = [
+        new TestCase({
+          description: 'should return 0',
+          args: [[0, 1, 2, 4, 5], 3],
+          expected: 0
+        }),
+        new TestCase({
+          description: 'should return 1',
+          args: [[1, 2, 3, 4, 5], 3],
+          expected: 1
+        }),
+        new TestCase({
+          description: 'should return 2',
+          args: [[1, 2, 3, 3, 4, 5], 3],
+          expected: 2
+        }),
+        new TestCase({
+          description: 'should return 3',
+          args: [[1, 3, 3, 3, 5], 3],
+          expected: 3
+        }),
+        new TestCase({
+          description: 'should return 4',
+          args: [[3, 3, 3, 3], 3],
+          expected: 4
+        }),
+        new TestCase({
+          description: 'should return 5',
+          args: [[1, 3, 3, 3, 3, 3], 3],
+          expected: 5
+        }),
+        new TestCase({
+          description: 'should return 6',
+          args: [[3, 3, 3, 3, 3, 3, 4], 3],
+          expected: 6
+        })
+      ]
+
+      testCases.forEach(({ args, expected, description }) => {
+        expect(BinarySearch.count(...args)).toBe(expected, description)
+      })
+    })
+  })
 })

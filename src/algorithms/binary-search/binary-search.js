@@ -76,6 +76,64 @@ class BinarySearch {
   static recursiveIndexOf (a, key) {
     return BinarySearch._recursiveIndexOf(a, key, 0, a.length - 1)
   }
+
+  /**
+   * Returns the count of the items
+   * in the sorted array that are less
+   * than the value of the `key`.
+   * @param {[]} a The sorted array with duplicated keys.
+   * @param {number} key The value to get the rank.
+   */
+  static rank (a, key) {
+    const index = this.recursiveIndexOf(a, key)
+
+    if (index >= 0) {
+      let i = index
+
+      // loop to the left to find
+      // the first match with a key
+      // that is less than `k`
+      for (; i >= 0; i--) {
+        if (a[i] !== key) break
+      }
+
+      return i + 1
+    } else {
+      // loop to the right
+      // until find the first match
+      // with a key greater than `k`
+      for (let i = 0; i < a.length; i++) {
+        if (a[i] > key) return i
+      }
+    }
+  }
+
+  /**
+   * Returns the number of values
+   * that are equal to `key`.
+   * @param {[]} a The sorted array with duplicated keys.
+   * @param {number} key The value to count.
+   */
+  static count (a, key) {
+    const index = this.recursiveIndexOf(a, key)
+    let _count = 0
+
+    if (index === -1) return _count
+
+    // count to the left
+    let left = index - 1
+    while (left >= 0 && a[left--] === key) {
+      _count++
+    }
+
+    // count to the right
+    let right = index + 1
+    while (right < a.length && a[right++] === key) {
+      _count++
+    }
+
+    return _count + 1
+  }
 }
 
 module.exports = BinarySearch
