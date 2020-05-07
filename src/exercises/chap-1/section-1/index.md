@@ -734,3 +734,31 @@ $ node ex-1.1.33.js [2,1,3] [[1,2,3],[4,5,6],[7,8,9]]
 Vector-Matrix Product:
 [13,31,49]
 ```
+
+### Exercise 1.1.34 (_Not coding exercise_)
+
+:pencil2: **Answer**
+
+> Print the maximum and minimum numbers.
+> > can be implemented as a filter. By having `max` and `min` variables and updating those when reading the values.
+>
+> Print the median of the numbers.
+> > requires saving all the values. We need to store all numbers from standard input and sort them, then we can select the median.
+>
+> Print the `k`th smallest value, for `k` less than `100`.
+> > can be implemented as a filter. By having `min` and `minCount` variables.
+>
+> Print the sum of the squares of the numbers.
+> > can be implemented as a filter. By having only a `sum` variable to store the square of each number + `sum`.
+>
+> Print the average of the `n` numbers.
+> > can be implemented as a filter. By having `sum` and `count` variables.
+>
+> Print the percentage of numbers greater than the average.
+> > requires saving all the values. We need to store all numbers to get the `average` and then count all the numbers greater than it.
+>
+> Print the `n` numbers in increasing order.
+> > requires saving all the values. We need to store all numbers then sort them in increasing order.
+>
+> Print the `n` numbers in random order.
+> > requires saving all the values. We need to store all numbers and then print them in random order.
