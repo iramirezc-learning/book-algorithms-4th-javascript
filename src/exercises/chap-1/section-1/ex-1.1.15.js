@@ -1,5 +1,5 @@
 const { StdOut, StdRandom } = require('../../../libs')
-const { buildArrayOf } = require('../../../utils')
+const { newArrayOf } = require('../../../utils')
 
 /**
  * Exercise 1.1.15
@@ -12,7 +12,7 @@ class Exercise {
    * @returns {[]} Array of random ints.
    */
   static createArrayOfRandomInt (n) {
-    return buildArrayOf(n, () => StdRandom.uniform(n))
+    return newArrayOf(n, () => StdRandom.uniform(n))
   }
 
   /**
@@ -29,7 +29,7 @@ class Exercise {
    * @returns {[]} The histogram array.
    */
   static histogram (a, n) {
-    const h = buildArrayOf(n, 0)
+    const h = newArrayOf(n, 0)
 
     for (let i = 0; i < a.length; i++) {
       h[a[i]]++

@@ -1,5 +1,5 @@
 const { StdOut, math } = require('../../../libs')
-const { buildArrayOf } = require('../../../utils')
+const { newArrayOf } = require('../../../utils')
 
 /**
  * Exercise 1.1.19
@@ -50,12 +50,12 @@ class Exercise {
    * 8 21
    * 9 34
    * 10 55
-   * ...
+   * ... # truncated
    * 89 1779979416004714189
    * ```
    */
   static solution () {
-    const a = buildArrayOf(90, null)
+    const a = newArrayOf(90, null)
 
     a[0] = 0
     a[1] = 1

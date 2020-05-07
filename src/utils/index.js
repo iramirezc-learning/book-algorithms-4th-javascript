@@ -1,4 +1,4 @@
-function buildArrayOf (n, data) {
+function newArrayOf (n, data) {
   const a = []
 
   if (typeof data === 'function') {
@@ -25,6 +25,6 @@ function pad (str, n = 0) {
 }
 
 module.exports = {
-  buildArrayOf,
+  newArrayOf,
   pad
 }
