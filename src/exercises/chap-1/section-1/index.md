@@ -708,3 +708,29 @@ $ node ex-1.1.30.js 20
 :bar_chart: **Drawing**
 
 ![exercise 1.1.32 preview](/docs/img/1.1.32.png "Histogram")
+
+### [Exercise 1.1.33](./ex-1.1.33.js)
+
+:computer: **Output**
+
+```sh
+$ node ex-1.1.33.js [[1,2,3],[4,5,6],[7,8,9]]
+Transpose:
+[[1,4,7],[2,5,8],[3,6,9]]
+
+$ node ex-1.1.33.js [9,2,7] [4,8,10]
+Vector Dot Product:
+122
+
+$ node ex-1.1.33.js [[0,4,-2],[-4,-3,0]] [[0,1],[1,-1],[2,3]]
+Matrix-Matrix Product:
+[[0,-10],[-3,-1]]
+
+$ node ex-1.1.33.js [[1,-1,2],[0,-3,1]] [2,1,0]
+Matrix-Vector Product:
+[1,-3]
+
+$ node ex-1.1.33.js [2,1,3] [[1,2,3],[4,5,6],[7,8,9]]
+Vector-Matrix Product:
+[13,31,49]
+```
