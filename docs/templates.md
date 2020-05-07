@@ -60,3 +60,7 @@ if (require.main === module) Exercise.solution(process.argv.slice(2))
 :warning: **Note**
 
 > your notes here
+
+:bar_chart: **Drawing**
+
+![exercise 1.1.x preview](/docs/img/octocat.png "Octocat")
