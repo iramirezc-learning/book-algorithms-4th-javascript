@@ -692,3 +692,19 @@ $ node ex-1.1.30.js 20
   •       •   •       •   •       •   •
   • • • • • • • • • • • • • • • • • •
 ```
+
+### Exercise 1.1.31
+
+> :exclamation:TODO: I need to implement an StdDraw library
+
+:bar_chart: **Drawing**
+
+![exercise 1.1.31 preview](/docs/img/1.1.31.png "Random Connections")
+
+### Exercise 1.1.32
+
+> :exclamation:TODO: I need to implement an StdDraw library
+
+:bar_chart: **Drawing**
+
+![exercise 1.1.32 preview](/docs/img/1.1.32.png "Histogram")
