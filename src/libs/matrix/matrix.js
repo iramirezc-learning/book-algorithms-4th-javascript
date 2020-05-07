@@ -3,7 +3,7 @@ const { newArrayOf } = require('../../utils')
 /**
  * Matrix
  * @classdesc Collection of Matrix & Vectors computations
- * @see {exercises: [1.1.33]}
+ * @see {exercise: [1.1.33]}
  */
 class Matrix {
   /**
@@ -26,6 +26,7 @@ class Matrix {
 
   /**
    * Transpose
+   * @see {exercise: [1.1.13]}
    * @param {[][]} m Matrix
    * @returns {[][]} Transposed matrix
    */
