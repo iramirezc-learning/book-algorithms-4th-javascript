@@ -762,3 +762,46 @@ Vector-Matrix Product:
 >
 > Print the `n` numbers in random order.
 > > requires saving all the values. We need to store all numbers and then print them in random order.
+
+### [Exercise 1.1.35](./ex-1.1.35.js)
+
+:pencil2: **Answer**
+
+> The number of throws vary a lot to match the exact probability distribution from 38,346,018~ to 100,572,005~
+
+:computer: **Output**
+
+```sh
+$ node ex-1.1.35.js
+Exact Results:
+Dice Sum:  0  Freq:  0  P: 0
+Dice Sum:  1  Freq:  0  P: 0
+Dice Sum:  2  Freq:  1  P: 0.028
+Dice Sum:  3  Freq:  2  P: 0.056
+Dice Sum:  4  Freq:  3  P: 0.083
+Dice Sum:  5  Freq:  4  P: 0.111
+Dice Sum:  6  Freq:  5  P: 0.139
+Dice Sum:  7  Freq:  6  P: 0.167
+Dice Sum:  8  Freq:  5  P: 0.139
+Dice Sum:  9  Freq:  4  P: 0.111
+Dice Sum: 10  Freq:  3  P: 0.083
+Dice Sum: 11  Freq:  2  P: 0.056
+Dice Sum: 12  Freq:  1  P: 0.028
+Total Throws: 36, Total P: 1
+
+Simulation Empirical Results:
+Dice Sum:  0  Freq:  0  P: 0
+Dice Sum:  1  Freq:  0  P: 0
+Dice Sum:  2  Freq: 380557  P: 0.028
+Dice Sum:  3  Freq: 762385  P: 0.056
+Dice Sum:  4  Freq: 1140840  P: 0.083
+Dice Sum:  5  Freq: 1523698  P: 0.111
+Dice Sum:  6  Freq: 1905290  P: 0.139
+Dice Sum:  7  Freq: 2285261  P: 0.167
+Dice Sum:  8  Freq: 1902612  P: 0.139
+Dice Sum:  9  Freq: 1525440  P: 0.111
+Dice Sum: 10  Freq: 1141563  P: 0.083
+Dice Sum: 11  Freq: 760805  P: 0.056
+Dice Sum: 12  Freq: 379734  P: 0.028
+Total Throws: 13708185, Total P: 1
+```
