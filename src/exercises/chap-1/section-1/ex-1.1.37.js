@@ -1,23 +1,11 @@
 const { StdOut, StdRandom } = require('../../../libs')
 const { newArrayOf } = require('../../../utils')
+const E1136 = require('./ex-1.1.36')
 
 /**
  * Exercise 1.1.37
  */
 class Exercise {
-  /**
-   * Counts for every number `i`
-   * the appearance in position `j`
-   * for a shuffled array.
-   * @param {[]} shuffled Shuffled Array
-   * @param {[[]]} matrix Matrix that keep tracks of the new position of number `i`.
-   */
-  static shuffleTest (shuffled, matrix) {
-    for (let j = 0; j < shuffled.length; j++) {
-      matrix[shuffled[j]][j]++
-    }
-  }
-
   /**
    * Bad Shuffle
    * Re-arranges the elements in an array
@@ -80,7 +68,7 @@ class Exercise {
       const array = newArrayOf(m, i => i)
 
       this.badShuffle(array)
-      this.shuffleTest(array, matrix)
+      E1136.shuffleTest(array, matrix)
     }
 
     StdOut.println(`Total Shuffles (n): ${n}`)
