@@ -886,3 +886,26 @@ BruteForce:
 Running Time: 13918111.657770991 # 3.8 hours!
 Filtered Keys: 367966
 ```
+
+### [Exercise 1.1.39](./ex-1.1.39.js)
+
+:computer: **Output**
+
+```sh
+$ node ex-1.1.39.js 100
+Running 100 trials for n = 1000
+Duplicated keys: 102
+Average: 1.02
+
+Running 100 trials for n = 10000
+Duplicated keys: 10919
+Average: 109.19
+
+Running 100 trials for n = 100000
+Duplicated keys: 1051018
+Average: 10510.18
+
+Running 100 trials for n = 1000000
+Duplicated keys: 67079632
+Average: 670796.32
+```
