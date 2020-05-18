@@ -867,3 +867,22 @@ Empirical Shuffle Check:
   [ 1843721, 2046718, 2305007, 1803177, 2001377 ],
   [ 1638136, 1844111, 2098759, 2421122, 1997872 ] ]
 ```
+
+### [Exercise 1.1.38](./ex-1.1.38.js)
+
+:computer: **Output**
+
+```sh
+$ node ex-1.1.38.js ~/algs4-data/largeW.txt ~/algs4-data/largeT.txt
+Running benchmark...
+Whitelist length: 1000000
+Keys length: 10000000
+
+BinarySearch:
+Running Time: 4939.283277988434 # 4.9 secs
+Filtered Keys: 367966
+
+BruteForce:
+Running Time: 13918111.657770991 # 3.8 hours!
+Filtered Keys: 367966
+```
