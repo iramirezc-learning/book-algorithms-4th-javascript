@@ -20,9 +20,12 @@ class BasicDate {
       year = arguments[2]
     }
 
-    this._month = month
-    this._day = day
-    this._year = year
+    // immutable properties
+    Object.defineProperties(this, {
+      _month: { value: month },
+      _day: { value: day },
+      _year: { value: year }
+    })
   }
 
   /**
