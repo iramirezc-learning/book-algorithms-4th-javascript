@@ -2,6 +2,7 @@
  * Iterator
  * @classdesc Iterable interface for Node elements
  * @abstract
+ * @see p. 155
  */
 class Iterator {
   constructor (element = null) {
