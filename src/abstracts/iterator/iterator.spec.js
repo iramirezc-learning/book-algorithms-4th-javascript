@@ -72,7 +72,7 @@ describe('Unit Tests: Abstract Iterator Interface', () => {
         })
       })
 
-      it('should set _current to the the _current._next', () => {
+      it('should set _current to the _current._next', () => {
         const node1 = new Node()
         const node2 = new Node()
         node1._item = 1
