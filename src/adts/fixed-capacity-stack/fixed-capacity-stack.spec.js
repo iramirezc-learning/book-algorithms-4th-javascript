@@ -1,4 +1,4 @@
-const FixedCapacityStack = require('./fixed-stack')
+const FixedCapacityStack = require('./fixed-capacity-stack')
 const { StdRandom } = require('../../libs')
 
 describe('Unit Tests: FixedCapacityStack ADT', () => {
