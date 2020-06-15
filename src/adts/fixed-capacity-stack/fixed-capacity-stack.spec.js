@@ -93,7 +93,7 @@ describe('Unit Tests: FixedCapacityStack ADT', () => {
         expect(this.stack.size()).toBe(n)
       })
 
-      it('should set _a[n] to be the last item inserted', () => {
+      it('should set _a[n - 1] to be the last item inserted', () => {
         const n = 1000
 
         for (let i = 1; i <= n; i++) {
