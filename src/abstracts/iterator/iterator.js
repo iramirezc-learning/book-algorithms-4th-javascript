@@ -20,7 +20,9 @@ class Iterator {
   }
 
   /**
-   * @todo implementation
+   * Is best not to modify Data Structures
+   * when iterating.
+   * @see p. 139
    */
   remove () {
     /* do nothing */
