@@ -14,7 +14,7 @@ Personal notes and JavaScript code for the book Algorithms (4th edition) by Robe
 ## Standard Libraries for JavaScript
 
 * [In](/src/libs/in/in.js)
-* StdDraw
+* StdDraw (*not implemented*)
 * [StdIn](/src/libs/std-in/std-in.js)
 * [StdOut](/src/libs/std-out/std-out.js)
 * [StdRandom](/src/libs/std-random/std-random.js)
