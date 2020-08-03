@@ -36,6 +36,7 @@
 * [Bag - TestClient - p.125](/src/examples/test-clients/bag.client.js)
 * [Stack - TestClient - p.147](/src/examples/test-clients/stack.client.js)
 * [Queue - TestClient - p.150](/src/examples/test-clients/queue.client.js)
+* [ThreeSum - TestClient - p.173](/src/examples/test-clients/three-sum.client.js)
 
 ### Key Concepts
 
@@ -113,3 +114,11 @@
 >
 > * Arrays aka *Sequential Allocation*
 > * Linked Lists aka *Linked Allocation*
+
+#### The Scientific Method
+
+> * Observe
+> * Hypothesize
+> * Predict
+> * Verify
+> * Validate
