@@ -5,9 +5,9 @@ module.exports = {
   Counter: require('./counter/counter'),
   FixedCapacityStack: require('./fixed-capacity-stack/fixed-capacity-stack'),
   Node: require('./node/node'),
+  Queue: require('./queue/queue'),
   ResizableArrayStack: require('./resizable-array-stack/resizable-array-stack'),
   SmallDate: require('./small-date/small-date'),
   Stack: require('./stack/stack'),
-  Transaction: require('./transaction/transaction'),
-  Queue: require('./queue/queue')
+  Transaction: require('./transaction/transaction')
 }
