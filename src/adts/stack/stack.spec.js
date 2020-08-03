@@ -149,6 +149,18 @@ describe('Unit Tests: Stack ADT', () => {
 
         expect(this.stack.size()).toBe(0)
       })
+
+      it('should set _first to be null', () => {
+        this.stack.pop()
+
+        expect(this.stack._first).toBeNull()
+      })
+
+      it('should return the removed item', () => {
+        const removedItem = this.stack.pop()
+
+        expect(removedItem).toBe(this.firstItem)
+      })
     })
 
     describe('when removing the last item in the stack:', () => {
