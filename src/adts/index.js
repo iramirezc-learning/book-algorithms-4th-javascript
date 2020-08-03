@@ -1,5 +1,6 @@
 module.exports = {
   Accumulator: require('./accumulator/accumulator'),
+  Bag: require('./bag/bag'),
   BasicDate: require('./basic-date/basic-date'),
   Counter: require('./counter/counter'),
   FixedCapacityStack: require('./fixed-capacity-stack/fixed-capacity-stack'),
