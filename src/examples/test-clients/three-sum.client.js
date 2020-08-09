@@ -59,6 +59,9 @@ class ThreeSum {
   }
 }
 
+// NOTE: exportation required for stop-watch.client.js
+module.exports = ThreeSum
+
 // Execution
 // ==============================
-ThreeSum.main(process.argv.slice(2))
+if (require.main === module) ThreeSum.main(process.argv.slice(2))

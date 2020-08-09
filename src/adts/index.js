@@ -9,5 +9,6 @@ module.exports = {
   ResizableArrayStack: require('./resizable-array-stack/resizable-array-stack'),
   SmallDate: require('./small-date/small-date'),
   Stack: require('./stack/stack'),
+  StopWatch: require('./stop-watch/stop-watch'),
   Transaction: require('./transaction/transaction')
 }
