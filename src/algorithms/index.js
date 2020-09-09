@@ -3,5 +3,6 @@ module.exports = {
   DijkstraEvaluate: require('./dijkstra-two-stack/dijkstra-two-stack'),
   Euclidean: require('./euclidean/euclidean'),
   LinearSearch: require('./linear-search/linear-search'),
-  ThreeSum: require('./three-sum/three-sum')
+  ThreeSum: require('./three-sum/three-sum'),
+  TwoSumFast: require('./two-sum-fast/two-sum-fast')
 }
