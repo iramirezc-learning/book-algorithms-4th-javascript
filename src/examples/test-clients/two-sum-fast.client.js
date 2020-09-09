@@ -30,6 +30,11 @@ class TwoSumFastClient {
    * $ node two-sum-fast.client.js ~/algs4-data/8Kints.txt
    * 19
    * ```
+   * @example <caption>1M ints</caption>
+   * ```sh
+   * $ node two-sum-fast.client.js ~/algs4-data/1Mints.txt
+   * 249838
+   * ```
    */
   static main (args) {
     const input = new In(args[0])
