@@ -85,4 +85,15 @@ describe('Array Utils - Unit Tests', () => {
       expect(a).toEqual(expected)
     })
   })
+
+  describe('numbersByAscendingOrder', () => {
+    it('should sort the numbers in an array in ascending order', () => {
+      const a = [1, 10, 11, 100, 2, 20, 22, 200, 3, 4, 5, -1, -2, -3]
+      const expected = [-3, -2, -1, 1, 2, 3, 4, 5, 10, 11, 20, 22, 100, 200]
+
+      a.sort(arrayUtils.numbersByAscendingOrder)
+
+      expect(a).toEqual(expected)
+    })
+  })
 })

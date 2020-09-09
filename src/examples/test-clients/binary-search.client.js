@@ -1,5 +1,6 @@
 const { In, StdIn, StdOut } = require('../../libs')
 const { BinarySearch } = require('../../algorithms')
+const { numbersByAscendingOrder } = require(('../../utils'))
 
 /**
  * BSClient
@@ -33,7 +34,7 @@ class BSClient {
     const input = new In(args[0])
     const whitelist = input.readAllInts()
 
-    whitelist.sort((a, b) => a - b)
+    whitelist.sort(numbersByAscendingOrder)
 
     StdIn.read().on('line', line => {
       const key = StdIn.readInt(line)

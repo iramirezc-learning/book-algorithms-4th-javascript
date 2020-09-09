@@ -1,5 +1,6 @@
 const { In, StdOut } = require('../../../libs')
 const { BinarySearch } = require('../../../algorithms')
+const { numbersByAscendingOrder } = require('../../../utils')
 
 /**
  * Exercise 1.1.29
@@ -87,7 +88,7 @@ class Exercise {
     const input = new In(args[0])
     const whitelist = input.readAllInts()
 
-    whitelist.sort((a, b) => a - b)
+    whitelist.sort(numbersByAscendingOrder)
 
     StdOut.println('mostDuplicatedKey (v1):', this.getMostDuplicatedKey(whitelist))
     StdOut.println('mostDuplicatedKey (v2):', this.getMostDuplicatedKeyV2(whitelist))

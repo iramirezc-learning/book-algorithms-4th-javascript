@@ -1,5 +1,6 @@
 const { In, StdIn, StdOut } = require('../../../libs')
 const { BinarySearch } = require('../../../algorithms')
+const { numbersByAscendingOrder } = require('../../../utils')
 
 /**
  * Exercise 1.1.23
@@ -31,7 +32,7 @@ class Exercise {
     const sign = args[1]
     const whitelist = input.readAllInts()
 
-    whitelist.sort((a, b) => a - b)
+    whitelist.sort(numbersByAscendingOrder)
 
     StdIn.read().on('line', line => {
       const key = StdIn.readInt(line)

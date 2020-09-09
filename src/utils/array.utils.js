@@ -32,9 +32,12 @@ function newArrayOf (n, data) {
   return a
 }
 
+const numbersByAscendingOrder = (a, b) => a - b
+
 module.exports = {
   arrayToString,
   isMatrix,
   isVector,
-  newArrayOf
+  newArrayOf,
+  numbersByAscendingOrder
 }
