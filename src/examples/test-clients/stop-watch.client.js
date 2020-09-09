@@ -1,6 +1,6 @@
 const { StdOut, StdRandom } = require('../../libs')
 const { StopWatch } = require('../../adts')
-const ThreeSum = require('./three-sum.client')
+const { ThreeSum } = require('../../algorithms')
 
 /**
  * StopWatchClient

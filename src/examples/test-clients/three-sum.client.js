@@ -1,32 +1,12 @@
 const { StdOut, In } = require('../../libs')
+const { ThreeSum } = require('../../algorithms')
 
 /**
- * ThreeSum
- * @classdesc ThreeSum client.
+ * ThreeSumClient
+ * @classdesc ThreeSumClient.
  * @see p. 173
  */
-class ThreeSum {
-  /**
-   * Returns the count of triplets in an array
-   * @param {[]} a The array of integers
-   */
-  static count (a) {
-    const n = a.length
-    let count = 0
-
-    for (let i = 0; i < n; i++) {
-      for (let j = i + 1; j < n; j++) {
-        for (let k = j + 1; k < n; k++) {
-          if (a[i] + a[j] + a[k] === 0) {
-            count++
-          }
-        }
-      }
-    }
-
-    return count
-  }
-
+class ThreeSumClient {
   /**
    * Counts the Triplets that sum to 0
    * @param {[]} args [tripletsFilePath]
@@ -55,13 +35,10 @@ class ThreeSum {
     const input = new In(args[0])
     const a = input.readAllInts()
 
-    StdOut.println(this.count(a))
+    StdOut.println(ThreeSum.count(a))
   }
 }
 
-// NOTE: exportation required for stop-watch.client.js
-module.exports = ThreeSum
-
 // Execution
 // ==============================
-if (require.main === module) ThreeSum.main(process.argv.slice(2))
+ThreeSumClient.main(process.argv.slice(2))
