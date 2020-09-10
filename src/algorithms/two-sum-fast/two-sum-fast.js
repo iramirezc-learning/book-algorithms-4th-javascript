@@ -3,6 +3,7 @@ const { numbersByAscendingOrder } = require('../../utils')
 
 /**
  * TwoSumFast
+ * > Running Time: n log(n)
  * @classdesc Counts the pair of numbers in an array that sum 0.
  * @see p. 189
  */
