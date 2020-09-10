@@ -1,7 +1,7 @@
 const { StdOut, StdRandom } = require('../../libs')
-const { StopWatch } = require('../../adts')
-const ThreeSum = require('../test-clients/three-sum.client')
 const { pad } = require('../../utils')
+const { StopWatch } = require('../../adts')
+const { ThreeSum } = require('../../algorithms')
 
 /**
  * DoublingTest
