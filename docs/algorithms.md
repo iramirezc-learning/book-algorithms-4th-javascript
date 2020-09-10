@@ -36,8 +36,8 @@ See [Java Algorithms & Clients](https://algs4.cs.princeton.edu/code/)
 * LinearRegression
 * ThreeSum | [js](/src/algorithms/three-sum/three-sum.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/ThreeSum.java.html) |
 * ThreeSumFast | [js](/src/algorithms/three-sum-fast/three-sum-fast.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/ThreeSumFast.java.html) |
-* DoublingTest
-* DoublingRatio
+* DoublingTest | [js](/src/examples/experiments/doubling-test.experiment.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/DoublingTest.java.html) |
+* DoublingRatio | [js](/src/examples/experiments/doubling-ratio.experiment.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/DoublingRatio.java.html) |
 * QuickFindUF
 * QuickUnionUF
 * WeightedQuickUnionUF
