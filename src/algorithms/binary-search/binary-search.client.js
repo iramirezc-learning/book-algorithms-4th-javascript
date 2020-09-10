@@ -1,6 +1,6 @@
 const { In, StdIn, StdOut } = require('../../libs')
-const { BinarySearch } = require('../../algorithms')
 const { numbersByAscendingOrder } = require(('../../utils'))
+const BinarySearch = require('./binary-search')
 
 /**
  * BSClient

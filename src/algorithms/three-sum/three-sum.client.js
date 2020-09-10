@@ -1,5 +1,5 @@
 const { StdOut, In } = require('../../libs')
-const { ThreeSum } = require('../../algorithms')
+const ThreeSum = require('./three-sum')
 
 /**
  * ThreeSumClient

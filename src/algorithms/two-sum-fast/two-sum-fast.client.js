@@ -1,5 +1,5 @@
 const { StdOut, In } = require('../../libs')
-const { TwoSumFast } = require('../../algorithms')
+const TwoSumFast = require('./two-sum-fast')
 
 /**
  * TwoSumFastClient
