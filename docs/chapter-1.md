@@ -122,3 +122,9 @@
 > * Predict
 > * Verify
 > * Validate
+
+#### Analysis of Algorithms
+
+> _Premature optimization is the root of all evil_ - C. A. R. Hoare
+>
+> _Premature optimization is the root of all evil (or at least most of it) in programming_ - Knuth
