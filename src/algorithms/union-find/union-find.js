@@ -47,7 +47,11 @@ class UF {
   find (p) {
     assert(typeof p === 'number', 'p should be a number')
 
-    return this._id[p]
+    while (p !== this._id[p]) {
+      p = this._id[p]
+    }
+
+    return p
   }
 
   /**
@@ -66,11 +70,7 @@ class UF {
     if (pId === qId) return
 
     // change the componentId from _id[p] to _id[q]
-    for (let i = 0; i < this._id.length; i++) {
-      if (this._id[i] === pId) {
-        this._id[i] = qId
-      }
-    }
+    this._id[pId] = qId
 
     this._count--
   }

@@ -115,14 +115,12 @@ describe('Unit Tests: Union Find Algorithm', () => {
     })
 
     it('should connect the pairs given returning a total of 2 components', () => {
-      const expectedIds = [1, 1, 1, 8, 8, 1, 1, 1, 8, 8]
       const expectedCount = 2
 
       this.pairs.forEach(([p, q]) => {
         this.uf.union(p, q)
       })
 
-      expect(this.uf._id).toEqual(expectedIds)
       expect(this.uf.count()).toBe(expectedCount)
     })
   })
