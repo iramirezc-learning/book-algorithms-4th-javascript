@@ -47,9 +47,7 @@ class UF {
   find (p) {
     assert(typeof p === 'number', 'p should be a number')
 
-    // TODO
-
-    return p
+    return this._id[p]
   }
 
   /**
@@ -61,7 +59,20 @@ class UF {
     assert(typeof p === 'number', 'p should be a number')
     assert(typeof q === 'number', 'q should be a number')
 
-    // TODO
+    const pId = this.find(p)
+    const qId = this.find(q)
+
+    // nothing to do if already connected (same component id)
+    if (pId === qId) return
+
+    // change the componentId from _id[p] to _id[q]
+    for (let i = 0; i < this._id.length; i++) {
+      if (this._id[i] === pId) {
+        this._id[i] = qId
+      }
+    }
+
+    this._count--
   }
 }
 
