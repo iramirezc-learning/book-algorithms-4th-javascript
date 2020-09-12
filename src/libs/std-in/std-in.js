@@ -1,3 +1,4 @@
+const assert = require('assert')
 const readline = require('readline')
 
 let reader = null
@@ -29,6 +30,7 @@ class StdIn {
    * @returns {number} The parsed number to integer.
    */
   static readInt (line) {
+    assert(typeof line === 'string', 'line should be a string')
     return parseInt(line, 10)
   }
 }
