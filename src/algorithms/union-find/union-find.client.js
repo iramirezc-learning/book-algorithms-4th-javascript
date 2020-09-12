@@ -22,6 +22,17 @@ class UFClient {
    * 6 1
    * 2 components
    * ```
+   * @example <caption>Medium UF</caption>
+   * ```sh
+   * $ node union-find.client.js < ~/algs4-data/mediumUF.txt
+   * 528 503
+   * 548 523
+   * 389 414
+   * 446 421
+   * 552 553
+   * ...
+   * 3 components
+   * ```
    * @example <caption>Large UF</caption>
    * ```sh
    * $ node union-find.client.js < ~/algs4-data/tinyUF.txt
