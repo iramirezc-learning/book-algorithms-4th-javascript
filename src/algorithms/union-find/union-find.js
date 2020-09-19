@@ -2,8 +2,8 @@ const assert = require('assert')
 
 /**
  * UF
- * @classdesc Union-Find implementation.
- * @see p.221, 222, 224, 228
+ * @classdesc Union Find - Quick-Find implementation.
+ * @see p.221, 222
  */
 class UF {
   constructor (n) {
@@ -47,11 +47,7 @@ class UF {
   find (p) {
     assert(typeof p === 'number', 'p should be a number')
 
-    while (p !== this._id[p]) {
-      p = this._id[p]
-    }
-
-    return p
+    return this._id[p]
   }
 
   /**
@@ -70,7 +66,11 @@ class UF {
     if (pId === qId) return
 
     // change the componentId from _id[p] to _id[q]
-    this._id[pId] = qId
+    for (let i = 0; i < this._id.length; i++) {
+      if (this._id[i] === pId) {
+        this._id[i] = qId
+      }
+    }
 
     this._count--
   }
