@@ -4,7 +4,7 @@ const UFQ = require('./union-find-quick')
 /**
  * UFQClient
  * @classdesc Union-Find Test client.
- * @see p. 221
+ * @see p. 221, 224
  */
 class UFQClient {
   /**
@@ -42,7 +42,7 @@ class UFQClient {
    * 44723 265931
    * 698410 385074
    * ...
-   * 5 components
+   * ??? components
    * ```
    */
   static main () {

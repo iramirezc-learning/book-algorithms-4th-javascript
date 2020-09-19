@@ -3,7 +3,7 @@ const assert = require('assert')
 /**
  * UFQ
  * @classdesc Union Find - Quick Union implementation.
- * @see p.221, 224, 228 (weighted)
+ * @see p.221, 224
  */
 class UFQ {
   constructor (n) {
