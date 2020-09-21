@@ -2,42 +2,6 @@
 
 ## Chapter 1. Fundamentals
 
-### Algorithms
-
-* [Euclid's - Algorithm - p. 4](/src/algorithms/euclidean/euclidean.js)
-* [BinarySearch - Algorithm - p.47](/src/algorithms/binary-search/binary-search.js)
-* [LinearSearch - Algorithm - p.48](/src/algorithms/linear-search/linear-search.js)
-* [Dijkstra's Two-Stack: Expression Evaluation - Algorithm - p.129](/src/algorithms/dijkstra-two-stack/dijkstra-two-stack.js)
-
-### ADTs
-
-* [BasicDate - ADT - p. 79](/src/adts/basic-date/basic-date.js)
-* [SmallDate - ADT - p. 79](/src/adts/small-date/small-date.js)
-* [Transaction - ADT - p. 79](/src/adts/transaction/transaction.js)
-* [Counter - ADT - p. 85](/src/adts/counter/counter.js)
-* [Accumulator - ADT - p. 93](/src/adts/accumulator/accumulator.js)
-* [FixedCapacityStack - ADT - p. 135](/src/adts/fixed-capacity-stack/fixed-capacity-stack.js)
-* [ResizingArrayStack - ADT - p. 141](/src/adts/resizable-array-stack/resizable-array-stack.js)
-* [Node - ADT - p. 142](/src/adts/node/node.js)
-* [Stack - ADT - p. 149](/src/adts/stack/stack.js)
-* [Queue - ADT - p. 151](/src/adts/queue/queue.js)
-* [Bag - ADT - p. 155](/src/adts/bag/bag.js)
-
-### Examples & Code Snippets
-
-* [StdRandom - TestClient - p. 32](/src/examples/test-clients/std-random.client.js)
-* [RandomSeq - TestClient - p. 37](/src/examples/test-clients/random-seq.client.js)
-* [Average - TestClient - p. 39](/src/examples/test-clients/average.client.js)
-* [BinarySearch - TestClient - p.47](/src/examples/test-clients/binary-search.client.js)
-* [LinearSearch - TestClient - p.48](/src/examples/test-clients/linear-search.client.js)
-* [Counter: Flips - TestClient - p.70](/src/examples/test-clients/flips.client.js)
-* [Counter: Rolls - TestClient - p.72](/src/examples/test-clients/rolls.client.js)
-* [Accumulator - TestClient - p.93](/src/examples/test-clients/accumulator.client.js)
-* [Bag - TestClient - p.125](/src/examples/test-clients/bag.client.js)
-* [Stack - TestClient - p.147](/src/examples/test-clients/stack.client.js)
-* [Queue - TestClient - p.150](/src/examples/test-clients/queue.client.js)
-* [ThreeSum - TestClient - p.173](/src/examples/test-clients/three-sum.client.js)
-
 ### Key Concepts
 
 #### Algorithm
