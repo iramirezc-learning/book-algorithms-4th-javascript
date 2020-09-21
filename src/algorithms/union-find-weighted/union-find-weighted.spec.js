@@ -129,5 +129,27 @@ describe('Unit Tests: Union Find Weighted Algorithm', () => {
 
       expect(this.wuf.count()).toBe(expectedCount)
     })
+
+    it('should update all the component ids', () => {
+      //            sites [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+      const expectedIds = [6, 2, 6, 4, 4, 6, 6, 2, 4, 4]
+
+      this.pairs.forEach(([p, q]) => {
+        this.wuf.union(p, q)
+      })
+
+      expect(this.wuf._id).toEqual(expectedIds)
+    })
+
+    it('should increment the size for each index', () => {
+      //              sites [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+      const expectedSizes = [1, 1, 3, 1, 4, 1, 6, 1, 1, 1]
+
+      this.pairs.forEach(([p, q]) => {
+        this.wuf.union(p, q)
+      })
+
+      expect(this.wuf._size).toEqual(expectedSizes)
+    })
   })
 })

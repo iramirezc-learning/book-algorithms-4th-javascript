@@ -123,5 +123,16 @@ describe('Unit Tests: Union Find Algorithm', () => {
 
       expect(this.uf.count()).toBe(expectedCount)
     })
+
+    it('should update all the component ids', () => {
+      //            sites [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+      const expectedIds = [1, 1, 1, 8, 8, 1, 1, 1, 8, 8]
+
+      this.pairs.forEach(([p, q]) => {
+        this.uf.union(p, q)
+      })
+
+      expect(this.uf._id).toEqual(expectedIds)
+    })
   })
 })
