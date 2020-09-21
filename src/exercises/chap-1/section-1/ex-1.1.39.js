@@ -1,6 +1,6 @@
 const { StdOut, StdRandom } = require('../../../libs')
 const { BinarySearch } = require('../../../algorithms')
-const { newArrayOf } = require('../../../utils')
+const { newArrayOf, numbersByAscendingOrder } = require('../../../utils')
 
 /**
  * Exercise 1.1.39
@@ -59,7 +59,7 @@ class Exercise {
         const source = this.newArrayOfSixDigits(n)
         const keys = this.newArrayOfSixDigits(n)
 
-        source.sort((a, b) => a - b)
+        source.sort(numbersByAscendingOrder)
 
         for (const key of keys) {
           if (BinarySearch.indexOf(source, key) >= 0) {

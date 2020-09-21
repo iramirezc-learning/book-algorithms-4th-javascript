@@ -71,7 +71,7 @@ Client.main(process.argv.slice(2))
 
 ### Exercise Answer
 
-### [Exercise 1.1.x](./ex-1.1.x.js)
+### [Exercise 1.1.x](./samples/ex-1.1.x.js)
 
 :pencil2: **Answer**
 

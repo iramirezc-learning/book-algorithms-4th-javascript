@@ -1,5 +1,5 @@
 const { In, StdIn, StdOut } = require('../../../libs')
-const { pad } = require('../../../utils')
+const { pad, numbersByAscendingOrder } = require('../../../utils')
 
 /**
  * Exercise 1.1.22
@@ -51,7 +51,7 @@ class Exercise {
     const whitelist = input.readAllInts()
     const len = whitelist.length - 1
 
-    whitelist.sort((a, b) => a - b)
+    whitelist.sort(numbersByAscendingOrder)
 
     StdIn.read().on('line', line => {
       const key = StdIn.readInt(line)

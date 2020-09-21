@@ -1,6 +1,7 @@
 const { performance } = require('perf_hooks')
 const { In, StdOut } = require('../../../libs')
 const { BinarySearch, LinearSearch } = require('../../../algorithms')
+const { numbersByAscendingOrder } = require('../../../utils')
 
 /**
  * Exercise 1.1.38
@@ -74,7 +75,7 @@ class Exercise {
     const whitelist = whitelistFile.readAllInts()
     const keys = targetsFile.readAllInts()
 
-    whitelist.sort((a, b) => a - b)
+    whitelist.sort(numbersByAscendingOrder)
 
     StdOut.println('Running benchmark...')
     StdOut.println(`Whitelist length: ${whitelist.length}`)

@@ -2,20 +2,6 @@
 
 ## Chapter 1. Fundamentals
 
-### Algorithms
-
-* [Euclid's - Algorithm - p. 4](/src/algorithms/euclidean/euclidean.js)
-* [BinarySearch - Algorithm - p.47](/src/algorithms/binary-search/binary-search.js)
-* [LinearSearch - Algorithm - p.48](/src/algorithms/linear-search/linear-search.js)
-
-### Examples & Code Snippets
-
-* [StdRandom - TestClient - p. 32](/src/examples/test-clients/std-random.client.js)
-* [RandomSeq - TestClient - p. 37](/src/examples/test-clients/random-seq.client.js)
-* [Average - TestClient - p. 39](/src/examples/test-clients/average.client.js)
-* [BinarySearch - TestClient - p.47](/src/examples/test-clients/binary-search.client.js)
-* [LinearSearch - TestClient - p.48](/src/examples/test-clients/linear-search.client.js)
-
 ### Key Concepts
 
 #### Algorithm
@@ -85,3 +71,24 @@
 #### Data Abstraction
 
 > Extends encapsulation and reuse to allow defining non-primitive data types, supporting Object-Oriented programming.
+
+#### Data Structures
+
+> Two ways of representing object collections:
+>
+> * Arrays aka *Sequential Allocation*
+> * Linked Lists aka *Linked Allocation*
+
+#### The Scientific Method
+
+> * Observe
+> * Hypothesize
+> * Predict
+> * Verify
+> * Validate
+
+#### Analysis of Algorithms
+
+> _Premature optimization is the root of all evil_ - C. A. R. Hoare
+>
+> _Premature optimization is the root of all evil (or at least most of it) in programming_ - Knuth

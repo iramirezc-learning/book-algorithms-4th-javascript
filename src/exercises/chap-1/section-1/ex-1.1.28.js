@@ -1,5 +1,6 @@
 const { In, StdIn, StdOut } = require('../../../libs')
 const { BinarySearch } = require('../../../algorithms')
+const { numbersByAscendingOrder } = require('../../../utils')
 
 /**
  * Exercise 1.1.28
@@ -48,7 +49,7 @@ class Exercise {
     const input = new In(args[0])
     const whitelist = input.readAllInts()
 
-    whitelist.sort((a, b) => a - b)
+    whitelist.sort(numbersByAscendingOrder)
 
     const unique = this.filterDuplicates(whitelist)
 

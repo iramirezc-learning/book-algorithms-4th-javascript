@@ -21,6 +21,7 @@
       "describe",
       "it",
       "expect",
+      "beforeAll",
       "beforeEach",
       "afterEach",
       "TestCase"
