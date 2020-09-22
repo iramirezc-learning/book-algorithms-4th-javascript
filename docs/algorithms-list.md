@@ -44,3 +44,26 @@ Every algorithm or ADT has a link pointing to the original Java implementation a
 * QuickUnionUF | [js](/src/algorithms/union-find-quick/union-find-quick.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/QuickUnionUF.java.html) |
 * WeightedQuickUnionUF | [js](/src/algorithms/union-find-weighted/union-find-weighted.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/WeightedQuickUnionUF.java.html) |
 * UF | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/UF.java.html) |
+
+### Chapter 2. Sorting
+
+* Insertion | js | java |
+* InsertionX | js | java |
+* BinaryInsertion | js | java |
+* Selection | js | java |
+* Shell | js | java |
+* Merge | js | java |
+* MergeBU | js | java |
+* MergeX | js | java |
+* Inversions | js | java |
+* Quick | js | java |
+* Quick3way | js | java |
+* QuickX | js | java |
+* QuickBentleyMcIlroy | js | java |
+* TopM | js | java |
+* MaxPQ | js | java |
+* MinPQ | js | java |
+* IndexMinPQ | js | java |
+* IndexMaxPQ | js | java |
+* Multiway | js | java |
+* Heap | js | java |
