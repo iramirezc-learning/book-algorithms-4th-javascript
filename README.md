@@ -61,7 +61,7 @@ _For a list similar to the book site see this [algorithms list](/docs/algorithms
 
 **Algorithms:**
 
-> TODO
+* [Selection Sort - p.249](/src/algorithms/selection-sort/selection-sort.js)
 
 **ADTs:**
 

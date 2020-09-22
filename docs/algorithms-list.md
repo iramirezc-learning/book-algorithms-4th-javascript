@@ -50,7 +50,7 @@ Every algorithm or ADT has a link pointing to the original Java implementation a
 * Insertion | js | java |
 * InsertionX | js | java |
 * BinaryInsertion | js | java |
-* Selection | js | java |
+* Selection | [js](/src/algorithms/selection-sort/selection-sort.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Selection.java.html) |
 * Shell | js | java |
 * Merge | js | java |
 * MergeBU | js | java |
