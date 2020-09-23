@@ -28,6 +28,7 @@ class Benchmark {
 
   /**
    * Set up the data for the tests.
+   * @abstract
    * @throws SyntaxError This function should be implemented by the client.
    */
   setUp () {
