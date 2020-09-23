@@ -47,7 +47,7 @@ Every algorithm or ADT has a link pointing to the original Java implementation a
 
 ### Chapter 2. Sorting
 
-* Insertion | js | java |
+* Insertion | [js](/src/algorithms/insertion-sort/insertion-sort.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Insertion.java.html) |
 * InsertionX | js | java |
 * BinaryInsertion | js | java |
 * Selection | [js](/src/algorithms/selection-sort/selection-sort.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Selection.java.html) |
