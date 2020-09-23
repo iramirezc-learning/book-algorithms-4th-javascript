@@ -1,12 +1,7 @@
 const Selection = require('./selection-sort')
 const { newArrayOf } = require('../../utils')
 const { StdRandom } = require('../../libs')
-
-const comparator = (a, b) => {
-  if (a < b) return -1
-  else if (a > b) return 1
-  return 0
-}
+const { defaultComparator: comparator } = require('../../common')
 
 describe('Unit Tests: Selection Sort Algorithm', () => {
   beforeEach(() => {
