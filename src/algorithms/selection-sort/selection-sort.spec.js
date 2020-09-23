@@ -13,6 +13,7 @@ describe('Unit Tests: Selection Sort Algorithm', () => {
     this.orderedArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     this.reversedArray = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
     this.unorderedArray = [0, 9, 5, 2, 1, 8, 7, 6, 4, 3]
+    this.allEqualArray = [9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
   })
 
   describe('static less method', () => {
@@ -58,6 +59,7 @@ describe('Unit Tests: Selection Sort Algorithm', () => {
   describe('static isSorted method', () => {
     it('should return true if an array is sorted', () => {
       expect(Selection.isSorted(this.orderedArray)).toBe(true)
+      expect(Selection.isSorted(this.allEqualArray)).toBe(true)
     })
 
     it('should return false if the array is not sorted', () => {
@@ -89,7 +91,7 @@ describe('Unit Tests: Selection Sort Algorithm', () => {
     })
   })
 
-  describe('static sort method', () => {
+  describe('static show method', () => {
     it('should be a function', () => {
       // I could test the call to StdOut, but I don't want to.
       expect(Selection.show).toBeInstanceOf(Function)
@@ -119,6 +121,14 @@ describe('Unit Tests: Selection Sort Algorithm', () => {
       Selection.sort(this.reversedArray)
 
       expect(this.reversedArray).toEqual(expectedArray)
+    })
+
+    it('should sort an array with all the values to be equal', () => {
+      const expectedArray = [9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
+
+      Selection.sort(this.allEqualArray)
+
+      expect(this.allEqualArray).toEqual(expectedArray)
     })
 
     it('should sort a small random array', () => {
