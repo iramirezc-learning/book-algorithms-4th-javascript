@@ -47,7 +47,7 @@ class Selection {
    */
   static isSorted (array, comparator = defaultComparator) {
     for (let i = 1; i < array.length; i++) {
-      if (Selection.less(array[i], array[i - 1], comparator)) {
+      if (this.less(array[i], array[i - 1], comparator)) {
         return false
       }
     }
@@ -79,12 +79,12 @@ class Selection {
       let min = i
 
       for (let j = i + 1; j < n; j++) {
-        if (Selection.less(array[j], array[min], comparator)) {
+        if (this.less(array[j], array[min], comparator)) {
           min = j
         }
       }
 
-      Selection.exchange(array, i, min)
+      this.exchange(array, i, min)
     }
   }
 }
