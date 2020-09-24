@@ -2,6 +2,7 @@ module.exports = {
   BinarySearch: require('./binary-search/binary-search'),
   DijkstraEvaluate: require('./dijkstra-two-stack/dijkstra-two-stack'),
   Euclidean: require('./euclidean/euclidean'),
+  InsertionSort: require('./insertion-sort/insertion-sort'),
   LinearSearch: require('./linear-search/linear-search'),
   SelectionSort: require('./selection-sort/selection-sort'),
   ThreeSum: require('./three-sum/three-sum'),

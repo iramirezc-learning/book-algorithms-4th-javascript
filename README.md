@@ -68,6 +68,10 @@ _For a list similar to the book site see this [algorithms list](/docs/algorithms
 
 > TODO
 
+**Clients:**
+
+* [SortCompare - p. 256](/src/examples/test-clients/sort-compare.client.js)
+
 ## Exercise Solutions
 
 :warning: _Do **NOT** copy any of [these solutions](/src/exercises/index.md). These are for my reference only. You should have attempted to solve any of these exercises by your own after at least a few days before even trying to look for the solution. Finally, my solutions can be wrong too._
