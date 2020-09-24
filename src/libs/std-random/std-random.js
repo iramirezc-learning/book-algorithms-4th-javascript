@@ -28,6 +28,9 @@ class StdRandom {
   /**
    * Uniform
    *
+   * @todo Somehow I need to make this function to return
+   * real number values when [0.0, 1.0] are provided.
+   *
    * @constructor
    * @desc Returns a random real number uniformly in [0, 1).
    * @returns {number} A random real number uniformly in [0, 1).
@@ -66,6 +69,13 @@ class StdRandom {
       return getRandomInt(0, lo)
     }
 
+    /* NOTE: the book uses a signature like `uniform(0.0, 1.0)`
+     * to generate real or double numbers from [0, 1),
+     * in case you want create the same behaviour, then do
+     * `uniform()` and this will make the function to get to this
+     * returning value. In case you want to generate values from [0.0, 5.0)
+     * then I would recommend to do `uniform(0, 4.999)`.
+     */
     return Math.random()
   }
 
