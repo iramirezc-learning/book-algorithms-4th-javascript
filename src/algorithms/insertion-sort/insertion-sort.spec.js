@@ -3,44 +3,41 @@ const { newArrayOf } = require('../../utils')
 const { StdRandom } = require('../../libs')
 
 describe('Unit Tests: Insertion Sort Algorithm', () => {
-  beforeEach(() => {
-    this.orderedArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-    this.reversedArray = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
-    this.unorderedArray = [0, 9, 5, 2, 1, 8, 7, 6, 4, 3]
-    this.allEqualArray = [9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
-  })
-
   describe('static sort method', () => {
     it('should sort an ordered array', () => {
+      const orderedArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
       const expectedArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-      Insertion.sort(this.orderedArray)
+      Insertion.sort(orderedArray)
 
-      expect(this.orderedArray).toEqual(expectedArray)
+      expect(orderedArray).toEqual(expectedArray)
     })
 
     it('should sort a reversed array', () => {
+      const reversedArray = [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
       const expectedArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-      Insertion.sort(this.reversedArray)
+      Insertion.sort(reversedArray)
 
-      expect(this.reversedArray).toEqual(expectedArray)
+      expect(reversedArray).toEqual(expectedArray)
     })
 
-    it('should sort a unordered array', () => {
+    it('should sort an unordered array', () => {
+      const unorderedArray = [0, 9, 5, 2, 1, 8, 7, 6, 4, 3]
       const expectedArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-      Insertion.sort(this.unorderedArray)
+      Insertion.sort(unorderedArray)
 
-      expect(this.unorderedArray).toEqual(expectedArray)
+      expect(unorderedArray).toEqual(expectedArray)
     })
 
-    it('should sort an array with all the values to be equal', () => {
+    it('should sort an array with all equal values', () => {
+      const allEqualArray = [9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
       const expectedArray = [9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
 
-      Insertion.sort(this.allEqualArray)
+      Insertion.sort(allEqualArray)
 
-      expect(this.allEqualArray).toEqual(expectedArray)
+      expect(allEqualArray).toEqual(expectedArray)
     })
 
     it('should sort a small random array', () => {
