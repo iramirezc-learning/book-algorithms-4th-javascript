@@ -52,5 +52,49 @@ describe('Unit Tests: Insertion Sort Algorithm', () => {
 
       expect(Insertion.isSorted(array)).toBeTrue()
     })
+
+    it('should call `exchange` n times', () => {
+      spyOn(Insertion, 'exchange').and.callThrough()
+      const array = [9, 8, 6, 5, 7]
+      const expectedCallsArgs = [
+        [array, 1, 0], // | i = 1; j = 1 | 8 <-> 9 = [8, 9, 6, 5, 7]
+        [array, 2, 1], // | i = 2; j = 2 | 6 <-> 9 = [8, 6, 9, 5, 7]
+        [array, 1, 0], // | i = 2; j = 1 | 6 <-> 8 = [6, 8, 9, 5, 7]
+        [array, 3, 2], // | i = 3; j = 3 | 5 <-> 9 = [6, 8, 5, 9, 7]
+        [array, 2, 1], // | i = 3; j = 2 | 5 <-> 8 = [6, 5, 8, 9, 7]
+        [array, 1, 0], // | i = 3; j = 1 | 5 <-> 6 = [5, 6, 8, 9, 7]
+        [array, 4, 3], // | i = 4; j = 4 | 7 <-> 9 = [5, 6, 8, 7, 9]
+        [array, 3, 2] //  | i = 4; j = 3 | 7 <-> 8 = [5, 6, 7, 8, 9]
+      ]
+
+      Insertion.sort(array)
+
+      expect(Insertion.exchange.calls.allArgs()).toEqual(expectedCallsArgs)
+    })
+
+    it('should mutate the array', () => {
+      const mutations = []
+      const originalImplementation = Insertion.exchange.bind(Insertion)
+      spyOn(Insertion, 'exchange').and.callFake((array, i, j) => {
+        originalImplementation(array, i, j)
+        const arrayCopy = array.slice(0)
+        mutations.push(arrayCopy)
+      })
+      const array = [9, 8, 6, 5, 7]
+      const expectedMutations = [
+        [8, 9, 6, 5, 7],
+        [8, 6, 9, 5, 7],
+        [6, 8, 9, 5, 7],
+        [6, 8, 5, 9, 7],
+        [6, 5, 8, 9, 7],
+        [5, 6, 8, 9, 7],
+        [5, 6, 8, 7, 9],
+        [5, 6, 7, 8, 9]
+      ]
+
+      Insertion.sort(array)
+
+      expect(mutations).toEqual(expectedMutations)
+    })
   })
 })
