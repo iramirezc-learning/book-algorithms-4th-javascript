@@ -52,7 +52,7 @@ Every algorithm or ADT has a link pointing to the original Java implementation a
 * BinaryInsertion | js | java |
 * Selection | [js](/src/algorithms/selection-sort/selection-sort.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Selection.java.html) |
 * Shell | [js](/src/algorithms/shell-sort/shell-sort.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Shell.java.html) |
-* Merge | js | java |
+* Merge | [js](/src/algorithms/merge-sort/merge-sort.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Merge.java.html) |
 * MergeBU | js | java |
 * MergeX | js | java |
 * Inversions | js | java |

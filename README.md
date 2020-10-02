@@ -64,6 +64,7 @@ _For a list similar to the book site see this [algorithms list](/docs/algorithms
 * [Selection Sort - p. 249](/src/algorithms/selection-sort/selection-sort.js)
 * [Insertion Sort - p. 251](/src/algorithms/insertion-sort/insertion-sort.js)
 * [Shell Sort - p. 259](/src/algorithms/shell-sort/shell-sort.js)
+* [Merge Sort - p. 273](/src/algorithms/merge-sort/merge-sort.js)
 
 **ADTs:**
 
