@@ -50,42 +50,44 @@ describe('Unit Tests: Selection Sort Algorithm', () => {
       expect(Selection.isSorted(array)).toBeTrue()
     })
 
-    it('should call `exchange` n times', () => {
-      spyOn(Selection, 'exchange').and.callThrough()
-      const array = [9, 8, 6, 5, 7]
-      const expectedCallsArgs = [
-        [array, 0, 3], // 9 <-> 5 = [5, 8, 6, 9, 7]
-        [array, 1, 2], // 8 <-> 6 = [5, 6, 8, 9, 7]
-        [array, 2, 4], // 8 <-> 7 = [5, 6, 7, 9, 8]
-        [array, 3, 4], // 9 <-> 8 = [5, 6, 7, 8, 9]
-        [array, 4, 4] //  9 <-> 9 = [5, 6, 7, 8, 9]
-      ]
+    describe('implementation details', () => {
+      it('should call `exchange` n times', () => {
+        spyOn(Selection, 'exchange').and.callThrough()
+        const array = [9, 8, 6, 5, 7]
+        const expectedCallsArgs = [
+          [array, 0, 3], // 9 <-> 5 = [5, 8, 6, 9, 7]
+          [array, 1, 2], // 8 <-> 6 = [5, 6, 8, 9, 7]
+          [array, 2, 4], // 8 <-> 7 = [5, 6, 7, 9, 8]
+          [array, 3, 4], // 9 <-> 8 = [5, 6, 7, 8, 9]
+          [array, 4, 4] //  9 <-> 9 = [5, 6, 7, 8, 9]
+        ]
 
-      Selection.sort(array)
+        Selection.sort(array)
 
-      expect(Selection.exchange.calls.allArgs()).toEqual(expectedCallsArgs)
-    })
-
-    it('should mutate the array', () => {
-      const mutations = []
-      const originalImplementation = Selection.exchange.bind(Selection)
-      spyOn(Selection, 'exchange').and.callFake((array, i, j) => {
-        originalImplementation(array, i, j)
-        const arrayCopy = array.slice(0)
-        mutations.push(arrayCopy)
+        expect(Selection.exchange.calls.allArgs()).toEqual(expectedCallsArgs)
       })
-      const array = [9, 8, 6, 5, 7]
-      const expectedMutations = [
-        [5, 8, 6, 9, 7],
-        [5, 6, 8, 9, 7],
-        [5, 6, 7, 9, 8],
-        [5, 6, 7, 8, 9],
-        [5, 6, 7, 8, 9]
-      ]
 
-      Selection.sort(array)
+      it('should mutate the array', () => {
+        const mutations = []
+        const originalImplementation = Selection.exchange.bind(Selection)
+        spyOn(Selection, 'exchange').and.callFake((array, i, j) => {
+          originalImplementation(array, i, j)
+          const arrayCopy = array.slice(0)
+          mutations.push(arrayCopy)
+        })
+        const array = [9, 8, 6, 5, 7]
+        const expectedMutations = [
+          [5, 8, 6, 9, 7],
+          [5, 6, 8, 9, 7],
+          [5, 6, 7, 9, 8],
+          [5, 6, 7, 8, 9],
+          [5, 6, 7, 8, 9]
+        ]
 
-      expect(mutations).toEqual(expectedMutations)
+        Selection.sort(array)
+
+        expect(mutations).toEqual(expectedMutations)
+      })
     })
   })
 })
