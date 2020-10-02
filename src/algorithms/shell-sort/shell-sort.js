@@ -11,7 +11,7 @@ class Shell extends GenericSort {
   /**
    * Sorts the `array` using the Shell Sort algorithm.
    * @param {[*]} array Array of values.
-   * @param {*} comparator A comparing function that
+   * @param {function} comparator A comparing function that
    * returns -1 when `a` is less than `b`,
    * returns 1 when `a` is greater than `b` or
    * returns 0 when `a` is equal to `b`.
