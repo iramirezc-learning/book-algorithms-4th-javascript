@@ -18,7 +18,7 @@ class MergeSortClient {
    * @example <caption>Words3 Example</caption>
    * ```sh
    * $ node merge-sort.client.js < ~/algs4-data/words3.txt
-   *  all bad bed bug dad ... yes yet zoo
+   * all bad bed bug dad ... yes yet zoo
    * ```
    */
   static main () {
@@ -27,7 +27,7 @@ class MergeSortClient {
     // read all strings from standard input.
     StdIn.read()
       .on('line', line => {
-        array = array.concat(line.split(' '))
+        array = array.concat(line.trim().split(' '))
       })
       .on('close', () => {
         Merge.sort(array)
