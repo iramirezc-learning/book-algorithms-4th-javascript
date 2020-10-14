@@ -5,6 +5,7 @@ module.exports = {
   InsertionSort: require('./insertion-sort/insertion-sort'),
   LinearSearch: require('./linear-search/linear-search'),
   MergeSort: require('./merge-sort/merge-sort'),
+  MergeBUSort: require('./merge-sort-bu/merge-sort-bu'),
   SelectionSort: require('./selection-sort/selection-sort'),
   ShellSort: require('./shell-sort/shell-sort'),
   ThreeSum: require('./three-sum/three-sum'),
