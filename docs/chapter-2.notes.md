@@ -22,3 +22,20 @@
 > * Analyze their basic properties
 > * Formulate a hypothesis about comparative performance
 > * Run experiments to validate the Hypothesis
+
+#### Merge Sort
+
+> * is an asymptotically optimal compare-based sorting algorithm `~n lg(n)`.
+> * is not optimal with respect to use space usage.
+
+#### Merge Sort Bottom-Up Approach
+
+> Is the sorting method for choice when sorting elements stored in a Linked-List as it rearranges the links to sort the list in place (no extra memory).
+
+#### Top-Down (Divide n Conquer) vs Bottom-Up
+
+> When implementing a Top-Down or a Bottom-Up approach it is worth considering the other.
+>
+> Top-Down: Break a problem to smaller problems and solve them recursively.
+>
+> Bottom-Up: Build small solutions into larges ones.
