@@ -39,3 +39,17 @@
 > Top-Down: Break a problem to smaller problems and solve them recursively.
 >
 > Bottom-Up: Build small solutions into larges ones.
+
+#### Quick Sort
+
+> Was invented in 1960 by C.A.R. Hoare.
+>
+> Quick Sort is warranted to run in a constant factor of `1.39n lg(n)`.
+>
+> Quick Sort can be improved up to 20-30%, with care, with some recommended changes:
+>
+> * Cutoff to insertion sort
+> * Median-of-three partitioning
+> * Entropy-optimal sorting
+>
+> Quick Sort is slower than insertion sort for tiny sub-arrays.

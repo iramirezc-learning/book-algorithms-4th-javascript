@@ -91,6 +91,15 @@ class SortCompare {
    * For 100000 random Doubles
    *     MergeBU is 1.4 times faster than Merge
    * ```
+   * @example <caption>Quick vs. MergeBU</caption>
+   * ```sh
+   * $ node sort-compare.client.js Quick MergeBU 100000 100
+   * Quick: 2.0709999999999984
+   * MergeBU: 2.7499999999999973
+   *
+   * For 100000 random Doubles
+   *     Quick is 1.3 times faster than MergeBU
+   * ```
    */
   static main (args) {
     const alg1 = args[0]
