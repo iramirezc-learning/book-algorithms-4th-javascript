@@ -9,6 +9,19 @@ const { StdRandom } = require('../../libs')
  * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Quick.java.html}
  */
 class Quick extends GenericSort {
+  /**
+   * Choosing the array[lo] item as the partition item `v`,
+   * this method interchanges the greater values to the right
+   * and the lesser values to the left of the final position `j`
+   * in the array for `v`.
+   * @param {[*]} array The array of values to partition.
+   * @param {number} lo Lower index bound.
+   * @param {number} hi Higher index bound.
+   * @param {function} comparator A comparing function that
+   * returns -1 when `a` is less than `b`,
+   * returns 1 when `a` is greater than `b` or
+   * returns 0 when `a` is equal to `b`.
+   */
   static _partition (array, lo, hi, comparator) {
     let i = lo
     let j = hi + 1
