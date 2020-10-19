@@ -66,6 +66,8 @@ _For a list similar to the book site see this [algorithms list](/docs/algorithms
 * [Shell Sort - p. 259](/src/algorithms/shell-sort/shell-sort.js)
 * [Merge Sort - p. 273](/src/algorithms/merge-sort/merge-sort.js)
 * [MergeBU Sort - p. 278](/src/algorithms/merge-sort-bu/merge-sort-bu.js)
+* [Quick Sort - p. 289](/src/algorithms/quick-sort/quick-sort.js)
+* [Quick3way Sort - p. 299](/src/algorithms/quick-3way-sort/quick-3way-sort.js)
 
 **ADTs:**
 
