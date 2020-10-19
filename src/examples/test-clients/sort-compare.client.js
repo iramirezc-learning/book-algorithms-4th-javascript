@@ -100,6 +100,18 @@ class SortCompare {
    * For 100000 random Doubles
    *     Quick is 1.3 times faster than MergeBU
    * ```
+   * @example <caption>Quick3way vs. Quick</caption>
+   * ```sh
+   * $ node sort-compare.client.js Quick3way Quick 100000 100
+   * # NOTE: for this example I changed `timeRandomInput` implementation
+   * # to create duplicated keys by doing `StdRandom.uniform(10)`
+   *
+   * Quick3way: 0.5800000000000004
+   * Quick: 1.1609999999999998
+   *
+   * For 100000 random Doubles
+   *     Quick3way is 2.0 times faster than Quick
+   * ```
    */
   static main (args) {
     const alg1 = args[0]
