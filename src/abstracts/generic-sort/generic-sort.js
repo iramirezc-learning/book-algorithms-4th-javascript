@@ -16,7 +16,7 @@ class GenericSort {
    * returns 1 when `a` is greater than `b` or
    * returns 0 when `a` is equal to `b`.
    */
-  static less (a, b, comparator = defaultComparator) {
+  static less (a, b, comparator = this.defaultComparator) {
     return comparator(a, b) < 0
   }
 
@@ -43,7 +43,7 @@ class GenericSort {
    * returns 1 when `a` is greater than `b` or
    * returns 0 when `a` is equal to `b`.
    */
-  static isSorted (array, comparator = defaultComparator) {
+  static isSorted (array, comparator = this.defaultComparator) {
     for (let i = 1; i < array.length; i++) {
       if (this.less(array[i], array[i - 1], comparator)) {
         return false
@@ -71,5 +71,8 @@ class GenericSort {
     throw new SyntaxError('sort method not implemented')
   }
 }
+
+// public final defaultComparator
+Object.defineProperty(GenericSort, 'defaultComparator', { value: defaultComparator })
 
 module.exports = GenericSort
