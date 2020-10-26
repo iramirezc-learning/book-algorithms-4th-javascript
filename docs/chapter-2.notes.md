@@ -53,3 +53,14 @@
 > * Entropy-optimal sorting
 >
 > Quick Sort is slower than insertion sort for tiny sub-arrays.
+
+#### Heaps
+
+##### Binary Heap aka Heap
+
+> The binary heap is a data structure that can efficiently support the basic priority-queue operations.
+>
+> It can be represented by:
+>
+> * Linked-lists (having 3 pointer links: 1 for the parent node and 2 for the children nodes)
+> * Arrays (by using complete binary trees each node can be placed in lever order: the root goes to the 1, then its children go to 2 and 3, their children in positions 4, 5, and 7, and so on.)
