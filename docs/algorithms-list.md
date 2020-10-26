@@ -60,9 +60,9 @@ Every algorithm or ADT has a link pointing to the original Java implementation a
 * Quick3way | [js](/src/algorithms/quick-3way-sort/quick-3way-sort.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Quick3way.java.html) |
 * QuickX | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/QuickX.java.html) |
 * QuickBentleyMcIlroy | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/QuickBentleyMcIlroy.java.html) |
-* TopM | js | java |
-* MaxPQ | js | java |
-* MinPQ | js | java |
+* TopM | [js](/src/adts/priority-queue-min/priority-queue-min.client.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/TopM.java.html) |
+* MaxPQ | [js](/src/adts/priority-queue-max/priority-queue-max.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/MaxPQ.java.html) |
+* MinPQ | [js](/src/adts/priority-queue-min/priority-queue-min.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/MinPQ.java.html) |
 * IndexMinPQ | js | java |
 * IndexMaxPQ | js | java |
 * Multiway | js | java |
