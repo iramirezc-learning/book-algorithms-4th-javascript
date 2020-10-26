@@ -1,4 +1,5 @@
 const MinPQ = require('./priority-queue-min')
+const UNDEF = undefined
 
 describe('Unit Tests: Minimum Priority Queue', () => {
   describe('instance', () => {
@@ -14,10 +15,7 @@ describe('Unit Tests: Minimum Priority Queue', () => {
 
       it('should have a prop `_pq` which is an array of length `max`', () => {
         const expectedLength = this.max + 1
-        const expectedArray = [
-          undefined,
-          undefined
-        ]
+        const expectedArray = [UNDEF, UNDEF]
 
         expect(this.pq._pq.length).toBe(expectedLength)
         expect(this.pq._pq).toEqual(expectedArray)
@@ -34,31 +32,31 @@ describe('Unit Tests: Minimum Priority Queue', () => {
       })
     })
 
-    describe('private less method', () => {
+    describe('private greater method', () => {
       beforeEach(() => {
         this.max = 2
         this.pq = new MinPQ(this.max)
       })
 
-      it('should return true when key at index `i` is less than key at index `j`', () => {
-        this.pq._pq[1] = 10
-        this.pq._pq[2] = 20
+      it('should return true when key at index `i` is greater than key at index `j`', () => {
+        this.pq._pq[1] = 20
+        this.pq._pq[2] = 10
 
-        expect(this.pq.less(1, 2)).toBeTrue()
+        expect(this.pq.greater(1, 2)).toBeTrue()
       })
 
-      it('should return false when key at index `i` is not less than key at index `j`', () => {
-        this.pq._pq[1] = 'B'
-        this.pq._pq[2] = 'A'
+      it('should return false when key at index `i` is not greater than key at index `j`', () => {
+        this.pq._pq[1] = 'A'
+        this.pq._pq[2] = 'B'
 
-        expect(this.pq.less(1, 2)).toBeFalse()
+        expect(this.pq.greater(1, 2)).toBeFalse()
       })
 
       it('should return false when key at index `i` is equal to key at index `j`', () => {
         this.pq._pq[1] = 'same'
         this.pq._pq[2] = 'same'
 
-        expect(this.pq.less(1, 2)).toBeFalse()
+        expect(this.pq.greater(1, 2)).toBeFalse()
       })
     })
 
@@ -83,12 +81,12 @@ describe('Unit Tests: Minimum Priority Queue', () => {
       beforeEach(() => {
         this.max = 5
         this.pq = new MinPQ(this.max)
-        this.pq._pq = [undefined, 'B', 'C', 'D', 'E', 'A']
+        this.pq._pq = [UNDEF, 'B', 'C', 'D', 'E', 'A']
       })
 
       it('should restore the heap order by swimming up the `A` key to the root', () => {
         const indexToSwim = 5 // 'A' violates the heap order
-        const expectedOrder = [undefined, 'A', 'B', 'D', 'E', 'C']
+        const expectedOrder = [UNDEF, 'A', 'B', 'D', 'E', 'C']
 
         this.pq.swim(indexToSwim)
 
@@ -100,13 +98,13 @@ describe('Unit Tests: Minimum Priority Queue', () => {
       beforeEach(() => {
         this.max = 5
         this.pq = new MinPQ(this.max)
-        this.pq._pq = [undefined, 'Z', 'A', 'B', 'C', 'D']
-        this.pq._n = 6 // important that size is updated
+        this.pq._pq = [UNDEF, 'Z', 'A', 'B', 'C', 'D']
+        this.pq._n = 5 // important that size is updated
       })
 
       it('should restore the heap order by sinking down the `Z` key', () => {
         const indexToSink = 1 // 'Z' violates the heap order
-        const expectedOrder = [undefined, 'A', 'C', 'B', 'Z', 'D']
+        const expectedOrder = [UNDEF, 'A', 'C', 'B', 'Z', 'D']
 
         this.pq.sink(indexToSink)
 
@@ -173,7 +171,7 @@ describe('Unit Tests: Minimum Priority Queue', () => {
 
       it('should insert multiple keys keeping the heap order', () => {
         const keysToInsert = ['Z', 'Y', 'X', 'C', 'B', 'A']
-        const expectedPQ = [undefined, 'A', 'C', 'B', 'Z', 'X', 'Y']
+        const expectedPQ = [UNDEF, 'A', 'C', 'B', 'Z', 'X', 'Y']
 
         keysToInsert.forEach(key => this.pq.insert(key))
 
@@ -209,12 +207,12 @@ describe('Unit Tests: Minimum Priority Queue', () => {
           })
           const keysToInsert = ['Z', 'Y', 'X', 'C', 'B', 'A']
           const expectedMutations = [
-            [undefined, 'Z', undefined, undefined, undefined, undefined, undefined],
-            [undefined, 'Y', 'Z', undefined, undefined, undefined, undefined],
-            [undefined, 'X', 'Z', 'Y', undefined, undefined, undefined],
-            [undefined, 'C', 'X', 'Y', 'Z', undefined, undefined],
-            [undefined, 'B', 'C', 'Y', 'Z', 'X', undefined],
-            [undefined, 'A', 'C', 'B', 'Z', 'X', 'Y']
+            [UNDEF, 'Z', UNDEF, UNDEF, UNDEF, UNDEF, UNDEF],
+            [UNDEF, 'Y', 'Z', UNDEF, UNDEF, UNDEF, UNDEF],
+            [UNDEF, 'X', 'Z', 'Y', UNDEF, UNDEF, UNDEF],
+            [UNDEF, 'C', 'X', 'Y', 'Z', UNDEF, UNDEF],
+            [UNDEF, 'B', 'C', 'Y', 'Z', 'X', UNDEF],
+            [UNDEF, 'A', 'C', 'B', 'Z', 'X', 'Y']
           ]
 
           keysToInsert.forEach(key => this.pq.insert(key))
@@ -259,7 +257,7 @@ describe('Unit Tests: Minimum Priority Queue', () => {
       it('should delete multiple keys keeping the heap order', () => {
         let keysToRemove = 3
         const deletedKeys = []
-        const expectedPQ = [undefined, 'X', 'Z', 'Y', undefined, undefined, undefined]
+        const expectedPQ = [UNDEF, 'X', 'Z', 'Y', UNDEF, UNDEF, UNDEF]
         const expectedDeletedKeys = ['A', 'B', 'C']
 
         while (keysToRemove--) {
@@ -276,11 +274,11 @@ describe('Unit Tests: Minimum Priority Queue', () => {
           let keysToRemove = 3
           const expectedCallsArgs = [
             [1, 6], // A <-> Y
-            [3, 1], // B <-> Y
+            [1, 3], // Y <-> B
             [1, 5], // B <-> X
-            [2, 1], // C <-> X
+            [1, 2], // X <-> C
             [1, 4], // C <-> Z
-            [2, 1] //  X <-> Z
+            [1, 2] //  Z <-> X
           ]
 
           while (keysToRemove--) {
@@ -299,9 +297,9 @@ describe('Unit Tests: Minimum Priority Queue', () => {
           })
           let keysToRemove = 3
           const expectedMutations = [
-            [undefined, 'B', 'C', 'Y', 'Z', 'X', undefined],
-            [undefined, 'C', 'X', 'Y', 'Z', undefined, undefined],
-            [undefined, 'X', 'Z', 'Y', undefined, undefined, undefined]
+            [UNDEF, 'B', 'C', 'Y', 'Z', 'X', UNDEF],
+            [UNDEF, 'C', 'X', 'Y', 'Z', UNDEF, UNDEF],
+            [UNDEF, 'X', 'Z', 'Y', UNDEF, UNDEF, UNDEF]
           ]
 
           while (keysToRemove--) {

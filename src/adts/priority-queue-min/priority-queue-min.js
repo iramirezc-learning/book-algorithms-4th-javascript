@@ -33,14 +33,14 @@ class MinPQ {
   }
 
   /**
-   * Compares if key at index `i` is less than key at index `j`.
+   * Compares if key at index `i` is greater than key at index `j`.
    * @private
    * @param {number} i Index of first key
    * @param {number} j Index of second key
-   * @returns {boolean} if key at index `i` is less than key at index`j`
+   * @returns {boolean} if key at index `i` is greater than key at index`j`
    */
-  less (i, j) {
-    return compare(this._pq[i], this._pq[j]) < 0
+  greater (i, j) {
+    return compare(this._pq[i], this._pq[j]) > 0
   }
 
   /**
@@ -60,16 +60,16 @@ class MinPQ {
   /**
    * Bottom-up reheapify (minimum).
    * Algorithm to fix the heap order when a key becomes
-   * __smaller__ than it's parent.
+   * __smaller__ than its parent.
    * @private
    * @param {number} k Index of the key to _swim_.
    * @returns {void}
    */
   swim (k) {
-    // Notice the exchange of `k` & `k/2` indexes
-    // to determine if the current key is less than
-    // it's parent.
-    while (k > 1 && this.less(k, Math.floor(k / 2))) {
+    // while current index `k` is not the root (k > 1)
+    // and while the parent node (at k / 2) is greater than
+    // the current node (at k), exchange both nodes.
+    while (k > 1 && this.greater(Math.floor(k / 2), k)) {
       this.exch(Math.floor(k / 2), k)
       k = Math.floor(k / 2)
     }
@@ -78,33 +78,32 @@ class MinPQ {
   /**
    * Top-down reheapify (minimum).
    * Algorithm to fix the heap order when a key becomes
-   * __larger__ than it's parent.
+   * __greater__ than a child.
    * @private
    * @param {number} k Index of the key to _sink_.
    * @returns {void}
    */
   sink (k) {
+    // while `k` still having next child
+    // that is in bounds with the PQ size (_n).
     while (2 * k <= this._n) {
+      // let `j` be the next left child of ´k´ (2 * k)
       let j = 2 * k
 
-      // Notice the exchange of `j + 1` & `j` indexes
-      // to determine if the current key is greater than
-      // the right child.
-      if (j < this._n && this.less(j + 1, j)) {
+      // if the left child (j) is greater than the right child (j + 1)
+      // then choose the right child (j++)
+      if (j < this._n && this.greater(j, j + 1)) {
         j++
       }
 
-      // Notice the exchange of `j` & `k` indexes
-      // to determine if the current key is greater than
-      // the left child.
-      if (!this.less(j, k)) {
-        // if current key is not even greater than
-        // the left child, then the current key
-        // is in its final position.
+      // if parent node (at k) is NOT greater than
+      // the child node (at j), then we have found
+      // its final position
+      if (!this.greater(k, j)) {
         break
       }
 
-      this.exch(j, k)
+      this.exch(k, j)
 
       k = j
     }
