@@ -24,6 +24,31 @@ class In {
   }
 
   /**
+   * Returns if the In is empty.
+   */
+  isEmpty () {
+    return this.content.length === 0
+  }
+
+  /**
+   * Parses the file's content to and
+   * array of strings separated by new lines and whitespace,
+   * then, it returns the first element of the array.
+   */
+  readString () {
+    if (!this._isArrayOfStrings) {
+      this.content = this.content.split(/[\n\r\s]*/)
+      this._isArrayOfStrings = true
+    }
+
+    if (this.isEmpty()) throw new ReferenceError(`stream ${this.fileName} is empty`)
+
+    const string = this.content.shift()
+
+    return string
+  }
+
+  /**
    * Parses the file's contents to Integers
    * @returns {[number]} The array of parsed integers.
    */
