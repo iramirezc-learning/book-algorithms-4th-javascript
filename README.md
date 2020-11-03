@@ -71,8 +71,8 @@ _For a list similar to the book site see this [algorithms list](/docs/algorithms
 
 **ADTs:**
 
-* [MinPQ - p. 311](/src/adts/priority-queue-min/priority-queue-min.js)
-* [MaxPQ - p. 318](/src/adts/priority-queue-max/priority-queue-max.js)
+* [MinPQ - p. 311](/src/adts/min-priority-queue/min-priority-queue.js)
+* [MaxPQ - p. 318](/src/adts/max-priority-queue/max-priority-queue.js)
 
 **Clients:**
 

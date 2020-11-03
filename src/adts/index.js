@@ -5,6 +5,8 @@ module.exports = {
   Counter: require('./counter/counter'),
   FixedCapacityStack: require('./fixed-capacity-stack/fixed-capacity-stack'),
   Node: require('./node/node'),
+  MaxPQ: require('./max-priority-queue/max-priority-queue'),
+  MinPQ: require('./min-priority-queue/min-priority-queue'),
   Queue: require('./queue/queue'),
   ResizableArrayStack: require('./resizable-array-stack/resizable-array-stack'),
   SmallDate: require('./small-date/small-date'),

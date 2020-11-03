@@ -1,4 +1,4 @@
-const MaxPQ = require('./priority-queue-max')
+const MaxPQ = require('./max-priority-queue')
 const UNDEF = undefined
 
 describe('Unit Tests: Maximum Priority Queue', () => {

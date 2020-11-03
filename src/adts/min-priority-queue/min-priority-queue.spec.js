@@ -1,4 +1,4 @@
-const MinPQ = require('./priority-queue-min')
+const MinPQ = require('./min-priority-queue')
 const UNDEF = undefined
 
 describe('Unit Tests: Minimum Priority Queue', () => {
