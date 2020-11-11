@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Personal notes & JavaScript code for the book: Algorithms 4th edition by Robert Sedgewick and Kevin Wayne.",
   "scripts": {
-    "docs": "jsdoc -c docs/conf.json --pedantic --verbose",
+    "docs": "jsdoc -c docs/conf.json --pedantic --verbose -a all",
     "lint": "standard \"src/**/*.js\"",
     "lint:fix": "yarn lint --fix",
     "pretest": "yarn lint",

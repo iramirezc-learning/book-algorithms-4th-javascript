@@ -40,7 +40,8 @@
     "includeDate": false,
     "navType": "vertical",
     "inverseNav": false,
+    "outputSourceFiles": true,
     "linenums": true,
-    "sort": false
+    "sort": true
   }
 }
