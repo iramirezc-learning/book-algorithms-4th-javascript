@@ -53,7 +53,7 @@ class Flips {
     StdOut.println(`delta: ${Math.abs(delta)}`)
 
     if (heads.tally() === tails.tally()) {
-      StdOut.println(`It's a Tie!`)
+      StdOut.println('It\'s a Tie!')
     } else {
       StdOut.println(`${Flips.max(heads, tails)} wins`)
     }

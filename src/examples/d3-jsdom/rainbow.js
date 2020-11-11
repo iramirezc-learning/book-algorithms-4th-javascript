@@ -14,7 +14,7 @@ class D3JSDOM {
    * Returns a new DOM
    */
   static createDOM () {
-    return (new JSDOM(`<!DOCTYPE html><body></body>`)).window.document
+    return (new JSDOM('<!DOCTYPE html><body></body>')).window.document
   }
 
   /**
