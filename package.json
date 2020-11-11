@@ -2,8 +2,10 @@
   "name": "algorithms-4th-javascript",
   "version": "1.0.0",
   "description": "Personal notes & JavaScript code for the book: Algorithms 4th edition by Robert Sedgewick and Kevin Wayne.",
-  "main": "index.js",
   "scripts": {
+    "lint": "standard \"src/**/*.js\"",
+    "lint:fix": "yarn lint --fix",
+    "pretest": "yarn lint",
     "test": "jasmine --config=jasmine.json"
   },
   "keywords": [
@@ -16,21 +18,23 @@
   "license": "ISC",
   "standard": {
     "globals": [
-      "jasmine",
-      "spyOn",
-      "describe",
-      "it",
-      "expect",
+      "TestCase",
+      "afterEach",
       "beforeAll",
       "beforeEach",
-      "afterEach",
-      "TestCase"
+      "describe",
+      "expect",
+      "it",
+      "jasmine",
+      "spyOn"
     ]
   },
-  "dependencies": {
+  "devDependencies": {
     "d3": "^5.15.1",
-    "jasmine": "^3.5.0",
-    "jsdom": "^16.2.2",
-    "mathjs": "^6.6.4"
+    "jasmine": "^3.6.3",
+    "jsdoc": "~3.6.6",
+    "jsdom": "^16.4.0",
+    "mathjs": "^8.0.1",
+    "standard": "^16.0.1"
   }
 }

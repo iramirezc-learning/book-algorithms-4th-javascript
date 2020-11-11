@@ -5,7 +5,7 @@
     "!**/*nospec.js"
   ],
   "helpers": [
-    "spec/helpers/**/*.js"
+    "../spec/helpers/**/*.js"
   ],
   "stopSpecOnExpectationFailure": false,
   "random": false
