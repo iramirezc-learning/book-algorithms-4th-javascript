@@ -1,0 +1,46 @@
+{
+  "plugins": [
+    "plugins/markdown",
+    "plugins/my-tags"
+  ],
+  "markdown": {
+    "tags": ["note"]
+  },
+  "recurseDepth": 10,
+  "source": {
+    "include": ["./src"],
+    "exclude": [],
+    "includePattern": ".+\\.js(doc|x)?$",
+    "excludePattern": "(^|\\/|\\\\)_|.+\\.spec\\.js$"
+  },
+  "sourceType": "module",
+  "opts": {
+    "template": "./node_modules/ink-docstrap/template",
+    "encoding": "utf8",
+    "destination": "./docs/html",
+    "recurse": true,
+    "readme": "./README.md"
+  },
+  "tags": {
+    "allowUnknownTags": true,
+    "dictionaries": ["jsdoc", "closure"]
+  },
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false,
+    "default": {
+      "outputSourceFiles": true,
+      "staticFiles": {
+        "include": ["./static"]
+      },
+      "includeDate": false,
+      "useLongnameInNav": false
+    },
+    "theme": "simplex",
+    "includeDate": false,
+    "navType": "vertical",
+    "inverseNav": false,
+    "linenums": true,
+    "sort": false
+  }
+}

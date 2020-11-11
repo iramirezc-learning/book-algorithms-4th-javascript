@@ -1,6 +1,6 @@
 /** @module samples */
 
-const { StdOut } = require('../src/libs')
+const { StdOut } = require('../../src/libs')
 
 /**
  * @summary Exercise x.x.x

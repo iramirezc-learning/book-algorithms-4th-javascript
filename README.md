@@ -10,10 +10,6 @@ Personal notes and JavaScript code for the book Algorithms (4th edition) by Robe
 * [StdOut](/src/libs/std-out/std-out.js)
 * [StdRandom](/src/libs/std-random/std-random.js)
 
-## Benchmarks
-
-* [Linear Search vs. Binary Search](/src/benchmarks/searching/linear-vs-binary-search.js)
-
 ## Algorithms & Data Structures
 
 _For a list similar to the book site see this [algorithms list](/markdown/algorithms.md)._
@@ -72,3 +68,7 @@ _For a list similar to the book site see this [algorithms list](/markdown/algori
 ## Exercise Solutions
 
 :warning: _Do **NOT** copy any of [these solutions](/src/exercises/index.md). These are for my reference only. You should have attempted to solve any of these exercises by your own after at least a few days before even trying to look for the solution. Finally, my solutions can be wrong too._
+
+## Benchmarks
+
+* [Linear Search vs. Binary Search](/benchmarks/searching/linear-vs-binary-search.js)

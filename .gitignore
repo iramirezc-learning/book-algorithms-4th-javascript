@@ -1,4 +1,8 @@
-# Logs
+# docs output
+docs/html/*
+!docs/html/.gitkeep
+
+# logs
 logs
 *.log
 npm-debug.log*
@@ -7,4 +11,4 @@ yarn-error.log*
 lerna-debug.log*
 
 # npm modules
-node_modules/
+node_modules
