@@ -1,20 +1,21 @@
-/** @module samples */
+/** @module TestClients */
 
-const { StdOut } = require('../src/libs')
+const { StdOut } = require('../../src/libs')
 
 /**
- * @summary Client
- * @classdesc A Test Client
- * @page n
+ * An example of a TestClient class.
+ * @memberof module:TestClients
+ * @see page: n.
+ * @see [edu.princeton.cs.algs4.CLASS_NAME.java]{@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/CLASS_NAME.java.html}
  */
-class Client {
+class TestClient {
   /**
    * Main static function
    * @param {[number, number]} args - [n, m]
    * @returns {number} `n` * `m`
    * @example <caption>testing the client</caption>
    * ```sh
-   * $ node test.client.js 10 50
+   * $ ./client TestClient 10 50
    * 500
    * ```
    */
@@ -25,3 +26,5 @@ class Client {
     StdOut.println(n * m)
   }
 }
+
+module.exports = { TestClient }
