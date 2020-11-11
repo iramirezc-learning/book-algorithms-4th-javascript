@@ -43,4 +43,4 @@ class Quick3waySortClient {
 
 // Execution
 // ==============================
-Quick3waySortClient.main()
+if (require.main === module) Quick3waySortClient.main()

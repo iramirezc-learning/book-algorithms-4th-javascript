@@ -43,4 +43,4 @@ class MergeSortClient {
 
 // Execution
 // ==============================
-MergeSortClient.main()
+if (require.main === module) MergeSortClient.main()

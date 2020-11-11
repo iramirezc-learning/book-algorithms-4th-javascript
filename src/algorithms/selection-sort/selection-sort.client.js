@@ -43,4 +43,4 @@ class SelectionSortClient {
 
 // Execution
 // ==============================
-SelectionSortClient.main()
+if (require.main === module) SelectionSortClient.main()

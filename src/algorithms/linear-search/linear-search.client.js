@@ -45,4 +45,4 @@ class LSClient {
 
 // Execution
 // ==============================
-LSClient.main(process.argv.slice(2))
+if (require.main === module) LSClient.main(process.argv.slice(2))

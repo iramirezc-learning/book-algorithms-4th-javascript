@@ -43,4 +43,4 @@ class QuickSortClient {
 
 // Execution
 // ==============================
-QuickSortClient.main()
+if (require.main === module) QuickSortClient.main()

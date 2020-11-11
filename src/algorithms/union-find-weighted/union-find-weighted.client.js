@@ -74,4 +74,4 @@ class WeightedQuickUnionUFClient {
 
 // Execution
 // ==============================
-WeightedQuickUnionUFClient.main()
+if (require.main === module) WeightedQuickUnionUFClient.main()

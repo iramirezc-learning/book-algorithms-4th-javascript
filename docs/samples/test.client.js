@@ -25,7 +25,3 @@ class Client {
     StdOut.println(n * m)
   }
 }
-
-// Execution
-// ==============================
-Client.main(process.argv.slice(2))

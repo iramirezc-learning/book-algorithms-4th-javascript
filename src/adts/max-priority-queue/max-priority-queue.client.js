@@ -49,4 +49,4 @@ class LowestM {
 
 // Execution
 // ==============================
-LowestM.main(process.argv.slice(2))
+if (require.main === module) LowestM.main(process.argv.slice(2))

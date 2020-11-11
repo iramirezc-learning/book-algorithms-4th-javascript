@@ -49,4 +49,4 @@ class TopM {
 
 // Execution
 // ==============================
-TopM.main(process.argv.slice(2))
+if (require.main === module) TopM.main(process.argv.slice(2))

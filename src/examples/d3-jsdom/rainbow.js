@@ -81,4 +81,4 @@ class D3JSDOM {
 
 // Execution
 // ==============================
-D3JSDOM.main()
+if (require.main === module) D3JSDOM.main()

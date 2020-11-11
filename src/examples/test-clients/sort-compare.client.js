@@ -133,4 +133,4 @@ class SortCompare {
 
 // Execution
 // ==============================
-SortCompare.main(process.argv.slice(2))
+if (require.main === module) SortCompare.main(process.argv.slice(2))

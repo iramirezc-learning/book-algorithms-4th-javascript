@@ -43,4 +43,4 @@ class ShellSortClient {
 
 // Execution
 // ==============================
-ShellSortClient.main()
+if (require.main === module) ShellSortClient.main()

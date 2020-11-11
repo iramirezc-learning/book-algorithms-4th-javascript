@@ -43,4 +43,4 @@ class MergeBUSortClient {
 
 // Execution
 // ==============================
-MergeBUSortClient.main()
+if (require.main === module) MergeBUSortClient.main()

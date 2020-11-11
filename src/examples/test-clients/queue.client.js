@@ -36,4 +36,4 @@ class QueueClient {
 
 // Execution
 // ==============================
-QueueClient.main()
+if (require.main === module) QueueClient.main()

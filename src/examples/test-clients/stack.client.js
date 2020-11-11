@@ -36,4 +36,4 @@ class StackClient {
 
 // Execution
 // ==============================
-StackClient.main()
+if (require.main === module) StackClient.main()

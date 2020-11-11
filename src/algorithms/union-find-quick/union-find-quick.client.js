@@ -74,4 +74,4 @@ class UFQClient {
 
 // Execution
 // ==============================
-UFQClient.main()
+if (require.main === module) UFQClient.main()

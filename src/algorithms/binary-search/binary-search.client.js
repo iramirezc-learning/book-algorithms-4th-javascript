@@ -48,4 +48,4 @@ class BSClient {
 
 // Execution
 // ==============================
-BSClient.main(process.argv.slice(2))
+if (require.main === module) BSClient.main(process.argv.slice(2))

@@ -46,4 +46,4 @@ class TwoSumFastClient {
 
 // Execution
 // ==============================
-TwoSumFastClient.main(process.argv.slice(2))
+if (require.main === module) TwoSumFastClient.main(process.argv.slice(2))

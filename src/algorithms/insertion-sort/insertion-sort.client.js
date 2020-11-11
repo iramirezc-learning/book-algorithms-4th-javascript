@@ -43,4 +43,4 @@ class InsertionSortClient {
 
 // Execution
 // ==============================
-InsertionSortClient.main()
+if (require.main === module) InsertionSortClient.main()

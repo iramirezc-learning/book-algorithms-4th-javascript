@@ -74,4 +74,4 @@ class UFClient {
 
 // Execution
 // ==============================
-UFClient.main()
+if (require.main === module) UFClient.main()

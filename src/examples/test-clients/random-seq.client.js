@@ -39,4 +39,4 @@ class RandomSeq {
 
 // Execution
 // ==============================
-RandomSeq.main(process.argv.slice(2))
+if (require.main === module) RandomSeq.main(process.argv.slice(2))
