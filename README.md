@@ -2,15 +2,6 @@
 
 Personal notes and JavaScript code for the book Algorithms (4th edition) by Robert Sedgewick & Kevin Wayne.
 
-## Chapters' Notes
-
-* [Chapter 1. Fundamentals](/docs/chapter-1.notes.md)
-* [Chapter 2. Sorting](/docs/chapter-2.notes.md)
-* Chapter 3. Searching
-* Chapter 4. Graphs
-* Chapter 5. Strings
-* Chapter 6. Context
-
 ## Standard Libraries for JavaScript
 
 * [In](/src/libs/in/in.js)
@@ -25,7 +16,7 @@ Personal notes and JavaScript code for the book Algorithms (4th edition) by Robe
 
 ## Algorithms & Data Structures
 
-_For a list similar to the book site see this [algorithms list](/docs/algorithms-list.md)._
+_For a list similar to the book site see this [algorithms list](/markdown/algorithms.md)._
 
 ### Chapter 1. Fundamentals
 
