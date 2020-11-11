@@ -1,6 +1,6 @@
 const Benchmark = require('../tools/benchmark')
 const { getSortedArray, getRandomInt } = require('../tools/data-generators')
-const { BinarySearch, LinearSearch } = require('../../algorithms')
+const { BinarySearch, LinearSearch } = require('../../src/algorithms')
 
 class SearchingBenchmark extends Benchmark {
   setUp ({ arraySize }) {
