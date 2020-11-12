@@ -11,13 +11,14 @@ const { StdOut } = require('../../src/libs')
 class TestClient {
   /**
    * Main static function
-   * @param {[number, number]} args - [n, m]
+   * @param {Array<string>} args - Syntax: `[n, m]`
+   * * The first number `n`
+   * * The second number `m`
    * @returns {number} `n` * `m`
    * @example <caption>testing the client</caption>
-   * ```sh
+   * {@lang bash}
    * $ ./client TestClient 10 50
    * 500
-   * ```
    */
   static main (args) {
     const n = parseInt(args[0])
@@ -26,5 +27,7 @@ class TestClient {
     StdOut.println(n * m)
   }
 }
+
+TestClient.main()
 
 module.exports = { TestClient }
