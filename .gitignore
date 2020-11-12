@@ -12,3 +12,6 @@ lerna-debug.log*
 
 # npm modules
 node_modules
+
+# symlinks
+algs4-data
