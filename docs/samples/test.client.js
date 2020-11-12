@@ -10,15 +10,14 @@ const { StdOut } = require('../../src/libs')
  */
 class TestClient {
   /**
-   * Main static function
-   * @param {Array<string>} args - Syntax: `[n, m]`
-   * * The first number `n`
-   * * The second number `m`
-   * @returns {number} `n` * `m`
-   * @example <caption>testing the client</caption>
+   * Outputs the multiplication of `n * m`.
+   * @example <caption>Multiplying 10 * 50</caption>
    * {@lang bash}
    * $ ./client TestClient 10 50
    * 500
+   * @param {...string} args - Params: `[n, m]`
+   * * @type {number} `args[0]` - Number `n`.
+   * * @type {number} `args[1]` - Number `m`.
    */
   static main (args) {
     const n = parseInt(args[0])
@@ -26,8 +25,13 @@ class TestClient {
 
     StdOut.println(n * m)
   }
-}
 
-TestClient.main()
+  /**
+   * Other methods go after `main` method.
+   */
+  static otherMethod () {
+    // your code goes here
+  }
+}
 
 module.exports = { TestClient }
