@@ -11,8 +11,24 @@ const { StdOut, In } = require('../../libs')
  */
 class Multiway {
   /**
+   * Creates `n` streams `In` for each given file path
+   * that contains an ordered sequence of chars,
+   * then it merges all of them in sorted order.
+   * @example <caption>Merging 3 sorted source files</caption>
+   * {@lang bash}
+   * $ ./client Multiway algs4-data/m1.txt algs4-data/m2.txt algs4-data/m3.txt
+   * A A B B B C D E F F G H I I J N P Q Q Z
+   * @param {...string} args - The file paths: `['path/1', 'path/2', ..., 'path/n']`
+   */
+  static main (args) {
+    const streams = args.map(file => new In(file))
+
+    this.merge(streams)
+  }
+
+  /**
    * Given some ordered streams, it merges all of them
-   * in order printing out the sequence in the `StdOut`.
+   * in order, printing out the sequence in the `StdOut`.
    * @param {Array<In>} streams - The array of `In` streams.
    */
   static merge (streams) {
@@ -34,21 +50,6 @@ class Multiway {
         pq.insert(i, streams[i].readString())
       }
     }
-  }
-
-  /**
-   * Creates n `In` streams depending on the given file paths,
-   * then it merges them in sorted order.
-   * @param {...string} args - The file paths.
-   * @example <caption>Merging 3 sorted source files</caption>
-   * {@lang bash}
-   * $ ./client Multiway algs4-data/m1.txt algs4-data/m2.txt algs4-data/m3.txt
-   * A A B B B C D E F F G H I I J N P Q Q Z
-   */
-  static main (args) {
-    const streams = args.map(file => new In(file))
-
-    this.merge(streams)
   }
 }
 
