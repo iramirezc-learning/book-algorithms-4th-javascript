@@ -12,12 +12,12 @@ class ShellSortClient {
    * with the input provided.
    * @example <caption>Tiny Example</caption>
    * ```sh
-   * $ node shell-sort.client.js < ~/algs4-data/tiny.txt
+   * $ node shell-sort.client.js < algs4-data/tiny.txt
    * A E E L M O P R S T X
    * ```
    * @example <caption>Words3 Example</caption>
    * ```sh
-   * $ node shell-sort.client.js < ~/algs4-data/words3.txt
+   * $ node shell-sort.client.js < algs4-data/words3.txt
    * all bad bed bug dad ... yes yet zoo
    * ```
    */

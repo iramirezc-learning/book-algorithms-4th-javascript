@@ -13,14 +13,14 @@ class BSClient {
    * @param {[]} args [whitelistFilePath]
    * @example <caption>Filtering a tiny whitelist</caption>
    * ```sh
-   * $ node binary-search.client.js ~/algs4-data/tinyW.txt < ~/algs4-data/tinyT.txt | more
+   * $ node binary-search.client.js algs4-data/tinyW.txt < algs4-data/tinyT.txt | more
    * 50
    * 99
    * 13
    * ```
    * @example <caption>Filtering a large whitelist</caption>
    * ```sh
-   * $ node binary-search.client.js ~/algs4-data/largeW.txt < ~/algs4-data/largeT.txt | more
+   * $ node binary-search.client.js algs4-data/largeW.txt < algs4-data/largeT.txt | more
    * 499569
    * 984875
    * 295754
