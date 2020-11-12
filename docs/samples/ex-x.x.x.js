@@ -41,7 +41,6 @@ class C1S1E1 {
 
 // Exports
 // ==============================
-
 module.exports = C1S1E1
 
 // Bash Execution

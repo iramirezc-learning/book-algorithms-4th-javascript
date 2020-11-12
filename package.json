@@ -7,7 +7,8 @@
     "lint": "standard \"src/**/*.js\"",
     "lint:fix": "yarn lint --fix",
     "pretest": "yarn lint:fix",
-    "test": "jasmine --config=jasmine.json"
+    "test": "jasmine --config=jasmine.json",
+    "test:exercises": "jasmine exercises/**/*.spec.js --helper=spec/helpers/*.js"
   },
   "keywords": [
     "algorithms",
