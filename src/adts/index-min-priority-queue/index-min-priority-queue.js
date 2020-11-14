@@ -69,23 +69,23 @@ class IndexMinPQ {
   }
 
   /**
-   * Exchanges the indexes `i` and `j`.
+   * Exchanges the indexes `i` and `j` in pq.
    * Updates the inverse array `_qp`.
    * @private
    * @param {number} i - The index of the first key.
    * @param {number} j - The index of the second key.
    */
   _exch (i, j) {
-    const prevI = this._pq[i]
-    const prevJ = this._pq[j]
+    const inverseI = this._pq[i]
+    const inverseJ = this._pq[j]
 
-    this._pq[i] = prevJ
-    this._pq[j] = prevI
+    this._pq[i] = inverseJ
+    this._pq[j] = inverseI
 
-    const temp = this._qp[prevI]
+    const temp = this._qp[inverseI]
 
-    this._qp[prevI] = this._qp[prevJ]
-    this._qp[prevJ] = temp
+    this._qp[inverseI] = this._qp[inverseJ]
+    this._qp[inverseJ] = temp
   }
 
   /**
@@ -220,13 +220,21 @@ class IndexMinPQ {
   delMin () {
     const minIndex = this.minIndex()
 
+    // exchange current min with the last inserted
     this._exch(1, this._n--)
+    // the last inserted now is the new min key,
+    // but it may NOT be the minimum in the PQ,
+    // so, we gotta find its correct place by using sink
     this._sink(1)
 
+    // save the inverse index of the last item
     const i = this._pq[this._n + 1]
 
+    // clean the reverse index of the last item in the PQ
     this._pq[this._n + 1] = undefined
+    // clean the key associated to the inverse index
     this._keys[i] = undefined
+    // update the inverse index that this is key no longer exists
     this._qp[i] = -1
 
     return minIndex
