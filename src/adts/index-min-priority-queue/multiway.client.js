@@ -1,5 +1,3 @@
-/** @module TestClients */
-
 const IndexMinPQ = require('./index-min-priority-queue')
 const { StdOut, In } = require('../../libs')
 

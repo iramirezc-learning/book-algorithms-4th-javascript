@@ -1,5 +1,3 @@
-/** @module ADTs */
-
 const { newArrayOf } = require('../../utils')
 const { compare } = require('../../common')
 
