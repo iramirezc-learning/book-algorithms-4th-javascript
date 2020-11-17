@@ -20,6 +20,8 @@
   "license": "ISC",
   "standard": {
     "globals": [
+      "CONFIG",
+      "UNDEF",
       "TestCase",
       "afterEach",
       "beforeAll",
