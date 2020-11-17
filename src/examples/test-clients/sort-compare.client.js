@@ -71,15 +71,15 @@ class SortCompare {
    * For 100000 random Doubles
    *     Quick3way is 2.0 times faster than Quick
    *
-   * @example <caption>Quick vs. Heap</caption>
+   * @example <caption>Heap vs. Quick</caption>
    * {@lang bash}
-   * $ ./client SortCompare Quick Heap 100000 100
+   * $ ./client SortCompare Heap Quick 100000 100
    *
-   * Quick: 2.523999999999998
-   * Heap: 21.244
+   * Heap: 6.8640000000000025
+   * Quick: 2.0819999999999985
    *
    * For 100000 random Doubles
-   *     Quick is 8.4 times faster than Heap
+   *     Heap is 0.3 times faster than Quick
    *
    * @param {...string} args - Params: `[algorithmName1, algorithmName2, n, trials]`
    * * @type {string} `args[0]` - Name of the first sorting algorithm.
