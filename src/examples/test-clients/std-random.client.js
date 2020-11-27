@@ -50,4 +50,4 @@ class StdRandomClient {
 
 // Execution
 // ==============================
-StdRandomClient.main()
+if (require.main === module) StdRandomClient.main()

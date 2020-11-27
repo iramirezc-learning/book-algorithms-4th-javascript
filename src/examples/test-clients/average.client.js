@@ -50,4 +50,4 @@ class Average {
 
 // Execution
 // ==============================
-Average.main()
+if (require.main === module) Average.main()

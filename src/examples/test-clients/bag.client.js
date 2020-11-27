@@ -61,4 +61,4 @@ class BagClient {
 
 // Execution
 // ==============================
-BagClient.main()
+if (require.main === module) BagClient.main()

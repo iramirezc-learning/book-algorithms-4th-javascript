@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+const { sync } = require('glob')
+
+const [clientName, ...args] = process.argv.slice(2)
+
+const globOptions = { realpath: true, cwd: __dirname }
+
+const files = sync('src/**/*.client.js', globOptions)
+
+const clients = files.reduce((modules, path) => Object.assign(modules, require(path)), {})
+
+if (!clients[clientName]) {
+  throw new ReferenceError(`Client '${clientName}' not found.`)
+}
+
+clients[clientName].main(args)

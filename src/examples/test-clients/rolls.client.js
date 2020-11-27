@@ -43,4 +43,4 @@ class Rolls {
 
 // Execution
 // ==============================
-Rolls.main(process.argv.slice(2))
+if (require.main === module) Rolls.main(process.argv.slice(2))

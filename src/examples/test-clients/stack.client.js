@@ -11,7 +11,7 @@ class StackClient {
    * Create a stack and push/pop strings from the StdIn.
    * @example <caption>To be or not to be</caption>
    * ```sh
-   * $ node stack.client.js < ~/algs4-data/tobe.txt
+   * $ node stack.client.js < algs4-data/tobe.txt
    * to be not that or be (2 left on stack)
    * ```
    */
@@ -36,4 +36,4 @@ class StackClient {
 
 // Execution
 // ==============================
-StackClient.main()
+if (require.main === module) StackClient.main()

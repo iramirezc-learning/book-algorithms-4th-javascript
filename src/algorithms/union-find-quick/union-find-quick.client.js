@@ -11,7 +11,7 @@ class UFQClient {
    * Solves dynamic connectivity problem on StdIn.
    * @example <caption>Tiny UF</caption>
    * ```sh
-   * $ node union-find-quick.client.js < ~/algs4-data/tinyUF.txt
+   * $ node union-find-quick.client.js < algs4-data/tinyUF.txt
    * 4 3
    * 3 8
    * 6 5
@@ -24,7 +24,7 @@ class UFQClient {
    * ```
    * @example <caption>Medium UF</caption>
    * ```sh
-   * $ node union-find-quick.client.js < ~/algs4-data/mediumUF.txt
+   * $ node union-find-quick.client.js < algs4-data/mediumUF.txt
    * 528 503
    * 548 523
    * 389 414
@@ -35,7 +35,7 @@ class UFQClient {
    * ```
    * @example <caption>Large UF</caption>
    * ```sh
-   * $ node union-find-quick.client.js < ~/algs4-data/largeUF.txt
+   * $ node union-find-quick.client.js < algs4-data/largeUF.txt
    * 786321 134521
    * 696834 98245
    * 135991 549478
@@ -74,4 +74,4 @@ class UFQClient {
 
 // Execution
 // ==============================
-UFQClient.main()
+if (require.main === module) UFQClient.main()

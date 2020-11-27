@@ -30,4 +30,4 @@ class TestAccumulator {
 
 // Execution
 // ==============================
-TestAccumulator.main(process.argv.slice(2))
+if (require.main === module) TestAccumulator.main(process.argv.slice(2))

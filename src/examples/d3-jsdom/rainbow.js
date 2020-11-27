@@ -14,7 +14,7 @@ class D3JSDOM {
    * Returns a new DOM
    */
   static createDOM () {
-    return (new JSDOM(`<!DOCTYPE html><body></body>`)).window.document
+    return (new JSDOM('<!DOCTYPE html><body></body>')).window.document
   }
 
   /**
@@ -81,4 +81,4 @@ class D3JSDOM {
 
 // Execution
 // ==============================
-D3JSDOM.main()
+if (require.main === module) D3JSDOM.main()

@@ -2,15 +2,6 @@
 
 Personal notes and JavaScript code for the book Algorithms (4th edition) by Robert Sedgewick & Kevin Wayne.
 
-## Chapters' Notes
-
-* [Chapter 1. Fundamentals](/docs/chapter-1.notes.md)
-* Chapter 2. Sorting
-* Chapter 3. Searching
-* Chapter 4. Graphs
-* Chapter 5. Strings
-* Chapter 6. Context
-
 ## Standard Libraries for JavaScript
 
 * [In](/src/libs/in/in.js)
@@ -19,13 +10,9 @@ Personal notes and JavaScript code for the book Algorithms (4th edition) by Robe
 * [StdOut](/src/libs/std-out/std-out.js)
 * [StdRandom](/src/libs/std-random/std-random.js)
 
-## Benchmarks
-
-* [Linear Search vs. Binary Search](/src/benchmarks/searching/linear-vs-binary-search.js)
-
 ## Algorithms & Data Structures
 
-_For a list similar to the book site see this [algorithms list](/docs/algorithms-list.md)._
+_For a list similar to the book site see this [algorithms list](/markdown/algorithms.md)._
 
 ### Chapter 1. Fundamentals
 
@@ -61,19 +48,27 @@ _For a list similar to the book site see this [algorithms list](/docs/algorithms
 
 **Algorithms:**
 
-> TODO
+* [Selection Sort - p. 249](/src/algorithms/selection-sort/selection-sort.js)
+* [Insertion Sort - p. 251](/src/algorithms/insertion-sort/insertion-sort.js)
+* [Shell Sort - p. 259](/src/algorithms/shell-sort/shell-sort.js)
+* [Merge Sort - p. 273](/src/algorithms/merge-sort/merge-sort.js)
+* [MergeBU Sort - p. 278](/src/algorithms/merge-sort-bu/merge-sort-bu.js)
+* [Quick Sort - p. 289](/src/algorithms/quick-sort/quick-sort.js)
+* [Quick3way Sort - p. 299](/src/algorithms/quick-3way-sort/quick-3way-sort.js)
 
 **ADTs:**
 
-> TODO
+* [MinPQ - p. 311](/src/adts/min-priority-queue/min-priority-queue.js)
+* [MaxPQ - p. 318](/src/adts/max-priority-queue/max-priority-queue.js)
+
+**Clients:**
+
+* [SortCompare - p. 256](/src/examples/test-clients/sort-compare.client.js)
 
 ## Exercise Solutions
 
-:warning: _Do **NOT** copy any of these solutions. These are for my reference only. You should have attempted to solve any of these exercises by your own after at least a few days before even trying to look for the solution. Finally, my solutions can be wrong too._
+:warning: _Do **NOT** copy any of [these solutions](/src/exercises/index.md). These are for my reference only. You should have attempted to solve any of these exercises by your own after at least a few days before even trying to look for the solution. Finally, my solutions can be wrong too._
 
-* [Chapter 1. Fundamentals](/src/exercises/index.md)
-* Chapter 2. Sorting
-* Chapter 3. Searching
-* Chapter 4. Graphs
-* Chapter 5. Strings
-* Chapter 6. Context
+## Benchmarks
+
+* [Linear Search vs. Binary Search](/benchmarks/searching/linear-vs-binary-search.js)
