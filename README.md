@@ -12,7 +12,7 @@ Personal notes and JavaScript code for the book Algorithms (4th edition) by Robe
 
 ## Algorithms & Data Structures
 
-_For a list similar to the book site see this [algorithms list](/markdown/algorithms.md)._
+_For a list similar to the book site see this [algorithms list](/docs/markdown/algorithms.md)._
 
 ## Exercise Solutions
 
