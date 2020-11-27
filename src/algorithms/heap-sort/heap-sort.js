@@ -39,8 +39,10 @@ class Heap extends GenericSort {
    * @param {ComparatorFn} [comparator] - The comparator function.
    */
   static sink (a, k, n, comparator) {
+    let j
+
     while (2 * k <= n) {
-      let j = 2 * k
+      j = 2 * k
 
       // decrement indices by 1 so the array
       // can be sorted from a[0] to a[n - 1]

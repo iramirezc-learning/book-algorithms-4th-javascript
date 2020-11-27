@@ -122,7 +122,11 @@ class SortCompare {
 
     algorithms[sortName].sort(a)
 
-    return timer.elapsedTime()
+    const elapsedTime = timer.elapsedTime()
+
+    algorithms[sortName].isSorted(a)
+
+    return elapsedTime
   }
 
   /**
