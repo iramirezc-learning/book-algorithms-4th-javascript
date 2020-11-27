@@ -63,7 +63,7 @@ Every algorithm or ADT has a link pointing to the original Java implementation a
 * TopM | [js](/src/adts/min-priority-queue/min-priority-queue.client.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/TopM.java.html) |
 * MaxPQ | [js](/src/adts/max-priority-queue/max-priority-queue.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/MaxPQ.java.html) |
 * MinPQ | [js](/src/adts/min-priority-queue/min-priority-queue.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/MinPQ.java.html) |
-* IndexMinPQ | js | java |
-* IndexMaxPQ | js | java |
-* Multiway | js | java |
-* Heap | js | java |
+* IndexMinPQ | [js](/src/adts/index-min-priority-queue/index-min-priority-queue.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/IndexMinPQ.java.html) |
+* IndexMaxPQ | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/IndexMaxPQ.java.html) |
+* Multiway | [js](/src/adts/index-min-priority-queue/multiway.client.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Multiway.java.html) |
+* Heap | [js](/src/algorithms/heap-sort/heap-sort.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Heap.java.html) |
