@@ -12,7 +12,7 @@
 class NodeIterator {
   /**
    * Creates a new NodeIterator.
-   * @param {?Node} element - The first element to start the iteration.
+   * @param {?Node} [element=null] - The first element to start the iteration.
    */
   constructor (element = null) {
     /**

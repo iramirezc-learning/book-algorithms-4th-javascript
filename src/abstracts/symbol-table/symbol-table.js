@@ -1,3 +1,4 @@
+const NodeIterator = require('../node-iterator/node-iterator')
 const { defaultComparator } = require('../../common')
 
 /**
@@ -17,7 +18,7 @@ class SymbolTable {
    * @abstract
    * @throws SyntaxError - This function should be implemented by the client.
    * @param {*} key - The key that identifies the value.
-   * @param {*} val -  The value.
+   * @param {*} val - The value.
    */
   put (key, val) {
     throw new SyntaxError('put method is not implemented')
@@ -78,12 +79,16 @@ class SymbolTable {
 
   /**
    * Returns all the keys in the table as an iterator.
-   * @abstract
-   * @throws SyntaxError - This function should be implemented by the client.
-   * @returns {Symbol} Returns all the keys in the table as an iterator.
+   * @returns {NodeIterable} Returns an iterable object that will provide all the keys in the table as an iterator.
    */
   keys () {
-    throw new SyntaxError('keys method is not implemented')
+    const first = this._first
+
+    return {
+      [Symbol.iterator] () {
+        return new NodeIterator(first)
+      }
+    }
   }
 }
 
