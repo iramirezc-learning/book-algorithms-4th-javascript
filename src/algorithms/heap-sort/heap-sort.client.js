@@ -3,7 +3,7 @@ const { StdIn } = require('../../libs')
 
 /**
  * Heap Sort Test Client.
- * @memberof module:TestClients
+ * @memberof module:test-clients
  * @see page: 324.
  * @see [edu.princeton.cs.algs4.Heap.java]{@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Heap.java.html}
  */

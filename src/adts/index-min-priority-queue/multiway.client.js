@@ -3,7 +3,7 @@ const { StdOut, In } = require('../../libs')
 
 /**
  * IndexMinPQ test client.
- * @memberof module:TestClients
+ * @memberof module:test-clients
  * @see page: 322.
  * @see [edu.princeton.cs.algs4.Multiway.java]{@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Multiway.java.html}
  */

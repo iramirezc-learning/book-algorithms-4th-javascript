@@ -1,1 +1,1 @@
-/** @module TestClients */
+/** @module test-clients */

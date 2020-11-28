@@ -1,10 +1,10 @@
-/** @module TestClients */
+/** @module test-clients */
 
 const { StdOut } = require('../../src/libs')
 
 /**
  * An example of a TestClient class.
- * @memberof module:TestClients
+ * @memberof module:test-clients
  * @see page: n.
  * @see [edu.princeton.cs.algs4.CLASS_NAME.java]{@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/CLASS_NAME.java.html}
  */

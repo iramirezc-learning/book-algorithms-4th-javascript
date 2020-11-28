@@ -6,7 +6,7 @@ const { newArrayOf } = require('../../utils')
 /**
  * Client that runs two sorting algorithms
  * to compare their running times.
- * @memberof module:TestClients
+ * @memberof module:test-clients
  * @see page: 256.
  */
 class SortCompare {
