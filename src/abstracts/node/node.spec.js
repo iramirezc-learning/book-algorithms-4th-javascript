@@ -10,12 +10,20 @@ describe('Unit Tests: Node', () => {
       expect(this.node._item).toBeNull()
     })
 
+    it('should have a prop `_key` equal to null', () => {
+      expect(this.node._key).toBeNull()
+    })
+
+    it('should have a prop `_val` equal to null', () => {
+      expect(this.node._val).toBeNull()
+    })
+
     it('should have a prop `_next` equal to null', () => {
       expect(this.node._next).toBeNull()
     })
 
     it('should not be extensible', () => {
-      const expectedProps = ['_item', '_next']
+      const expectedProps = ['_item', '_key', '_val', '_next']
 
       this.node.newProp = null
 
