@@ -1,9 +1,9 @@
-const { Iterator, Node } = require('../../abstracts')
+const { Node, NodeIterator } = require('../../abstracts')
 
 /**
  * Stack
  * @classdesc Generic Stack implementation based on linked-lists.
- * @implements {Iterator}
+ * @implements {NodeIterator}
  * @see p. 147, 149, 155
  */
 class Stack {
@@ -59,11 +59,11 @@ class Stack {
   }
 
   /**
-   * Returns an Iterator to traverse the stack.
-   * @returns {Iterator}
+   * Returns an NodeIterator to traverse the stack.
+   * @returns {NodeIterator}
    */
   [Symbol.iterator] () {
-    return new Iterator(this._first)
+    return new NodeIterator(this._first)
   }
 }
 

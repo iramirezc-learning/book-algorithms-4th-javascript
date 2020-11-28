@@ -14,8 +14,7 @@ class ArrayIterator {
   }
 
   /**
-   * Returns if there are
-   * more elements in the Iterator.
+   * Returns if there are more elements in the iterator.
    */
   hasNext () {
     return this._current < this._n
@@ -31,7 +30,7 @@ class ArrayIterator {
   }
 
   /**
-   * Returns an object implementing the Iterator protocol.
+   * Returns an object implementing the iterator protocol.
    * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol
    * @returns {object} iterator protocol
    */

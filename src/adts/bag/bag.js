@@ -1,9 +1,9 @@
-const { Iterator, Node } = require('../../abstracts')
+const { Node, NodeIterator } = require('../../abstracts')
 
 /**
  * Bag
  * @classdesc Generic Bag implementation based on linked-lists.
- * @implements {Iterator}
+ * @implements {NodeIterator}
  * @see p. 155
  */
 class Bag {
@@ -42,11 +42,11 @@ class Bag {
   }
 
   /**
-   * Returns an Iterator to traverse the bag.
-   * @returns {Iterator}
+   * Returns an NodeIterator to traverse the bag.
+   * @returns {NodeIterator}
    */
   [Symbol.iterator] () {
-    return new Iterator(this._first)
+    return new NodeIterator(this._first)
   }
 }
 

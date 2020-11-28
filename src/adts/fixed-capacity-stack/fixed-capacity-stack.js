@@ -49,7 +49,7 @@ class FixedCapacityStack {
   }
 
   /**
-   * Returns an Iterator to traverse the stack.
+   * Returns a ReversedArrayIterator to traverse the stack.
    * @returns {ReversedArrayIterator}
    */
   [Symbol.iterator] () {

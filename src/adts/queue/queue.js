@@ -1,9 +1,9 @@
-const { Iterator, Node } = require('../../abstracts')
+const { Node, NodeIterator } = require('../../abstracts')
 
 /**
  * Queue
  * @classdesc Generic Queue implementation based on linked-lists.
- * @implements {Iterator}
+ * @implements {NodeIterator}
  * @see p. 151, 155
  */
 class Queue {
@@ -71,11 +71,11 @@ class Queue {
   }
 
   /**
-   * Returns an Iterator to traverse the Queue.
-   * @returns {Iterator}
+   * Returns an NodeIterator to traverse the Queue.
+   * @returns {NodeIterator}
    */
   [Symbol.iterator] () {
-    return new Iterator(this._first)
+    return new NodeIterator(this._first)
   }
 }
 

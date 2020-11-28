@@ -80,7 +80,7 @@ class ResizableArrayStack {
   }
 
   /**
-   * Returns an Iterator to traverse the stack.
+   * Returns an iterator to traverse the stack.
    * @returns {ReversedArrayIterator}
    */
   [Symbol.iterator] () {
