@@ -1,5 +1,5 @@
 const Iterator = require('./iterator')
-const Node = require('../../adts/node/node')
+const { Node } = require('../../abstracts')
 
 describe('Unit Tests: Abstract Iterator Interface', () => {
   describe('instance', () => {

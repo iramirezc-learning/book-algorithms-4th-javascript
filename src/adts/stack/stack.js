@@ -1,5 +1,4 @@
-const Node = require('../node/node')
-const { Iterator } = require('../../abstracts')
+const { Iterator, Node } = require('../../abstracts')
 
 /**
  * Stack

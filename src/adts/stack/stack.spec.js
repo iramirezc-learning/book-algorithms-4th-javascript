@@ -1,5 +1,5 @@
 const Stack = require('./stack')
-const Node = require('../node/node')
+const { Node } = require('../../abstracts')
 const { StdRandom } = require('../../libs')
 
 describe('Unit Tests: Stack ADT', () => {

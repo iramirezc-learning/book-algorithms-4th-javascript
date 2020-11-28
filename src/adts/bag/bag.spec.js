@@ -1,5 +1,5 @@
 const Bag = require('./bag')
-const { Node } = require('../index')
+const { Node } = require('../../abstracts')
 const { StdRandom } = require('../../libs')
 
 describe('Unit Tests: Bag ADT', () => {

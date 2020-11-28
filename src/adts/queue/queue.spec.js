@@ -1,5 +1,5 @@
 const Queue = require('./queue')
-const { Node } = require('../index')
+const { Node } = require('../../abstracts')
 const { StdRandom } = require('../../libs')
 
 describe('Unit Tests: FIFO Queue', () => {

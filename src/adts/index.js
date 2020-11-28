@@ -9,7 +9,6 @@ module.exports = {
   IndexMinPQ: require('./index-min-priority-queue/index-min-priority-queue'),
   MaxPQ: require('./max-priority-queue/max-priority-queue'),
   MinPQ: require('./min-priority-queue/min-priority-queue'),
-  Node: require('./node/node'),
   Queue: require('./queue/queue'),
   ResizableArrayStack: require('./resizable-array-stack/resizable-array-stack'),
   SmallDate: require('./small-date/small-date'),
