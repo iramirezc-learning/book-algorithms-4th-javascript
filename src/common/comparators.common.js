@@ -1,14 +1,11 @@
-/**
- * Helper function to determine if a given argument is defined.
- * @param {*} obj Single argument to be evaluated
- */
-function isDefined (obj) {
-  return typeof obj !== 'undefined'
-}
+/** @module common/comparators */
+
+const { isDefined } = require('./validators.common')
 
 /**
  * Helper function to inspect if a given object has the method `compareTo` implemented.
- * @param {*} obj Single argument to be inspected
+ * @param {*} obj - The object to be inspected.
+ * @returns {boolean} Returns if the object has the method `compareTo` implemented.
  */
 function hasCompareTo (obj) {
   return isDefined(obj) && typeof obj.compareTo === 'function'
@@ -16,8 +13,9 @@ function hasCompareTo (obj) {
 
 /**
  * Helper function to evaluate if objects `a` and `b` implement the `compareTo` function.
- * @param {*} a Object a
- * @param {*} b Object b
+ * @param {*} a - The object `a`.
+ * @param {*} b - The object `b`.
+ * @returns {boolean} Returns if both objects `a` and `b` implement the `compareTo` method.
  */
 function implementCompareTo (a, b) {
   return hasCompareTo(a) && hasCompareTo(b)
@@ -25,8 +23,9 @@ function implementCompareTo (a, b) {
 
 /**
  * A default comparing function.
- * @param {*} a Comparable object `a`
- * @param {*} b Comparable object `b`
+ * @memberof module:common/comparators
+ * @param {*} a - Comparable object `a`.
+ * @param {*} b - Comparable object `b`.
  * @returns {number}
  *   returns `-1` when `a` is less than `b`,
  *   returns `1` when `a` is greater than `b` or
@@ -40,8 +39,9 @@ const defaultComparator = (a, b) => {
 
 /**
  * Generic comparator function.
- * @param {*} a Comparable object `a`
- * @param {*} b Comparable object `b`
+ * @memberof module:common/comparators
+ * @param {*} a - Comparable object `a`.
+ * @param {*} b - Comparable object `b`.
  * @returns {number}
  *   returns `-1` when `a` is less than `b`,
  *   returns `1` when `a` is greater than `b` or
