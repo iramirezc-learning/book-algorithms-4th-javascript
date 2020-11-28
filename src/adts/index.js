@@ -11,6 +11,7 @@ module.exports = {
   MinPQ: require('./min-priority-queue/min-priority-queue'),
   Queue: require('./queue/queue'),
   ResizableArrayStack: require('./resizable-array-stack/resizable-array-stack'),
+  SequentialSearchST: require('./sequential-search-st/sequential-search-st'),
   SmallDate: require('./small-date/small-date'),
   Stack: require('./stack/stack'),
   StopWatch: require('./stop-watch/stop-watch'),

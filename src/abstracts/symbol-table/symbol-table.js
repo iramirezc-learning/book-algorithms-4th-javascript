@@ -25,8 +25,8 @@ class SymbolTable {
   }
 
   /**
-   * Returns the value paired with the key.
-   * Returns `null` if the key is absent.
+   * Returns the value paired with the key
+   * or returns `null` if the key is absent.
    * @abstract
    * @throws SyntaxError - This function should be implemented by the client.
    * @param {*} key - The key to be searched.
@@ -47,7 +47,7 @@ class SymbolTable {
   }
 
   /**
-   * Returns `true` if the key has a value.
+   * Returns `true` if the `key` has an associated value.
    * @abstract
    * @throws SyntaxError - This function should be implemented by the client.
    * @param {*} key - The key to be inspected.
