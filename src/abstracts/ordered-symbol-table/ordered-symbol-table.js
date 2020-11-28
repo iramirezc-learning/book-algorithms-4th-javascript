@@ -1,7 +1,10 @@
+const { isDefined } = require('../../common')
 const SymbolTable = require('../symbol-table/symbol-table')
 
 /**
  * Abstract Generic Class for Ordered Symbol Tables.
+ * @augments SymbolTable
+ * @see pages: 366, 368.
  */
 class OrderedSymbolTable extends SymbolTable {
   /**
@@ -70,20 +73,41 @@ class OrderedSymbolTable extends SymbolTable {
 
   /**
    * Deletes the smallest key in the table.
-   * @abstract
-   * @throws SyntaxError - This function should be implemented by the client.
    */
   deleteMin () {
-    throw new SyntaxError('deleteMin method is not implemented')
+    this.delete(this.min())
   }
 
   /**
    * Deletes the largest key in the table.
-   * @abstract
-   * @throws SyntaxError - This function should be implemented by the client.
    */
   deleteMax () {
-    throw new SyntaxError('deleteMax method is not implemented')
+    this.delete(this.max())
+  }
+
+  /**
+   * Returns the number of key-value pairs in the table.
+   * @todo Implementation.
+   * @throws SyntaxError - This function should be implemented by the client.
+   * @returns {number} Returns the total key-value pairs in the table.
+   *//**
+   * Returns the number of key-value paris in [lo..hi] contained in the table.
+   * @param {*} lo - The lowest key.
+   * @param {*} hi - The largest key.
+   * @returns {number} Returns the total key-value paris in [lo..hi].
+   */
+  size (lo, hi) {
+    if (isDefined(lo) && isDefined(hi)) {
+      if (this.comparator(hi, lo) < 0) {
+        return 0
+      } else if (this.contains(hi)) {
+        return this.rank(hi) - this.rank(lo) + 1
+      } else {
+        return this.rank(hi) - this.rank(lo)
+      }
+    } else {
+      return super.size()
+    }
   }
 }
 

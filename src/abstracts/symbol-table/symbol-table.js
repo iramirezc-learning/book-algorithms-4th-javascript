@@ -1,7 +1,17 @@
+const { defaultComparator } = require('../../common')
+
 /**
  * Abstract Generic Class for Symbol Tables.
  */
 class SymbolTable {
+  /**
+   * Creates a new SymbolTable.
+   * @param {ComparatorFn} [comparator=defaultComparator] - The comparator function.
+   */
+  constructor (comparator = defaultComparator) {
+    this.comparator = comparator
+  }
+
   /**
    * Puts key-value pair into the table. Removes key from table if value is `null`.
    * @abstract
@@ -58,7 +68,7 @@ class SymbolTable {
 
   /**
    * Returns the number of key-value pairs in the table.
-   * @abstract
+   * @todo Implementation.
    * @throws SyntaxError - This function should be implemented by the client.
    * @returns {number} Returns the total key-value pairs in the table.
    */
