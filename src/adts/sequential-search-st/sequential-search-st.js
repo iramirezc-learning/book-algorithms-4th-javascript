@@ -40,6 +40,7 @@ class SequentialSearchST extends SymbolTable {
     }
 
     this._first = new Node(key, val, this._first)
+    this._n++
   }
 
   /**

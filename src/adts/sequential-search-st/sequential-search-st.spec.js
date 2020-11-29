@@ -69,6 +69,32 @@ describe('Unit Tests: SequentialSearchST', () => {
       expect(second._key).toBe('A')
       expect(second._val).toBe(2)
     })
+
+    it('should increment the ST size', () => {
+      expect(this.searchST.size()).toBe(0)
+
+      this.searchST.put('A', 0)
+      expect(this.searchST.size()).toBe(1)
+
+      this.searchST.put('B', 1)
+      expect(this.searchST.size()).toBe(2)
+
+      this.searchST.put('C', 2)
+      expect(this.searchST.size()).toBe(3)
+    })
+
+    it('should not increment the ST size when the key is duplicated', () => {
+      expect(this.searchST.size()).toBe(0)
+
+      this.searchST.put('A', 0)
+      expect(this.searchST.size()).toBe(1)
+
+      this.searchST.put('A', 1)
+      expect(this.searchST.size()).toBe(1)
+
+      this.searchST.put('A', 2)
+      expect(this.searchST.size()).toBe(1)
+    })
   })
 
   describe('SequentialSearchST#get()', () => {
