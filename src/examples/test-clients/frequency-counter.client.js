@@ -23,7 +23,7 @@ class FrequencyCounter {
    * @example <caption>Leipzig</caption>
    * {@lang bash}
    * $ ./client FrequencyCounter 10 < algs4-data/leipzig1M.txt
-   * ???
+   * government 24763
    * @param {...string} args - Params: `[minLength]`
    * * @type {number} `args[0]` - Number `minLength`.
    */
