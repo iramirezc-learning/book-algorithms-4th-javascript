@@ -1,5 +1,4 @@
 const ST = require('./symbol-table')
-const Node = require('../node/node')
 
 describe('Unit Tests: Abstract SymbolTable', () => {
   beforeEach(() => {
@@ -9,7 +8,7 @@ describe('Unit Tests: Abstract SymbolTable', () => {
   describe('SymbolTable instance', () => {
     it('should implement the generic API', () => {
       const expectedAPI = [
-        'put', 'get', 'delete', 'isEmpty', 'size', 'contains', 'keys'
+        'size', 'isEmpty', 'contains', 'put', 'get', 'delete', 'keys'
       ]
 
       expectedAPI.forEach(method => {
@@ -42,7 +41,7 @@ describe('Unit Tests: Abstract SymbolTable', () => {
     })
   })
 
-  describe('SymbolTable#contains()', () => {
+  describe('SymbolTable#contains(key)', () => {
     it('should return true if the get method returns a non-null value', () => {
       spyOn(this.st, 'get').and.returnValue(0)
 
@@ -56,22 +55,32 @@ describe('Unit Tests: Abstract SymbolTable', () => {
     })
   })
 
+  describe('SymbolTable#put(key, val)', () => {
+    it('should throw because is not implemented', () => {
+      expect(() => this.st.put('A', 0)).toThrowError(SyntaxError)
+    })
+  })
+
+  describe('SymbolTable#get(key)', () => {
+    it('should throw because is not implemented', () => {
+      expect(() => this.st.get('A')).toThrowError(SyntaxError)
+    })
+  })
+
+  describe('SymbolTable#delete(key)', () => {
+    it('should call put method as the default implementation', () => {
+      spyOn(this.st, 'put')
+      const key = 'A'
+
+      this.st.delete('A')
+
+      expect(this.st.put).toHaveBeenCalledWith(key, null)
+    })
+  })
+
   describe('SymbolTable#keys()', () => {
-    it('should return an iterator object to traverse all the table keys', () => {
-      // assuming we insert the keys
-      // in the following order ['A', 'B', 'C']
-      const third = new Node('A', 0, null)
-      const second = new Node('B', 1, third)
-      const first = new Node('C', 2, second)
-      this.st._first = first
-      const expectedKeys = ['C', 'B', 'A']
-      const iteratedKeys = []
-
-      for (const k of this.st.keys()) {
-        iteratedKeys.push(k)
-      }
-
-      expect(iteratedKeys).toEqual(expectedKeys)
+    it('should throw because is not implemented', () => {
+      expect(() => this.st.keys()).toThrowError(SyntaxError)
     })
   })
 })
