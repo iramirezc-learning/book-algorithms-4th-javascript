@@ -26,7 +26,7 @@ class NodeIterator {
   }
 
   /**
-   * Returns if there are more elements in the Iterator.
+   * Returns if there are more elements in the iterator.
    * @returns {boolean} Returns whether the current element is null or not.
    */
   hasNext () {
@@ -42,7 +42,7 @@ class NodeIterator {
   }
 
   /**
-   * Returns an object implementing the Iterator protocol.
+   * Returns an object implementing the iterator protocol.
    * @see [The iterator protocol]{@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol}
    * @returns {Object} The object iterator.
    */
