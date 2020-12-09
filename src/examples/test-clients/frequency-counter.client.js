@@ -1,4 +1,7 @@
-const { SequentialSearchST: ST } = require('../../adts')
+// Choose any of the ST implementations
+// - SequentialSearchST
+// - BinarySearchST
+const { BinarySearchST: ST } = require('../../adts')
 const { StdIn, StdOut } = require('../../libs')
 
 /**

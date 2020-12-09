@@ -4,6 +4,7 @@ module.exports = {
   Accumulator: require('./accumulator/accumulator'),
   Bag: require('./bag/bag'),
   BasicDate: require('./basic-date/basic-date'),
+  BinarySearchST: require('./binary-search-st/binary-search-st'),
   Counter: require('./counter/counter'),
   FixedCapacityStack: require('./fixed-capacity-stack/fixed-capacity-stack'),
   IndexMinPQ: require('./index-min-priority-queue/index-min-priority-queue'),
