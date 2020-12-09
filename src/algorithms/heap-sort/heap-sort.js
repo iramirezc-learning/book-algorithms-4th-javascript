@@ -3,7 +3,7 @@ const { GenericSort } = require('../../abstracts')
 /**
  * Heap Sort Algorithm.
  * @augments GenericSort
- * @memberof module:Algorithms
+ * @memberof module:algorithms
  * @see page: 324.
  * @see [edu.princeton.cs.algs4.Heap.java]{@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Heap.java.html}
  */

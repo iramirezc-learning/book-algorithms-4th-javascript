@@ -1,4 +1,4 @@
-/** @module Algorithms */
+/** @module algorithms */
 
 module.exports = {
   BinarySearch: require('./binary-search/binary-search'),

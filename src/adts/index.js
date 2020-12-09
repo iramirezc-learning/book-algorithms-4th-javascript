@@ -1,4 +1,4 @@
-/** @module ADTs */
+/** @module adts */
 
 module.exports = {
   Accumulator: require('./accumulator/accumulator'),

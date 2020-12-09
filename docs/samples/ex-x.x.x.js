@@ -1,10 +1,10 @@
-/** @module Exercises */
+/** @module exercises */
 
 const { StdOut } = require('../../src/libs')
 
 /**
  * Exercise C1S1E1
- * @memberof module:Exercises
+ * @memberof module:exercises
  */
 class C1S1E1 {
   /**

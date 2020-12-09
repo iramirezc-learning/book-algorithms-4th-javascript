@@ -3,7 +3,7 @@ const { compare } = require('../../common')
 
 /**
  * Generic Minimum Priority Queue implementation with associated indices.
- * @memberof module:ADTs
+ * @memberof module:adts
  * @see pages: 320, 323, 333, 334.
  * @see [edu.princeton.cs.algs4.IndexMinPQ.java]{@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/IndexMinPQ.java.html}
  */
