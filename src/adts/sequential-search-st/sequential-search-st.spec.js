@@ -14,9 +14,64 @@ describe('Unit Tests: SequentialSearchST', () => {
     it('should have a prop `_first` equal to null', () => {
       expect(this.searchST._first).toBeNull()
     })
+
+    it('should not be extensible', () => {
+      const expectedProps = ['comparator', '_n', '_first']
+
+      this.searchST.newProp = 'should be ignored'
+
+      const actualProps = Object.getOwnPropertyNames(this.searchST)
+      expect(actualProps).toEqual(expectedProps)
+      expect(this.searchST.newProp).toBeUndefined()
+    })
   })
 
-  describe('SequentialSearchST#put()', () => {
+  // Inherited methods
+  // ==================================================
+
+  describe('SequentialSearchST#size()', () => {
+    it('should return 0 when ST is empty', () => {
+      expect(this.searchST.size()).toBe(0)
+    })
+
+    it('should return the new size when keys are inserted', () => {
+      const keys = ['A', 'B', 'C', 'D', 'E', 'F']
+      const expectedSize = keys.length
+
+      keys.forEach((k, v) => this.searchST.put(k, v))
+
+      expect(this.searchST.size()).toBe(expectedSize)
+    })
+  })
+
+  describe('SequentialSearchST#isEmpty()', () => {
+    it('should return true when ST has no keys', () => {
+      expect(this.searchST.isEmpty()).toBeTrue()
+    })
+
+    it('should return false when ST has keys', () => {
+      this.searchST.put('A', 0)
+
+      expect(this.searchST.isEmpty()).toBeFalse()
+    })
+  })
+
+  describe('SequentialSearchST#contains(key)', () => {
+    it('should return false when key does not exist in the ST', () => {
+      expect(this.searchST.contains('A')).toBeFalse()
+    })
+
+    it('should return true when key exists in the ST', () => {
+      this.searchST.put('A', 0)
+
+      expect(this.searchST.contains('A')).toBeTrue()
+    })
+  })
+
+  // Class methods
+  // ==================================================
+
+  describe('SequentialSearchST#put(key, val)', () => {
     it('should insert the first key correctly', () => {
       const key = 'A'
       const val = 0
@@ -83,21 +138,15 @@ describe('Unit Tests: SequentialSearchST', () => {
       expect(this.searchST.size()).toBe(3)
     })
 
-    it('should not increment the ST size when the key is duplicated', () => {
-      expect(this.searchST.size()).toBe(0)
-
+    it('should NOT increment the ST size when the key is duplicated', () => {
       this.searchST.put('A', 0)
-      expect(this.searchST.size()).toBe(1)
-
       this.searchST.put('A', 1)
-      expect(this.searchST.size()).toBe(1)
-
       this.searchST.put('A', 2)
       expect(this.searchST.size()).toBe(1)
     })
   })
 
-  describe('SequentialSearchST#get()', () => {
+  describe('SequentialSearchST#get(key)', () => {
     it('should return null if the ST is empty', () => {
       expect(this.searchST.get('A')).toBeNull()
     })
@@ -119,6 +168,10 @@ describe('Unit Tests: SequentialSearchST', () => {
 
       expect(this.searchST.get('D')).toBe(null)
     })
+  })
+
+  describe('SequentialSearchST#delete(key)', () => {
+    // TODO: method implementation
   })
 
   describe('SequentialSearchST#keys()', () => {

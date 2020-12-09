@@ -1,4 +1,4 @@
-const { SymbolTable, Node } = require('../../abstracts')
+const { SymbolTable, Node, NodeIterator } = require('../../abstracts')
 
 /**
  * Sequential Search Symbol Table.
@@ -57,6 +57,29 @@ class SequentialSearchST extends SymbolTable {
     }
 
     return null
+  }
+
+  /**
+   * Removes the key and its value from the table.
+   * @todo implementation. Exercise 3.1.16.
+   * @param {*} key - The key that will be deleted.
+   */
+  delete (key) {
+    throw new SyntaxError('delete method is not implemented')
+  }
+
+  /**
+   * Returns all the keys in the table as an iterator.
+   * @returns {NodeIterable} Returns an iterable object that will provide all the keys in the table as an iterator.
+   */
+  keys () {
+    const first = this._first
+
+    return {
+      [Symbol.iterator] () {
+        return new NodeIterator(first)
+      }
+    }
   }
 }
 
