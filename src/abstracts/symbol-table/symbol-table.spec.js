@@ -57,13 +57,13 @@ describe('Unit Tests: Abstract SymbolTable', () => {
 
   describe('SymbolTable#put(key, val)', () => {
     it('should throw because is not implemented', () => {
-      expect(() => this.st.put('A', 0)).toThrowError(SyntaxError)
+      expect(() => this.st.put('A', 0)).toThrowError(SyntaxError, 'put method is not implemented')
     })
   })
 
   describe('SymbolTable#get(key)', () => {
     it('should throw because is not implemented', () => {
-      expect(() => this.st.get('A')).toThrowError(SyntaxError)
+      expect(() => this.st.get('A')).toThrowError(SyntaxError, 'get method is not implemented')
     })
   })
 
@@ -80,7 +80,7 @@ describe('Unit Tests: Abstract SymbolTable', () => {
 
   describe('SymbolTable#keys()', () => {
     it('should throw because is not implemented', () => {
-      expect(() => this.st.keys()).toThrowError(SyntaxError)
+      expect(() => this.st.keys()).toThrowError(SyntaxError, 'keys method is not implemented')
     })
   })
 })
