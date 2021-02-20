@@ -4,9 +4,8 @@
   "description": "Personal notes & JavaScript code for the book: Algorithms 4th edition by Robert Sedgewick and Kevin Wayne.",
   "scripts": {
     "docs": "jsdoc -c docs/conf.json --pedantic --verbose -a all",
-    "lint": "standard \"src/**/*.js\"",
-    "lint:fix": "yarn lint --fix",
-    "pretest": "yarn lint:fix",
+    "format": "prettier --write \"src/**/*.js\"",
+    "lint": "eslint \"src/**/*.js\" --quiet",
     "test": "jasmine --config=jasmine.json",
     "test:exercises": "jasmine exercises/**/*.spec.js --helper=spec/helpers/*.js"
   },
@@ -18,22 +17,6 @@
   ],
   "author": "Isaac Ramírez <iramirezc@live.com.mx>",
   "license": "ISC",
-  "standard": {
-    "globals": [
-      "CONFIG",
-      "UNDEF",
-      "TestCase",
-      "afterEach",
-      "beforeAll",
-      "beforeEach",
-      "describe",
-      "expect",
-      "it",
-      "xit",
-      "jasmine",
-      "spyOn"
-    ]
-  },
   "devDependencies": {
     "d3": "^5.15.1",
     "glob": "^7.1.6",
@@ -43,6 +26,8 @@
     "jsdoc": "~3.6.6",
     "jsdom": "^16.4.0",
     "mathjs": "^8.0.1",
-    "standard": "^16.0.1"
+    "eslint": "^7.20.0",
+    "eslint-config-prettier": "^7.2.0",
+    "prettier": "^2.2.1"
   }
 }
