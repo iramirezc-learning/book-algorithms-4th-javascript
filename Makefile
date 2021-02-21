@@ -65,3 +65,9 @@ merge-sort: # merge sort (top down)
 
 mergebu-sort: # merge sort (bottom up)
 	./client MergeBUSortClient < algs4-data/words3.txt
+
+quick-sort: # quick sort
+	./client QuickSortClient < algs4-data/words3.txt
+
+quick3-sort: # quick 3way sort
+	./client Quick3waySortClient < algs4-data/words3.txt

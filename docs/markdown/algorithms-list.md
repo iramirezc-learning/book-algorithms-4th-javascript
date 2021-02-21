@@ -76,3 +76,10 @@
 - [MergeSortBU](/src/algorithms/merge-sort-bu/merge-sort-bu.js)
 - [MergeSortBU Client](/src/algorithms/merge-sort-bu/merge-sort-bu.client.js)
 
+#### Section 2.3 - Quick Sort
+
+- [QuickSort](/src/algorithms/quick-sort/quick-sort.js)
+- [QuickSort Client](/src/algorithms/quick-sort/quick-sort.client.js)
+- [Quick3way](/src/algorithms/quick-3way-sort/quick-3way-sort.js)
+- [Quick3way Client](/src/algorithms/quick-3way-sort/quick-3way-sort.client.js)
+
