@@ -71,3 +71,15 @@ quick-sort: # quick sort
 
 quick3-sort: # quick 3way sort
 	./client Quick3waySortClient < algs4-data/words3.txt
+
+topm: # top max (minimun priority queue)
+	./client TopM 5 < algs4-data/tinyBatch.txt
+
+minm: # low min (maximum priority queue)
+	./client LowestM 5 < algs4-data/tinyBatch.txt
+
+multiway: # multiway (index minimun priority queue)
+	./client Multiway algs4-data/m1.txt algs4-data/m2.txt algs4-data/m3.txt
+
+heap-sort: # heap sort
+	./client HeapSortClient < algs4-data/words3.txt

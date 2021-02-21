@@ -83,3 +83,13 @@
 - [Quick3way](/src/algorithms/quick-3way-sort/quick-3way-sort.js)
 - [Quick3way Client](/src/algorithms/quick-3way-sort/quick-3way-sort.client.js)
 
+#### Section 2.4 - Priority Queues
+
+- [MinPQ](/src/adts/min-priority-queue/min-priority-queue.js)
+- [TopM Client](/src/adts/min-priority-queue/min-priority-queue.client.js)
+- [MaxPQ](/src/adts/max-priority-queue/max-priority-queue.js)
+- [LowestM](/src/adts/max-priority-queue/max-priority-queue.client.js)
+- [IndexMinPQ](/src/adts/index-min-priority-queue/index-min-priority-queue.js)
+- [Multiway](/src/adts/index-min-priority-queue/multiway.client.js)
+- [HeapSort](/src/algorithms/heap-sort/heap-sort.js)
+- [HeapSort Client](/src/algorithms/heap-sort/heap-sort.client.js)

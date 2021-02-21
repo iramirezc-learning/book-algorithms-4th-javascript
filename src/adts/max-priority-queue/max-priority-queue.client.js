@@ -13,7 +13,7 @@ class LowestM {
    * @param {[]} args [m]
    * @example <caption>Print the lowest 5 transactions</caption>
    * ```sh
-   * $ node max-priority-queue.client.js 5 < algs4-data/tinyBatch.txt
+   * $ ./client LowestM 5 < algs4-data/tinyBatch.txt
    * Turing 1/11/2002 66.1
    * Turing 6/17/1990 644.08
    * Dijkstra 9/10/2000 708.95
@@ -47,6 +47,4 @@ class LowestM {
   }
 }
 
-// Execution
-// ==============================
-if (require.main === module) LowestM.main(process.argv.slice(2))
+module.exports = { LowestM }

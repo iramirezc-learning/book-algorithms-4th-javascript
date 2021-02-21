@@ -13,7 +13,7 @@ class TopM {
    * @param {[]} args [m]
    * @example <caption>Print the top 5 transactions</caption>
    * ```sh
-   * $ node min-priority-queue.client.js 5 < algs4-data/tinyBatch.txt
+   * $ ./client TopM 5 < algs4-data/tinyBatch.txt
    * Thompson 2/27/2000 4747.08
    * vonNeumann 2/12/1994 4732.35
    * vonNeumann 1/11/1999 4409.74
@@ -47,6 +47,4 @@ class TopM {
   }
 }
 
-// Execution
-// ==============================
-if (require.main === module) TopM.main(process.argv.slice(2))
+module.exports = { TopM }
