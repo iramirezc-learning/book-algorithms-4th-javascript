@@ -101,3 +101,16 @@
 #### Section 2.5 - Applications
 
 > No algorithms to implement
+
+### Chapter 3 - Searching
+
+#### Section 3.1 - Symbol Tables
+
+- [ST <interface>](/src/abstracts/symbol-table/symbol-table.js)
+- [OST <interface>](/src/abstracts/ordered-symbol-table/ordered-symbol-table.js)
+- [SequentialSearchST](/src/adts/sequential-search-st/sequential-search-st.js)
+- [SequentialSearchST Client](/src/adts/sequential-search-st/sequential-search-st.client.js)
+- [FrequencyCounter](/src/clients/frequency-counter.client.js)
+- [BinarySearchST](/src/adts/binary-search-st/binary-search-st.js)
+- [BinarySearchST Client](/src/adts/binary-search-st/binary-search-st.client.js)
+  

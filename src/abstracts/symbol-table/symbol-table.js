@@ -56,7 +56,7 @@ class SymbolTable {
    * @param {*} key - The key that identifies the value.
    * @param {*} val - The value.
    */
-  put(key, val) {
+  put(/* key, val */) {
     throw new SyntaxError('put method is not implemented')
   }
 
@@ -68,7 +68,7 @@ class SymbolTable {
    * @param {*} key - The key to be searched.
    * @returns {*} Returns the value associated with the key.
    */
-  get(key) {
+  get(/* key */) {
     throw new SyntaxError('get method is not implemented')
   }
 

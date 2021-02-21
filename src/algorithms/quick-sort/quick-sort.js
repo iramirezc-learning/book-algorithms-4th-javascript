@@ -28,6 +28,7 @@ class Quick extends GenericSort {
 
     const v = array[lo]
 
+    // eslint-disable-next-line
     while (true) {
       // increment `i` until array[i] is not longer less
       // than comparable `v`

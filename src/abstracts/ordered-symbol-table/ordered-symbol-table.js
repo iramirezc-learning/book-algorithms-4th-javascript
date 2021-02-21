@@ -14,7 +14,7 @@ class OrderedSymbolTable extends SymbolTable {
    * @param {*} key - The key to be searched.
    * @returns {number} The number of keys less than the `key`.
    */
-  rank(key) {
+  rank(/* key */) {
     throw new SyntaxError('rank method is not implemented')
   }
 
@@ -45,7 +45,7 @@ class OrderedSymbolTable extends SymbolTable {
    * @param {*} key - The key to be searched.
    * @returns {*} The largest key less than or equal to the `key`.
    */
-  floor(key) {
+  floor(/* key */) {
     throw new SyntaxError('floor method is not implemented')
   }
 
@@ -56,7 +56,7 @@ class OrderedSymbolTable extends SymbolTable {
    * @param {*} key - The key to be searched.
    * @returns {*} The smallest key greater than or equal to the `key`.
    */
-  ceiling(key) {
+  ceiling(/* key */) {
     throw new SyntaxError('ceiling method is not implemented')
   }
 
@@ -67,7 +67,7 @@ class OrderedSymbolTable extends SymbolTable {
    * @param {number} k - The rank to be searched.
    * @returns {*} The key of rank `k`.
    */
-  select(k) {
+  select(/* k */) {
     throw new SyntaxError('select method is not implemented')
   }
 

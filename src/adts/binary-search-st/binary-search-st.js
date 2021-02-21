@@ -142,7 +142,7 @@ class BinarySearchST extends OrderedSymbolTable {
    * @todo implementation. Exercise 3.1.16.
    * @param {*} key - The key that will be deleted.
    */
-  delete(key) {
+  delete(/* key */) {
     throw new SyntaxError('delete method is not implemented')
   }
 
@@ -176,7 +176,7 @@ class BinarySearchST extends OrderedSymbolTable {
    * @param {*} key - The key to be searched.
    * @returns {*} The largest key less than or equal to the `key`.
    */
-  floor(key) {
+  floor(/* key */) {
     throw new SyntaxError('floor method is not implemented')
   }
 

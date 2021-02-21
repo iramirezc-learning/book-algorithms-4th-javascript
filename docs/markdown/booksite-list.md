@@ -67,3 +67,23 @@ Every algorithm or ADT has a link pointing to the **authors** Java implementatio
 - IndexMaxPQ | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/IndexMaxPQ.java.html) |
 - Multiway | [js](/src/adts/index-min-priority-queue/multiway.client.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Multiway.java.html) |
 - Heap | [js](/src/algorithms/heap-sort/heap-sort.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Heap.java.html) |
+
+### Chapter 3. Searching
+
+- FrequencyCounter | [js](/src/clients/frequency-counter.client.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/FrequencyCounter.java.html) |
+- SequentialSearchST | [js](/src/adts/sequential-search-st/sequential-search-st.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/SequentialSearchST.java.html) |
+- BinarySearchST | [js](/src/adts/binary-search-st/binary-search-st.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/BinarySearchST.java.html) |
+- BST | js | java |
+- RedBlackBST | js | java |
+- SeparateChainingHashST | js | java |
+- LinearProbingHashST | js | java |
+- ST | js | java |
+- SET | js | java |
+- DeDup | js | java |
+- AllowFilter | js | java |
+- BlockFilter | js | java |
+- LookupCSV | js | java |
+- LookupIndex | js | java |
+- FileIndex | js | java |
+- SparseVector | js | java |
+

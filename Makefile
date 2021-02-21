@@ -83,3 +83,12 @@ multiway: # multiway (index minimun priority queue)
 
 heap-sort: # heap sort
 	./client HeapSortClient < algs4-data/words3.txt
+
+ssst: # sequential search symbol table
+	./client SequentialSearchSTClient < algs4-data/custom/search-example.txt
+
+freqc: # frequency counter symbol table
+	./client FrequencyCounter 8 < algs4-data/tale.txt
+
+bsst: # binary search symbol table
+	./client BinarySearchSTClient < algs4-data/custom/search-example.txt

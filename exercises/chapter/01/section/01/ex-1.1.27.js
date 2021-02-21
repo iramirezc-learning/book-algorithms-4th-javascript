@@ -51,7 +51,7 @@ class Exercise {
    * using memoization.
    * @todo implementation
    */
-  static myBinomial(n, k, p) {}
+  static myBinomial(/* n, k, p */) {}
 }
 
 // Exports

@@ -64,7 +64,7 @@ class SequentialSearchST extends SymbolTable {
    * @todo implementation. Exercise 3.1.16.
    * @param {*} key - The key that will be deleted.
    */
-  delete(key) {
+  delete(/* key */) {
     throw new SyntaxError('delete method is not implemented')
   }
 

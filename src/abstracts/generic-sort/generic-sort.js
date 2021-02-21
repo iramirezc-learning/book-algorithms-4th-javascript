@@ -70,7 +70,7 @@ class GenericSort {
    * @throws SyntaxError This function should be implemented by the client.
    * @param {Array<*>} a - The array of values.
    */
-  static sort(a) {
+  static sort(/* a */) {
     throw new SyntaxError('sort method not implemented')
   }
 }
