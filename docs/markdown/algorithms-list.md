@@ -45,7 +45,7 @@
 - [TwoSumFast](/src/algorithms/two-sum-fast/two-sum-fast.js)
 - [TwoSumFast Client](/src/algorithms/two-sum-fast/two-sum-fast.client.js)
 - [ThreeSumFast](/src/algorithms/three-sum-fast/three-sum-fast.js)
-- [ThreeSumFast Client](/src/algorithms/three-sum-fast/three-sum-fast.js)
+- [ThreeSumFast Client](/src/algorithms/three-sum-fast/three-sum-fast.client.js)
 - [DoublingRatio Experiment](/src/clients/doubling-ratio.client.js)
 
 #### Section 1.5 - Case Study: Union-Find
@@ -68,3 +68,11 @@
 - [SortCompare Client](/src/clients/sort-compare.client.js)
 - [ShellSort](/src/algorithms/shell-sort/shell-sort.js)
 - [ShellSort Client](/src/algorithms/shell-sort/shell-sort.client.js)
+
+#### Section 2.2 - Merge Sort
+
+- [MergeSort](/src/algorithms/merge-sort/merge-sort.js)
+- [MergeSort Client](/src/algorithms/merge-sort/merge-sort.client.js)
+- [MergeSortBU](/src/algorithms/merge-sort-bu/merge-sort-bu.js)
+- [MergeSortBU Client](/src/algorithms/merge-sort-bu/merge-sort-bu.client.js)
+

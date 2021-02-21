@@ -59,3 +59,9 @@ insertion-sort: # insertion sort
 
 shell-sort: # shell sort
 	./client ShellSortClient < algs4-data/words3.txt
+
+merge-sort: # merge sort (top down)
+	./client MergeSortClient < algs4-data/words3.txt
+
+mergebu-sort: # merge sort (bottom up)
+	./client MergeBUSortClient < algs4-data/words3.txt
