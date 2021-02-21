@@ -12,22 +12,22 @@ class ThreeSumClient {
    * @param {[]} args [tripletsFilePath]
    * @example <caption>1K ints</caption>
    * ```sh
-   * $ node three-sum.client.js algs4-data/1Kints.txt
+   * $ ./client ThreeSumClient algs4-data/1Kints.txt
    * 70
    * ```
    * @example <caption>2K ints</caption>
    * ```sh
-   * $ node three-sum.client.js algs4-data/2Kints.txt
+   * $ ./client ThreeSumClient algs4-data/2Kints.txt
    * 528
    * ```
    * @example <caption>4K ints</caption>
    * ```sh
-   * $ node three-sum.client.js algs4-data/4Kints.txt
+   * $ ./client ThreeSumClient algs4-data/4Kints.txt
    * 4039
    * ```
    * @example <caption>8K ints</caption>
    * ```sh
-   * $ node three-sum.client.js algs4-data/8Kints.txt
+   * $ ./client ThreeSumClient algs4-data/8Kints.txt
    * 32074
    * ```
    */
@@ -39,6 +39,4 @@ class ThreeSumClient {
   }
 }
 
-// Execution
-// ==============================
-if (require.main === module) ThreeSumClient.main(process.argv.slice(2))
+module.exports = { ThreeSumClient }

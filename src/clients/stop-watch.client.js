@@ -13,12 +13,12 @@ class StopWatchClient {
    * @param {[]} args [n]
    * @example <caption>time counting the triplets in 1000 random ints</caption>
    * ```sh
-   * $ node stop-watch.client.js 1000
+   * $ ./client StopWatchClient 1000
    * 61 triplets 0.374 seconds
    * ```
    * @example <caption>time counting the triplets in 2000 random ints</caption>
    * ```sh
-   * $ node stop-watch.client.js 2000
+   * $ ./client StopWatchClient 2000
    * 474 triplets 2.807 seconds
    * ```
    */
@@ -37,6 +37,4 @@ class StopWatchClient {
   }
 }
 
-// Execution
-// ==============================
-if (require.main === module) StopWatchClient.main(process.argv.slice(2))
+module.exports = { StopWatchClient }

@@ -1,7 +1,7 @@
-const { StdOut, StdRandom } = require('../../libs')
-const { pad } = require('../../utils')
-const { StopWatch } = require('../../adts')
-const { ThreeSum } = require('../../algorithms')
+const { StdOut, StdRandom } = require('../libs')
+const { pad } = require('../utils')
+const { StopWatch } = require('../adts')
+const { ThreeSum } = require('../algorithms')
 
 /**
  * DoublingTest
@@ -33,7 +33,7 @@ class DoublingTest {
    * doubling the size of array a every time.
    * @example
    * ```sh
-   * $ node doubling-test.experiment.js
+   * $ ./client DoublingTest
    *     250   0.013
    *     500   0.043
    *    1000   0.298
@@ -52,6 +52,4 @@ class DoublingTest {
   }
 }
 
-// Execution
-// ==============================
-DoublingTest.main()
+module.exports = { DoublingTest }

@@ -26,3 +26,15 @@ stats: # bag client returns mean and standard deviation
 
 stack: # linked stack
 	./client StackClient < algs4-data/tobe.txt
+
+threesum: # triplets sum
+	./client ThreeSumClient algs4-data/1Kints.txt
+
+stopwatch: # stop watch
+	./client StopWatchClient 1000
+
+twosum: # two sum fast
+	./client TwoSumFastClient algs4-data/1Mints.txt
+
+threesumfast: # three sum fast
+	

@@ -12,27 +12,27 @@ class TwoSumFastClient {
    * @param {[]} args [tripletsFilePath]
    * @example <caption>1K ints</caption>
    * ```sh
-   * $ node two-sum-fast.client.js algs4-data/1Kints.txt
+   * $ ./client TwoSumFastClient algs4-data/1Kints.txt
    * 1
    * ```
    * @example <caption>2K ints</caption>
    * ```sh
-   * $ node two-sum-fast.client.js algs4-data/2Kints.txt
+   * $ ./client TwoSumFastClient algs4-data/2Kints.txt
    * 2
    * ```
    * @example <caption>4K ints</caption>
    * ```sh
-   * $ node two-sum-fast.client.js algs4-data/4Kints.txt
+   * $ ./client TwoSumFastClient algs4-data/4Kints.txt
    * 3
    * ```
    * @example <caption>8K ints</caption>
    * ```sh
-   * $ node two-sum-fast.client.js algs4-data/8Kints.txt
+   * $ ./client TwoSumFastClient algs4-data/8Kints.txt
    * 19
    * ```
    * @example <caption>1M ints</caption>
    * ```sh
-   * $ node two-sum-fast.client.js algs4-data/1Mints.txt
+   * $ ./client TwoSumFastClient algs4-data/1Mints.txt
    * 249838
    * ```
    */
@@ -44,6 +44,4 @@ class TwoSumFastClient {
   }
 }
 
-// Execution
-// ==============================
-if (require.main === module) TwoSumFastClient.main(process.argv.slice(2))
+module.exports = { TwoSumFastClient }
