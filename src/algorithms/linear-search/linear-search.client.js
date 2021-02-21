@@ -12,14 +12,14 @@ class LSClient {
    * @param {[]} args [whitelistFilePath]
    * @example <caption>Filtering a tiny whitelist</caption>
    * ```sh
-   * $ node linear-search.client.js algs4-data/tinyW.txt < algs4-data/tinyT.txt | more
+   * $ ./client LSClient algs4-data/tinyW.txt < algs4-data/tinyT.txt | more
    * 50
    * 99
    * 13
    * ```
    * @example <caption>Filtering a large whitelist</caption>
    * ```sh
-   * $ node linear-search.client.js algs4-data/largeW.txt < algs4-data/largeT.txt | more
+   * $ ./client LSClient algs4-data/largeW.txt < algs4-data/largeT.txt | more
    * 499569
    * 984875
    * 295754
@@ -43,6 +43,4 @@ class LSClient {
   }
 }
 
-// Execution
-// ==============================
-if (require.main === module) LSClient.main(process.argv.slice(2))
+module.exports = { LSClient }

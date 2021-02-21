@@ -12,7 +12,7 @@ class Average {
    * read from the StdIn.
    * @example <caption>Manual input from StdIn</caption>
    * ```sh
-   * $ node average.client.js
+   * $ ./client Average
    * > 1.23456
    * > 2.34567
    * > 3.45678
@@ -22,12 +22,12 @@ class Average {
    * ```
    * @example <caption>Streaming from a file</caption>
    * ```sh
-   * $ node average.client.js < data.txt
+   * $ ./client Average < out/data.txt
    * Average is 152.17971
    * ```
    * @example <caption>Piping from another process</caption>
    * ```sh
-   * $ node random-seq.client.js 1000 100 199.99 | node average.client.js
+   * $ ./client RandomSeq 1000 100 199.99 | ./client Average
    * Average is 150.25505
    * ```
    */
@@ -48,6 +48,4 @@ class Average {
   }
 }
 
-// Execution
-// ==============================
-if (require.main === module) Average.main()
+module.exports = { Average }

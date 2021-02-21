@@ -12,7 +12,7 @@ class RandomSeq {
    * @param {[]} args [n, lo, hi]
    * @example <caption>Generating 5 random doubles between 100-199.99</caption>
    * ```sh
-   * $ node random-seq.client.js 5 100.0 199.99
+   * $ ./client RandomSeq 5 100.0 199.99
    * 166.29
    * 171.09
    * 199.85
@@ -21,7 +21,7 @@ class RandomSeq {
    * ```
    * @example <caption>Streaming the StdOut to a file</caption>
    * ```sh
-   * $ node random-seq.client.js 1000 100.0 199.99 > data.txt
+   * $ ./client RandomSeq 1000 100.0 199.99 > ./out/data.txt
    * ```
    */
   static main(args) {
@@ -37,6 +37,4 @@ class RandomSeq {
   }
 }
 
-// Execution
-// ==============================
-if (require.main === module) RandomSeq.main(process.argv.slice(2))
+module.exports = { RandomSeq }

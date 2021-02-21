@@ -2,6 +2,10 @@
 docs/html/*
 !docs/html/.gitkeep
 
+# test files output
+out/*
+!out/.gitkeep
+
 # logs
 logs
 *.log
