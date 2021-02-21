@@ -1,5 +1,5 @@
-const { StdIn, StdOut } = require('../../libs')
-const { Bag } = require('../../adts')
+const { StdIn, StdOut } = require("../libs");
+const { Bag } = require("../adts");
 
 /**
  * BagClient
@@ -28,37 +28,37 @@ class BagClient {
    * Stddev: 10.51
    * ```
    */
-  static main () {
-    const bag = new Bag()
+  static main() {
+    const bag = new Bag();
 
     StdIn.read()
-      .on('line', line => {
-        bag.add(parseFloat(line))
+      .on("line", (line) => {
+        bag.add(parseFloat(line));
       })
-      .on('close', () => {
-        const n = bag.size()
-        let sum = 0
+      .on("close", () => {
+        const n = bag.size();
+        let sum = 0;
 
         for (const x of bag) {
-          sum += x
+          sum += x;
         }
 
-        const mean = sum / n
+        const mean = sum / n;
 
-        sum = 0
+        sum = 0;
 
         for (const x of bag) {
-          sum += (x - mean) * (x - mean)
+          sum += (x - mean) * (x - mean);
         }
 
-        const stddev = Math.sqrt(sum / (n - 1))
+        const stddev = Math.sqrt(sum / (n - 1));
 
-        StdOut.printf('Mean: %f\n', mean.toFixed(2))
-        StdOut.printf('Stddev: %f\n', stddev.toFixed(2))
-      })
+        StdOut.printf("Mean: %f\n", mean.toFixed(2));
+        StdOut.printf("Stddev: %f\n", stddev.toFixed(2));
+      });
   }
 }
 
 // Execution
 // ==============================
-if (require.main === module) BagClient.main()
+if (require.main === module) BagClient.main();

@@ -1,8 +1,8 @@
 // Choose any of the ST implementations
 // - SequentialSearchST
 // - BinarySearchST
-const { BinarySearchST: ST } = require('../../adts')
-const { StdIn, StdOut } = require('../../libs')
+const { BinarySearchST: ST } = require("../adts");
+const { StdIn, StdOut } = require("../libs");
 
 /**
  * A ST client.
@@ -30,38 +30,41 @@ class FrequencyCounter {
    * @param {...string} args - Params: `[minLength]`
    * * @type {number} `args[0]` - Number `minLength`.
    */
-  static main (args) {
-    const minLength = parseInt(args[0], 10)
-    const st = new ST()
+  static main(args) {
+    const minLength = parseInt(args[0], 10);
+    const st = new ST();
 
     StdIn.read()
-      .on('line', line => {
-        line.trim().split(' ').forEach(word => {
-          if (word.length < minLength) {
-            return
-          }
+      .on("line", (line) => {
+        line
+          .trim()
+          .split(" ")
+          .forEach((word) => {
+            if (word.length < minLength) {
+              return;
+            }
 
-          if (!st.contains(word)) {
-            st.put(word, 1)
-          } else {
-            st.put(word, st.get(word) + 1)
-          }
-        })
+            if (!st.contains(word)) {
+              st.put(word, 1);
+            } else {
+              st.put(word, st.get(word) + 1);
+            }
+          });
       })
-      .on('close', () => {
-        let max = ''
+      .on("close", () => {
+        let max = "";
 
-        st.put(max, 0)
+        st.put(max, 0);
 
         for (const word of st.keys()) {
           if (st.get(word) >= st.get(max)) {
-            max = word
+            max = word;
           }
         }
 
-        StdOut.println(`${max} ${st.get(max)}`)
-      })
+        StdOut.println(`${max} ${st.get(max)}`);
+      });
   }
 }
 
-module.exports = { FrequencyCounter }
+module.exports = { FrequencyCounter };

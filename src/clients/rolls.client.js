@@ -1,5 +1,5 @@
-const { StdOut, StdRandom } = require('../../libs')
-const { Counter } = require('../../adts')
+const { StdOut, StdRandom } = require("../libs");
+const { Counter } = require("../adts");
 
 /**
  * Rolls
@@ -21,26 +21,26 @@ class Rolls {
    * 16740 6s
    * ```
    */
-  static main (args) {
-    const trials = parseInt(args[0], 10)
-    const SIDES = 6
-    const rolls = new Array(SIDES + 1)
+  static main(args) {
+    const trials = parseInt(args[0], 10);
+    const SIDES = 6;
+    const rolls = new Array(SIDES + 1);
 
     for (let i = 1; i <= SIDES; i++) {
-      rolls[i] = new Counter(`${i}s`)
+      rolls[i] = new Counter(`${i}s`);
     }
 
     for (let t = 0; t < trials; t++) {
-      const result = StdRandom.uniform(1, SIDES + 1)
-      rolls[result].increment()
+      const result = StdRandom.uniform(1, SIDES + 1);
+      rolls[result].increment();
     }
 
     for (let i = 1; i <= SIDES; i++) {
-      StdOut.println(String(rolls[i]))
+      StdOut.println(String(rolls[i]));
     }
   }
 }
 
 // Execution
 // ==============================
-if (require.main === module) Rolls.main(process.argv.slice(2))
+if (require.main === module) Rolls.main(process.argv.slice(2));

@@ -1,4 +1,4 @@
-const { StdIn, StdOut } = require('../../libs')
+const { StdIn, StdOut } = require("../libs");
 
 /**
  * Average
@@ -31,23 +31,23 @@ class Average {
    * Average is 150.25505
    * ```
    */
-  static main () {
-    let sum = 0
-    let count = 0
+  static main() {
+    let sum = 0;
+    let count = 0;
 
     StdIn.read()
-      .on('line', line => {
-        sum += parseFloat(line)
-        count++
+      .on("line", (line) => {
+        sum += parseFloat(line);
+        count++;
       })
-      .on('close', () => {
-        const avg = sum / count
+      .on("close", () => {
+        const avg = sum / count;
 
-        StdOut.printf('Average is %f\n', avg.toFixed(5))
-      })
+        StdOut.printf("Average is %f\n", avg.toFixed(5));
+      });
   }
 }
 
 // Execution
 // ==============================
-if (require.main === module) Average.main()
+if (require.main === module) Average.main();

@@ -1,6 +1,6 @@
-const { StdOut, StdRandom } = require('../../libs')
-const { StopWatch } = require('../../adts')
-const { ThreeSum } = require('../../algorithms')
+const { StdOut, StdRandom } = require("../libs");
+const { StopWatch } = require("../adts");
+const { ThreeSum } = require("../algorithms");
 
 /**
  * StopWatchClient
@@ -22,21 +22,21 @@ class StopWatchClient {
    * 474 triplets 2.807 seconds
    * ```
    */
-  static main (args) {
-    const n = parseInt(args[0])
-    const a = []
+  static main(args) {
+    const n = parseInt(args[0]);
+    const a = [];
 
     for (let i = 0; i < n; i++) {
-      a[i] = StdRandom.uniform(-1000000, 1000000)
+      a[i] = StdRandom.uniform(-1000000, 1000000);
     }
 
-    const timer = new StopWatch()
-    const count = ThreeSum.count(a)
-    const time = timer.elapsedTime()
-    StdOut.println(`${count} triplets ${time} seconds`)
+    const timer = new StopWatch();
+    const count = ThreeSum.count(a);
+    const time = timer.elapsedTime();
+    StdOut.println(`${count} triplets ${time} seconds`);
   }
 }
 
 // Execution
 // ==============================
-if (require.main === module) StopWatchClient.main(process.argv.slice(2))
+if (require.main === module) StopWatchClient.main(process.argv.slice(2));

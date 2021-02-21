@@ -1,5 +1,5 @@
-const { StdOut, StdRandom } = require('../../libs')
-const { Accumulator } = require('../../adts')
+const { StdOut, StdRandom } = require("../libs");
+const { Accumulator } = require("../adts");
 
 /**
  * TestAccumulator
@@ -16,18 +16,18 @@ class TestAccumulator {
    * Mean (100000 values): 0.49879
    * ```
    */
-  static main (args) {
-    const trials = parseInt(args[0], 10)
-    const accumulator = new Accumulator()
+  static main(args) {
+    const trials = parseInt(args[0], 10);
+    const accumulator = new Accumulator();
 
     for (let t = 0; t < trials; t++) {
-      accumulator.addDataValue(StdRandom.uniform(0, 0.999))
+      accumulator.addDataValue(StdRandom.uniform(0, 0.999));
     }
 
-    StdOut.println(String(accumulator))
+    StdOut.println(String(accumulator));
   }
 }
 
 // Execution
 // ==============================
-if (require.main === module) TestAccumulator.main(process.argv.slice(2))
+if (require.main === module) TestAccumulator.main(process.argv.slice(2));
