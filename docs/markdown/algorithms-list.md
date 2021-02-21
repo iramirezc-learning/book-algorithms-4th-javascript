@@ -8,39 +8,43 @@
 
 - [Euclidean](/src/algorithms/euclidean/euclidean.js)
 - [Binary Search](/src/algorithms/binary-search/binary-search.js)
-- [RandomSeq Client](/src/clients/random-seq.client.js)
-- [Average Client](/src/clients/average.client.js)
+- [Whitelist Client (BS)](/src/algorithms/binary-search/binary-search.client.js)
 - [Linear Search](/src/algorithms/linear-search/linear-search.js)
+- [Linear Search Client](/src/algorithms/linear-search/linear-search.client.js)
+- [RandomSeq Client](/src/clients/random-seq.client.js)
 - [StdRandomClient](/src/clients/std-random.client.js)
+- [Average Client](/src/clients/average.client.js)
 
 #### Section 1.2 - Data Abstraction
 
 - [Accumulator](/src/adts/accumulator/accumulator.js)
-- [TestAccumulator Client](/src/clients/accumulator.client.js)
-- [Flips Client](/src/clients/flips.client.js)
+- [TestAccumulator Client](/src/adts/accumulator/accumulator.client.js)
 - [Counter](/src/adts/counter/counter.js)
-- [Rolls Client](/src/clients/rolls.client.js)
+- [Flips Client](/src/adts/counter/flips.client.js)
+- [Rolls Client](/src/adts/counter/rolls.client.js)
 - [Date](/src/adts/basic-date/basic-date.js)
 - [Date (alternate)](/src/adts/small-date/small-date.js)
 - [Transaction](/src/adts/transaction/transaction.js)
-- [Whitelist Client (BS)](/src/algorithms/binary-search/binary-search.client.js)
 
 #### Section 1.3 - Bags, Queues, and Stacks
 
-- [Stats Client](/src/clients/stats.client.js)
+
 - [Dijkstra's Two-Stack (Evaluate)](/src/algorithms/dijkstra-two-stack/dijkstra-two-stack.js)
 - [FixedCapacityStack](/src/adts/fixed-capacity-stack/fixed-capacity-stack.js)
 - [ResizingArrayStack](/src/adts/resizable-array-stack/resizable-array-stack.js)
 - [Stack (linked-list)](/src/adts/stack/stack.js)
+- [Stack Client](/src/adts/stack/stack.client.js)
 - [Queue](/src/adts/queue/queue.js)
+- [Queue Client](/src/adts/queue/queue.client.js)
 - [Bag](/src/adts/bag/bag.js)
+- [Stats Client](/src/adts/bag/stats.client.js)
 
 #### Section 1.4 - Analysis of Algorithms
 
 - [ThreeSum](/src/algorithms/three-sum/three-sum.js)
 - [ThreeSum Client](/src/algorithms/three-sum/three-sum.client.js)
 - [StopWatch](/src/adts/stop-watch/stop-watch.js)
-- [StopWatch Client](/src/clients/stop-watch.client.js)
+- [StopWatch Client](/src/adts/stop-watch/stop-watch.client.js)
 - [DoublingTest Experiment](/src/clients/doubling-test.client.js)
 - [TwoSumFast](/src/algorithms/two-sum-fast/two-sum-fast.js)
 - [TwoSumFast Client](/src/algorithms/two-sum-fast/two-sum-fast.client.js)
@@ -93,3 +97,7 @@
 - [Multiway](/src/adts/index-min-priority-queue/multiway.client.js)
 - [HeapSort](/src/algorithms/heap-sort/heap-sort.js)
 - [HeapSort Client](/src/algorithms/heap-sort/heap-sort.client.js)
+
+#### Section 2.5 - Applications
+
+> No algorithms to implement

@@ -1,5 +1,5 @@
-const { StdOut, StdRandom } = require('../libs')
-const { Accumulator } = require('../adts')
+const { StdOut, StdRandom } = require('../../libs')
+const Accumulator = require('./accumulator')
 
 /**
  * TestAccumulator

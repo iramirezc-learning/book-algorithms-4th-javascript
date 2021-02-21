@@ -1,5 +1,5 @@
-const { StdIn, StdOut } = require('../libs')
-const { Queue } = require('../adts')
+const { StdIn, StdOut } = require('../../libs')
+const Queue = require('./queue')
 
 /**
  * QueueClient

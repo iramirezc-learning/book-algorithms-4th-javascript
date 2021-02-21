@@ -1,5 +1,5 @@
-const { StdOut, StdRandom } = require('../libs')
-const { Counter } = require('../adts')
+const { StdOut, StdRandom } = require('../../libs')
+const Counter = require('./counter')
 
 /**
  * Rolls

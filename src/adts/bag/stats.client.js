@@ -1,5 +1,5 @@
-const { StdIn, StdOut } = require('../libs')
-const { Bag } = require('../adts')
+const { StdIn, StdOut } = require('../../libs')
+const Bag = require('./bag')
 
 /**
  * Stats

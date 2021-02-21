@@ -1,5 +1,5 @@
-const { StdIn, StdOut } = require('../libs')
-const { Stack } = require('../adts')
+const { StdIn, StdOut } = require('../../libs')
+const Stack = require('./stack')
 
 /**
  * StackClient
