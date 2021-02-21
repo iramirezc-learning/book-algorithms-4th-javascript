@@ -12,7 +12,7 @@ class TestAccumulator {
    * @param {[]} args [trials]
    * @example
    * ```sh
-   * $ node accumulator.client.js 100000
+   * $ ./client TestAccumulator 100000
    * Mean (100000 values): 0.49879
    * ```
    */
@@ -28,6 +28,4 @@ class TestAccumulator {
   }
 }
 
-// Execution
-// ==============================
-if (require.main === module) TestAccumulator.main(process.argv.slice(2))
+module.exports = { TestAccumulator }

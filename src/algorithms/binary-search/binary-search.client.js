@@ -5,7 +5,7 @@ const BinarySearch = require('./binary-search')
 /**
  * BSClient
  * @classdesc BinarySearch Test client.
- * @see p. 47
+ * @see p. 47, 98, 99
  */
 class BSClient {
   /**

@@ -25,7 +25,7 @@ class Flips {
    * @param {[]} args [trials]
    * @example
    * ```sh
-   * $ node flips.client.js 1000
+   * $ ./client Flips 1000
    * 490 heads
    * 510 tails
    * delta: 20
@@ -60,6 +60,4 @@ class Flips {
   }
 }
 
-// Execution
-// ==============================
-if (require.main === module) Flips.main(process.argv.slice(2))
+module.exports = { Flips }

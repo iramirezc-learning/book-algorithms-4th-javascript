@@ -12,7 +12,7 @@ class Rolls {
    * @param {[]} args [trials]
    * @example
    * ```sh
-   * $ node rolls.client.js 100000
+   * $ ./client Rolls 100000
    * 16399 1s
    * 16785 2s
    * 16661 3s
@@ -41,6 +41,4 @@ class Rolls {
   }
 }
 
-// Execution
-// ==============================
-if (require.main === module) Rolls.main(process.argv.slice(2))
+module.exports = { Rolls }

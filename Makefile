@@ -11,3 +11,12 @@ average: # average from input stream
 
 ls: # linear search
 	./client LSClient algs4-data/tinyW.txt < algs4-data/tinyT.txt | more
+
+flips: # flips
+	./client Flips 1000
+
+acc: # test accumulator
+	./client TestAccumulator 100000
+
+rolls: # rolls
+	./client Rolls 100000

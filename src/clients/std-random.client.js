@@ -10,7 +10,7 @@ class StdRandomClient {
    * Prints results of various StdRandom methods
    * @example
    * ```sh
-   * $ node std-random.client.js
+   * $ ./client StdRandomClient
    * uniform method
    *   real between [0, 1): 0.7183014458813031
    *   integer between [0, 1): 0
@@ -54,6 +54,4 @@ class StdRandomClient {
   }
 }
 
-// Execution
-// ==============================
-if (require.main === module) StdRandomClient.main()
+module.exports = { StdRandomClient }
