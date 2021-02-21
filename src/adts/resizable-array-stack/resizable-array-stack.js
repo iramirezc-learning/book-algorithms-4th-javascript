@@ -8,7 +8,7 @@ const { ReversedArrayIterator } = require('../../abstracts')
  * @see p. 141
  */
 class ResizableArrayStack {
-  constructor () {
+  constructor() {
     this._a = new Array(1) // it should start with length of 1
     this._n = 0
 
@@ -19,7 +19,7 @@ class ResizableArrayStack {
    * Returns if the Stack is empty.
    * @returns {boolean} Whether the stack is empty or not.
    */
-  isEmpty () {
+  isEmpty() {
     return this._n === 0
   }
 
@@ -27,7 +27,7 @@ class ResizableArrayStack {
    * Returns the number of the elements in the stack.
    * @returns {number} Stack's size.
    */
-  size () {
+  size() {
     return this._n
   }
 
@@ -35,7 +35,7 @@ class ResizableArrayStack {
    * Resizes the internal array `_a` copying the elements from [0, _n)
    * @param {number} max New size for the internal array in the stack.
    */
-  resize (max) {
+  resize(max) {
     assert(max, `max is required. Given: ${max}`)
 
     const temp = new Array(max)
@@ -51,7 +51,7 @@ class ResizableArrayStack {
    * Inserts an item to the Stack.
    * @param {*} item The item to be stored
    */
-  push (item) {
+  push(item) {
     if (this._n === this._a.length) {
       this.resize(2 * this._n)
     }
@@ -63,7 +63,7 @@ class ResizableArrayStack {
    * Removes and returns the last item inserted in the Stack.
    * @returns {*} The item at the top of the Stack.
    */
-  pop () {
+  pop() {
     if (this.isEmpty()) {
       throw new ReferenceError('stack is empty')
     }
@@ -83,7 +83,7 @@ class ResizableArrayStack {
    * Returns an iterator to traverse the stack.
    * @returns {ReversedArrayIterator}
    */
-  [Symbol.iterator] () {
+  [Symbol.iterator]() {
     return new ReversedArrayIterator(this._a, this._n)
   }
 }

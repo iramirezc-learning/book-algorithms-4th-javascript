@@ -4,7 +4,7 @@
  * @see p. 93
  */
 class Accumulator {
-  constructor () {
+  constructor() {
     this._sum = 0
     this._n = 0
   }
@@ -12,7 +12,7 @@ class Accumulator {
   /**
    * @param {number} value Number to add
    */
-  addDataValue (value) {
+  addDataValue(value) {
     this._n++
     this._sum += value
   }
@@ -21,7 +21,7 @@ class Accumulator {
    * Returns the mean of the values accumulated.
    * @returns {number} The computed mean
    */
-  mean () {
+  mean() {
     return this._sum / this._n
   }
 
@@ -31,7 +31,7 @@ class Accumulator {
    * @example
    * // Mean (3 values): 0.12345
    */
-  toString () {
+  toString() {
     return `Mean (${this._n} values): ${this.mean().toFixed(5)}`
   }
 }

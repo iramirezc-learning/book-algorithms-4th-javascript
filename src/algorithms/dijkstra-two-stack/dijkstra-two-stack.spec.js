@@ -1,7 +1,7 @@
 const DijkstraTwoStack = require('./dijkstra-two-stack')
 const { Stack, FixedCapacityStack, ResizableArrayStack } = require('../../adts')
 
-describe('Unit Tests: Dijkstra\'s Two-Stack Algorithm for Expression Evaluation', () => {
+describe("Unit Tests: Dijkstra's Two-Stack Algorithm for Expression Evaluation", () => {
   describe('when using default Stack implementation', () => {
     it('should be using Stack ADT implementation', () => {
       expect(DijkstraTwoStack.Stack).toBe(Stack)

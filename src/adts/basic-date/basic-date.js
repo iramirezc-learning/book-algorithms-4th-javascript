@@ -5,7 +5,7 @@
  * @see p. 79, 91, 103, 247
  */
 class BasicDate {
-  constructor () {
+  constructor() {
     let month, day, year
 
     if (arguments.length === 1 && typeof arguments[0] === 'string') {
@@ -31,21 +31,21 @@ class BasicDate {
   /**
    * Returns the date's month
    */
-  month () {
+  month() {
     return this._month
   }
 
   /**
    * Returns the date's day
    */
-  day () {
+  day() {
     return this._day
   }
 
   /**
    * Returns the date's year
    */
-  year () {
+  year() {
     return this._year
   }
 
@@ -54,7 +54,7 @@ class BasicDate {
    * @example
    * // '9/27/1987'
    */
-  toString () {
+  toString() {
     return `${this.month()}/${this.day()}/${this.year()}`
   }
 
@@ -63,7 +63,7 @@ class BasicDate {
    * @param {BasicDate} target The target BasicDate
    * @returns {boolean}
    */
-  equals (target) {
+  equals(target) {
     if (this === target) return true
     if (target === null) return false
     if (!(target instanceof BasicDate)) return false
@@ -80,7 +80,7 @@ class BasicDate {
    * @param {BasicDate} target The target BasicDate
    * @returns {number} +1 (greater than), -1 (smaller than), 0 (equal to)
    */
-  compareTo (target) {
+  compareTo(target) {
     if (this.year() > target.year()) return +1
     if (this.year() < target.year()) return -1
     if (this.month() > target.month()) return +1

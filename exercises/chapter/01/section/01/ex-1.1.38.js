@@ -26,7 +26,7 @@ class Exercise {
    * ```
    * @param {[]} args [whitelistFile, targetFile]
    */
-  static solution (args) {
+  static solution(args) {
     const whitelistFile = new In(args[0])
     const targetsFile = new In(args[1])
 
@@ -57,7 +57,7 @@ class Exercise {
    * @param {[]} whitelist
    * @param {[]} keys
    */
-  static run (Algorithm, whitelist, keys) {
+  static run(Algorithm, whitelist, keys) {
     const filtered = []
     const start = performance.now()
 
@@ -70,7 +70,8 @@ class Exercise {
     const totalRunningTime = performance.now() - start
 
     return {
-      totalRunningTime, filtered
+      totalRunningTime,
+      filtered
     }
   }
 
@@ -79,7 +80,7 @@ class Exercise {
    * @param {[]} whitelist
    * @param {[]} keys
    */
-  static runBF (whitelist, keys) {
+  static runBF(whitelist, keys) {
     return this.run(LinearSearch, whitelist, keys)
   }
 
@@ -88,7 +89,7 @@ class Exercise {
    * @param {[]} whitelist
    * @param {[]} keys
    */
-  static runBS (whitelist, keys) {
+  static runBS(whitelist, keys) {
     return this.run(BinarySearch, whitelist, keys)
   }
 }

@@ -14,7 +14,7 @@ class Exercise {
    * c) 10000
    * ```
    */
-  static solution () {
+  static solution() {
     StdOut.println(`a) ${this.a().toFixed(5)}`)
     StdOut.println(`b) ${this.b()}`)
     StdOut.println(`c) ${this.c()}`)
@@ -23,7 +23,7 @@ class Exercise {
   /**
    * Mystery code a)
    */
-  static a () {
+  static a() {
     let t = 9.0
 
     while (Math.abs(t - 9.0 / t) > 0.001) {
@@ -36,7 +36,7 @@ class Exercise {
   /**
    * Mystery code b)
    */
-  static b () {
+  static b() {
     let sum = 0
 
     for (let i = 1; i < 1000; i++) {
@@ -51,7 +51,7 @@ class Exercise {
   /**
    * Mystery code c)
    */
-  static c () {
+  static c() {
     let sum = 0
 
     for (let i = 1; i < 1000; i *= 2) {

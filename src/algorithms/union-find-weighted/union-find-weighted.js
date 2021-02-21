@@ -6,7 +6,7 @@ const assert = require('assert')
  * @see p.221, 224, 228
  */
 class WeightedQuickUnionUF {
-  constructor (n) {
+  constructor(n) {
     assert(typeof n === 'number', 'n should be a number')
 
     // access to component id (site indexed)
@@ -27,7 +27,7 @@ class WeightedQuickUnionUF {
   /**
    * Returns the total number of components.
    */
-  count () {
+  count() {
     return this._count
   }
 
@@ -36,7 +36,7 @@ class WeightedQuickUnionUF {
    * @param {number} p Site 1
    * @param {number} q Site 2
    */
-  connected (p, q) {
+  connected(p, q) {
     assert(typeof p === 'number', 'p should be a number')
     assert(typeof q === 'number', 'q should be a number')
 
@@ -47,7 +47,7 @@ class WeightedQuickUnionUF {
    * Returns the component identifier for `p` (0 to n-1)
    * @param {number} p Site
    */
-  find (p) {
+  find(p) {
     assert(typeof p === 'number', 'p should be a number')
 
     while (p !== this._id[p]) {
@@ -62,7 +62,7 @@ class WeightedQuickUnionUF {
    * @param {number} p Site 1
    * @param {number} q Site 2
    */
-  union (p, q) {
+  union(p, q) {
     assert(typeof p === 'number', 'p should be a number')
     assert(typeof q === 'number', 'q should be a number')
 

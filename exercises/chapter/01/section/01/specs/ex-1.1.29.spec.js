@@ -77,7 +77,10 @@ describe('Unit Tests: Exercise 1.1.29', () => {
       ]
 
       testCases.forEach(({ args, expected, description }) => {
-        expect(Exercise.getMostDuplicatedKey(...args)).toEqual(expected, description)
+        expect(Exercise.getMostDuplicatedKey(...args)).toEqual(
+          expected,
+          description
+        )
       })
     })
   })
@@ -158,7 +161,10 @@ describe('Unit Tests: Exercise 1.1.29', () => {
       ]
 
       testCases.forEach(({ args, expected, description }) => {
-        expect(Exercise.getMostDuplicatedKeyV2(...args)).toEqual(expected, description)
+        expect(Exercise.getMostDuplicatedKeyV2(...args)).toEqual(
+          expected,
+          description
+        )
       })
     })
   })

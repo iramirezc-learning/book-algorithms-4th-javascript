@@ -21,12 +21,12 @@ class QuickSortClient {
    * all bad bed bug dad ... yes yet zoo
    * ```
    */
-  static main () {
+  static main() {
     let array = []
 
     // read all strings from standard input.
     StdIn.read()
-      .on('line', line => {
+      .on('line', (line) => {
         array = array.concat(line.trim().split(' '))
       })
       .on('close', () => {

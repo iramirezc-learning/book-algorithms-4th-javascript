@@ -71,14 +71,14 @@ describe('Unit Tests: GenericSort Abstract Class', () => {
 
     it('should return true for a sorted big array', () => {
       const n = 1000000 // a million!
-      const array = newArrayOf(n, i => i) // from 0 to 999999
+      const array = newArrayOf(n, (i) => i) // from 0 to 999999
 
       expect(GenericSort.isSorted(array)).toBeTrue()
     })
 
     it('should return false for a random big array', () => {
       const n = 1000000 // a million!
-      const array = newArrayOf(n, i => i) // from 0 to 999999
+      const array = newArrayOf(n, (i) => i) // from 0 to 999999
       array[array.length - 1] = 0 // change last number to be 0
 
       expect(GenericSort.isSorted(array)).toBeFalse()

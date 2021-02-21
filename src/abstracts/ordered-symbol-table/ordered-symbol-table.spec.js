@@ -30,7 +30,7 @@ describe('Unit Tests: Abstract OrderedSymbolTable', () => {
         'keys'
       ]
 
-      expectedAPI.forEach(method => {
+      expectedAPI.forEach((method) => {
         expect(this.ost[method]).toBeInstanceOf(Function)
       })
     })
@@ -64,7 +64,7 @@ describe('Unit Tests: Abstract OrderedSymbolTable', () => {
     it('should return the rank between `lo` and `hi` if `hi` exists in the OST', () => {
       const expectedSize = 5
       spyOn(this.ost, 'contains').and.returnValue(true)
-      spyOn(this.ost, 'rank').and.callFake(k => {
+      spyOn(this.ost, 'rank').and.callFake((k) => {
         if (k === 'A') return 0
         if (k === 'E') return 4
       })
@@ -75,7 +75,7 @@ describe('Unit Tests: Abstract OrderedSymbolTable', () => {
     it('should return the rank between `lo` and `hi` even if `hi` key does not exist', () => {
       const expectedSize = 4
       spyOn(this.ost, 'contains').and.returnValue(false)
-      spyOn(this.ost, 'rank').and.callFake(k => {
+      spyOn(this.ost, 'rank').and.callFake((k) => {
         if (k === 'A') return 0
         if (k === 'E') return 4
       })
@@ -112,19 +112,28 @@ describe('Unit Tests: Abstract OrderedSymbolTable', () => {
 
   describe('OrderedSymbolTable#rank(key)', () => {
     it('should throw because is not implemented', () => {
-      expect(() => this.ost.rank('A')).toThrowError(SyntaxError, 'rank method is not implemented')
+      expect(() => this.ost.rank('A')).toThrowError(
+        SyntaxError,
+        'rank method is not implemented'
+      )
     })
   })
 
   describe('OrderedSymbolTable#put(key, val)', () => {
     it('should throw because is not implemented', () => {
-      expect(() => this.ost.put('A', 0)).toThrowError(SyntaxError, 'put method is not implemented')
+      expect(() => this.ost.put('A', 0)).toThrowError(
+        SyntaxError,
+        'put method is not implemented'
+      )
     })
   })
 
   describe('OrderedSymbolTable#get(key)', () => {
     it('should throw because is not implemented', () => {
-      expect(() => this.ost.get('A')).toThrowError(SyntaxError, 'get method is not implemented')
+      expect(() => this.ost.get('A')).toThrowError(
+        SyntaxError,
+        'get method is not implemented'
+      )
     })
   })
 
@@ -132,37 +141,55 @@ describe('Unit Tests: Abstract OrderedSymbolTable', () => {
     it('should throw because is not implemented', () => {
       // SymbolTable has the default implementation for the delete method
       // this test will throw because the put method is not implemented
-      expect(() => this.ost.delete('A')).toThrowError(SyntaxError, 'put method is not implemented')
+      expect(() => this.ost.delete('A')).toThrowError(
+        SyntaxError,
+        'put method is not implemented'
+      )
     })
   })
 
   describe('OrderedSymbolTable#min()', () => {
     it('should throw because is not implemented', () => {
-      expect(() => this.ost.min()).toThrowError(SyntaxError, 'min method is not implemented')
+      expect(() => this.ost.min()).toThrowError(
+        SyntaxError,
+        'min method is not implemented'
+      )
     })
   })
 
   describe('OrderedSymbolTable#max()', () => {
     it('should throw because is not implemented', () => {
-      expect(() => this.ost.max()).toThrowError(SyntaxError, 'max method is not implemented')
+      expect(() => this.ost.max()).toThrowError(
+        SyntaxError,
+        'max method is not implemented'
+      )
     })
   })
 
   describe('OrderedSymbolTable#floor(key)', () => {
     it('should throw because is not implemented', () => {
-      expect(() => this.ost.floor('A')).toThrowError(SyntaxError, 'floor method is not implemented')
+      expect(() => this.ost.floor('A')).toThrowError(
+        SyntaxError,
+        'floor method is not implemented'
+      )
     })
   })
 
   describe('OrderedSymbolTable#ceiling(key)', () => {
     it('should throw because is not implemented', () => {
-      expect(() => this.ost.ceiling('A')).toThrowError(SyntaxError, 'ceiling method is not implemented')
+      expect(() => this.ost.ceiling('A')).toThrowError(
+        SyntaxError,
+        'ceiling method is not implemented'
+      )
     })
   })
 
   describe('OrderedSymbolTable#select(k)', () => {
     it('should throw because is not implemented', () => {
-      expect(() => this.ost.select(0)).toThrowError(SyntaxError, 'select method is not implemented')
+      expect(() => this.ost.select(0)).toThrowError(
+        SyntaxError,
+        'select method is not implemented'
+      )
     })
   })
 
@@ -196,7 +223,10 @@ describe('Unit Tests: Abstract OrderedSymbolTable', () => {
 
   describe('OrderedSymbolTable#keys()', () => {
     it('should throw because is not implemented', () => {
-      expect(() => this.ost.keys()).toThrowError(SyntaxError, 'keys method is not implemented')
+      expect(() => this.ost.keys()).toThrowError(
+        SyntaxError,
+        'keys method is not implemented'
+      )
     })
   })
 })

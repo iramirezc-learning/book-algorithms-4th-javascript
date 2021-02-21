@@ -6,7 +6,7 @@ const insertKeysInPQ = (keys, pq) => {
   keys.forEach((k, i) => pq.insert(i, k))
 }
 
-const clonePQState = pq => {
+const clonePQState = (pq) => {
   return {
     _n: pq._n,
     _pq: [...pq._pq],

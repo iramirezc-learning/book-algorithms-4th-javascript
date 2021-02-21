@@ -15,7 +15,7 @@ class DoublingRatio {
    * random ints.
    * @param {number} n Array size.
    */
-  static timeTrial (n) {
+  static timeTrial(n) {
     const MAX = 1000000
     const a = []
 
@@ -45,12 +45,17 @@ class DoublingRatio {
    * ...
    * ```
    */
-  static main () {
+  static main() {
     let prev = this.timeTrial(125)
 
     for (let n = 250; true; n *= 2) {
       const time = this.timeTrial(n)
-      StdOut.println(`${pad(n, 7)} ${pad(time.toFixed(1), 7)} ${pad((time / prev).toFixed(1), 7)}`)
+      StdOut.println(
+        `${pad(n, 7)} ${pad(time.toFixed(1), 7)} ${pad(
+          (time / prev).toFixed(1),
+          7
+        )}`
+      )
       prev = time
     }
   }

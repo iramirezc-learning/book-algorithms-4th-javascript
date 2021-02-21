@@ -25,7 +25,7 @@ class Exercise {
    * ```
    * @param {[]} args [n, -v] Integer number, version
    */
-  static solution (args) {
+  static solution(args) {
     const n = parseInt(args[0], 10)
     const version = args[1]
 
@@ -47,7 +47,7 @@ class Exercise {
    * @param {number} n Integer number
    * @returns {number} Integer not larger than `lg_2(n)`
    */
-  static lg (n) {
+  static lg(n) {
     const BASE = 2
     let exp = 0
     let result = 1
@@ -67,7 +67,7 @@ class Exercise {
    * @param {number} n Integer number
    * @returns {number} Integer not larger than `lg_2(n)`
    */
-  static lgV2 (n) {
+  static lgV2(n) {
     let x = 0
 
     for (let i = n; i > 1; i = Math.floor(i / 2)) {
@@ -84,7 +84,7 @@ class Exercise {
    * @param {number} n Integer number
    * @returns {number} Integer not larger than `lg_2(n)`
    */
-  static lgMath (n) {
+  static lgMath(n) {
     return Math.floor(Math.log2(n))
   }
 }

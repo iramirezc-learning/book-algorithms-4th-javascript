@@ -26,15 +26,18 @@ class BinarySearchSTClient {
    * S 0
    * X 7
    */
-  static main () {
+  static main() {
     const st = new BinarySearchST()
     let i = 0
 
     StdIn.read()
-      .on('line', line => {
-        line.trim().split(' ').forEach(key => {
-          st.put(key, i++)
-        })
+      .on('line', (line) => {
+        line
+          .trim()
+          .split(' ')
+          .forEach((key) => {
+            st.put(key, i++)
+          })
       })
       .on('close', () => {
         for (const s of st.keys()) {

@@ -1,6 +1,6 @@
 /** @module test-clients */
 
-const { StdOut } = require('../../src/libs')
+const { StdOut } = require('../src/libs')
 
 /**
  * An example of a TestClient class.
@@ -19,7 +19,7 @@ class TestClient {
    * * @type {number} `args[0]` - Number `n`.
    * * @type {number} `args[1]` - Number `m`.
    */
-  static main (args) {
+  static main(args) {
     const n = parseInt(args[0])
     const m = parseInt(args[1])
 
@@ -29,7 +29,7 @@ class TestClient {
   /**
    * Other methods go after `main` method.
    */
-  static otherMethod () {
+  static otherMethod() {
     // your code goes here
   }
 }

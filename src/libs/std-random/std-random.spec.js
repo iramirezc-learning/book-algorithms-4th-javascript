@@ -95,7 +95,9 @@ describe('StRandom Library', () => {
 
         expect(result).toBeGreaterThanOrEqual(0)
         expect(result).toBeLessThan(len)
-        expect(Number.isInteger(result)).toBeTrue('should be an integer number.')
+        expect(Number.isInteger(result)).toBeTrue(
+          'should be an integer number.'
+        )
       }
     })
   })

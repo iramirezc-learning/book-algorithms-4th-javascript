@@ -15,7 +15,7 @@ class ArrayIterator {
    * @param {Array<*>} array - The sorted array to be iterated.
    * @param {number} n - The size of elements in the array.
    */
-  constructor (array, n) {
+  constructor(array, n) {
     /**
      * Index of the current element in the iterator.
      * @private
@@ -45,7 +45,7 @@ class ArrayIterator {
    * @returns {boolean} Returns if the current index
    * is less than the index of the last item in the array.
    */
-  hasNext () {
+  hasNext() {
     return this._current < this._n
   }
 
@@ -53,7 +53,7 @@ class ArrayIterator {
    * It is best not to modify Data Structures when iterating.
    * @see page: 139.
    */
-  remove () {
+  remove() {
     /* do nothing */
   }
 
@@ -62,7 +62,7 @@ class ArrayIterator {
    * @see [The iterator protocol]{@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol}
    * @returns {Object} The object iterator.
    */
-  next () {
+  next() {
     if (this.hasNext()) {
       const item = this._a[this._current++]
 

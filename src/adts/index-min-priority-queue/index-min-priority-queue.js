@@ -12,7 +12,7 @@ class IndexMinPQ {
    * Creates a PQ of capacity `maxN` with possible indices between `0` an `maxN - 1`.
    * @param {number} [maxN] - Maximum fixed size for the Priority Queue.
    */
-  constructor (maxN) {
+  constructor(maxN) {
     /**
      * Number of elements on PQ.
      * @private
@@ -62,7 +62,7 @@ class IndexMinPQ {
    * @param {number} j - The inverse index of the second key.
    * @returns {boolean} If the key at index `i` is greater than the key at index`j`.
    */
-  _greater (i, j) {
+  _greater(i, j) {
     return compare(this._keys[this._pq[i]], this._keys[this._pq[j]]) > 0
   }
 
@@ -73,7 +73,7 @@ class IndexMinPQ {
    * @param {number} i - The index of the first key.
    * @param {number} j - The index of the second key.
    */
-  _exch (i, j) {
+  _exch(i, j) {
     const inverseI = this._pq[i]
     const inverseJ = this._pq[j]
 
@@ -93,7 +93,7 @@ class IndexMinPQ {
    * @private
    * @param {number} k - The index of the key to *swim*.
    */
-  _swim (k) {
+  _swim(k) {
     // While the current index 'k' is not the root (k > 1)
     // and while the parent node (at k / 2) is greater than
     // the current node (at k), exchange both nodes.
@@ -110,7 +110,7 @@ class IndexMinPQ {
    * @private
    * @param {number} k - Index of the key to *sink*.
    */
-  _sink (k) {
+  _sink(k) {
     // While 'k' is still having a next child
     // that is in bounds with the PQ size (_n) ...
     while (2 * k <= this._n) {
@@ -144,7 +144,7 @@ class IndexMinPQ {
    * @param {number} i - The index for the key `k`.
    * @param {*} k - The key to be inserted.
    */
-  insert (i, k) {
+  insert(i, k) {
     this._n++
     this._qp[i] = this._n
     this._pq[this._n] = i
@@ -157,7 +157,7 @@ class IndexMinPQ {
    * @param {number} i - The index that will get the new key.
    * @param {*} k - The new key for index `i`.
    */
-  changeKey (i, k) {
+  changeKey(i, k) {
     this._keys[i] = k
     this._swim(this._qp[i])
     this._sink(this._qp[i])
@@ -168,7 +168,7 @@ class IndexMinPQ {
    * @param {number} i - The index to be inspected.
    * @returns {boolean} If the index contains an associated key.
    */
-  contains (i) {
+  contains(i) {
     return this._qp[i] !== -1
   }
 
@@ -176,7 +176,7 @@ class IndexMinPQ {
    * Removes the key associated with index `i`.
    * @param {number} i - The index of the key that should be deleted.
    */
-  delete (i) {
+  delete(i) {
     if (!this.contains(i)) return
 
     const index = this._qp[i]
@@ -194,7 +194,7 @@ class IndexMinPQ {
    * Returns the minimum key in the PQ.
    * @returns {*} The minimum key in the PQ.
    */
-  minKey () {
+  minKey() {
     return this._keys[this.minIndex()]
   }
 
@@ -203,7 +203,7 @@ class IndexMinPQ {
    * @returns {number} The index of the minimum key in the PQ.
    * @throws {ReferenceError} If the PQ is empty.
    */
-  minIndex () {
+  minIndex() {
     if (this.isEmpty()) {
       throw new ReferenceError('IndexMinPQ is empty.')
     }
@@ -215,7 +215,7 @@ class IndexMinPQ {
    * Removes the minimum key in the PQ and returns its index.
    * @returns {*} The minimum key.
    */
-  delMin () {
+  delMin() {
     const minIndex = this.minIndex()
 
     // exchange current min with the last inserted
@@ -242,7 +242,7 @@ class IndexMinPQ {
    * Returns if the PQ is empty.
    * @returns {boolean} If the PQ is empty.
    */
-  isEmpty () {
+  isEmpty() {
     return this._n === 0
   }
 
@@ -250,7 +250,7 @@ class IndexMinPQ {
    * Returns the size of the PQ.
    * @returns {number} The size of the PQ (total nodes).
    */
-  size () {
+  size() {
     return this._n
   }
 
@@ -259,7 +259,7 @@ class IndexMinPQ {
    * @param {number} i - The index of the key.
    * @returns {*} The key located at index `i`.
    */
-  keyOf (i) {
+  keyOf(i) {
     return this._keys[i]
   }
 }

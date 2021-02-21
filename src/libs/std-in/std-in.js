@@ -14,11 +14,13 @@ class StdIn {
    * @see {@link https://nodejs.org/api/readline.html}
    * @returns {EventEmitter} The reader interface.
    */
-  static read () {
+  static read() {
     if (reader === null) {
-      reader = Object.create(readline.createInterface({
-        input: process.stdin
-      }))
+      reader = Object.create(
+        readline.createInterface({
+          input: process.stdin
+        })
+      )
     }
 
     return reader
@@ -29,7 +31,7 @@ class StdIn {
    * @param {string} The string representing a number.
    * @returns {number} The parsed number to integer.
    */
-  static readInt (line) {
+  static readInt(line) {
     assert(typeof line === 'string', 'line should be a string')
     return parseInt(line, 10)
   }

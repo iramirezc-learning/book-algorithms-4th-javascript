@@ -27,7 +27,7 @@ class Exercise {
    * 610
    * ```
    */
-  static solution () {
+  static solution() {
     let f = 0
     let g = 1
 

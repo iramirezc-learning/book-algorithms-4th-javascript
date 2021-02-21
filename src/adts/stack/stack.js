@@ -7,7 +7,7 @@ const { Node, NodeIterator } = require('../../abstracts')
  * @see p. 147, 149, 155
  */
 class Stack {
-  constructor () {
+  constructor() {
     this._n = 0
     this._first = null
 
@@ -17,14 +17,14 @@ class Stack {
   /**
    * Returns if the Stack is empty
    */
-  isEmpty () {
+  isEmpty() {
     return this._first === null
   }
 
   /**
    * Returns the Stacks' size
    */
-  size () {
+  size() {
     return this._n
   }
 
@@ -32,7 +32,7 @@ class Stack {
    * Inserts an item to the Stack
    * @param {*} item The item to be stored
    */
-  push (item) {
+  push(item) {
     const oldFirst = this._first
 
     this._first = new Node()
@@ -45,7 +45,7 @@ class Stack {
    * Removes and returns the last inserted
    * item from the Stack.
    */
-  pop () {
+  pop() {
     if (this.isEmpty()) {
       throw new ReferenceError('stack is empty')
     }
@@ -62,7 +62,7 @@ class Stack {
    * Returns an NodeIterator to traverse the stack.
    * @returns {NodeIterator}
    */
-  [Symbol.iterator] () {
+  [Symbol.iterator]() {
     return new NodeIterator(this._first)
   }
 }

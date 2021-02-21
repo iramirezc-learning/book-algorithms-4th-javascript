@@ -3,7 +3,7 @@ const { getSortedArray, getRandomInt } = require('../tools/data-generators')
 const { BinarySearch, LinearSearch } = require('../../src/algorithms')
 
 class SearchingBenchmark extends Benchmark {
-  setUp ({ arraySize }) {
+  setUp({ arraySize }) {
     const a = getSortedArray(arraySize)
 
     for (let i = 0; i < this.iterations; i++) {
@@ -18,7 +18,10 @@ class SearchingBenchmark extends Benchmark {
 // Execution
 // $ node linear-vs-binary-search.js
 // ==============================
-new SearchingBenchmark({ name: 'Searching Algorithms Benchmark', iterations: 1000 })
+new SearchingBenchmark({
+  name: 'Searching Algorithms Benchmark',
+  iterations: 1000
+})
   .setUp({ arraySize: 10 * 1000000 })
   .addTest('LinearSearch', LinearSearch.indexOf)
   .addTest('BinarySearch', BinarySearch.indexOf)

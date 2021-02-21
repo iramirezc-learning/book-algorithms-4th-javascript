@@ -16,11 +16,15 @@ class Insertion extends GenericSort {
    * returns 1 when `a` is greater than `b` or
    * returns 0 when `a` is equal to `b`.
    */
-  static sort (array, comparator) {
+  static sort(array, comparator) {
     const n = array.length
 
     for (let i = 1; i < n; i++) {
-      for (let j = i; j > 0 && this.less(array[j], array[j - 1], comparator); j--) {
+      for (
+        let j = i;
+        j > 0 && this.less(array[j], array[j - 1], comparator);
+        j--
+      ) {
         this.exchange(array, j, j - 1)
       }
     }

@@ -20,7 +20,7 @@ class Exercise {
    * ```
    * @param {[]} args [a, b] int a, int b
    */
-  static solution (args) {
+  static solution(args) {
     const a = parseInt(args[0])
     const b = parseInt(args[1])
 
@@ -33,7 +33,7 @@ class Exercise {
    * @param {number} a Integer number `a`
    * @param {number} b Integer number `b`
    */
-  static mystery (a, b) {
+  static mystery(a, b) {
     if (b === 0) {
       return 0
     }
@@ -50,7 +50,7 @@ class Exercise {
    * @param {number} a Integer number `a`
    * @param {number} b Integer number `b`
    */
-  static mystery2 (a, b) {
+  static mystery2(a, b) {
     if (b === 0) {
       return 1
     }

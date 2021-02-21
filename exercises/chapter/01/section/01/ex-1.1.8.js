@@ -14,7 +14,7 @@ class Exercise {
    * a4
    * ```
    */
-  static solution () {
+  static solution() {
     StdOut.println('b')
     StdOut.println('b' + 'c')
     StdOut.println('a' + 4)

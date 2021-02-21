@@ -1,6 +1,9 @@
 const { StdOut, StdRandom } = require('../../../../../src/libs')
 const { BinarySearch } = require('../../../../../src/algorithms')
-const { newArrayOf, numbersByAscendingOrder } = require('../../../../../src/utils')
+const {
+  newArrayOf,
+  numbersByAscendingOrder
+} = require('../../../../../src/utils')
 
 /**
  * Exercise 1.1.39
@@ -31,7 +34,7 @@ class Exercise {
    * ```
    * @param {[]} args [trials] Number of trials
    */
-  static solution (args) {
+  static solution(args) {
     const trials = parseInt(args[0], 10)
     const base = 10
     const results = {}
@@ -66,7 +69,7 @@ class Exercise {
    * length `size`.
    * @param {number} size Size for the new Array
    */
-  static newArrayOfSixDigits (size) {
+  static newArrayOfSixDigits(size) {
     const minSixDigit = 100000
     const maxSixDigit = 999999 + 1
 

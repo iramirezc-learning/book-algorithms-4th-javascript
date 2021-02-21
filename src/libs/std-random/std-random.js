@@ -4,7 +4,7 @@
  * @param {number} min
  * @param {number} max
  */
-function getRandomInt (min, max) {
+function getRandomInt(min, max) {
   min = Math.ceil(min)
   max = Math.floor(max)
 
@@ -15,7 +15,7 @@ function getRandomInt (min, max) {
  * Returns if a number is integer
  * @param {number} n Number to be tested
  */
-function isInteger (n) {
+function isInteger(n) {
   return Number.isInteger(n)
 }
 
@@ -34,31 +34,31 @@ class StdRandom {
    * @constructor
    * @desc Returns a random real number uniformly in [0, 1).
    * @returns {number} A random real number uniformly in [0, 1).
-   *//**
-  * Uniform
-  *
-  * @constructor
-  * @desc Returns a random integer uniformly in [0, n).
-  * @param {number} n Number of possible integers.
-  * @returns {number} A random integer uniformly between 0 (inclusive) and `n` (exclusive).
-  *//**
-  * Uniform
-  *
-  * @constructor
-  * @desc Returns a random integer uniformly in [lo, hi).
-  * @param {number} lo Minimum number.
-  * @param {number} hi Maximum number.
-  * @returns {number} A random integer uniformly in [lo, hi).
-  *//**
-  * Uniform
-  *
-  * @constructor
-  * @desc Returns a random real number uniformly in [lo, hi).
-  * @param {number} lo Minimum number.
-  * @param {number} hi Maximum number.
-  * @returns {number} A random real number uniformly in [lo, hi).
-  */
-  static uniform (lo, hi) {
+   */ /**
+   * Uniform
+   *
+   * @constructor
+   * @desc Returns a random integer uniformly in [0, n).
+   * @param {number} n Number of possible integers.
+   * @returns {number} A random integer uniformly between 0 (inclusive) and `n` (exclusive).
+   */ /**
+   * Uniform
+   *
+   * @constructor
+   * @desc Returns a random integer uniformly in [lo, hi).
+   * @param {number} lo Minimum number.
+   * @param {number} hi Maximum number.
+   * @returns {number} A random integer uniformly in [lo, hi).
+   */ /**
+   * Uniform
+   *
+   * @constructor
+   * @desc Returns a random real number uniformly in [lo, hi).
+   * @param {number} lo Minimum number.
+   * @param {number} hi Maximum number.
+   * @returns {number} A random real number uniformly in [lo, hi).
+   */
+  static uniform(lo, hi) {
     if (typeof lo === 'number' && typeof hi === 'number') {
       if (isInteger(lo) && isInteger(hi)) {
         return getRandomInt(lo, hi)
@@ -87,14 +87,14 @@ class StdRandom {
    * Defaults to `0.5`.
    * @returns {boolean} `true` or `false` with probability of 1/2
    */
-  static bernoulli (p = 0.5) {
+  static bernoulli(p = 0.5) {
     return StdRandom.uniform() < p
   }
 
   /**
    * @todo implementation
    */
-  static gaussian () {
+  static gaussian() {
     throw new SyntaxError('method gaussian not implemented')
   }
 
@@ -105,7 +105,7 @@ class StdRandom {
    * @returns {number} A random integer from a discrete distribution:
    * `i` with probability proportional to `frequencies[i]`.
    */
-  static discrete (a) {
+  static discrete(a) {
     const r = StdRandom.uniform()
     let sum = 0
 
@@ -122,7 +122,7 @@ class StdRandom {
    * @desc Rearranges the elements of the specified array in uniformly random order.
    * @param {[]} a The array to shuffle
    */
-  static shuffle (a) {
+  static shuffle(a) {
     const n = a.length
 
     for (let i = 0; i < n; i++) {

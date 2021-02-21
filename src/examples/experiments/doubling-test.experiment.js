@@ -15,7 +15,7 @@ class DoublingTest {
    * random ints.
    * @param {number} n Array size.
    */
-  static timeTrial (n) {
+  static timeTrial(n) {
     const MAX = 1000000
     const a = []
 
@@ -44,7 +44,7 @@ class DoublingTest {
    * ...
    * ```
    */
-  static main () {
+  static main() {
     for (let i = 250; ; i *= 2) {
       const time = this.timeTrial(i)
       StdOut.println(`${pad(i, 7)} ${pad(time, 7)}`)

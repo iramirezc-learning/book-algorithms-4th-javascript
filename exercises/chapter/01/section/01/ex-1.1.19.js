@@ -25,7 +25,7 @@ class Exercise {
    * 89 1779979416004714189
    * ```
    */
-  static solution () {
+  static solution() {
     const a = newArrayOf(90, null)
 
     a[0] = 0
@@ -40,7 +40,7 @@ class Exercise {
    * Computes the `n`th Fibonacci.
    * @param {number} n
    */
-  static fibonacci (n) {
+  static fibonacci(n) {
     if (n === 0) {
       return 0
     }
@@ -49,7 +49,10 @@ class Exercise {
       return 1
     }
 
-    return math.add(math.bignumber(this.fibonacci(n - 1)), math.bignumber(this.fibonacci(n - 2)))
+    return math.add(
+      math.bignumber(this.fibonacci(n - 1)),
+      math.bignumber(this.fibonacci(n - 2))
+    )
   }
 
   /**
@@ -57,9 +60,11 @@ class Exercise {
    * @param {[]} a Fib numbers already calculated.
    * @param {number} n
    */
-  static fibonacciV2 (a, n) {
+  static fibonacciV2(a, n) {
     if (a[n] === null) {
-      a[n] = math.evaluate(`${this.fibonacciV2(a, n - 1)} + ${this.fibonacciV2(a, n - 2)}`)
+      a[n] = math.evaluate(
+        `${this.fibonacciV2(a, n - 1)} + ${this.fibonacciV2(a, n - 2)}`
+      )
     }
 
     return a[n]

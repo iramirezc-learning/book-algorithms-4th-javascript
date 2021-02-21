@@ -9,7 +9,7 @@ class SymbolTable {
    * Creates a new SymbolTable.
    * @param {ComparatorFn} [comparator=defaultComparator] - The comparator function.
    */
-  constructor (comparator = defaultComparator) {
+  constructor(comparator = defaultComparator) {
     /**
      * Comparator function for the keys in the ST.
      * @type {ComparatorFn}
@@ -28,7 +28,7 @@ class SymbolTable {
    * Returns the number of key-value pairs in the table.
    * @returns {number} Returns the total key-value pairs in the table.
    */
-  size () {
+  size() {
     return this._n // default implementation
   }
 
@@ -36,7 +36,7 @@ class SymbolTable {
    * Returns `true` if the table has no keys, `false` otherwise.
    * @returns {boolean} Returns whether the Symbol Table is empty or not.
    */
-  isEmpty () {
+  isEmpty() {
     return this.size() === 0 // default implementation
   }
 
@@ -45,7 +45,7 @@ class SymbolTable {
    * @param {*} key - The key to be inspected.
    * @returns {boolean} Returns whether the key has a value associated or not.
    */
-  contains (key) {
+  contains(key) {
     return this.get(key) !== null // default implementation
   }
 
@@ -56,7 +56,7 @@ class SymbolTable {
    * @param {*} key - The key that identifies the value.
    * @param {*} val - The value.
    */
-  put (key, val) {
+  put(key, val) {
     throw new SyntaxError('put method is not implemented')
   }
 
@@ -68,7 +68,7 @@ class SymbolTable {
    * @param {*} key - The key to be searched.
    * @returns {*} Returns the value associated with the key.
    */
-  get (key) {
+  get(key) {
     throw new SyntaxError('get method is not implemented')
   }
 
@@ -76,7 +76,7 @@ class SymbolTable {
    * Removes the key and its value from the table.
    * @param {*} key - The key that will be deleted.
    */
-  delete (key) {
+  delete(key) {
     this.put(key, null) // default implementation
   }
 
@@ -86,7 +86,7 @@ class SymbolTable {
    * @throws SyntaxError - This function should be implemented by the client.
    * @returns {NodeIterable} Returns an iterable object that will provide all the keys in the table as an iterator.
    */
-  keys () {
+  keys() {
     throw new SyntaxError('keys method is not implemented')
   }
 }

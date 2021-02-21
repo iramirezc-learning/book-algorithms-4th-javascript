@@ -13,8 +13,8 @@ class D3JSDOM {
   /**
    * Returns a new DOM
    */
-  static createDOM () {
-    return (new JSDOM('<!DOCTYPE html><body></body>')).window.document
+  static createDOM() {
+    return new JSDOM('<!DOCTYPE html><body></body>').window.document
   }
 
   /**
@@ -24,8 +24,9 @@ class D3JSDOM {
    * @param {number} height The SVG height.
    * @returns {*} The SVG node appended
    */
-  static createSVG (el, width, height) {
-    return el.append('svg')
+  static createSVG(el, width, height) {
+    return el
+      .append('svg')
       .attr('xmlns', 'http://www.w3.org/2000/svg')
       .attr('width', width)
       .attr('height', height)
@@ -35,7 +36,7 @@ class D3JSDOM {
    * Generates a beautiful Rainbow drawing with D3
    * @returns {*} SVG Markup
    */
-  static getD3Draw () {
+  static getD3Draw() {
     const τ = 2 * Math.PI
     const n = 500
     const width = 720
@@ -53,12 +54,16 @@ class D3JSDOM {
       .data(d3.range(0, τ, τ / n))
       .enter()
       .append('path')
-      .attr('d', d3.arc()
-        .outerRadius(outerRadius)
-        .innerRadius(innerRadius)
-        .startAngle(d => d)
-        .endAngle(d => d + τ / n * 1.1))
-      .style('fill', d => d3.hsl(d * 360 / τ, 1, 0.5))
+      .attr(
+        'd',
+        d3
+          .arc()
+          .outerRadius(outerRadius)
+          .innerRadius(innerRadius)
+          .startAngle((d) => d)
+          .endAngle((d) => d + (τ / n) * 1.1)
+      )
+      .style('fill', (d) => d3.hsl((d * 360) / τ, 1, 0.5))
 
     return body.html()
   }
@@ -71,11 +76,15 @@ class D3JSDOM {
    * Server listening on http://localhost:8083
    * ```
    */
-  static main () {
-    http.createServer((req, res) => {
-      res.writeHead(200, { 'Content-Type': 'image/svg+xml' })
-      res.end(D3JSDOM.getD3Draw())
-    }).listen(PORT, () => console.log(`Server listening on http://localhost:${PORT}`))
+  static main() {
+    http
+      .createServer((req, res) => {
+        res.writeHead(200, { 'Content-Type': 'image/svg+xml' })
+        res.end(D3JSDOM.getD3Draw())
+      })
+      .listen(PORT, () =>
+        console.log(`Server listening on http://localhost:${PORT}`)
+      )
   }
 }
 

@@ -173,7 +173,7 @@ describe('Unit Tests: Minimum Priority Queue', () => {
         const keysToInsert = ['Z', 'Y', 'X', 'C', 'B', 'A']
         const expectedPQ = [UNDEF, 'A', 'C', 'B', 'Z', 'X', 'Y']
 
-        keysToInsert.forEach(key => this.pq.insert(key))
+        keysToInsert.forEach((key) => this.pq.insert(key))
 
         expect(this.pq._pq).toEqual(expectedPQ)
       })
@@ -193,7 +193,7 @@ describe('Unit Tests: Minimum Priority Queue', () => {
             [1, 3] //  B <-> A
           ]
 
-          keysToInsert.forEach(key => this.pq.insert(key))
+          keysToInsert.forEach((key) => this.pq.insert(key))
 
           expect(this.pq.exch.calls.allArgs()).toEqual(expectedCallsArgs)
         })
@@ -215,7 +215,7 @@ describe('Unit Tests: Minimum Priority Queue', () => {
             [UNDEF, 'A', 'C', 'B', 'Z', 'X', 'Y']
           ]
 
-          keysToInsert.forEach(key => this.pq.insert(key))
+          keysToInsert.forEach((key) => this.pq.insert(key))
 
           expect(mutations).toEqual(expectedMutations)
         })
@@ -228,7 +228,7 @@ describe('Unit Tests: Minimum Priority Queue', () => {
         this.pq = new MinPQ(this.max)
 
         const keys = ['Z', 'Y', 'X', 'C', 'B', 'A']
-        keys.forEach(k => this.pq.insert(k))
+        keys.forEach((k) => this.pq.insert(k))
       })
 
       it('should return the minimum key `A`', () => {

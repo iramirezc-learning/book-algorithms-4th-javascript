@@ -1,4 +1,3 @@
-
 const { numbersByAscendingOrder } = require('../../utils')
 const BinarySearch = require('../binary-search/binary-search')
 
@@ -13,7 +12,7 @@ class ThreeSumFast {
    * Returns the count of triplets in an array that sum 0.
    * @param {[]} a The array of integers
    */
-  static count (a) {
+  static count(a) {
     a.sort(numbersByAscendingOrder)
     const n = a.length
     let count = 0

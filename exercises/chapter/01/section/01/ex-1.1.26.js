@@ -14,7 +14,7 @@ class Exercise {
    * ```
    * @param {[]} args [a, b, c]
    */
-  static solution (args) {
+  static solution(args) {
     let a = args[0]
     let b = args[1]
     let c = args[2]

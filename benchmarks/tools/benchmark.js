@@ -5,7 +5,7 @@ const { performance } = require('perf_hooks')
  * @param {number} n Float to parse
  * @returns {number} Float number with `3` decimals
  */
-const fixed = n => parseFloat(n.toFixed(3))
+const fixed = (n) => parseFloat(n.toFixed(3))
 
 /**
  * Benchmark
@@ -18,7 +18,7 @@ class Benchmark {
    * @param {string} props.name The name of the benchmark.
    * @param {number} props.iterations The number of times a test should run.
    */
-  constructor ({ name, iterations = 1 }) {
+  constructor({ name, iterations = 1 }) {
     this.name = name
     this.iterations = iterations
     this.inputData = []
@@ -31,7 +31,7 @@ class Benchmark {
    * @abstract
    * @throws SyntaxError This function should be implemented by the client.
    */
-  setUp () {
+  setUp() {
     throw new SyntaxError('Must implement setUp function')
   }
 
@@ -41,7 +41,7 @@ class Benchmark {
    * @param {*} name Name of the test
    * @param {*} fn Function to execute for the test.
    */
-  addTest (name, fn) {
+  addTest(name, fn) {
     this.tests.push({ name, fn })
 
     return this
@@ -52,7 +52,7 @@ class Benchmark {
    * Calculates the `total` and `avg` time for every test.
    * Saves the results in the `this.results` prop.
    */
-  exec () {
+  exec() {
     for (const test of this.tests) {
       let i = 0
       const output = []
@@ -76,7 +76,7 @@ class Benchmark {
   /**
    * Prints the results of the benchmark in the console.
    */
-  summary () {
+  summary() {
     console.log(`${this.name} - ${this.iterations} iterations`)
     console.table(this.results)
   }

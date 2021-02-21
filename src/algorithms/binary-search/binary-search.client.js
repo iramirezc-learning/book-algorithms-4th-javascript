@@ -1,5 +1,5 @@
 const { In, StdIn, StdOut } = require('../../libs')
-const { numbersByAscendingOrder } = require(('../../utils'))
+const { numbersByAscendingOrder } = require('../../utils')
 const BinarySearch = require('./binary-search')
 
 /**
@@ -30,13 +30,13 @@ class BSClient {
    * ...
    * ```
    */
-  static main (args) {
+  static main(args) {
     const input = new In(args[0])
     const whitelist = input.readAllInts()
 
     whitelist.sort(numbersByAscendingOrder)
 
-    StdIn.read().on('line', line => {
+    StdIn.read().on('line', (line) => {
       const key = StdIn.readInt(line)
 
       if (BinarySearch.indexOf(whitelist, key) === -1) {

@@ -16,7 +16,7 @@ class Shell extends GenericSort {
    * returns 1 when `a` is greater than `b` or
    * returns 0 when `a` is equal to `b`.
    */
-  static sort (array, comparator) {
+  static sort(array, comparator) {
     const n = array.length
     let h = 1
 
@@ -26,7 +26,11 @@ class Shell extends GenericSort {
 
     while (h >= 1) {
       for (let i = h; i < n; i++) {
-        for (let j = i; j >= h && this.less(array[j], array[j - h], comparator); j -= h) {
+        for (
+          let j = i;
+          j >= h && this.less(array[j], array[j - h], comparator);
+          j -= h
+        ) {
           this.exchange(array, j, j - h)
         }
       }

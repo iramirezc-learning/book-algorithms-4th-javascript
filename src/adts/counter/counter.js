@@ -4,7 +4,7 @@
  * @see p. 85
  */
 class Counter {
-  constructor (id) {
+  constructor(id) {
     this._count = 0
     // static final string _id
     Object.defineProperty(this, '_id', { value: id })
@@ -13,7 +13,7 @@ class Counter {
   /**
    * Increments the internal count
    */
-  increment () {
+  increment() {
     this._count++
   }
 
@@ -21,7 +21,7 @@ class Counter {
    * Returns the total count.
    * @returns {number} The total count
    */
-  tally () {
+  tally() {
     return this._count
   }
 
@@ -31,7 +31,7 @@ class Counter {
    * @example
    * // 3 heads
    */
-  toString () {
+  toString() {
     return `${this.tally()} ${this._id}`
   }
 }

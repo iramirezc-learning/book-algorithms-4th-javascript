@@ -17,7 +17,7 @@ class Exercise {
    * ```
    * @param {[]} args [n] ArraySize
    */
-  static solution (args) {
+  static solution(args) {
     const m = parseInt(args[0])
 
     const a = this.createArrayOfRandomInt(m)
@@ -35,7 +35,7 @@ class Exercise {
    * @param {number} n Array size
    * @returns {[]} Array of random ints.
    */
-  static createArrayOfRandomInt (n) {
+  static createArrayOfRandomInt(n) {
     return newArrayOf(n, () => StdRandom.uniform(n))
   }
 
@@ -52,7 +52,7 @@ class Exercise {
    * @param {number} n The size of the array.
    * @returns {[]} The histogram array.
    */
-  static histogram (a, n) {
+  static histogram(a, n) {
     const h = newArrayOf(n, 0)
 
     for (let i = 0; i < a.length; i++) {

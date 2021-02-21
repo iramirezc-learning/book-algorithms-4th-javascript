@@ -45,7 +45,7 @@ class Exercise {
    * Total Throws: 100572005, Total P: 1
    * ```
    */
-  static solution () {
+  static solution() {
     const exactF = this.computeExactFrequencies()
     const exactP = this.computeExactProbability(exactF)
 
@@ -55,7 +55,10 @@ class Exercise {
     const simulation = this.runSimulation(exactP)
 
     StdOut.println('\nSimulation Empirical Results:')
-    this.printFrequencyAndProbability(simulation.frequencies, simulation.probability)
+    this.printFrequencyAndProbability(
+      simulation.frequencies,
+      simulation.probability
+    )
   }
 
   /**
@@ -68,7 +71,7 @@ class Exercise {
    * // [0, 0, 1, 2, 3, 4, 5, 6, 5, 4,  3,  2,  1] // the exact frequency
    * // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] // sum of values
    */
-  static computeExactFrequencies () {
+  static computeExactFrequencies() {
     const frequencies = newArrayOf(SIDES * 2 + 1, 0)
 
     for (let i = 1; i <= SIDES; i++) {
@@ -86,7 +89,7 @@ class Exercise {
    * given as `exactFrequencies`
    * @param {[]} exactFrequencies [0, 0, 1, 2, 3, 4, 5, 6, 5, 4,  3,  2,  1]
    */
-  static computeExactProbability (exactFrequencies) {
+  static computeExactProbability(exactFrequencies) {
     // the total exact throws is 36
     const totalThrows = SIDES * SIDES
     return this.computeProbability(exactFrequencies, totalThrows)
@@ -100,7 +103,7 @@ class Exercise {
    * @example
    * // P [0, 0, 0.027, 0.055, 0.083, 0.111, 0.138, 0.166, 0.138, 0.111, 0.083, 0.055, 0.027]
    */
-  static computeProbability (frequencies, totalThrows) {
+  static computeProbability(frequencies, totalThrows) {
     const probabilities = newArrayOf(SIDES * 2 + 1, 0)
 
     for (let k = 2; k <= SIDES * 2; k++) {
@@ -122,24 +125,31 @@ class Exercise {
    * // Total Throws: 36, Total P: 1
    * ```
    */
-  static printFrequencyAndProbability (f, p) {
+  static printFrequencyAndProbability(f, p) {
     let totalThrows = 0
     let totalP = 0
 
     for (let i = 0; i < f.length; i++) {
-      StdOut.println(`Dice Sum: ${pad(i, 2)}  Freq: ${pad(f[i], 2)}  P: ${this.toThreeDecimals(p[i])}`)
+      StdOut.println(
+        `Dice Sum: ${pad(i, 2)}  Freq: ${pad(
+          f[i],
+          2
+        )}  P: ${this.toThreeDecimals(p[i])}`
+      )
       totalThrows += f[i]
       totalP += p[i]
     }
 
-    StdOut.println(`Total Throws: ${totalThrows}, Total P: ${this.toThreeDecimals(totalP)}`)
+    StdOut.println(
+      `Total Throws: ${totalThrows}, Total P: ${this.toThreeDecimals(totalP)}`
+    )
   }
 
   /**
    * Rounds a float number to 3 decimals
    * @param {number} n Float number
    */
-  static toThreeDecimals (n) {
+  static toThreeDecimals(n) {
     // alternative:
     // return parseFloat(n.toFixed(3))
     return Math.round(n * 1000) / 1000
@@ -149,7 +159,7 @@ class Exercise {
    * Simulates the throw of a dice
    * by returning a number [1 - 6]
    */
-  static throwDice () {
+  static throwDice() {
     return StdRandom.uniform(1, 6 + 1)
   }
 
@@ -161,9 +171,11 @@ class Exercise {
    * @param {[]} Exact Probability
    * @returns {boolean} Whether the simulated matches the exact probability.
    */
-  static isAMatch (simulatedP, exactP) {
+  static isAMatch(simulatedP, exactP) {
     for (let i = 2; i <= SIDES * 2; i++) {
-      if (this.toThreeDecimals(simulatedP[i]) !== this.toThreeDecimals(exactP[i])) {
+      if (
+        this.toThreeDecimals(simulatedP[i]) !== this.toThreeDecimals(exactP[i])
+      ) {
         return false
       }
     }
@@ -177,7 +189,7 @@ class Exercise {
    * results match the exact results.
    * @param {[]} exactProbability The exact probability of dice throws.
    */
-  static runSimulation (exactProbability) {
+  static runSimulation(exactProbability) {
     const frequencies = newArrayOf(SIDES * 2 + 1, 0)
     let totalThrows = 0
     let probability = []

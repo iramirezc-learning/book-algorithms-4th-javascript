@@ -8,10 +8,16 @@ describe('Unit Tests: Abstract SymbolTable', () => {
   describe('SymbolTable instance', () => {
     it('should implement the generic API', () => {
       const expectedAPI = [
-        'size', 'isEmpty', 'contains', 'put', 'get', 'delete', 'keys'
+        'size',
+        'isEmpty',
+        'contains',
+        'put',
+        'get',
+        'delete',
+        'keys'
       ]
 
-      expectedAPI.forEach(method => {
+      expectedAPI.forEach((method) => {
         expect(this.st[method]).toBeInstanceOf(Function)
       })
     })
@@ -57,13 +63,19 @@ describe('Unit Tests: Abstract SymbolTable', () => {
 
   describe('SymbolTable#put(key, val)', () => {
     it('should throw because is not implemented', () => {
-      expect(() => this.st.put('A', 0)).toThrowError(SyntaxError, 'put method is not implemented')
+      expect(() => this.st.put('A', 0)).toThrowError(
+        SyntaxError,
+        'put method is not implemented'
+      )
     })
   })
 
   describe('SymbolTable#get(key)', () => {
     it('should throw because is not implemented', () => {
-      expect(() => this.st.get('A')).toThrowError(SyntaxError, 'get method is not implemented')
+      expect(() => this.st.get('A')).toThrowError(
+        SyntaxError,
+        'get method is not implemented'
+      )
     })
   })
 
@@ -80,7 +92,10 @@ describe('Unit Tests: Abstract SymbolTable', () => {
 
   describe('SymbolTable#keys()', () => {
     it('should throw because is not implemented', () => {
-      expect(() => this.st.keys()).toThrowError(SyntaxError, 'keys method is not implemented')
+      expect(() => this.st.keys()).toThrowError(
+        SyntaxError,
+        'keys method is not implemented'
+      )
     })
   })
 })

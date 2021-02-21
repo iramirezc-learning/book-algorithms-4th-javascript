@@ -20,14 +20,20 @@ class Exercise {
    * ```
    * @param {[]} args [whitelistFile]
    */
-  static solution (args) {
+  static solution(args) {
     const input = new In(args[0])
     const whitelist = input.readAllInts()
 
     whitelist.sort(numbersByAscendingOrder)
 
-    StdOut.println('mostDuplicatedKey (v1):', this.getMostDuplicatedKey(whitelist))
-    StdOut.println('mostDuplicatedKey (v2):', this.getMostDuplicatedKeyV2(whitelist))
+    StdOut.println(
+      'mostDuplicatedKey (v1):',
+      this.getMostDuplicatedKey(whitelist)
+    )
+    StdOut.println(
+      'mostDuplicatedKey (v2):',
+      this.getMostDuplicatedKeyV2(whitelist)
+    )
   }
 
   /**
@@ -36,7 +42,7 @@ class Exercise {
    * with most duplicates.
    * @param {[]} a The sorted array with duplicated keys.
    */
-  static getMostDuplicatedKey (a) {
+  static getMostDuplicatedKey(a) {
     let key = a[0]
     let count = BinarySearch.count(a, key)
 
@@ -68,7 +74,7 @@ class Exercise {
    * most duplicated values.
    * @param {[]} a The sorted array with duplicated values.
    */
-  static getMostDuplicatedKeyV2 (a) {
+  static getMostDuplicatedKeyV2(a) {
     const keys = {}
     let maxKey = null
     let maxKeyCount = 0

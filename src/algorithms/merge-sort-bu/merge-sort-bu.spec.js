@@ -157,10 +157,12 @@ describe('Unit Tests: Bottom-Up MergeBU Sort Algorithm', () => {
       it('should mutate the array', () => {
         const mutations = []
         const originalImplementation = MergeBU.merge.bind(MergeBU)
-        spyOn(MergeBU, 'merge').and.callFake((array, lo, mid, hi, comparator) => {
-          originalImplementation(array, lo, mid, hi, comparator)
-          mutations.push([...array])
-        })
+        spyOn(MergeBU, 'merge').and.callFake(
+          (array, lo, mid, hi, comparator) => {
+            originalImplementation(array, lo, mid, hi, comparator)
+            mutations.push([...array])
+          }
+        )
         const a = [9, 8, 6, 5, 7, 4]
         // see test about calls to `merge` function
         const expectedMutations = [

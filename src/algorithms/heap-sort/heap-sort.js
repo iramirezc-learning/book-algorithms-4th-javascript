@@ -13,7 +13,7 @@ class Heap extends GenericSort {
    * @param {Array<*>} a - The array of values to be sorted.
    * @param {ComparatorFn} [comparator] - The comparator function.
    */
-  static sort (a, comparator) {
+  static sort(a, comparator) {
     let n = a.length
 
     // constructs the max heap from the first half of the array
@@ -38,7 +38,7 @@ class Heap extends GenericSort {
    * @param {number} n - The max length of the heap in which sink should run.
    * @param {ComparatorFn} [comparator] - The comparator function.
    */
-  static sink (a, k, n, comparator) {
+  static sink(a, k, n, comparator) {
     let j
 
     while (2 * k <= n) {

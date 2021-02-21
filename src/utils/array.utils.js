@@ -1,17 +1,17 @@
-function arrayToString (a) {
+function arrayToString(a) {
   return JSON.stringify(a)
 }
 
-function isMatrix (m) {
+function isMatrix(m) {
   if (Array.isArray(m) && m.length > 0) {
-    return m.every(row => isVector(row))
+    return m.every((row) => isVector(row))
   }
   return false
 }
 
-function isVector (v) {
+function isVector(v) {
   if (Array.isArray(v) && v.length > 0) {
-    return v.every(n => !Array.isArray(n))
+    return v.every((n) => !Array.isArray(n))
   }
   return false
 }
@@ -37,7 +37,7 @@ function isVector (v) {
  * @example <caption>Array of even numbers</caption>
  * newArrayOf(5, i => (i + 1) * 2) // [2, 4, 6, 8, 10]
  */
-function newArrayOf (n, data) {
+function newArrayOf(n, data) {
   const a = []
 
   if (typeof data === 'function') {

@@ -1,5 +1,5 @@
-const { StdIn, StdOut } = require("../libs");
-const { Queue } = require("../adts");
+const { StdIn, StdOut } = require('../libs')
+const { Queue } = require('../adts')
 
 /**
  * QueueClient
@@ -16,24 +16,24 @@ class QueueClient {
    * ```
    */
   static main() {
-    const queue = new Queue();
+    const queue = new Queue()
 
     StdIn.read()
-      .on("line", (line) => {
-        line.split(" ").forEach((item) => {
-          if (item === "-" && !queue.isEmpty()) {
-            StdOut.printf(queue.dequeue() + " ");
+      .on('line', (line) => {
+        line.split(' ').forEach((item) => {
+          if (item === '-' && !queue.isEmpty()) {
+            StdOut.printf(queue.dequeue() + ' ')
           } else {
-            queue.enqueue(item);
+            queue.enqueue(item)
           }
-        });
+        })
       })
-      .on("close", () => {
-        StdOut.println(`(${queue.size()} left on queue)`);
-      });
+      .on('close', () => {
+        StdOut.println(`(${queue.size()} left on queue)`)
+      })
   }
 }
 
 // Execution
 // ==============================
-if (require.main === module) QueueClient.main();
+if (require.main === module) QueueClient.main()

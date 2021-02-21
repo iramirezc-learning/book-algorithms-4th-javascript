@@ -22,7 +22,7 @@ class Exercise {
    * ```
    * @param {[]} args [p, q]
    */
-  static solution (args) {
+  static solution(args) {
     const p = parseInt(args[0], 10)
     const q = parseInt(args[1], 10)
     const result = this.gcd(p, q)
@@ -33,7 +33,7 @@ class Exercise {
   /**
    * Recursive implementation of Euclidean Algorithm.
    */
-  static gcd (p, q) {
+  static gcd(p, q) {
     if (q === 0) {
       StdOut.println(`p = ${p}; q = ${q}`)
       return p

@@ -20,7 +20,7 @@ class Exercise {
    * ```
    * @param {[]} args [n, k, p]
    */
-  static solution (args) {
+  static solution(args) {
     const n = parseInt(args[0], 10)
     const k = parseInt(args[1], 10)
     const p = parseFloat(args[2], 10)
@@ -38,10 +38,12 @@ class Exercise {
    * @param {number} k Integer `k`
    * @param {number} p Float `p`
    */
-  static binomial (n, k, p) {
-    if ((n === 0) && (k === 0)) return 1.0
-    if ((n < 0) || (k < 0)) return 0.0
-    return (1 - p) * this.binomial(n - 1, k, p) + p * this.binomial(n - 1, k - 1, p)
+  static binomial(n, k, p) {
+    if (n === 0 && k === 0) return 1.0
+    if (n < 0 || k < 0) return 0.0
+    return (
+      (1 - p) * this.binomial(n - 1, k, p) + p * this.binomial(n - 1, k - 1, p)
+    )
   }
 
   /**
@@ -49,9 +51,7 @@ class Exercise {
    * using memoization.
    * @todo implementation
    */
-  static myBinomial (n, k, p) {
-
-  }
+  static myBinomial(n, k, p) {}
 }
 
 // Exports

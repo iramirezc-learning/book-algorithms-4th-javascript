@@ -13,7 +13,7 @@ class Exercise {
    * ```
    * @param {[]} args [n] positive integer number
    */
-  static solution (args) {
+  static solution(args) {
     const n = args[0]
 
     StdOut.println(`ln(${n}!) = ${this.ln(n)}`)
@@ -23,7 +23,7 @@ class Exercise {
    * Calculates n!
    * @param {number} n Positive integer number
    */
-  static factorial (n) {
+  static factorial(n) {
     if (n <= 1) return 1
     return n * this.factorial(n - 1)
   }
@@ -37,7 +37,7 @@ class Exercise {
    * ```
    * @param {number} n Integer positive number
    */
-  static ln (n) {
+  static ln(n) {
     const nFactorial = this.factorial(n)
     let exp = 0
     let result = 1.0

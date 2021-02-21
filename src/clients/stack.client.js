@@ -1,5 +1,5 @@
-const { StdIn, StdOut } = require("../../libs");
-const { Stack } = require("../../adts");
+const { StdIn, StdOut } = require('../../libs')
+const { Stack } = require('../../adts')
 
 /**
  * StackClient
@@ -16,24 +16,24 @@ class StackClient {
    * ```
    */
   static main() {
-    const stack = new Stack();
+    const stack = new Stack()
 
     StdIn.read()
-      .on("line", (line) => {
-        line.split(" ").forEach((item) => {
-          if (item === "-" && !stack.isEmpty()) {
-            StdOut.printf(stack.pop() + " ");
+      .on('line', (line) => {
+        line.split(' ').forEach((item) => {
+          if (item === '-' && !stack.isEmpty()) {
+            StdOut.printf(stack.pop() + ' ')
           } else {
-            stack.push(item);
+            stack.push(item)
           }
-        });
+        })
       })
-      .on("close", () => {
-        StdOut.println(`(${stack.size()} left on stack)`);
-      });
+      .on('close', () => {
+        StdOut.println(`(${stack.size()} left on stack)`)
+      })
   }
 }
 
 // Execution
 // ==============================
-if (require.main === module) StackClient.main();
+if (require.main === module) StackClient.main()

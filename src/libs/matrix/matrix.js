@@ -13,7 +13,7 @@ class Matrix {
    * @param {[]} y Vector `y`
    * @returns {number} Vector product
    */
-  static dot (x, y) {
+  static dot(x, y) {
     const n = x.length
     let sum = 0
 
@@ -30,7 +30,7 @@ class Matrix {
    * @param {[][]} m Matrix
    * @returns {[][]} Transposed matrix
    */
-  static transpose (m) {
+  static transpose(m) {
     const rows = m.length
     const cols = m[0].length
     const t = []
@@ -51,7 +51,7 @@ class Matrix {
    * @param {[][]} b Matrix `b`
    * @returns {[][]} Matrix-Matrix product
    */
-  static multMatrixMatrix (a, b) {
+  static multMatrixMatrix(a, b) {
     const n = a.length
     const c = newArrayOf(n, 0)
     const t = this.transpose(b)
@@ -73,7 +73,7 @@ class Matrix {
    * @param {[]} v Vector `v`
    * @returns {[]} Matrix-Vector product
    */
-  static multMatrixVector (m, v) {
+  static multMatrixVector(m, v) {
     const n = m.length
     const c = []
 
@@ -90,7 +90,7 @@ class Matrix {
    * @param {[][]} m Matrix `m`
    * @returns {[]} Vector-Matrix product
    */
-  static multVectorMatrix (v, m) {
+  static multVectorMatrix(v, m) {
     return this.multMatrixVector(m, v)
   }
 }

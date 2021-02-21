@@ -26,7 +26,7 @@ class Exercise {
    * ```
    * @param {[]} args [whitelist]
    */
-  static solution (args) {
+  static solution(args) {
     const input = new In(args[0])
     const whitelist = input.readAllInts()
 
@@ -37,7 +37,7 @@ class Exercise {
     StdOut.println(`Whitelist length: ${whitelist.length}`)
     StdOut.println(`Unique length: ${unique.length}\n`)
 
-    StdIn.read().on('line', line => {
+    StdIn.read().on('line', (line) => {
       const key = StdIn.readInt(line)
 
       if (BinarySearch.indexOf(unique, key) === -1) {
@@ -50,7 +50,7 @@ class Exercise {
    * Returns new array with unique keys.
    * @param {[]} a Sorted Array
    */
-  static filterDuplicates (a) {
+  static filterDuplicates(a) {
     const unique = []
 
     // filter duplicated keys

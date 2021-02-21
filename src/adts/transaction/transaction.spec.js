@@ -88,7 +88,11 @@ describe('Unit Tests: Transaction ADT', () => {
       })
 
       it('should return false when objects have different who', () => {
-        const targetTransaction = new Transaction('OtherWho', this.transaction1.when(), this.transaction1.amount())
+        const targetTransaction = new Transaction(
+          'OtherWho',
+          this.transaction1.when(),
+          this.transaction1.amount()
+        )
 
         const isEqual = this.transaction1.equals(targetTransaction)
 
@@ -96,7 +100,11 @@ describe('Unit Tests: Transaction ADT', () => {
       })
 
       it('should return false when objects have different when', () => {
-        const targetTransaction = new Transaction(this.transaction1.who(), new BasicDate(1, 1, 1900), this.transaction1.amount())
+        const targetTransaction = new Transaction(
+          this.transaction1.who(),
+          new BasicDate(1, 1, 1900),
+          this.transaction1.amount()
+        )
 
         const isEqual = this.transaction1.equals(targetTransaction)
 
@@ -104,7 +112,11 @@ describe('Unit Tests: Transaction ADT', () => {
       })
 
       it('should return false when objects have different amount', () => {
-        const targetTransaction = new Transaction(this.transaction1.who(), this.transaction1.when(), this.transaction1.amount() * 2)
+        const targetTransaction = new Transaction(
+          this.transaction1.who(),
+          this.transaction1.when(),
+          this.transaction1.amount() * 2
+        )
 
         const isEqual = this.transaction1.equals(targetTransaction)
 
@@ -112,7 +124,11 @@ describe('Unit Tests: Transaction ADT', () => {
       })
 
       it('should return true when objects have same who, when and amount', () => {
-        const targetTransaction = new Transaction(this.transaction1.who(), this.transaction1.when(), this.transaction1.amount())
+        const targetTransaction = new Transaction(
+          this.transaction1.who(),
+          this.transaction1.when(),
+          this.transaction1.amount()
+        )
 
         const isEqual = this.transaction1.equals(targetTransaction)
 
@@ -122,7 +138,11 @@ describe('Unit Tests: Transaction ADT', () => {
 
     describe('compareTo()', () => {
       it('should return `+1` if transaction1.amount is greater than targetTransaction.amount', () => {
-        const targetTransaction = new Transaction(this.transaction1.who(), this.transaction1.when(), this.transaction1.amount() / 2)
+        const targetTransaction = new Transaction(
+          this.transaction1.who(),
+          this.transaction1.when(),
+          this.transaction1.amount() / 2
+        )
 
         const result = this.transaction1.compareTo(targetTransaction)
 
@@ -131,7 +151,11 @@ describe('Unit Tests: Transaction ADT', () => {
       })
 
       it('should return `-1` if transaction1.amount is smaller than targetTransaction.amount', () => {
-        const targetTransaction = new Transaction(this.transaction1.who(), this.transaction1.when(), this.transaction1.amount() * 2)
+        const targetTransaction = new Transaction(
+          this.transaction1.who(),
+          this.transaction1.when(),
+          this.transaction1.amount() * 2
+        )
 
         const result = this.transaction1.compareTo(targetTransaction)
 
@@ -140,7 +164,11 @@ describe('Unit Tests: Transaction ADT', () => {
       })
 
       it('should return `0` if both transactions are equal', () => {
-        const targetTransaction = new Transaction(this.transaction1.who(), this.transaction1.when(), this.transaction1.amount())
+        const targetTransaction = new Transaction(
+          this.transaction1.who(),
+          this.transaction1.when(),
+          this.transaction1.amount()
+        )
 
         const result = this.transaction1.compareTo(targetTransaction)
 

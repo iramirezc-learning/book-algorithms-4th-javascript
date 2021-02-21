@@ -6,7 +6,7 @@
  * @param {*} arg - The argument to be evaluated.
  * @returns {boolean} Returns if the given argument is defined or not.
  */
-function isDefined (arg) {
+function isDefined(arg) {
   return typeof arg !== 'undefined'
 }
 

@@ -12,7 +12,7 @@ class Exercise {
    * [ 0, 1, 2, 3, 4, 4, 3, 2, 1, 0 ]
    * ```
    */
-  static solution () {
+  static solution() {
     const a = []
 
     for (let i = 0; i < 10; i++) {

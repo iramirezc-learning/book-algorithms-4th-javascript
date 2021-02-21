@@ -27,14 +27,14 @@ class Exercise {
    * ```
    * @param {[]} args [whitelistFile, sign(+/-)]
    */
-  static solution (args) {
+  static solution(args) {
     const input = new In(args[0])
     const sign = args[1]
     const whitelist = input.readAllInts()
 
     whitelist.sort(numbersByAscendingOrder)
 
-    StdIn.read().on('line', line => {
+    StdIn.read().on('line', (line) => {
       const key = StdIn.readInt(line)
       const index = BinarySearch.indexOf(whitelist, key)
 

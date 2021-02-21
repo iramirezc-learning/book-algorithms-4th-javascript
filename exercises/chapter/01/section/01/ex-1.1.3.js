@@ -18,7 +18,7 @@ class Exercise {
    * ```
    * @param {[]} args [n1, n2, n3]
    */
-  static solution (args) {
+  static solution(args) {
     const a = parseInt(args[0], 10)
     const b = parseInt(args[1], 10)
     const c = parseInt(args[2], 10)
@@ -37,7 +37,7 @@ class Exercise {
    * @param {number} c Number 3
    * @returns {boolean} Whether the 3 numbers are equal or not.
    */
-  static areEqual (a, b, c) {
+  static areEqual(a, b, c) {
     return a === b && b === c
   }
 }

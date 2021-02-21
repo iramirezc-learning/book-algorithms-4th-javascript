@@ -12,7 +12,11 @@ describe('Array Utils - Unit Tests', () => {
 
     it('should return an array of arrays to string', () => {
       const expected = '[[1,2,3],[4,5,6],[7,8,9]]'
-      const a = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+      const a = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+      ]
 
       const str = arrayUtils.arrayToString(a)
 
@@ -22,7 +26,11 @@ describe('Array Utils - Unit Tests', () => {
 
   describe('isMatrix', () => {
     it('should return true for array of arrays', () => {
-      const m = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+      const m = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+      ]
 
       expect(arrayUtils.isMatrix(m)).toBeTrue()
     })
@@ -50,7 +58,11 @@ describe('Array Utils - Unit Tests', () => {
     })
 
     it('should return false for array of arrays', () => {
-      const m = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+      const m = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+      ]
 
       expect(arrayUtils.isVector(m)).toBeFalse()
     })
@@ -80,7 +92,7 @@ describe('Array Utils - Unit Tests', () => {
     it('should return an array of n items with computed values', () => {
       const expected = [2, 4, 6, 8, 10]
 
-      const a = arrayUtils.newArrayOf(5, n => (n + 1) * 2)
+      const a = arrayUtils.newArrayOf(5, (n) => (n + 1) * 2)
 
       expect(a).toEqual(expected)
     })

@@ -15,7 +15,7 @@ class Exercise {
    * d) 33 (string)
    * ```
    */
-  static solution () {
+  static solution() {
     const a = Exercise.a()
     const b = Exercise.b()
     const c = Exercise.c()
@@ -27,19 +27,19 @@ class Exercise {
     StdOut.println(`d) ${d} (${typeof d})`)
   }
 
-  static a () {
+  static a() {
     return (1 + 2.236) / 2
   }
 
-  static b () {
+  static b() {
     return 1 + 2 + 3 + 4.0
   }
 
-  static c () {
+  static c() {
     return 4.1 >= 4
   }
 
-  static d () {
+  static d() {
     return 1 + 2 + '3'
   }
 }

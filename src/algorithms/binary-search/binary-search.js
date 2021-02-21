@@ -11,7 +11,7 @@ class BinarySearch {
    * @param {number} key The target key.
    * @returns {number} The index of the number in the array or `-1` if not found.
    */
-  static _iterativeIndexOf (a, key) {
+  static _iterativeIndexOf(a, key) {
     let lo = 0
     let hi = a.length - 1
     let mid
@@ -39,7 +39,7 @@ class BinarySearch {
    * @param {number} hi The higher index bound.
    * @returns {number} The index of the number in the array or `-1` if not found.
    */
-  static _recursiveIndexOf (a, key, lo, hi) {
+  static _recursiveIndexOf(a, key, lo, hi) {
     if (lo > hi) {
       return -1
     }
@@ -62,7 +62,7 @@ class BinarySearch {
    * @param {number} key The target key to search for.
    * @returns {number} The index of `key` in the array `a` or `-1` if not found.
    */
-  static indexOf (a, key) {
+  static indexOf(a, key) {
     return BinarySearch._iterativeIndexOf(a, key)
   }
 
@@ -73,7 +73,7 @@ class BinarySearch {
    * @param {number} key The target key to search for.
    * @returns {number} The index of `key` in the array `a` or `-1` if not found.
    */
-  static recursiveIndexOf (a, key) {
+  static recursiveIndexOf(a, key) {
     return BinarySearch._recursiveIndexOf(a, key, 0, a.length - 1)
   }
 
@@ -84,7 +84,7 @@ class BinarySearch {
    * @param {[]} a The sorted array with duplicated keys.
    * @param {number} key The value to get the rank.
    */
-  static rank (a, key) {
+  static rank(a, key) {
     const index = this.recursiveIndexOf(a, key)
 
     if (index >= 0) {
@@ -114,7 +114,7 @@ class BinarySearch {
    * @param {[]} a The sorted array with duplicated keys.
    * @param {number} key The value to count.
    */
-  static count (a, key) {
+  static count(a, key) {
     const index = this.recursiveIndexOf(a, key)
     let _count = 0
 

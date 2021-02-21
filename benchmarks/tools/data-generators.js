@@ -3,7 +3,7 @@
  * @param {number} n Size of the sorted array.
  * @returns {[]} Sorted array of `n` number elements.
  */
-const getSortedArray = n => {
+const getSortedArray = (n) => {
   const a = []
 
   for (let i = 0; i < n; i++) {
@@ -17,7 +17,7 @@ const getSortedArray = n => {
  * Returns a random integer number from [0, max).
  * @param {number} max Max limit (exclusive) to generate the random number.
  */
-const getRandomInt = max => {
+const getRandomInt = (max) => {
   return Math.floor(Math.random() * Math.floor(max))
 }
 

@@ -1,5 +1,5 @@
-const { StdOut, StdRandom } = require("../libs");
-const { Counter } = require("../adts");
+const { StdOut, StdRandom } = require('../libs')
+const { Counter } = require('../adts')
 
 /**
  * Flips
@@ -14,9 +14,9 @@ class Flips {
    */
   static max(counterX, counterY) {
     if (counterX.tally() > counterY.tally()) {
-      return counterX;
+      return counterX
     } else {
-      return counterY;
+      return counterY
     }
   }
 
@@ -33,33 +33,33 @@ class Flips {
    * ```
    */
   static main(args) {
-    const trials = parseInt(args[0], 10);
-    const heads = new Counter("heads");
-    const tails = new Counter("tails");
+    const trials = parseInt(args[0], 10)
+    const heads = new Counter('heads')
+    const tails = new Counter('tails')
 
     for (let i = 0; i < trials; i++) {
       if (StdRandom.bernoulli(0.5)) {
-        heads.increment();
+        heads.increment()
       } else {
-        tails.increment();
+        tails.increment()
       }
     }
 
-    StdOut.println(heads.toString());
-    StdOut.println(tails.toString());
+    StdOut.println(heads.toString())
+    StdOut.println(tails.toString())
 
-    const delta = heads.tally() - tails.tally();
+    const delta = heads.tally() - tails.tally()
 
-    StdOut.println(`delta: ${Math.abs(delta)}`);
+    StdOut.println(`delta: ${Math.abs(delta)}`)
 
     if (heads.tally() === tails.tally()) {
-      StdOut.println("It's a Tie!");
+      StdOut.println("It's a Tie!")
     } else {
-      StdOut.println(`${Flips.max(heads, tails)} wins`);
+      StdOut.println(`${Flips.max(heads, tails)} wins`)
     }
   }
 }
 
 // Execution
 // ==============================
-if (require.main === module) Flips.main(process.argv.slice(2));
+if (require.main === module) Flips.main(process.argv.slice(2))

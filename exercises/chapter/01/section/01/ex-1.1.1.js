@@ -14,22 +14,22 @@ class Exercise {
    * c) true
    * ```
    */
-  static solution () {
+  static solution() {
     StdOut.println(`a) ${Exercise.a()}`)
     StdOut.println(`b) ${Exercise.b()}`)
     StdOut.println(`c) ${Exercise.c()}`)
   }
 
-  static a () {
+  static a() {
     return (0 + 15) / 2
   }
 
-  static b () {
+  static b() {
     return 2.0e-6 * 100000000.1
   }
 
-  static c () {
-    return true && false || true && true // eslint-disable-line
+  static c() {
+    return (true && false) || (true && true) // eslint-disable-line
   }
 }
 

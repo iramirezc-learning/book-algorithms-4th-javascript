@@ -26,15 +26,18 @@ class SequentialSearchSTClient {
    * E 12
    * S 0
    */
-  static main () {
+  static main() {
     const st = new SequentialSearchST()
     let i = 0
 
     StdIn.read()
-      .on('line', line => {
-        line.trim().split(' ').forEach(key => {
-          st.put(key, i++)
-        })
+      .on('line', (line) => {
+        line
+          .trim()
+          .split(' ')
+          .forEach((key) => {
+            st.put(key, i++)
+          })
       })
       .on('close', () => {
         for (const s of st.keys()) {

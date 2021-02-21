@@ -1,4 +1,4 @@
-const { StdRandom, StdOut } = require("../libs");
+const { StdRandom, StdOut } = require('../libs')
 
 /**
  * RandomSeq
@@ -25,18 +25,18 @@ class RandomSeq {
    * ```
    */
   static main(args) {
-    const n = parseInt(args[0], 10);
-    const lo = parseFloat(args[1]);
-    const hi = parseFloat(args[2]);
+    const n = parseInt(args[0], 10)
+    const lo = parseFloat(args[1])
+    const hi = parseFloat(args[2])
 
     for (let i = 0; i < n; i++) {
-      const x = StdRandom.uniform(lo, hi);
+      const x = StdRandom.uniform(lo, hi)
 
-      StdOut.printf("%f\n", x.toFixed(2));
+      StdOut.printf('%f\n', x.toFixed(2))
     }
   }
 }
 
 // Execution
 // ==============================
-if (require.main === module) RandomSeq.main(process.argv.slice(2));
+if (require.main === module) RandomSeq.main(process.argv.slice(2))

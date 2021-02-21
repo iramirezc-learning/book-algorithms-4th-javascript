@@ -23,7 +23,7 @@ class Merge extends GenericSort {
    * returns 1 when `a` is greater than `b` or
    * returns 0 when `a` is equal to `b`.
    */
-  static merge (a, lo, mid, hi, comparator) {
+  static merge(a, lo, mid, hi, comparator) {
     for (let k = lo; k <= hi; k++) {
       this._aux[k] = a[k]
     }
@@ -55,7 +55,7 @@ class Merge extends GenericSort {
    * returns 1 when `a` is greater than `b` or
    * returns 0 when `a` is equal to `b`.
    */
-  static _sort (array, lo, hi, comparator) {
+  static _sort(array, lo, hi, comparator) {
     if (hi <= lo) return
 
     const mid = lo + Math.floor((hi - lo) / 2)
@@ -73,7 +73,7 @@ class Merge extends GenericSort {
    * returns 1 when `a` is greater than `b` or
    * returns 0 when `a` is equal to `b`.
    */
-  static sort (array, comparator) {
+  static sort(array, comparator) {
     this._aux = new Array(array.length)
     this._sort(array, 0, array.length - 1, comparator)
   }

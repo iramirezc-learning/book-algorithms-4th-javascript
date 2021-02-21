@@ -16,7 +16,7 @@ class BinarySearchST extends OrderedSymbolTable {
    * @param {number} capacity - The initial capacity for the ST.
    * @param {ComparatorFn} [comparator] - The comparator function for the keys.
    */
-  constructor (capacity, comparator) {
+  constructor(capacity, comparator) {
     super(comparator)
 
     /**
@@ -41,7 +41,7 @@ class BinarySearchST extends OrderedSymbolTable {
    * @private
    * @param {number} max - The new size for arrays `_keys` and `_vals`.
    */
-  _resize (max) {
+  _resize(max) {
     const tempKeys = new Array(max)
     const tempVals = new Array(max)
 
@@ -59,7 +59,7 @@ class BinarySearchST extends OrderedSymbolTable {
    * @param {*} key - The key which we need to get the rank for.
    * @returns {number} The number of keys less than the `key`.
    */
-  rank (key) {
+  rank(key) {
     let lo = 0
     let hi = this._n - 1
     let mid
@@ -87,7 +87,7 @@ class BinarySearchST extends OrderedSymbolTable {
    * @param {*} key - The key that identifies the value.
    * @param {*} val - The value.
    */
-  put (key, val) {
+  put(key, val) {
     // find the rank of the key.
     const i = this.rank(key)
 
@@ -123,7 +123,7 @@ class BinarySearchST extends OrderedSymbolTable {
    * @param {*} key - The key to be searched.
    * @returns {*} Returns the value associated with the key.
    */
-  get (key) {
+  get(key) {
     if (this.isEmpty()) {
       return null
     }
@@ -142,7 +142,7 @@ class BinarySearchST extends OrderedSymbolTable {
    * @todo implementation. Exercise 3.1.16.
    * @param {*} key - The key that will be deleted.
    */
-  delete (key) {
+  delete(key) {
     throw new SyntaxError('delete method is not implemented')
   }
 
@@ -150,7 +150,7 @@ class BinarySearchST extends OrderedSymbolTable {
    * Returns the smallest key in the table.
    * @returns {*} The smallest key.
    */
-  min () {
+  min() {
     if (this.isEmpty()) {
       throw new ReferenceError('The ST is empty.')
     }
@@ -162,7 +162,7 @@ class BinarySearchST extends OrderedSymbolTable {
    * Returns the largest key in the table.
    * @returns {*} The largest key.
    */
-  max () {
+  max() {
     if (this.isEmpty()) {
       throw new ReferenceError('The ST is empty.')
     }
@@ -176,7 +176,7 @@ class BinarySearchST extends OrderedSymbolTable {
    * @param {*} key - The key to be searched.
    * @returns {*} The largest key less than or equal to the `key`.
    */
-  floor (key) {
+  floor(key) {
     throw new SyntaxError('floor method is not implemented')
   }
 
@@ -185,7 +185,7 @@ class BinarySearchST extends OrderedSymbolTable {
    * @param {*} key - The key to be searched.
    * @returns {*} The smallest key greater than or equal to the `key`.
    */
-  ceiling (key) {
+  ceiling(key) {
     const i = this.rank(key)
 
     if (i === this.size()) {
@@ -200,7 +200,7 @@ class BinarySearchST extends OrderedSymbolTable {
    * @param {number} k - The rank to be searched.
    * @returns {*} The key of rank `k`.
    */
-  select (k) {
+  select(k) {
     if (this.isEmpty()) {
       throw new ReferenceError('The ST is empty.')
     }
@@ -211,17 +211,17 @@ class BinarySearchST extends OrderedSymbolTable {
 
     return this._keys[k]
   }
-
   /**
-   * Returns all the keys in the table in sorted order as an iterator.
-   * @returns {*} Returns an iterable object that will provide all the keys in the table in sorted order.
-   *//**
    * Returns keys in [lo..hi] in sorted order as an iterator.
    * @param {*} lo - The lowest key.
    * @param {*} hi - The largest key.
    * @returns {*} Returns an iterable object that will provide all the keys in the table in sorted order.
    */
-  keys (lo, hi) {
+
+  /**
+   * Returns all the keys in the table in sorted order as an iterator.
+   * @returns {*} Returns an iterable object that will provide all the keys in the table in sorted order.
+   */ keys(lo, hi) {
     if (isDefined(lo) && isDefined(hi)) {
       const keys = this._keys // select the array containing the keys
       const queue = new Queue()

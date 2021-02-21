@@ -88,7 +88,11 @@ describe('Unit Tests: BasicDate ADT', () => {
       })
 
       it('should return false when objects have different day', () => {
-        const targetDate = new BasicDate(this.sourceDate.month(), this.sourceDate.day() + 1, this.sourceDate.year())
+        const targetDate = new BasicDate(
+          this.sourceDate.month(),
+          this.sourceDate.day() + 1,
+          this.sourceDate.year()
+        )
 
         const isEqual = this.sourceDate.equals(targetDate)
 
@@ -96,7 +100,11 @@ describe('Unit Tests: BasicDate ADT', () => {
       })
 
       it('should return false when objects have different month', () => {
-        const targetDate = new BasicDate(this.sourceDate.month() + 1, this.sourceDate.day(), this.sourceDate.year())
+        const targetDate = new BasicDate(
+          this.sourceDate.month() + 1,
+          this.sourceDate.day(),
+          this.sourceDate.year()
+        )
 
         const isEqual = this.sourceDate.equals(targetDate)
 
@@ -104,7 +112,11 @@ describe('Unit Tests: BasicDate ADT', () => {
       })
 
       it('should return false when objects have different year', () => {
-        const targetDate = new BasicDate(this.sourceDate.month(), this.sourceDate.day(), this.sourceDate.year() + 1)
+        const targetDate = new BasicDate(
+          this.sourceDate.month(),
+          this.sourceDate.day(),
+          this.sourceDate.year() + 1
+        )
 
         const isEqual = this.sourceDate.equals(targetDate)
 
@@ -112,7 +124,11 @@ describe('Unit Tests: BasicDate ADT', () => {
       })
 
       it('should return true when objects have same date', () => {
-        const targetDate = new BasicDate(this.sourceDate.month(), this.sourceDate.day(), this.sourceDate.year())
+        const targetDate = new BasicDate(
+          this.sourceDate.month(),
+          this.sourceDate.day(),
+          this.sourceDate.year()
+        )
 
         const isEqual = this.sourceDate.equals(targetDate)
 
@@ -126,7 +142,11 @@ describe('Unit Tests: BasicDate ADT', () => {
       })
 
       it('should return `+1` if sourceDate.year is greater than targetDate.year', () => {
-        const targetDate = new BasicDate(this.sourceDate.month(), this.sourceDate.day(), this.sourceDate.year() - 1)
+        const targetDate = new BasicDate(
+          this.sourceDate.month(),
+          this.sourceDate.day(),
+          this.sourceDate.year() - 1
+        )
 
         const result = this.sourceDate.compareTo(targetDate)
 
@@ -135,7 +155,11 @@ describe('Unit Tests: BasicDate ADT', () => {
       })
 
       it('should return `-1` if sourceDate.year is smaller than targetDate.year', () => {
-        const targetDate = new BasicDate(this.sourceDate.month(), this.sourceDate.day(), this.sourceDate.year() + 1)
+        const targetDate = new BasicDate(
+          this.sourceDate.month(),
+          this.sourceDate.day(),
+          this.sourceDate.year() + 1
+        )
 
         const result = this.sourceDate.compareTo(targetDate)
 
@@ -144,7 +168,11 @@ describe('Unit Tests: BasicDate ADT', () => {
       })
 
       it('should return `+1` if sourceDate.month is greater than targetDate.month', () => {
-        const targetDate = new BasicDate(this.sourceDate.month() - 1, this.sourceDate.day(), this.sourceDate.year())
+        const targetDate = new BasicDate(
+          this.sourceDate.month() - 1,
+          this.sourceDate.day(),
+          this.sourceDate.year()
+        )
 
         const result = this.sourceDate.compareTo(targetDate)
 
@@ -153,7 +181,11 @@ describe('Unit Tests: BasicDate ADT', () => {
       })
 
       it('should return `-1` if sourceDate.month is smaller than targetDate.month', () => {
-        const targetDate = new BasicDate(this.sourceDate.month() + 1, this.sourceDate.day(), this.sourceDate.year())
+        const targetDate = new BasicDate(
+          this.sourceDate.month() + 1,
+          this.sourceDate.day(),
+          this.sourceDate.year()
+        )
 
         const result = this.sourceDate.compareTo(targetDate)
 
@@ -162,7 +194,11 @@ describe('Unit Tests: BasicDate ADT', () => {
       })
 
       it('should return `+1` if sourceDate.day is greater than targetDate.day', () => {
-        const targetDate = new BasicDate(this.sourceDate.month(), this.sourceDate.day() - 1, this.sourceDate.year())
+        const targetDate = new BasicDate(
+          this.sourceDate.month(),
+          this.sourceDate.day() - 1,
+          this.sourceDate.year()
+        )
 
         const result = this.sourceDate.compareTo(targetDate)
 
@@ -171,7 +207,11 @@ describe('Unit Tests: BasicDate ADT', () => {
       })
 
       it('should return `-1` if sourceDate.day is smaller than targetDate.day', () => {
-        const targetDate = new BasicDate(this.sourceDate.month(), this.sourceDate.day() + 1, this.sourceDate.year())
+        const targetDate = new BasicDate(
+          this.sourceDate.month(),
+          this.sourceDate.day() + 1,
+          this.sourceDate.year()
+        )
 
         const result = this.sourceDate.compareTo(targetDate)
 
@@ -180,7 +220,11 @@ describe('Unit Tests: BasicDate ADT', () => {
       })
 
       it('should return `0` if both dates are equal', () => {
-        const targetDate = new BasicDate(this.sourceDate.month(), this.sourceDate.day(), this.sourceDate.year())
+        const targetDate = new BasicDate(
+          this.sourceDate.month(),
+          this.sourceDate.day(),
+          this.sourceDate.year()
+        )
 
         const result = this.sourceDate.compareTo(targetDate)
 

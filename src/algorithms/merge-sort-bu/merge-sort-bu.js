@@ -23,7 +23,7 @@ class MergeBU extends GenericSort {
    * returns 1 when `a` is greater than `b` or
    * returns 0 when `a` is equal to `b`.
    */
-  static merge (a, lo, mid, hi, comparator) {
+  static merge(a, lo, mid, hi, comparator) {
     for (let k = lo; k <= hi; k++) {
       this._aux[k] = a[k]
     }
@@ -52,14 +52,20 @@ class MergeBU extends GenericSort {
    * returns 1 when `a` is greater than `b` or
    * returns 0 when `a` is equal to `b`.
    */
-  static sort (array, comparator) {
+  static sort(array, comparator) {
     const n = array.length
 
     this._aux = new Array(n)
 
     for (let len = 1; len < n; len *= 2) {
       for (let lo = 0; lo < n - len; lo += len + len) {
-        this.merge(array, lo, lo + len - 1, Math.min(lo + len + len - 1, n - 1), comparator)
+        this.merge(
+          array,
+          lo,
+          lo + len - 1,
+          Math.min(lo + len + len - 1, n - 1),
+          comparator
+        )
       }
     }
   }

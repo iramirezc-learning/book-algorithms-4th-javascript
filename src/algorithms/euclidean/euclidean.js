@@ -11,7 +11,7 @@ class Euclidean {
    * @param {number} q Second non-negative integer.
    * @returns {number} The greatest common divisor
    */
-  static gcd (p, q) {
+  static gcd(p, q) {
     if (q === 0) {
       return p
     }

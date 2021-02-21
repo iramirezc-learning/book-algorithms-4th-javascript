@@ -12,7 +12,7 @@ class TwoSumFast {
    * Returns the count of non duplicate pairs of numbers in an array that sum 0.
    * @param {[]} a The array of integers
    */
-  static count (a) {
+  static count(a) {
     a.sort(numbersByAscendingOrder)
     const n = a.length
     let count = 0

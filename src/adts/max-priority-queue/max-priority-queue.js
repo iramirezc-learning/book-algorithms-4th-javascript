@@ -12,7 +12,7 @@ class MaxPQ {
    * @constructor
    * @param {number|[*]} [max] Maximum fixed size for the PQ or Array of keys to create the PQ from.
    */
-  constructor (max) {
+  constructor(max) {
     /**
      * Initial PQ size
      */
@@ -39,7 +39,7 @@ class MaxPQ {
    * @param {number} j Index of second key
    * @returns {boolean} if key at index `i` is less than key at index`j`
    */
-  less (i, j) {
+  less(i, j) {
     return compare(this._pq[i], this._pq[j]) < 0
   }
 
@@ -50,7 +50,7 @@ class MaxPQ {
    * @param {number} j Index of second key
    * @returns {void}
    */
-  exch (i, j) {
+  exch(i, j) {
     const t = this._pq[i]
 
     this._pq[i] = this._pq[j]
@@ -65,7 +65,7 @@ class MaxPQ {
    * @param {number} k Index of the key to _swim_.
    * @returns {void}
    */
-  swim (k) {
+  swim(k) {
     // while current index `k` is not the root (k > 1)
     // and while the parent node (at k / 2) is lower than
     // the current node (at k), exchange both nodes.
@@ -83,7 +83,7 @@ class MaxPQ {
    * @param {number} k Index of the key to _sink_.
    * @returns {void}
    */
-  sink (k) {
+  sink(k) {
     // while `k` still having next child
     // that is in bounds with the PQ size (_n).
     while (2 * k <= this._n) {
@@ -113,7 +113,7 @@ class MaxPQ {
    * Returns if the PQ is empty
    * @returns {boolean} if the PQ is empty
    */
-  isEmpty () {
+  isEmpty() {
     return this._n === 0
   }
 
@@ -121,7 +121,7 @@ class MaxPQ {
    * Returns the size of the PQ
    * @returns {number} the PQ size (total nodes)
    */
-  size () {
+  size() {
     return this._n
   }
 
@@ -130,7 +130,7 @@ class MaxPQ {
    * @param {*} v The Key to be inserted
    * @returns {void}
    */
-  insert (v) {
+  insert(v) {
     this._pq[++this._n] = v
     this.swim(this._n)
   }
@@ -140,7 +140,7 @@ class MaxPQ {
    * then it fixes the heap order.
    * @returns {*} The maximum Key in the PQ
    */
-  delMax () {
+  delMax() {
     const max = this._pq[1] // retrieve max Key from top
 
     this.exch(1, this._n--) // exchange with the last item
@@ -154,7 +154,7 @@ class MaxPQ {
    * Returns the `maximum` key in the PQ.
    * @returns {*} The maximum key in the PQ.
    */
-  max () {
+  max() {
     if (this.isEmpty()) {
       throw new ReferenceError('MaxPQ is empty.')
     }

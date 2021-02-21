@@ -173,7 +173,7 @@ describe('Unit Tests: Maximum Priority Queue', () => {
         const keysToInsert = ['A', 'B', 'C', 'X', 'Y', 'Z']
         const expectedPQ = [UNDEF, 'Z', 'X', 'Y', 'A', 'C', 'B']
 
-        keysToInsert.forEach(key => this.pq.insert(key))
+        keysToInsert.forEach((key) => this.pq.insert(key))
 
         expect(this.pq._pq).toEqual(expectedPQ)
       })
@@ -193,7 +193,7 @@ describe('Unit Tests: Maximum Priority Queue', () => {
             [1, 3] //  Y <-> Z
           ]
 
-          keysToInsert.forEach(key => this.pq.insert(key))
+          keysToInsert.forEach((key) => this.pq.insert(key))
 
           expect(this.pq.exch.calls.allArgs()).toEqual(expectedCallsArgs)
         })
@@ -215,7 +215,7 @@ describe('Unit Tests: Maximum Priority Queue', () => {
             [UNDEF, 'Z', 'X', 'Y', 'A', 'C', 'B']
           ]
 
-          keysToInsert.forEach(key => this.pq.insert(key))
+          keysToInsert.forEach((key) => this.pq.insert(key))
 
           expect(mutations).toEqual(expectedMutations)
         })
@@ -228,7 +228,7 @@ describe('Unit Tests: Maximum Priority Queue', () => {
         this.pq = new MaxPQ(this.max)
 
         const keys = ['A', 'B', 'C', 'X', 'Y', 'Z']
-        keys.forEach(k => this.pq.insert(k))
+        keys.forEach((k) => this.pq.insert(k))
       })
 
       it('should return the maximum key `Z`', () => {

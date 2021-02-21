@@ -7,7 +7,7 @@ const BasicDate = require('../basic-date/basic-date')
  * @see p. 79
  */
 class Transaction {
-  constructor () {
+  constructor() {
     let who, when, amount
 
     if (arguments.length === 1 && typeof arguments[0] === 'string') {
@@ -33,28 +33,28 @@ class Transaction {
   /**
    * Returns the who owns the transaction
    */
-  who () {
+  who() {
     return this._who
   }
 
   /**
    * Returns the date of the transaction
    */
-  when () {
+  when() {
     return this._when
   }
 
   /**
    * Returns the amount of the transaction
    */
-  amount () {
+  amount() {
     return this._amount
   }
 
   /**
    * Returns the transaction as string
    */
-  toString () {
+  toString() {
     return `${this.who()} ${this.when()} ${this.amount()}`
   }
 
@@ -64,7 +64,7 @@ class Transaction {
    * @param {Transaction} target The target Transaction
    * @returns {boolean}
    */
-  equals (target) {
+  equals(target) {
     if (this === target) return true
     if (target === null) return false
     if (!(target instanceof Transaction)) return false
@@ -82,7 +82,7 @@ class Transaction {
    * @param {Transaction} target The target Transaction
    * @returns {number} +1 (is greater), -1 (is smaller), 0 (is equal)
    */
-  compareTo (target) {
+  compareTo(target) {
     if (this.amount() > target.amount()) return +1
     if (this.amount() < target.amount()) return -1
 

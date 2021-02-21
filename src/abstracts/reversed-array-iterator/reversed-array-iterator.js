@@ -5,7 +5,7 @@
  * @see p. 141
  */
 class ReversedArrayIterator {
-  constructor (array, n) {
+  constructor(array, n) {
     this._current = n - 1
     this._a = [...array]
 
@@ -15,7 +15,7 @@ class ReversedArrayIterator {
   /**
    * Returns if there are more elements in the iterator.
    */
-  hasNext () {
+  hasNext() {
     return this._current >= 0
   }
 
@@ -24,7 +24,7 @@ class ReversedArrayIterator {
    * when iterating.
    * @see p. 139
    */
-  remove () {
+  remove() {
     /* do nothing */
   }
 
@@ -33,7 +33,7 @@ class ReversedArrayIterator {
    * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol
    * @returns {object} iterator protocol
    */
-  next () {
+  next() {
     if (this.hasNext()) {
       const item = this._a[this._current--]
 

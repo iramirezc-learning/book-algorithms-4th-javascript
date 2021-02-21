@@ -15,7 +15,7 @@ class Exercise {
    * d) if (a > b) c = 0 else b = 0; | SyntaxError: Unexpected token else
    * ```
    */
-  static solution () {
+  static solution() {
     // values
     let a = 2 // eslint-disable-line
     let b = 1 // eslint-disable-line
@@ -46,7 +46,7 @@ class Exercise {
     }
 
     try {
-      rc = eval(qc); // eslint-disable-line
+      rc = eval(qc) // eslint-disable-line
     } catch (err) {
       rc = String(err)
     }

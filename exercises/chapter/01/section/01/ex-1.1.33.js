@@ -42,7 +42,7 @@ class Exercise {
    * [13,31,49]
    * ```
    */
-  static solution (args) {
+  static solution(args) {
     const a = JSON.parse(args[0] || null)
     const b = JSON.parse(args[1] || null)
 

@@ -27,7 +27,10 @@ describe('Unit Tests: Exercise 1.1.28', () => {
       ]
 
       testCases.forEach(({ args, expected, description }) => {
-        expect(Exercise.filterDuplicates(...args)).toEqual(expected, description)
+        expect(Exercise.filterDuplicates(...args)).toEqual(
+          expected,
+          description
+        )
       })
     })
   })

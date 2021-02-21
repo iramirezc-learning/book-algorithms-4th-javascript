@@ -61,7 +61,14 @@ describe('Unit Tests: ResizableArrayStack ADT', () => {
 
         this.stack.resize(6)
 
-        expect(this.stack._a).toEqual([1, 2, 3, undefined, undefined, undefined])
+        expect(this.stack._a).toEqual([
+          1,
+          2,
+          3,
+          undefined,
+          undefined,
+          undefined
+        ])
       })
     })
 

@@ -26,14 +26,19 @@ describe('Unit Tests: BinarySearch Algorithm', () => {
       ]
 
       testCases.forEach(({ args, expected, description }) => {
-        expect(BinarySearch._iterativeIndexOf(...args)).toBe(expected, description)
+        expect(BinarySearch._iterativeIndexOf(...args)).toBe(
+          expected,
+          description
+        )
       })
     })
 
     it('should return -1 if the number is not found in the array', () => {
       const notInArray = 0
 
-      expect(BinarySearch._iterativeIndexOf(this.sortedArray, notInArray)).toBe(-1)
+      expect(BinarySearch._iterativeIndexOf(this.sortedArray, notInArray)).toBe(
+        -1
+      )
     })
   })
 
@@ -60,7 +65,10 @@ describe('Unit Tests: BinarySearch Algorithm', () => {
       ]
 
       testCases.forEach(({ args, expected, description }) => {
-        expect(BinarySearch._recursiveIndexOf(...args)).toBe(expected, description)
+        expect(BinarySearch._recursiveIndexOf(...args)).toBe(
+          expected,
+          description
+        )
       })
     })
 
@@ -69,7 +77,12 @@ describe('Unit Tests: BinarySearch Algorithm', () => {
       const lo = 0
       const hi = this.sortedArray.length - -1
 
-      const index = BinarySearch._recursiveIndexOf(this.sortedArray, notInArray, lo, hi)
+      const index = BinarySearch._recursiveIndexOf(
+        this.sortedArray,
+        notInArray,
+        lo,
+        hi
+      )
 
       expect(index).toBe(-1)
     })
@@ -82,7 +95,10 @@ describe('Unit Tests: BinarySearch Algorithm', () => {
 
       BinarySearch.indexOf(this.sortedArray, targetKey)
 
-      expect(BinarySearch._iterativeIndexOf).toHaveBeenCalledWith(this.sortedArray, targetKey)
+      expect(BinarySearch._iterativeIndexOf).toHaveBeenCalledWith(
+        this.sortedArray,
+        targetKey
+      )
     })
   })
 
@@ -95,7 +111,12 @@ describe('Unit Tests: BinarySearch Algorithm', () => {
 
       BinarySearch.recursiveIndexOf(this.sortedArray, targetKey)
 
-      expect(BinarySearch._recursiveIndexOf).toHaveBeenCalledWith(this.sortedArray, targetKey, lo, hi)
+      expect(BinarySearch._recursiveIndexOf).toHaveBeenCalledWith(
+        this.sortedArray,
+        targetKey,
+        lo,
+        hi
+      )
     })
   })
 

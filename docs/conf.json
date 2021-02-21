@@ -4,11 +4,15 @@
     "plugins/my-tags"
   ],
   "markdown": {
-    "tags": ["note"]
+    "tags": [
+      "note"
+    ]
   },
   "recurseDepth": 10,
   "source": {
-    "include": ["./src"],
+    "include": [
+      "./src"
+    ],
     "exclude": [],
     "includePattern": ".+\\.js(doc|x)?$",
     "excludePattern": "(^|\\/|\\\\)_|.+\\.spec\\.js$"
@@ -23,7 +27,10 @@
   },
   "tags": {
     "allowUnknownTags": true,
-    "dictionaries": ["jsdoc", "closure"]
+    "dictionaries": [
+      "jsdoc",
+      "closure"
+    ]
   },
   "templates": {
     "cleverLinks": false,
@@ -31,7 +38,9 @@
     "default": {
       "outputSourceFiles": true,
       "staticFiles": {
-        "include": ["./static"]
+        "include": [
+          "./static"
+        ]
       },
       "includeDate": false,
       "useLongnameInNav": false

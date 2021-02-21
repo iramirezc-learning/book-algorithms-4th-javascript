@@ -7,7 +7,7 @@ const { ReversedArrayIterator } = require('../../abstracts')
  * @see p. 135, 141
  */
 class FixedCapacityStack {
-  constructor (size) {
+  constructor(size) {
     this._a = new Array(size)
     this._n = 0
 
@@ -17,14 +17,14 @@ class FixedCapacityStack {
   /**
    * Returns if the Stack is empty
    */
-  isEmpty () {
+  isEmpty() {
     return this._n === 0
   }
 
   /**
    * Returns the Stacks' size
    */
-  size () {
+  size() {
     return this._n
   }
 
@@ -32,7 +32,7 @@ class FixedCapacityStack {
    * Inserts an item to the Stack
    * @param {*} item The item to be stored
    */
-  push (item) {
+  push(item) {
     this._a[this._n++] = item
   }
 
@@ -40,7 +40,7 @@ class FixedCapacityStack {
    * Removes and returns the last inserted
    * item from the Stack.
    */
-  pop () {
+  pop() {
     if (this.isEmpty()) {
       throw new ReferenceError('stack is empty')
     }
@@ -52,7 +52,7 @@ class FixedCapacityStack {
    * Returns a ReversedArrayIterator to traverse the stack.
    * @returns {ReversedArrayIterator}
    */
-  [Symbol.iterator] () {
+  [Symbol.iterator]() {
     return new ReversedArrayIterator(this._a, this._n)
   }
 }

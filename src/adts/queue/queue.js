@@ -7,7 +7,7 @@ const { Node, NodeIterator } = require('../../abstracts')
  * @see p. 151, 155
  */
 class Queue {
-  constructor () {
+  constructor() {
     this._n = 0
     this._first = null
     this._last = null
@@ -18,14 +18,14 @@ class Queue {
   /**
    * Returns if the Queue is empty
    */
-  isEmpty () {
+  isEmpty() {
     return this._first === null
   }
 
   /**
    * Returns the Queue's size
    */
-  size () {
+  size() {
     return this._n
   }
 
@@ -33,7 +33,7 @@ class Queue {
    * Inserts an item to the end of the Queue
    * @param {*} item The item to be stored
    */
-  enqueue (item) {
+  enqueue(item) {
     const oldLast = this._last
 
     this._last = new Node()
@@ -53,7 +53,7 @@ class Queue {
    * Removes and returns the first item
    * inserted to the Queue.
    */
-  dequeue () {
+  dequeue() {
     if (this.isEmpty()) {
       throw new ReferenceError('queue is empty')
     }
@@ -74,7 +74,7 @@ class Queue {
    * Returns an NodeIterator to traverse the Queue.
    * @returns {NodeIterator}
    */
-  [Symbol.iterator] () {
+  [Symbol.iterator]() {
     return new NodeIterator(this._first)
   }
 }

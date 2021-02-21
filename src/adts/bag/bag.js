@@ -7,7 +7,7 @@ const { Node, NodeIterator } = require('../../abstracts')
  * @see p. 155
  */
 class Bag {
-  constructor () {
+  constructor() {
     this._n = 0
     this._first = null
 
@@ -17,14 +17,14 @@ class Bag {
   /**
    * Returns if the Bag is empty
    */
-  isEmpty () {
+  isEmpty() {
     return this._first === null
   }
 
   /**
    * Returns the Bags' size
    */
-  size () {
+  size() {
     return this._n
   }
 
@@ -32,7 +32,7 @@ class Bag {
    * Inserts an item to the Bag
    * @param {*} item The item to be stored
    */
-  add (item) {
+  add(item) {
     const oldFirst = this._first
 
     this._first = new Node()
@@ -45,7 +45,7 @@ class Bag {
    * Returns an NodeIterator to traverse the bag.
    * @returns {NodeIterator}
    */
-  [Symbol.iterator] () {
+  [Symbol.iterator]() {
     return new NodeIterator(this._first)
   }
 }

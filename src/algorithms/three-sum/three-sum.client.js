@@ -31,7 +31,7 @@ class ThreeSumClient {
    * 32074
    * ```
    */
-  static main (args) {
+  static main(args) {
     const input = new In(args[0])
     const a = input.readAllInts()
 

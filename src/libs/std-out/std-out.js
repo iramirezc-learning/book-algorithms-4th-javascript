@@ -11,7 +11,7 @@ class StdOut {
    * @see {@link https://nodejs.org/docs/latest-v12.x/api/util.html#util_util_format_format_args}
    * @param {*} any
    */
-  static printf () {
+  static printf() {
     process.stdout.write(format(...arguments))
   }
 
@@ -19,7 +19,7 @@ class StdOut {
    * Prints formatted data with a new line in the `stdout`.
    * @param {*} any
    */
-  static println () {
+  static println() {
     console.log(...arguments)
   }
 }

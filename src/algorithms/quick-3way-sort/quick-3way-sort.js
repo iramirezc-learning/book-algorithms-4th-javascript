@@ -20,7 +20,7 @@ class Quick3way extends GenericSort {
    * returns 1 when `a` is greater than `b` or
    * returns 0 when `a` is equal to `b`.
    */
-  static _sort (array, lo, hi, comparator = this.defaultComparator) {
+  static _sort(array, lo, hi, comparator = this.defaultComparator) {
     if (hi <= lo) return
 
     let lt = lo //    [lo..lt-1] are less than v
@@ -58,7 +58,7 @@ class Quick3way extends GenericSort {
    * returns 1 when `a` is greater than `b` or
    * returns 0 when `a` is equal to `b`.
    */
-  static sort (array, comparator) {
+  static sort(array, comparator) {
     StdRandom.shuffle(array)
     this._sort(array, 0, array.length - 1, comparator)
   }

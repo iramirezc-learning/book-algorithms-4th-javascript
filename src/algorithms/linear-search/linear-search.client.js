@@ -29,11 +29,11 @@ class LSClient {
    * ...
    * ```
    */
-  static main (args) {
+  static main(args) {
     const input = new In(args[0])
     const whitelist = input.readAllInts()
 
-    StdIn.read().on('line', line => {
+    StdIn.read().on('line', (line) => {
       const key = StdIn.readInt(line)
 
       if (LinearSearch.indexOf(whitelist, key) === -1) {

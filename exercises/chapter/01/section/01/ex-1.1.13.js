@@ -23,7 +23,7 @@ class Exercise {
    * ```
    * @param {[]} args [x, y] Cols, Rows
    */
-  static solution (args) {
+  static solution(args) {
     const x = parseInt(args[0], 10)
     const y = parseInt(args[1], 10)
 
@@ -45,7 +45,7 @@ class Exercise {
    * @param {number} y Number of Rows
    * @returns {[[]]} A matrix of `x` columns and `y` rows
    */
-  static createMatrix (x, y) {
+  static createMatrix(x, y) {
     return newArrayOf(y, () => {
       return newArrayOf(x, () => StdRandom.uniform(Math.max(x, y)))
     })

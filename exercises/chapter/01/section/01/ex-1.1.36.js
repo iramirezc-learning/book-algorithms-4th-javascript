@@ -38,7 +38,7 @@ class Exercise {
    * ```
    * @param {[]} args [n, m] Total Shuffles, Array Size
    */
-  static solution (args) {
+  static solution(args) {
     const n = parseInt(args[0], 10)
     const m = parseInt(args[1], 10)
 
@@ -46,7 +46,7 @@ class Exercise {
 
     // shuffle array `n` times
     for (let i = 0; i < n; i++) {
-      const array = newArrayOf(m, i => i)
+      const array = newArrayOf(m, (i) => i)
       StdRandom.shuffle(array)
       // uncomment for debugging
       // StdOut.println(`Shuffle ${utils.pad(i + 1, 5)}: ${utils.arrayToString(array)}`)
@@ -67,7 +67,7 @@ class Exercise {
    * @param {[]} shuffled Shuffled Array
    * @param {[[]]} matrix Matrix that keep tracks of the new position of number `i`.
    */
-  static shuffleTest (shuffled, matrix) {
+  static shuffleTest(shuffled, matrix) {
     for (let j = 0; j < shuffled.length; j++) {
       matrix[shuffled[j]][j]++
     }

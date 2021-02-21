@@ -11,7 +11,7 @@ class Node {
    * @param {*} [val=null] - The holding value.
    * @param {?Node} [next=null] - The next element in the Linked List.
    */
-  constructor (key = null, val = null, next = null) {
+  constructor(key = null, val = null, next = null) {
     /**
      * The node's holding item.
      * @note You would either use the `_item` or the combination of the `_key` and `_val` props,

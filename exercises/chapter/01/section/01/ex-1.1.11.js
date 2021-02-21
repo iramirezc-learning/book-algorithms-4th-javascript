@@ -18,7 +18,7 @@ class Exercise {
    * ```
    * @param {[]} args [x, y] Cols, Rows
    */
-  static solution (args) {
+  static solution(args) {
     const x = parseInt(args[0], 10)
     const y = parseInt(args[1], 10)
 
@@ -35,7 +35,7 @@ class Exercise {
    * @param {number} y Total of rows
    * @returns {[[]]} A matrix `y` · `x` with random booleans.
    */
-  static createMatrix (x, y) {
+  static createMatrix(x, y) {
     const m = []
 
     for (let i = 0; i < y; i++) {
@@ -55,12 +55,12 @@ class Exercise {
    * It also prints row and columns numbers.
    * @param {[]} m The matrix of booleans to be converted to string.
    */
-  static matrixToString (m) {
+  static matrixToString(m) {
     let cols = ' '
     let s = ''
 
     for (let i = 0; i < m.length; i++) {
-      s += (i + 1)
+      s += i + 1
 
       for (let j = 0; j < m[i].length; j++) {
         if (i === 0) {

@@ -15,8 +15,16 @@ describe('Matrix Library - Unit Tests', () => {
 
   describe('transpose', () => {
     it('should transpose a matrix', () => {
-      const m = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-      const expected = [[1, 4, 7], [2, 5, 8], [3, 6, 9]]
+      const m = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+      ]
+      const expected = [
+        [1, 4, 7],
+        [2, 5, 8],
+        [3, 6, 9]
+      ]
 
       const result = Matrix.transpose(m)
 
@@ -26,9 +34,19 @@ describe('Matrix Library - Unit Tests', () => {
 
   describe('multMatrixMatrix', () => {
     it('should return the product of two matrix', () => {
-      const m1 = [[0, 4, -2], [-4, -3, 0]]
-      const m2 = [[0, 1], [1, -1], [2, 3]]
-      const expected = [[0, -10], [-3, -1]]
+      const m1 = [
+        [0, 4, -2],
+        [-4, -3, 0]
+      ]
+      const m2 = [
+        [0, 1],
+        [1, -1],
+        [2, 3]
+      ]
+      const expected = [
+        [0, -10],
+        [-3, -1]
+      ]
 
       const result = Matrix.multMatrixMatrix(m1, m2)
 
@@ -38,7 +56,10 @@ describe('Matrix Library - Unit Tests', () => {
 
   describe('multMatrixVector', () => {
     it('should return the product of a matrix and a vector', () => {
-      const m = [[1, -1, 2], [0, -3, 1]]
+      const m = [
+        [1, -1, 2],
+        [0, -3, 1]
+      ]
       const v = [2, 1, 0]
       const expected = [1, -3]
 
@@ -51,7 +72,11 @@ describe('Matrix Library - Unit Tests', () => {
   describe('multVectorMatrix', () => {
     it('should return the product of a vector and a matrix', () => {
       const v = [2, 1, 3]
-      const m = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+      const m = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+      ]
       const expected = [13, 31, 49]
 
       const result = Matrix.multVectorMatrix(v, m)

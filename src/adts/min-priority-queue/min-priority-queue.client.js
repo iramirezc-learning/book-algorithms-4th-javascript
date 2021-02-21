@@ -21,12 +21,12 @@ class TopM {
    * vonNeumann 3/26/2002 4121.85
    * ```
    */
-  static main (args) {
+  static main(args) {
     const m = parseInt(args[0], 10)
     const pq = new MinPQ(m + 1)
 
     StdIn.read()
-      .on('line', line => {
+      .on('line', (line) => {
         pq.insert(new Transaction(line.trim()))
 
         if (pq.size() > m) {

@@ -39,7 +39,7 @@ class Exercise {
    * ```
    * @param {[]} args [n, m] Total Shuffles, Array Size
    */
-  static solution (args) {
+  static solution(args) {
     const n = parseInt(args[0], 10)
     const m = parseInt(args[1], 10)
 
@@ -47,7 +47,7 @@ class Exercise {
 
     // BAD shuffle array `n` times
     for (let i = 0; i < n; i++) {
-      const array = newArrayOf(m, i => i)
+      const array = newArrayOf(m, (i) => i)
 
       this.badShuffle(array)
       E1136.shuffleTest(array, matrix)
@@ -66,7 +66,7 @@ class Exercise {
    * with a random number of position [0, n - 1]
    * @param {[]} a The array to shuffle.
    */
-  static badShuffle (a) {
+  static badShuffle(a) {
     const n = a.length
 
     for (let i = 0; i < n; i++) {

@@ -18,7 +18,7 @@ class Exercise {
    * ```
    * @param {[]} args [Matrix Size]
    */
-  static solution (args) {
+  static solution(args) {
     const n = parseInt(args[0], 10)
     const m = this.createBooleanArray(n)
 
@@ -31,7 +31,7 @@ class Exercise {
    * are relatively prime.
    * @param {number} n Size of matrix.
    */
-  static createBooleanArray (n) {
+  static createBooleanArray(n) {
     const a = []
 
     for (let i = 0; i < n; i++) {
@@ -53,12 +53,16 @@ class Exercise {
    * and `false` with a white space.
    * @param {[[]]} m Matrix of booleans.
    */
-  static matrixToString (m) {
-    return m.map(row => {
-      return row.map(col => {
-        return col ? '•' : ' '
-      }).join(' ')
-    }).join('\n')
+  static matrixToString(m) {
+    return m
+      .map((row) => {
+        return row
+          .map((col) => {
+            return col ? '•' : ' '
+          })
+          .join(' ')
+      })
+      .join('\n')
   }
 }
 

@@ -21,12 +21,12 @@ class LowestM {
    * Hoare 8/12/2003 1025.7
    * ```
    */
-  static main (args) {
+  static main(args) {
     const m = parseInt(args[0], 10)
     const pq = new MaxPQ(m + 1)
 
     StdIn.read()
-      .on('line', line => {
+      .on('line', (line) => {
         pq.insert(new Transaction(line.trim()))
 
         if (pq.size() > m) {

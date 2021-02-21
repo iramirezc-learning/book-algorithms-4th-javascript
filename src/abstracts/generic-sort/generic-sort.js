@@ -22,7 +22,7 @@ class GenericSort {
    * @param {ComparatorFn} [comparator=defaultComparator] - The comparator function.
    * @returns {boolean} Returns true if `a` is less than `b`.
    */
-  static less (a, b, comparator = this.defaultComparator) {
+  static less(a, b, comparator = this.defaultComparator) {
     return comparator(a, b) < 0
   }
 
@@ -33,7 +33,7 @@ class GenericSort {
    * @param {number} i - The first index.
    * @param {number} j - The second index.
    */
-  static exchange (a, i, j) {
+  static exchange(a, i, j) {
     const temp = a[i]
 
     a[i] = a[j]
@@ -46,7 +46,7 @@ class GenericSort {
    * @param {ComparatorFn} [comparator=defaultComparator] - The comparator function.
    * @returns {boolean} Whether the array is sorted or not.
    */
-  static isSorted (a, comparator = this.defaultComparator) {
+  static isSorted(a, comparator = this.defaultComparator) {
     for (let i = 1; i < a.length; i++) {
       if (this.less(a[i], a[i - 1], comparator)) {
         return false
@@ -60,7 +60,7 @@ class GenericSort {
    * Prints out the contents of the array `a`.
    * @param {Array<*>} a - The array of values.
    */
-  static show (a) {
+  static show(a) {
     StdOut.println(a.join(' '))
   }
 
@@ -70,7 +70,7 @@ class GenericSort {
    * @throws SyntaxError This function should be implemented by the client.
    * @param {Array<*>} a - The array of values.
    */
-  static sort (a) {
+  static sort(a) {
     throw new SyntaxError('sort method not implemented')
   }
 }
@@ -85,6 +85,8 @@ class GenericSort {
  * returns `1` when `a` is greater than `b` or
  * returns `0` when `a` is equal to `b`.
  */
-Object.defineProperty(GenericSort, 'defaultComparator', { value: defaultComparator })
+Object.defineProperty(GenericSort, 'defaultComparator', {
+  value: defaultComparator
+})
 
 module.exports = GenericSort

@@ -13,7 +13,7 @@ class Exercise {
    * ```
    * @param {[]} args [n] int
    */
-  static solution (args) {
+  static solution(args) {
     const n = parseInt(args[0])
 
     StdOut.println(`exR1(${n}) = ${this.exR1(n)}`)
@@ -24,7 +24,7 @@ class Exercise {
    * @param {number} int number
    * @returns {*} ???
    */
-  static exR1 (n) {
+  static exR1(n) {
     if (n <= 0) {
       return ''
     }

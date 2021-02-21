@@ -4,8 +4,8 @@
   "description": "Personal notes & JavaScript code for the book: Algorithms 4th edition by Robert Sedgewick and Kevin Wayne.",
   "scripts": {
     "docs": "jsdoc -c docs/conf.json --pedantic --verbose -a all",
-    "format": "prettier --write \"src/**/*.js\"",
-    "lint": "eslint \"src/**/*.js\" --quiet",
+    "format": "prettier --write \"./**/*.js\"",
+    "lint": "eslint \"./**/*.js\" --quiet",
     "test": "jasmine --config=jasmine.json",
     "test:exercises": "jasmine exercises/**/*.spec.js --helper=spec/helpers/*.js"
   },

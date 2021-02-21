@@ -1,7 +1,7 @@
-const algorithms = require("../algorithms");
-const { StopWatch } = require("../adts");
-const { StdOut, StdRandom } = require("../libs");
-const { newArrayOf } = require("../utils");
+const algorithms = require('../algorithms')
+const { StopWatch } = require('../adts')
+const { StdOut, StdRandom } = require('../libs')
+const { newArrayOf } = require('../utils')
 
 /**
  * Client that runs two sorting algorithms
@@ -88,20 +88,20 @@ class SortCompare {
    * * @type {number} `args[3]` - Number of trials.
    */
   static main(args) {
-    const alg1 = args[0];
-    const alg2 = args[1];
-    const n = parseInt(args[2], 10);
-    const trials = parseInt(args[3], 10);
+    const alg1 = args[0]
+    const alg2 = args[1]
+    const n = parseInt(args[2], 10)
+    const trials = parseInt(args[3], 10)
 
-    const time1 = this.timeRandomInput(alg1, n, trials);
-    const time2 = this.timeRandomInput(alg2, n, trials);
+    const time1 = this.timeRandomInput(alg1, n, trials)
+    const time2 = this.timeRandomInput(alg2, n, trials)
 
-    StdOut.println(`${alg1}: ${time1}\n${alg2}: ${time2}\n`);
+    StdOut.println(`${alg1}: ${time1}\n${alg2}: ${time2}\n`)
 
-    const ratio = time2 / time1;
+    const ratio = time2 / time1
 
-    StdOut.printf("For %d random Doubles\n    %s is", n, alg1);
-    StdOut.printf(` ${ratio.toFixed(1)} times faster than %s\n`, alg2);
+    StdOut.printf('For %d random Doubles\n    %s is', n, alg1)
+    StdOut.printf(` ${ratio.toFixed(1)} times faster than %s\n`, alg2)
   }
 
   /**
@@ -112,21 +112,21 @@ class SortCompare {
    * @returns {number} The total running time.
    */
   static time(algorithmName, a) {
-    const sortName = `${algorithmName}Sort`;
+    const sortName = `${algorithmName}Sort`
 
     if (!algorithms[sortName]) {
-      throw new Error(`${sortName} is not defined`);
+      throw new Error(`${sortName} is not defined`)
     }
 
-    const timer = new StopWatch();
+    const timer = new StopWatch()
 
-    algorithms[sortName].sort(a);
+    algorithms[sortName].sort(a)
 
-    const elapsedTime = timer.elapsedTime();
+    const elapsedTime = timer.elapsedTime()
 
-    algorithms[sortName].isSorted(a);
+    algorithms[sortName].isSorted(a)
 
-    return elapsedTime;
+    return elapsedTime
   }
 
   /**
@@ -138,16 +138,16 @@ class SortCompare {
    * @returns {number} The total running time of all `trials`.
    */
   static timeRandomInput(algorithmName, n, trials) {
-    let total = 0;
-    let a = [];
+    let total = 0
+    let a = []
 
     for (let t = 0; t < trials; t++) {
-      a = newArrayOf(n, () => StdRandom.uniform());
-      total += this.time(algorithmName, a);
+      a = newArrayOf(n, () => StdRandom.uniform())
+      total += this.time(algorithmName, a)
     }
 
-    return total;
+    return total
   }
 }
 
-module.exports = { SortCompare };
+module.exports = { SortCompare }

@@ -11,7 +11,7 @@ class LinearSearch {
    * @param {number} key The target key to search for.
    * @returns {number} The index of `key` in the array `a` or `-1` if not found.
    */
-  static indexOf (a, key) {
+  static indexOf(a, key) {
     for (let i = 0; i < a.length; i++) {
       if (a[i] === key) return i
     }

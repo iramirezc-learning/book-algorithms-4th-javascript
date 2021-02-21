@@ -26,14 +26,14 @@ class Exercise {
    * ```
    * @param {[]} args [whitelistFilePath]
    */
-  static solution (args) {
+  static solution(args) {
     const input = new In(args[0])
     const whitelist = input.readAllInts()
     const len = whitelist.length - 1
 
     whitelist.sort(numbersByAscendingOrder)
 
-    StdIn.read().on('line', line => {
+    StdIn.read().on('line', (line) => {
       const key = StdIn.readInt(line)
       StdOut.println(`key = ${key}`)
       const index = Exercise.indexOf(whitelist, key, 0, len)
@@ -44,7 +44,7 @@ class Exercise {
   /**
    * Recursive implementation of BinarySearch
    */
-  static indexOf (a, key, lo, hi, depth = 1) {
+  static indexOf(a, key, lo, hi, depth = 1) {
     const msg = `${depth}[${lo},${hi}]`
     StdOut.println(pad(msg, msg.length + depth))
 

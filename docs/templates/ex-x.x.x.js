@@ -22,7 +22,7 @@ class C1S1E1 {
    * * @type {number} `args[0]` - Number `x`.
    * * @type {number} `args[1]` - Number `y`.
    */
-  static solution (args) {
+  static solution(args) {
     const x = parseFloat(args[0])
     const y = parseFloat(args[1])
 
@@ -34,7 +34,7 @@ class C1S1E1 {
   /**
    * Other methods go after `solution` method.
    */
-  static otherMethod () {
+  static otherMethod() {
     // code goes here
   }
 }

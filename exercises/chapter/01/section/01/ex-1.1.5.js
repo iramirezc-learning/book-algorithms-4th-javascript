@@ -18,7 +18,7 @@ class Exercise {
    * ```
    * @param {[]} args [x, y]
    */
-  static solution (args) {
+  static solution(args) {
     const x = parseFloat(args[0])
     const y = parseFloat(args[1])
     const result = this.inRange(x) && this.inRange(y)
@@ -30,7 +30,7 @@ class Exercise {
    * Determines if a number `n` is in range [0, 1]
    * @param {number} n The number to compare
    */
-  static inRange (n) {
+  static inRange(n) {
     return n > 0 && n < 1
   }
 }

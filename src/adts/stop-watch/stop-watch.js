@@ -4,7 +4,7 @@
  * @see p. 175
  */
 class StopWatch {
-  constructor () {
+  constructor() {
     // static final long _start
     Object.defineProperty(this, '_start', {
       value: Date.now()
@@ -17,7 +17,7 @@ class StopWatch {
    * Returns total elapsed time in seconds
    * upon StopWatch instantiation.
    */
-  elapsedTime () {
+  elapsedTime() {
     const now = Date.now()
     return (now - this._start) / 1000
   }

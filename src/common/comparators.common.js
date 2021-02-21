@@ -7,7 +7,7 @@ const { isDefined } = require('./validators.common')
  * @param {*} obj - The object to be inspected.
  * @returns {boolean} Returns if the object has the method `compareTo` implemented.
  */
-function hasCompareTo (obj) {
+function hasCompareTo(obj) {
   return isDefined(obj) && typeof obj.compareTo === 'function'
 }
 
@@ -17,7 +17,7 @@ function hasCompareTo (obj) {
  * @param {*} b - The object `b`.
  * @returns {boolean} Returns if both objects `a` and `b` implement the `compareTo` method.
  */
-function implementCompareTo (a, b) {
+function implementCompareTo(a, b) {
   return hasCompareTo(a) && hasCompareTo(b)
 }
 

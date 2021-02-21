@@ -13,7 +13,7 @@ class SequentialSearchST extends SymbolTable {
    * the SymbolTable interface.
    * @param {ComparatorFn} [comparator] - The comparator function for the keys.
    */
-  constructor (comparator) {
+  constructor(comparator) {
     super(comparator)
 
     /**
@@ -31,7 +31,7 @@ class SequentialSearchST extends SymbolTable {
    * @param {*} key - The key that identifies the value.
    * @param {*} val - The value.
    */
-  put (key, val) {
+  put(key, val) {
     for (let x = this._first; x !== null; x = x._next) {
       if (key === x._key) {
         x._val = val
@@ -49,7 +49,7 @@ class SequentialSearchST extends SymbolTable {
    * @param {*} key - The key to be searched.
    * @returns {*} Returns the value associated with the key or `null` if the key is absent.
    */
-  get (key) {
+  get(key) {
     for (let x = this._first; x !== null; x = x._next) {
       if (key === x._key) {
         return x._val
@@ -64,7 +64,7 @@ class SequentialSearchST extends SymbolTable {
    * @todo implementation. Exercise 3.1.16.
    * @param {*} key - The key that will be deleted.
    */
-  delete (key) {
+  delete(key) {
     throw new SyntaxError('delete method is not implemented')
   }
 
@@ -72,11 +72,11 @@ class SequentialSearchST extends SymbolTable {
    * Returns all the keys in the table as an iterator.
    * @returns {NodeIterable} Returns an iterable object that will provide all the keys in the table as an iterator.
    */
-  keys () {
+  keys() {
     const first = this._first
 
     return {
-      [Symbol.iterator] () {
+      [Symbol.iterator]() {
         return new NodeIterator(first)
       }
     }

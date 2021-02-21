@@ -14,7 +14,7 @@ class NodeIterator {
    * Creates a new NodeIterator.
    * @param {?Node} [element=null] - The first element to start the iteration.
    */
-  constructor (element = null) {
+  constructor(element = null) {
     /**
      * The current element of the iterator.
      * @private
@@ -29,7 +29,7 @@ class NodeIterator {
    * Returns if there are more elements in the iterator.
    * @returns {boolean} Returns whether the current element is null or not.
    */
-  hasNext () {
+  hasNext() {
     return this._current !== null
   }
 
@@ -37,7 +37,7 @@ class NodeIterator {
    * It is best not to modify Data Structures when iterating.
    * @see page: 139.
    */
-  remove () {
+  remove() {
     /* do nothing */
   }
 
@@ -46,7 +46,7 @@ class NodeIterator {
    * @see [The iterator protocol]{@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol}
    * @returns {Object} The object iterator.
    */
-  next () {
+  next() {
     if (this.hasNext()) {
       const item = this._current._item || this._current._key
 

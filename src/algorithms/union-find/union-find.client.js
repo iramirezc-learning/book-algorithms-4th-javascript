@@ -45,18 +45,18 @@ class UFClient {
    * ??? components
    * ```
    */
-  static main () {
+  static main() {
     let n
     let uf
 
     StdIn.read()
-      .on('line', line => {
+      .on('line', (line) => {
         if (!n) {
           // read firs line
           n = StdIn.readInt(line)
           uf = new UF(n)
         } else {
-          const [p, q] = line.split(' ').map(n => parseInt(n, 10))
+          const [p, q] = line.split(' ').map((n) => parseInt(n, 10))
 
           if (uf.connected(p, q)) {
             // do nothing

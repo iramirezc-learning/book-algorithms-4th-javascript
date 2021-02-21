@@ -13,7 +13,7 @@ class Exercise {
    * ```
    * @param {[]} args [n]
    */
-  static solution (args) {
+  static solution(args) {
     const n = parseInt(args[0], 10)
 
     StdOut.printf('%d to binary -> %s\n', n, this.toBinaryString(n))
@@ -25,7 +25,7 @@ class Exercise {
    * @param {number} n The positive number
    * @returns {string} The binary string representation of `n`
    */
-  static toBinaryString (n) {
+  static toBinaryString(n) {
     let s = ''
 
     for (let k = n; k > 0; k = Math.floor(k / 2)) {

@@ -9,7 +9,7 @@ class ThreeSum {
    * Returns the count of triplets in an array that sum 0.
    * @param {[]} a The array of integers
    */
-  static count (a) {
+  static count(a) {
     const n = a.length
     let count = 0
 

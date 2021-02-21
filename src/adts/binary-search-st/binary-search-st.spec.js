@@ -82,8 +82,22 @@ describe('Unit Tests: BinarySearchST', () => {
       this.bsST._keys = ['A', 'B', 'C', 'D', 'E']
       this.bsST._vals = [0, 1, 2, 3, 4]
 
-      const expectedKeys = [...this.bsST._keys, UNDEF, UNDEF, UNDEF, UNDEF, UNDEF]
-      const expectedVals = [...this.bsST._vals, UNDEF, UNDEF, UNDEF, UNDEF, UNDEF]
+      const expectedKeys = [
+        ...this.bsST._keys,
+        UNDEF,
+        UNDEF,
+        UNDEF,
+        UNDEF,
+        UNDEF
+      ]
+      const expectedVals = [
+        ...this.bsST._vals,
+        UNDEF,
+        UNDEF,
+        UNDEF,
+        UNDEF,
+        UNDEF
+      ]
 
       this.bsST._resize(10)
 
@@ -169,7 +183,18 @@ describe('Unit Tests: BinarySearchST', () => {
     })
 
     it('should resize the `_keys` and `_vals` arrays doubling their length when they are full', () => {
-      const expectedKeys = ['A', 'B', 'C', 'D', 'E', 'F', UNDEF, UNDEF, UNDEF, UNDEF]
+      const expectedKeys = [
+        'A',
+        'B',
+        'C',
+        'D',
+        'E',
+        'F',
+        UNDEF,
+        UNDEF,
+        UNDEF,
+        UNDEF
+      ]
       const expectedVals = [5, 4, 3, 2, 1, 0, UNDEF, UNDEF, UNDEF, UNDEF]
       const keys = ['F', 'E', 'D', 'C', 'B', 'A']
 

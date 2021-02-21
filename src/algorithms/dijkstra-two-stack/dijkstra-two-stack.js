@@ -8,11 +8,11 @@ const { Stack } = require('../../adts')
  * @see p. 129
  */
 class DijkstraTwoStack {
-  static evaluate (expression = '') {
+  static evaluate(expression = '') {
     const operators = new DijkstraTwoStack.Stack()
     const values = new DijkstraTwoStack.Stack()
 
-    expression.split(/\s+/).forEach(token => {
+    expression.split(/\s+/).forEach((token) => {
       if (token === '(') {
         // ignore
       } else if (token === '+') {

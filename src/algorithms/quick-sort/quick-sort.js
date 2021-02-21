@@ -22,7 +22,7 @@ class Quick extends GenericSort {
    * returns 1 when `a` is greater than `b` or
    * returns 0 when `a` is equal to `b`.
    */
-  static _partition (array, lo, hi, comparator) {
+  static _partition(array, lo, hi, comparator) {
     let i = lo
     let j = hi + 1
 
@@ -44,7 +44,8 @@ class Quick extends GenericSort {
       while (this.less(v, array[--j], comparator)) {
         // it index `j` reaches
         // `lo` index, break
-        if (j === lo) { // redundant test, as array[lo] is not les than `v`
+        if (j === lo) {
+          // redundant test, as array[lo] is not les than `v`
           break
         }
       }
@@ -84,7 +85,7 @@ class Quick extends GenericSort {
    * returns 1 when `a` is greater than `b` or
    * returns 0 when `a` is equal to `b`.
    */
-  static _sort (array, lo, hi, comparator) {
+  static _sort(array, lo, hi, comparator) {
     if (hi <= lo) return
 
     const j = this._partition(array, lo, hi, comparator)
@@ -101,7 +102,7 @@ class Quick extends GenericSort {
    * returns 1 when `a` is greater than `b` or
    * returns 0 when `a` is equal to `b`.
    */
-  static sort (array, comparator) {
+  static sort(array, comparator) {
     StdRandom.shuffle(array)
     this._sort(array, 0, array.length - 1, comparator)
   }
