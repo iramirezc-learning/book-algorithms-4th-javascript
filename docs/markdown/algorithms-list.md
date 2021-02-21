@@ -47,3 +47,12 @@
 - [ThreeSumFast](/src/algorithms/three-sum-fast/three-sum-fast.js)
 - [ThreeSumFast Client](/src/algorithms/three-sum-fast/three-sum-fast.js)
 - [DoublingRatio Experiment](/src/clients/doubling-ratio.client.js)
+
+#### Section 1.5 - Case Study: Union-Find
+
+- [UnionFind](/src/algorithms/union-find/union-find.js)
+- [UnionFind Client](/src/algorithms/union-find/union-find.client.js)
+- [QuickUnionFind](/src/algorithms/union-find-quick/union-find-quick.js)
+- [QuickUnionFind Client](/src/algorithms/union-find-quick/union-find-quick.client.js)
+- [QuickUnionWeighted](/src/algorithms/union-find-weighted/union-find-weighted.js)
+- [QuickUnionWeighted Client](/src/algorithms/union-find-weighted/union-find-weighted.client.js)

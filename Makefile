@@ -27,6 +27,9 @@ stats: # bag client returns mean and standard deviation
 stack: # linked stack
 	./client StackClient < algs4-data/tobe.txt
 
+queue: # queue
+	./client QueueClient < algs4-data/tobe.txt
+
 threesum: # triplets sum
 	./client ThreeSumClient algs4-data/1Kints.txt
 
@@ -37,4 +40,13 @@ twosum: # two sum fast
 	./client TwoSumFastClient algs4-data/1Mints.txt
 
 threesumfast: # three sum fast
-	
+	./client ThreeSumFastClient algs4-data/8Kints.txt
+
+uf: # union quick-find
+	./client UFClient < algs4-data/mediumUF.txt
+
+quf: # quick-union find
+	./client UFQClient < algs4-data/mediumUF.txt
+
+wquf: # weighted quick-union
+	./client WeightedQuickUnionUFClient < algs4-data/mediumUF.txt

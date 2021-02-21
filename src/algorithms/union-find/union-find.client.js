@@ -11,7 +11,7 @@ class UFClient {
    * Solves dynamic connectivity problem on StdIn.
    * @example <caption>Tiny UF</caption>
    * ```sh
-   * $ node union-find.client.js < algs4-data/tinyUF.txt
+   * $ ./client UFClient < algs4-data/tinyUF.txt
    * 4 3
    * 3 8
    * 6 5
@@ -24,7 +24,7 @@ class UFClient {
    * ```
    * @example <caption>Medium UF</caption>
    * ```sh
-   * $ node union-find.client.js < algs4-data/mediumUF.txt
+   * $ ./client UFClient < algs4-data/mediumUF.txt
    * 528 503
    * 548 523
    * 389 414
@@ -35,7 +35,7 @@ class UFClient {
    * ```
    * @example <caption>Large UF</caption>
    * ```sh
-   * $ node union-find.client.js < algs4-data/largeUF.txt
+   * $ ./client UFClient < algs4-data/largeUF.txt
    * 786321 134521
    * 696834 98245
    * 135991 549478
@@ -72,6 +72,4 @@ class UFClient {
   }
 }
 
-// Execution
-// ==============================
-if (require.main === module) UFClient.main()
+module.exports = { UFClient }

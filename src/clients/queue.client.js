@@ -11,7 +11,7 @@ class QueueClient {
    * Create a queue and enqueue/dequeue strings from the StdIn.
    * @example <caption>To be or not to be</caption>
    * ```sh
-   * $ node queue.client.js < algs4-data/tobe.txt
+   * $ ./client QueueClient < algs4-data/tobe.txt
    * to be or not to be (2 left on queue)
    * ```
    */
@@ -34,6 +34,4 @@ class QueueClient {
   }
 }
 
-// Execution
-// ==============================
-if (require.main === module) QueueClient.main()
+module.exports = { QueueClient }
