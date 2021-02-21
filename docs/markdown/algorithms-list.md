@@ -56,3 +56,15 @@
 - [QuickUnionFind Client](/src/algorithms/union-find-quick/union-find-quick.client.js)
 - [QuickUnionWeighted](/src/algorithms/union-find-weighted/union-find-weighted.js)
 - [QuickUnionWeighted Client](/src/algorithms/union-find-weighted/union-find-weighted.client.js)
+
+### Chapter 2 - Sorting
+
+#### Section 2.1 - Elementary Sorts
+
+- [SelectionSort](/src/algorithms/selection-sort/selection-sort.js)
+- [SelectionSort Client](/src/algorithms/selection-sort/selection-sort.client.js)
+- [InsertionSort](/src/algorithms/insertion-sort/insertion-sort.js)
+- [InsertionSort Client](/src/algorithms/insertion-sort/insertion-sort.client.js)
+- [SortCompare Client](/src/clients/sort-compare.client.js)
+- [ShellSort](/src/algorithms/shell-sort/shell-sort.js)
+- [ShellSort Client](/src/algorithms/shell-sort/shell-sort.client.js)

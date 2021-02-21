@@ -3,7 +3,7 @@
 bs: # binary search
 	./client BSClient algs4-data/tinyW.txt < algs4-data/tinyT.txt | more
 
-randomseq: # random sequence
+random-seq: # random sequence
 	./client RandomSeq 5 100.0 199.99
 
 average: # average from input stream
@@ -50,3 +50,12 @@ quf: # quick-union find
 
 wquf: # weighted quick-union
 	./client WeightedQuickUnionUFClient < algs4-data/mediumUF.txt
+
+selection-sort: # selection sort
+	./client SelectionSortClient < algs4-data/words3.txt
+
+insertion-sort: # insertion sort
+	./client InsertionSortClient < algs4-data/words3.txt
+
+shell-sort: # shell sort
+	./client ShellSortClient < algs4-data/words3.txt

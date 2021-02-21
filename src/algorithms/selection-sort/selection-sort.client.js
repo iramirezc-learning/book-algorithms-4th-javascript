@@ -12,12 +12,12 @@ class SelectionSortClient {
    * with the input provided.
    * @example <caption>Tiny Example</caption>
    * ```sh
-   * $ node selection-sort.client.js < algs4-data/tiny.txt
+   * $ ./client SelectionSortClient < algs4-data/tiny.txt
    * A E E L M O P R S T X
    * ```
    * @example <caption>Words3 Example</caption>
    * ```sh
-   * $ node selection-sort.client.js < algs4-data/words3.txt
+   * $ ./client SelectionSortClient < algs4-data/words3.txt
    * all bad bed bug dad ... yes yet zoo
    * ```
    */
@@ -41,6 +41,4 @@ class SelectionSortClient {
   }
 }
 
-// Execution
-// ==============================
-if (require.main === module) SelectionSortClient.main()
+module.exports = { SelectionSortClient }
