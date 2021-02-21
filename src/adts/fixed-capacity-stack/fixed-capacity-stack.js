@@ -4,7 +4,7 @@ const { ReversedArrayIterator } = require('../../abstracts')
  * FixedCapacityStack
  * @classdesc A Generic Fixed Capacity Stack based on arrays of limit size.
  * @implements {ReversedArrayIterator}
- * @see p. 135, 141
+ * @see p. 133, 135, 141
  */
 class FixedCapacityStack {
   constructor(size) {

@@ -2,17 +2,17 @@ const { StdIn, StdOut } = require('../libs')
 const { Bag } = require('../adts')
 
 /**
- * BagClient
+ * Stats
  * @classdesc Bag Test client.
  * @see p. 125
  */
-class BagClient {
+class Stats {
   /**
    * Create a bag and reads doubles from the StdIn.
    * Then it calculates the Mean and the Standard Deviation.
    * @example <caption>Mean & StdDev</caption>
    * ```sh
-   * $ node bag.client.js
+   * $ ./client Stats
    * > 100
    * > 99
    * > 101
@@ -59,6 +59,4 @@ class BagClient {
   }
 }
 
-// Execution
-// ==============================
-if (require.main === module) BagClient.main()
+module.exports = { Stats }

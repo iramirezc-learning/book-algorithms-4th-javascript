@@ -24,3 +24,13 @@
 - [Date (alternate)](/src/adts/small-date/small-date.js)
 - [Transaction](/src/adts/transaction/transaction.js)
 - [Whitelist Client (BS)](/src/algorithms/binary-search/binary-search.client.js)
+
+#### Section 1.3 - Bags, Queues, and Stacks
+
+- [Stats Client](/src/clients/stats.client.js)
+- [Dijkstra's Two-Stack (Evaluate)](/src/algorithms/dijkstra-two-stack/dijkstra-two-stack.js)
+- [FixedCapacityStack](/src/adts/fixed-capacity-stack/fixed-capacity-stack.js)
+- [ResizingArrayStack](/src/adts/resizable-array-stack/resizable-array-stack.js)
+- [Stack (linked-list)](/src/adts/stack/stack.js)
+- [Queue](/src/adts/queue/queue.js)
+- [Bag](/src/adts/bag/bag.js)

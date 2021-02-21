@@ -20,3 +20,9 @@ acc: # test accumulator
 
 rolls: # rolls
 	./client Rolls 100000
+
+stats: # bag client returns mean and standard deviation
+	./client Stats
+
+stack: # linked stack
+	./client StackClient < algs4-data/tobe.txt
