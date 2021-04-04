@@ -1,9 +1,9 @@
-const Node = require('./sized-node')
+const NodeBST = require('./node-bst')
 
-describe('Unit Tests: Sized Node', () => {
-  describe('Node instance', () => {
+describe('Unit Tests: NodeBST', () => {
+  describe('NodeBST instance', () => {
     beforeEach(() => {
-      this.node = new Node()
+      this.node = new NodeBST()
     })
 
     it('should have a prop `_key` equal to null', () => {
@@ -33,7 +33,7 @@ describe('Unit Tests: Sized Node', () => {
       const v = 0
       const n = 1
 
-      this.node = new Node(k, v, n)
+      this.node = new NodeBST(k, v, n)
 
       expect(this.node._key).toBe(k)
       expect(this.node._val).toBe(v)

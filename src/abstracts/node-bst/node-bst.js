@@ -1,8 +1,8 @@
 /**
- * Generic Sized Node element for BSTs.
- * @see pages: 398.
+ * Generic sized Node element for BSTs.
+ * @see page: 398.
  */
-class Node {
+class NodeBST {
   /**
    * Creates a new Node that represents a node in a BST.
    * @param {*} [key=null] - The key that identifies the value.
@@ -35,4 +35,4 @@ class Node {
   }
 }
 
-module.exports = Node
+module.exports = NodeBST
