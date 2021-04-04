@@ -1,13 +1,9 @@
-const Node = require('./node')
+const Node = require('./sized-node')
 
-describe('Unit Tests: Node', () => {
+describe('Unit Tests: Sized Node', () => {
   describe('Node instance', () => {
     beforeEach(() => {
       this.node = new Node()
-    })
-
-    it('should have a prop `_item` equal to null', () => {
-      expect(this.node._item).toBeNull()
     })
 
     it('should have a prop `_key` equal to null', () => {
@@ -18,12 +14,12 @@ describe('Unit Tests: Node', () => {
       expect(this.node._val).toBeNull()
     })
 
-    it('should have a prop `_next` equal to null', () => {
-      expect(this.node._next).toBeNull()
+    it('should have a prop `_n` equal to 0', () => {
+      expect(this.node._n).toBe(0)
     })
 
     it('should not be extensible', () => {
-      const expectedProps = ['_item', '_key', '_val', '_next']
+      const expectedProps = ['_key', '_val', '_n']
 
       this.node.newProp = null
 
@@ -35,13 +31,13 @@ describe('Unit Tests: Node', () => {
     it('should be initialized with the given props', () => {
       const k = 'A'
       const v = 0
-      const next = new Node()
+      const n = 1
 
-      this.node = new Node(k, v, next)
+      this.node = new Node(k, v, n)
 
       expect(this.node._key).toBe(k)
       expect(this.node._val).toBe(v)
-      expect(this.node._next).toBe(next)
+      expect(this.node._n).toBe(n)
     })
   })
 })

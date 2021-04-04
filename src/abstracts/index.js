@@ -5,5 +5,6 @@ module.exports = {
   Node: require('./node/node'),
   OrderedSymbolTable: require('./ordered-symbol-table/ordered-symbol-table'),
   ReversedArrayIterator: require('./reversed-array-iterator/reversed-array-iterator'),
+  SizedNode: require('./sized-node/sized-node'),
   SymbolTable: require('./symbol-table/symbol-table')
 }
