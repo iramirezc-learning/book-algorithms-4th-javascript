@@ -73,7 +73,7 @@ I have written JSDoc documentation _(🚧 needs some fixes)_ for all the algorit
 To generate the docs:
 
 ```sh
-yarn docs
+$ yarn docs
 ```
 
 Then, open the `docs/html/index.hml` file in your browser.
