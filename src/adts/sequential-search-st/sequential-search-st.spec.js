@@ -72,7 +72,7 @@ describe('Unit Tests: SequentialSearchST', () => {
   // ==================================================
 
   describe('SequentialSearchST#put(key, val)', () => {
-    it('should insert the first key correctly', () => {
+    it('should insert the first key', () => {
       const key = 'A'
       const val = 0
 
@@ -96,7 +96,7 @@ describe('Unit Tests: SequentialSearchST', () => {
       expect(second._val).toBe(0)
     })
 
-    it('should insert 3 keys correctly', () => {
+    it('should insert 3 keys', () => {
       const keys = ['A', 'B', 'C']
 
       keys.forEach((k, v) => this.searchST.put(k, v))

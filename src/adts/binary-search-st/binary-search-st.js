@@ -212,15 +212,15 @@ class BinarySearchST extends OrderedSymbolTable {
     return this._keys[k]
   }
   /**
-   * Returns keys in [lo..hi] in sorted order as an iterator.
+   * Returns all the keys in the table in sorted order as an iterator.
+   * @returns {*} Returns an iterable object that will
+   * provide all the keys in the table in sorted order.
+   */ /**
+   * Returns the keys in [lo..hi] in sorted order as an iterator.
    * @param {*} lo - The lowest key.
    * @param {*} hi - The largest key.
-   * @returns {*} Returns an iterable object that will provide all the keys in the table in sorted order.
-   */
-
-  /**
-   * Returns all the keys in the table in sorted order as an iterator.
-   * @returns {*} Returns an iterable object that will provide all the keys in the table in sorted order.
+   * @returns {*} Returns an iterable object that will
+   * provide all the keys in the table in sorted order.
    */ keys(lo, hi) {
     if (isDefined(lo) && isDefined(hi)) {
       const keys = this._keys // select the array containing the keys

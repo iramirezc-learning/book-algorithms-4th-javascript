@@ -62,7 +62,7 @@ describe("Unit Tests: Dijkstra's Two-Stack Algorithm for Expression Evaluation",
       expect(DijkstraTwoStack.Stack).toBe(FixedCapacityStack)
     })
 
-    it('should evaluate an expression correctly', () => {
+    it('should evaluate an expression', () => {
       const expression = '( ( ( ( 1 + sqrt ( 5.0 ) ) / 2.0 ) * 2 ) - 1 )'
       const expectedResult = 2.23606797749979
 
@@ -81,7 +81,7 @@ describe("Unit Tests: Dijkstra's Two-Stack Algorithm for Expression Evaluation",
       expect(DijkstraTwoStack.Stack).toBe(ResizableArrayStack)
     })
 
-    it('should evaluate an expression correctly', () => {
+    it('should evaluate an expression', () => {
       const expression = '( ( ( ( 1 + sqrt ( 5.0 ) ) / 2.0 ) * 2 ) - 1 )'
       const expectedResult = 2.23606797749979
 

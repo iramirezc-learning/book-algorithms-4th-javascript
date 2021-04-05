@@ -113,15 +113,15 @@ describe('Unit Tests: BinarySearchST', () => {
       this.bsST._vals = [0, 1, 2, 3, 4]
     })
 
-    it('should return the correct rank for the min key', () => {
+    it('should return the rank for the min key', () => {
       expect(this.bsST.rank('A')).toBe(0)
     })
 
-    it('should return the correct rank for the max key', () => {
+    it('should return the rank for the max key', () => {
       expect(this.bsST.rank('E')).toBe(4)
     })
 
-    it('should return the correct rank for a key in the middle', () => {
+    it('should return the rank for a key in the middle', () => {
       expect(this.bsST.rank('C')).toBe(2)
     })
 
@@ -137,14 +137,14 @@ describe('Unit Tests: BinarySearchST', () => {
   })
 
   describe('BinarySearchST#put(key, val)', () => {
-    it('should insert the first key correctly', () => {
+    it('should insert the first key', () => {
       this.bsST.put('A', 0)
 
       expect(this.bsST._keys).toEqual(['A', UNDEF, UNDEF, UNDEF, UNDEF])
       expect(this.bsST._vals).toEqual([0, UNDEF, UNDEF, UNDEF, UNDEF])
     })
 
-    it('should multiple keys correctly in sorted order', () => {
+    it('should insert multiple keys in sorted order', () => {
       const keys = ['C', 'B', 'A']
 
       keys.forEach((k, v) => this.bsST.put(k, v))
