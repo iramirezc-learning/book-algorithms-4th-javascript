@@ -1,7 +1,8 @@
 // Choose any of the ST implementations
 // - SequentialSearchST
 // - BinarySearchST
-const { BinarySearchST: ST } = require('../adts')
+// - BinarySearchTreeST
+const { BinarySearchTreeST: ST } = require('../adts')
 const { StdIn, StdOut } = require('../libs')
 
 /**

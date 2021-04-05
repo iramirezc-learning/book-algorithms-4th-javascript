@@ -114,3 +114,7 @@
 - [BinarySearchST](/src/adts/binary-search-st/binary-search-st.js)
 - [BinarySearchST Client](/src/adts/binary-search-st/binary-search-st.client.js)
   
+#### Section 3.2 - Binary Search Trees
+
+- [BinarySearchTreeST](/src/adts/binary-search-tree-st/binary-search-tree-st.js)
+- [BinarySearchTreeST Client](/src/adts/binary-search-tree-st/binary-search-tree-st.client.js)

@@ -73,7 +73,7 @@ Every algorithm or ADT has a link pointing to the **authors** Java implementatio
 - FrequencyCounter | [js](/src/clients/frequency-counter.client.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/FrequencyCounter.java.html) |
 - SequentialSearchST | [js](/src/adts/sequential-search-st/sequential-search-st.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/SequentialSearchST.java.html) |
 - BinarySearchST | [js](/src/adts/binary-search-st/binary-search-st.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/BinarySearchST.java.html) |
-- BST | js | java |
+- BST | [js](/src/adts/binary-search-tree-st/binary-search-tree-st.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/BST.java.html) |
 - RedBlackBST | js | java |
 - SeparateChainingHashST | js | java |
 - LinearProbingHashST | js | java |
