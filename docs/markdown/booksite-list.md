@@ -4,7 +4,7 @@
 
 This is the extracted list from the book site [Java Algorithms & Clients](https://algs4.cs.princeton.edu/code/).
 
-Every algorithm or ADT has a link pointing to the **authors** Java implementation and **my** JavaScript implementation.
+Every algorithm or ADT has a link pointing to the **authors** Java implementation and **my** JavaScript implementation (if any).
 
 ### Chapter 1. Fundamentals
 
