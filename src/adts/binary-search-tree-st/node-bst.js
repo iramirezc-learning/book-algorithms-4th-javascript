@@ -31,6 +31,20 @@ class NodeBST {
      */
     this._n = n
 
+    /**
+     * Link to the subtree for the left.
+     * @private
+     * @type {?NodeBST}
+     */
+    this._left = null
+
+    /**
+     * Link to the subtree for the right.
+     * @private
+     * @type {?NodeBST}
+     */
+    this._right = null
+
     Object.seal(this)
   }
 }

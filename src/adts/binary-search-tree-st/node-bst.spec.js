@@ -18,8 +18,16 @@ describe('Unit Tests: NodeBST', () => {
       expect(this.node._n).toBe(0)
     })
 
+    it('should have a prop `_left` equal to null', () => {
+      expect(this.node._left).toBeNull()
+    })
+
+    it('should have a prop `_right` equal to null', () => {
+      expect(this.node._right).toBeNull()
+    })
+
     it('should not be extensible', () => {
-      const expectedProps = ['_key', '_val', '_n']
+      const expectedProps = ['_key', '_val', '_n', '_left', '_right']
 
       this.node.newProp = null
 
