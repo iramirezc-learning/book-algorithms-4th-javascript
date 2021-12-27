@@ -6,7 +6,6 @@
 
 #### Section 1.1 - Basic Programming Model
 
-- [Euclidean](/src/algorithms/euclidean/euclidean.js)
 - [Binary Search](/src/algorithms/binary-search/binary-search.js)
 - [Whitelist Client (BS)](/src/algorithms/binary-search/binary-search.client.js)
 - [Linear Search](/src/algorithms/linear-search/linear-search.js)
@@ -100,7 +99,7 @@
 
 #### Section 2.5 - Applications
 
-> No algorithms to implement
+> There are no algorithms to implement
 
 ### Chapter 3 - Searching
 

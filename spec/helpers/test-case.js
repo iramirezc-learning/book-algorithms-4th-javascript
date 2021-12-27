@@ -1,8 +1,8 @@
 class TestCase {
-  constructor({ description = '', args, expected }) {
-    this.description = description
+  constructor({ args, expected, description = '' }) {
     this.args = args
     this.expected = expected
+    this.description = description
   }
 }
 

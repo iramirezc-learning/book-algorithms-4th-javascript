@@ -1,7 +1,4 @@
 global.TestCase = require('./test-case')
-global.CONFIG = {
-  SMALL_ARRAY_LENGTH: /*  a thousand         */ 1000,
-  MEDIUM_ARRAY_LENGTH: /* a hundred thousand */ 100000,
-  LARGE_ARRAY_LENGTH: /*  a million          */ 1000000
-}
-global.UNDEF = undefined
+global.A_THOUSAND = 1000
+global.A_HUNDRED_THOUSAND = 100000
+global.A_MILLION = 1000000

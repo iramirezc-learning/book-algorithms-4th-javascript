@@ -1,8 +1,8 @@
 const Euclidean = require('./euclidean')
 
-describe('Unit Tests: Euclidean Algorithm', () => {
-  describe('static gcd method', () => {
-    it('should return the greatest common divisor of two given numbers', () => {
+describe('Euclidean', () => {
+  describe('gcd', () => {
+    it('should return the greatest common divisor of two given positive numbers', () => {
       const testCases = [
         new TestCase({ args: [3, 0], expected: 3 }),
         new TestCase({ args: [0, 5], expected: 5 }),

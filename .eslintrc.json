@@ -10,8 +10,9 @@
     "jasmine": true
   },
   "globals": {
-    "CONFIG": true,
-    "UNDEF": true,
-    "TestCase": true
+    "TestCase": true,
+    "A_THOUSAND": true,
+    "A_HUNDRED_THOUSAND": true,
+    "A_MILLION": true
   }
 }

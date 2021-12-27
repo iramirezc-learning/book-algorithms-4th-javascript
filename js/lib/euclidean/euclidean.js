@@ -1,12 +1,10 @@
 /**
- * Euclidean
- * @classdesc Finds the Greatest Common Divisor of two positive integers.
- * @see p. 4
+ * Euclid's algorithm
+ * @see pg.4
  */
 class Euclidean {
   /**
-   * Computes the greatest common divisor of two
-   * non-negative integers.
+   * Finds the Greatest Common Divisor of two positive integers.
    * @param {number} p First non-negative integer.
    * @param {number} q Second non-negative integer.
    * @returns {number} The greatest common divisor
