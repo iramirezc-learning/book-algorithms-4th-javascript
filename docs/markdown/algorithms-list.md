@@ -6,7 +6,6 @@
 
 #### Section 1.1 - Basic Programming Model
 
-- [Binary Search](/src/algorithms/binary-search/binary-search.js)
 - [Whitelist Client (BS)](/src/algorithms/binary-search/binary-search.client.js)
 - [Linear Search](/src/algorithms/linear-search/linear-search.js)
 - [Linear Search Client](/src/algorithms/linear-search/linear-search.client.js)

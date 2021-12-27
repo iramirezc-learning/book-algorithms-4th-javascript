@@ -5,7 +5,17 @@
 **Algorithms:**
 
 - [x] [Euclid's algorithm](/js/lib/euclidean/euclidean.js)
-- [ ] Binary Search
+- [x] [Binary Search](/js/lib/binary-search/binary-search.js)
+- [x] [Binary Search Recursive](/js/lib/binary-search/binary-search-recursive.js)
+- [ ] Linear Search
+
+**Clients:**
+
+- [ ] Binary Search Client (Whitelist)
+- [ ] Linear Search Client
+- [ ] Random Sequence Client
+- [ ] Std Random Client
+- [ ] Average Client
 
 ## 1.2 Data Abstraction
 

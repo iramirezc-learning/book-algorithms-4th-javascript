@@ -1,4 +1,4 @@
-const BinarySearch = require('../binary-search/binary-search')
+const { BinarySearch } = require('../../../js/lib')
 const { numbersByAscendingOrder } = require('../../utils')
 
 /**

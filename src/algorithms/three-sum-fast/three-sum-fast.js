@@ -1,5 +1,5 @@
 const { numbersByAscendingOrder } = require('../../utils')
-const BinarySearch = require('../binary-search/binary-search')
+const { BinarySearch } = require('../../../js/lib')
 
 /**
  * ThreeSumFast
