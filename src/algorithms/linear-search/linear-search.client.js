@@ -1,5 +1,5 @@
 const { In, StdIn, StdOut } = require('../../libs')
-const LinearSearch = require('./linear-search')
+const { LinearSearch } = require('../../../js/lib')
 
 /**
  * LSClient

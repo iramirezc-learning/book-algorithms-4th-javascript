@@ -7,7 +7,7 @@
 - [x] [Euclid's algorithm](/js/lib/euclidean/euclidean.js)
 - [x] [Binary Search](/js/lib/binary-search/binary-search.js)
 - [x] [Binary Search Recursive](/js/lib/binary-search/binary-search-recursive.js)
-- [ ] Linear Search
+- [x] [Linear Search](/js/lib/linear-search/linear-search.js)
 
 **Clients:**
 

@@ -1,13 +1,12 @@
 /**
  * LinearSearch
- * @classdesc Finds the index of a number in an array.
- * @see p. 48
+ * @see p.48
  */
 class LinearSearch {
   /**
    * Returns the index of a number `key` found in an array `a`,
    * if `key` is not found, returns `-1`.
-   * @param {[]} a The array to search into.
+   * @param {Array<number>} a The unsorted array to search into.
    * @param {number} key The target key to search for.
    * @returns {number} The index of `key` in the array `a` or `-1` if not found.
    */
