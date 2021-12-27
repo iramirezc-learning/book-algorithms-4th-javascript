@@ -1,7 +1,7 @@
 const Euclidean = require('./euclidean')
 
 describe('Euclidean', () => {
-  describe('gcd', () => {
+  describe('.gcd()', () => {
     it('should return the greatest common divisor of two given positive numbers', () => {
       const testCases = [
         new TestCase({ args: [3, 0], expected: 3 }),
