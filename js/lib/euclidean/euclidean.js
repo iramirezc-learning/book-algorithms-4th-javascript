@@ -1,6 +1,6 @@
 /**
  * Euclid's algorithm
- * @see pg.4
+ * @see p. 4
  */
 class Euclidean {
   /**
