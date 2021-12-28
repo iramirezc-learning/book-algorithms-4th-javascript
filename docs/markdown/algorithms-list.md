@@ -9,7 +9,6 @@
 - [Whitelist Client (BS)](/src/algorithms/binary-search/binary-search.client.js)
 - [Linear Search Client](/src/algorithms/linear-search/linear-search.client.js)
 - [StdRandomClient](/src/clients/std-random.client.js)
-- [Average Client](/src/clients/average.client.js)
 
 #### Section 1.2 - Data Abstraction
 

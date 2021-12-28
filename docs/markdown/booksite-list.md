@@ -8,11 +8,6 @@ Every algorithm or ADT has a link pointing to the **authors** Java implementatio
 
 ### Chapter 1. Fundamentals
 
-- Binary Search | [js](/src/algorithms/binary-search/binary-search.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/BinarySearch.java.html) |
-- RandomSeq | [js](/src/examples/test-clients/random-seq.client.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/RandomSeq.java.html) |
-- Average | [js](/src/examples/test-clients/average.client.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Average.java.html) |
-- Cat | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Cat.java.html) |
-- Knuth | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Knuth.java.html) |
 - Counter | [js](/src/adts/counter/counter.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Counter.java.html) |
 - StaticSETofInts | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/StaticSETofInts.java.html) |
 - AllowList | [js](/src/algorithms/binary-search/binary-search.client.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Allowlist.java.html) |

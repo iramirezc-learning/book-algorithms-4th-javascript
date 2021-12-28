@@ -1,18 +1,18 @@
-const { StdIn, StdOut } = require('../libs')
+#!/usr/bin/env node
+const reader = require('readline').createInterface({ input: process.stdin })
 
 /**
- * Average
- * @classdesc Sample StdIn client
- * @see p. 39
+ * Average. A sample StdIn client.
+ * @see p.39
  * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Average.java.html}
  */
 class Average {
   /**
-   * Computes the average of the numbers
-   * read from the StdIn.
+   * Computes the average of the numbers read from the StdIn.
+   *
    * @example <caption>Manual input from StdIn</caption>
    * ```sh
-   * $ ./client Average
+   * $ ./Average
    * > 1.23456
    * > 2.34567
    * > 3.45678
@@ -20,22 +20,24 @@ class Average {
    * $ <ctrl-d>
    * Average is 2.90123
    * ```
+   *
    * @example <caption>Streaming from a file</caption>
    * ```sh
-   * $ ./client Average < out/data.txt
+   * $ ./Average < ./data.txt
    * Average is 152.17971
+   *
    * ```
    * @example <caption>Piping from another process</caption>
    * ```sh
-   * $ ./client RandomSeq 1000 100 199.99 | ./client Average
+   * $ ./RandomSeq 1000 100 199.99 | ./Average
    * Average is 150.25505
    * ```
    */
-  static main() {
+  static run() {
     let sum = 0
     let count = 0
 
-    StdIn.read()
+    reader
       .on('line', (line) => {
         sum += parseFloat(line)
         count++
@@ -43,9 +45,16 @@ class Average {
       .on('close', () => {
         const avg = sum / count
 
-        StdOut.printf('Average is %f\n', avg.toFixed(5))
+        console.log(`Average is ${avg.toFixed(5)}`)
       })
+  }
+
+  /**
+   * Main execution.
+   */
+  static main() {
+    this.run()
   }
 }
 
-module.exports = { Average }
+Average.main()

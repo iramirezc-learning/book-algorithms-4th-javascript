@@ -11,11 +11,13 @@
 
 **Clients:**
 
-- [ ] Binary Search Client (Whitelist)
-- [ ] Linear Search Client
-- [x] [Random Sequence Client](/bin/RandomSeq)
-- [ ] Std Random Client
-- [ ] Average Client
+- [x] [Average](/bin/Average)
+- [ ] Binary Search (Whitelist)
+- [ ] Cat
+- [ ] Knuth
+- [ ] Linear Search
+- [x] [RandomSeq](/bin/RandomSeq)
+- [ ] Std Random
 
 ## 1.2 Data Abstraction
 
