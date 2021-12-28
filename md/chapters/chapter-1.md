@@ -17,7 +17,6 @@
 - [ ] Knuth
 - [ ] Linear Search
 - [x] [RandomSeq](/bin/RandomSeq)
-- [ ] Std Random
 
 ## 1.2 Data Abstraction
 
