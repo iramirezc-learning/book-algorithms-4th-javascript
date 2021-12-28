@@ -10,7 +10,6 @@ Every algorithm or ADT has a link pointing to the **authors** Java implementatio
 
 - Counter | [js](/src/adts/counter/counter.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Counter.java.html) |
 - StaticSETofInts | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/StaticSETofInts.java.html) |
-- AllowList | [js](/src/algorithms/binary-search/binary-search.client.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Allowlist.java.html) |
 - Vector | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Vector.java.html) |
 - Date | [js](/src/adts/basic-date/basic-date.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Date.java.html) |
 - Transaction | [js](/src/adts/transaction/transaction.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Transaction.java.html) |

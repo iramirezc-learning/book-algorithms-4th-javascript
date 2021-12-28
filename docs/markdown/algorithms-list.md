@@ -6,7 +6,6 @@
 
 #### Section 1.1 - Basic Programming Model
 
-- [Whitelist Client (BS)](/src/algorithms/binary-search/binary-search.client.js)
 - [Linear Search Client](/src/algorithms/linear-search/linear-search.client.js)
 - [StdRandomClient](/src/clients/std-random.client.js)
 

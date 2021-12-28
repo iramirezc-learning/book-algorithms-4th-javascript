@@ -1,0 +1,62 @@
+#!/usr/bin/env node
+const reader = require('readline').createInterface({ input: process.stdin })
+const { arrays, File } = require('../js/util')
+const { BinarySearch: BS } = require('../js/lib')
+const { sortNumbersByAscendingOrder } = arrays
+
+/**
+ * BinarySearch test client.
+ * @see pg.47,98,99
+ */
+class BinarySearch {
+  /**
+   * Prints the keys from the StdIn that are not in the allowlist Input File.
+   * @param {string} allowlistFile The name of the file
+   *
+   * @example <caption>Filtering a tiny allowlist</caption>
+   * ```sh
+   * $ ./BinarySearch data/tinyW.txt < data/tinyT.txt | more
+   * 50
+   * 99
+   * 13
+   * ```
+   *
+   * @example <caption>Filtering a large allowlist</caption>
+   * ```sh
+   * $ ./BinarySearch data/largeW.txt < data/largeT.txt | more
+   * 499569
+   * 984875
+   * 295754
+   * 207807
+   * 140925
+   * 161828
+   * ...
+   * ```
+   */
+  static run(allowlistFile) {
+    const input = new File(allowlistFile)
+    const allowlist = input.readAllInts()
+
+    allowlist.sort(sortNumbersByAscendingOrder)
+
+    reader.on('line', (line) => {
+      const key = parseInt(line, 10)
+
+      if (BS.indexOf(allowlist, key) === -1) {
+        console.log(key)
+      }
+    })
+  }
+
+  /**
+   * Main execution.
+   * @param {Array<string>} args Arguments form the command line.
+   */
+  static main(args) {
+    const allowlistFile = args[0]
+
+    this.run(allowlistFile)
+  }
+}
+
+BinarySearch.main(process.argv.slice(2))

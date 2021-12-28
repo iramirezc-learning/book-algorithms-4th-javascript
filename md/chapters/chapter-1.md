@@ -12,7 +12,7 @@
 **Clients:**
 
 - [x] [Average](/bin/Average)
-- [ ] Binary Search (Whitelist)
+- [x] [Binary Search (Allowlist)](/bin/BinarySearch)
 - [ ] Cat
 - [ ] Knuth
 - [ ] Linear Search
