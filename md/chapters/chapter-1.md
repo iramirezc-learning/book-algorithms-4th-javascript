@@ -13,7 +13,7 @@
 
 - [ ] Binary Search Client (Whitelist)
 - [ ] Linear Search Client
-- [ ] Random Sequence Client
+- [x] [Random Sequence Client](/bin/RandomSeq)
 - [ ] Std Random Client
 - [ ] Average Client
 

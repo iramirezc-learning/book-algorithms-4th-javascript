@@ -2,9 +2,8 @@
 docs/html/*
 !docs/html/.gitkeep
 
-# test files output
-out/*
-!out/.gitkeep
+# bin folder output data
+bin/*.txt
 
 # logs
 logs
