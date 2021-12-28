@@ -11,16 +11,33 @@
 
 **Clients:**
 
+- [x] [Allowlist (Binary Search)](/bin/BinarySearch)
 - [x] [Average](/bin/Average)
-- [x] [Binary Search (Allowlist)](/bin/BinarySearch)
-- [ ] Cat
-- [ ] Knuth
+- [ ] [Knuth](https://algs4.cs.princeton.edu/11model/Knuth.java.html)
 - [x] [Linear Search](/bin/LinearSearch)
 - [x] [RandomSeq](/bin/RandomSeq)
 
 ## 1.2 Data Abstraction
 
-> TODO
+**Abstract Data Types:**
+
+- [ ] Accumulator
+- [ ] Counter
+- [ ] Date
+- [ ] Date (alternative)
+- [ ] [Interval1D](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Interval1D.java.html)
+- [ ] [Interval2D](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Interval2D.java.html)
+- [ ] [Point2D](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Point2D.java.html)
+- [ ] [StaticSETofInts](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/StaticSETofInts.java.html)
+- [ ] Transaction
+- [ ] [Vector](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Vector.java.html)
+
+**Clients:**
+
+- [ ] Cat
+- [ ] Flips
+- [ ] Rolls
+- [ ] TestAccumulator
 
 ## 1.3 Bags, Queues, and Stacks
 
