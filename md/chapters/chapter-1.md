@@ -15,7 +15,7 @@
 - [x] [Binary Search (Allowlist)](/bin/BinarySearch)
 - [ ] Cat
 - [ ] Knuth
-- [ ] Linear Search
+- [x] [Linear Search](/bin/LinearSearch)
 - [x] [RandomSeq](/bin/RandomSeq)
 
 ## 1.2 Data Abstraction

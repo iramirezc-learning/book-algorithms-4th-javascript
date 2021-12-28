@@ -4,11 +4,6 @@
 
 ### Chapter 1 - Fundamentals
 
-#### Section 1.1 - Basic Programming Model
-
-- [Linear Search Client](/src/algorithms/linear-search/linear-search.client.js)
-- [StdRandomClient](/src/clients/std-random.client.js)
-
 #### Section 1.2 - Data Abstraction
 
 - [Accumulator](/src/adts/accumulator/accumulator.js)
