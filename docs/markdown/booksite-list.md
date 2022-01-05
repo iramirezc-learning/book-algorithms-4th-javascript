@@ -7,16 +7,8 @@ This is the extracted list from the book site [Java Algorithms & Clients](https:
 Every algorithm or ADT has a link pointing to the **authors** Java implementation and **my** JavaScript implementation (if any).
 
 ### Chapter 1. Fundamentals
-
-- Counter | [js](/src/adts/counter/counter.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Counter.java.html) |
-  
-- Date | [js](/src/adts/basic-date/basic-date.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Date.java.html) |
-  
-- Transaction | [js](/src/adts/transaction/transaction.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Transaction.java.html) |
   
 - RectHV | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/RectHV.java.html) |
-- Accumulator | [js](/src/adts/accumulator/accumulator.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Accumulator.java.html) |
-
 - ResizingArrayStack | [js](/src/adts/resizable-array-stack/resizable-array-stack.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/ResizingArrayStack.java.html) |
 - LinkedStack | [js](/src/adts/stack/stack.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/LinkedStack.java.html) |
 - Stack | [js](/src/adts/stack/stack.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Stack.java.html) |

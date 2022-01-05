@@ -4,17 +4,6 @@
 
 ### Chapter 1 - Fundamentals
 
-#### Section 1.2 - Data Abstraction
-
-- [Accumulator](/src/adts/accumulator/accumulator.js)
-- [TestAccumulator Client](/src/adts/accumulator/accumulator.client.js)
-- [Counter](/src/adts/counter/counter.js)
-- [Flips Client](/src/adts/counter/flips.client.js)
-- [Rolls Client](/src/adts/counter/rolls.client.js)
-- [Date](/src/adts/basic-date/basic-date.js)
-- [Date (alternate)](/src/adts/small-date/small-date.js)
-- [Transaction](/src/adts/transaction/transaction.js)
-
 #### Section 1.3 - Bags, Queues, and Stacks
 
 
