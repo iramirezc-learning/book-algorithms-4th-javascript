@@ -6,7 +6,6 @@ module.exports = {
   BasicDate: require('./basic-date/basic-date'),
   BinarySearchST: require('./binary-search-st/binary-search-st'),
   BinarySearchTreeST: require('./binary-search-tree-st/binary-search-tree-st'),
-  Counter: require('./counter/counter'),
   FixedCapacityStack: require('./fixed-capacity-stack/fixed-capacity-stack'),
   IndexMinPQ: require('./index-min-priority-queue/index-min-priority-queue'),
   MaxPQ: require('./max-priority-queue/max-priority-queue'),

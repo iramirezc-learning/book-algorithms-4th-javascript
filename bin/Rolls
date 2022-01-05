@@ -1,0 +1,56 @@
+#!/usr/bin/env node
+const { Counter } = require('../js/lib')
+const { Random } = require('../js/util')
+
+/**
+ * Another Counter test client.
+ * @classdesc
+ * @see p.72
+ */
+class Rolls {
+  /**
+   * Simulates rolls of a die
+   * @param {number} trials
+   *
+   * @example
+   * ```sh
+   * $ ./Rolls 100000
+   * 16399 1s
+   * 16785 2s
+   * 16661 3s
+   * 16511 4s
+   * 16904 5s
+   * 16740 6s
+   * ```
+   */
+  static run(trials) {
+    const SIDES = 6
+    const rolls = new Array(SIDES + 1)
+
+    for (let i = 1; i <= SIDES; i++) {
+      rolls[i] = new Counter(`${i}s`)
+    }
+
+    for (let t = 0; t < trials; t++) {
+      // @ts-ignore
+      const result = Random.uniform(1, SIDES + 1)
+      rolls[result].increment()
+    }
+
+    for (let i = 1; i <= SIDES; i++) {
+      console.log(String(rolls[i]))
+    }
+  }
+
+  /**
+   * Main execution.
+   * @param {Array<string>} args Arguments form the command line.
+   */
+  static main(args) {
+    const trials = parseInt(args[0], 10)
+
+    this.run(trials)
+  }
+}
+
+Rolls.main(process.argv.slice(2))

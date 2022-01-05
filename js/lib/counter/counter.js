@@ -1,20 +1,21 @@
 /**
- * Counter
- * @classdesc An abstract data type for a simple Counter.
- * @see p. 85
+ * An abstract data type for a simple counter.
+ * @see p.85
  */
 class Counter {
+  /**
+   * @param {string} id
+   */
   constructor(id) {
-    this._count = 0
-    // static final string _id
-    Object.defineProperty(this, '_id', { value: id })
+    this.id = id
+    this.count = 0
   }
 
   /**
    * Increments the internal count
    */
   increment() {
-    this._count++
+    this.count++
   }
 
   /**
@@ -22,7 +23,7 @@ class Counter {
    * @returns {number} The total count
    */
   tally() {
-    return this._count
+    return this.count
   }
 
   /**
@@ -32,7 +33,7 @@ class Counter {
    * // 3 heads
    */
   toString() {
-    return `${this.tally()} ${this._id}`
+    return `${this.tally()} ${this.id}`
   }
 }
 

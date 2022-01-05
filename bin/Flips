@@ -1,10 +1,14 @@
-const { StdOut, StdRandom } = require('../../libs')
-const Counter = require('./counter')
+#!/usr/bin/env node
+const { Counter } = require('../js/lib')
+const { Random } = require('../js/util')
 
 /**
- * Flips
- * @classdesc Counter Client
- * @see p. 70, 71, 85, 89
+ * @typedef {import('../js/lib/counter/counter')} Counter
+ */
+
+/**
+ * Counter test client.
+ * @see pg.70,71,85,89
  */
 class Flips {
   /**
@@ -22,42 +26,52 @@ class Flips {
 
   /**
    * Simulates the flips of a coin and computes the delta.
-   * @param {[]} args [trials]
+   * @param {number} trials
+   *
    * @example
    * ```sh
-   * $ ./client Flips 1000
+   * $ ./Flips 1000
    * 490 heads
    * 510 tails
    * delta: 20
    * 510 tails wins
    * ```
    */
-  static main(args) {
-    const trials = parseInt(args[0], 10)
+  static run(trials) {
     const heads = new Counter('heads')
     const tails = new Counter('tails')
 
     for (let i = 0; i < trials; i++) {
-      if (StdRandom.bernoulli(0.5)) {
+      if (Random.bernoulli(0.5)) {
         heads.increment()
       } else {
         tails.increment()
       }
     }
 
-    StdOut.println(heads.toString())
-    StdOut.println(tails.toString())
+    console.log(heads.toString())
+    console.log(tails.toString())
 
     const delta = heads.tally() - tails.tally()
 
-    StdOut.println(`delta: ${Math.abs(delta)}`)
+    console.log(`delta: ${Math.abs(delta)}`)
 
     if (heads.tally() === tails.tally()) {
-      StdOut.println("It's a Tie!")
+      console.log("It's a Tie!")
     } else {
-      StdOut.println(`${Flips.max(heads, tails)} wins`)
+      console.log(`${Flips.max(heads, tails)} wins`)
     }
+  }
+
+  /**
+   * Main execution.
+   * @param {Array<string>} args Arguments form the command line.
+   */
+  static main(args) {
+    const trials = parseInt(args[0], 10)
+
+    this.run(trials)
   }
 }
 
-module.exports = { Flips }
+Flips.main(process.argv.slice(2))
