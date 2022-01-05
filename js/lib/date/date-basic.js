@@ -1,31 +1,19 @@
 /**
- * BasicDate
- * @classdesc An abstract data type for Dates.
- * @implements {Comparable}
- * @see p. 79, 91, 103, 247
+ * An abstract data type for dates.
+ * @see pg.79,91,103,247
  */
-class BasicDate {
+class DateBasic {
   constructor() {
-    let month, day, year
-
     if (arguments.length === 1 && typeof arguments[0] === 'string') {
       const parts = arguments[0].split('/')
-
-      month = parseInt(parts[0], 10)
-      day = parseInt(parts[1], 10)
-      year = parseInt(parts[2], 10)
+      this._month = parseInt(parts[0], 10)
+      this._day = parseInt(parts[1], 10)
+      this._year = parseInt(parts[2], 10)
     } else if (arguments.length === 3) {
-      month = arguments[0]
-      day = arguments[1]
-      year = arguments[2]
+      this._month = arguments[0]
+      this._day = arguments[1]
+      this._year = arguments[2]
     }
-
-    // immutable properties
-    Object.defineProperties(this, {
-      _month: { value: month },
-      _day: { value: day },
-      _year: { value: year }
-    })
   }
 
   /**
@@ -60,13 +48,13 @@ class BasicDate {
 
   /**
    * Returns if this date is equal to another date
-   * @param {BasicDate} target The target BasicDate
+   * @param {DateBasic} target The target DateBasic
    * @returns {boolean}
    */
   equals(target) {
     if (this === target) return true
     if (target === null) return false
-    if (!(target instanceof BasicDate)) return false
+    if (!(target instanceof DateBasic)) return false
     if (this.day() !== target.day()) return false
     if (this.month() !== target.month()) return false
     if (this.year() !== target.year()) return false
@@ -77,7 +65,7 @@ class BasicDate {
   /**
    * Returns if this date is greater (+1),
    * smaller (-1) or equal (0) to another date.
-   * @param {BasicDate} target The target BasicDate
+   * @param {DateBasic} target The target DateBasic
    * @returns {number} +1 (greater than), -1 (smaller than), 0 (equal to)
    */
   compareTo(target) {
@@ -92,4 +80,4 @@ class BasicDate {
   }
 }
 
-module.exports = BasicDate
+module.exports = DateBasic

@@ -3,7 +3,6 @@
 module.exports = {
   Accumulator: require('./accumulator/accumulator'),
   Bag: require('./bag/bag'),
-  BasicDate: require('./basic-date/basic-date'),
   BinarySearchST: require('./binary-search-st/binary-search-st'),
   BinarySearchTreeST: require('./binary-search-tree-st/binary-search-tree-st'),
   FixedCapacityStack: require('./fixed-capacity-stack/fixed-capacity-stack'),
@@ -13,7 +12,6 @@ module.exports = {
   Queue: require('./queue/queue'),
   ResizableArrayStack: require('./resizable-array-stack/resizable-array-stack'),
   SequentialSearchST: require('./sequential-search-st/sequential-search-st'),
-  SmallDate: require('./small-date/small-date'),
   Stack: require('./stack/stack'),
   StopWatch: require('./stop-watch/stop-watch'),
   Transaction: require('./transaction/transaction')
