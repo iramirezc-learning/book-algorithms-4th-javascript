@@ -1,20 +1,19 @@
 /**
- * Accumulator
- * @classdesc An abstract data type for accumulation data values.
- * @see p. 93
+ * An abstract data type for accumulation data values.
+ * @see p.93
  */
 class Accumulator {
   constructor() {
-    this._sum = 0
-    this._n = 0
+    this.sum = 0
+    this.n = 0
   }
 
   /**
    * @param {number} value Number to add
    */
   addDataValue(value) {
-    this._n++
-    this._sum += value
+    this.n++
+    this.sum += value
   }
 
   /**
@@ -22,7 +21,7 @@ class Accumulator {
    * @returns {number} The computed mean
    */
   mean() {
-    return this._sum / this._n
+    return this.sum / this.n
   }
 
   /**
@@ -32,7 +31,7 @@ class Accumulator {
    * // Mean (3 values): 0.12345
    */
   toString() {
-    return `Mean (${this._n} values): ${this.mean().toFixed(5)}`
+    return `Mean (${this.n} values): ${this.mean().toFixed(5)}`
   }
 }
 

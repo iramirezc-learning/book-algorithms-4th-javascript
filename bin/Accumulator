@@ -1,0 +1,42 @@
+#!/usr/bin/env node
+const { Accumulator: Acc } = require('../js/lib')
+const { Random } = require('../js/util')
+
+/**
+ * Accumulator test client.
+ * @see p.93
+ */
+class Accumulator {
+  /**
+   * Accumulates a total of `trials` numbers
+   * @param {number} trials
+   *
+   * @example
+   * ```sh
+   * $ ./Accumulator 100000
+   * Mean (100000 values): 0.49879
+   * ```
+   */
+  static run(trials) {
+    const accumulator = new Acc()
+
+    for (let t = 0; t < trials; t++) {
+      // @ts-ignore
+      accumulator.addDataValue(Random.uniform(0, 0.999))
+    }
+
+    console.log(String(accumulator))
+  }
+
+  /**
+   * Main execution.
+   * @param {Array<string>} args Arguments form the command line.
+   */
+  static main(args) {
+    const trials = parseInt(args[0], 10)
+
+    this.run(trials)
+  }
+}
+
+Accumulator.main(process.argv.slice(2))

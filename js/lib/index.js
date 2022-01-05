@@ -1,4 +1,5 @@
 module.exports = {
+  Accumulator: require('./accumulator/accumulator'),
   BinarySearch: require('./binary-search/binary-search'),
   BinarySearchRecursive: require('./binary-search/binary-search-recursive'),
   Counter: require('./counter/counter'),
