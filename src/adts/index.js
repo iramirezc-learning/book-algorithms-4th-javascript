@@ -1,7 +1,6 @@
 /** @module adts */
 
 module.exports = {
-  Bag: require('./bag/bag'),
   BinarySearchST: require('./binary-search-st/binary-search-st'),
   BinarySearchTreeST: require('./binary-search-tree-st/binary-search-tree-st'),
   FixedCapacityStack: require('./fixed-capacity-stack/fixed-capacity-stack'),

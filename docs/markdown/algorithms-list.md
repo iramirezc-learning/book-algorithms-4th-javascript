@@ -14,8 +14,6 @@
 - [Stack Client](/src/adts/stack/stack.client.js)
 - [Queue](/src/adts/queue/queue.js)
 - [Queue Client](/src/adts/queue/queue.client.js)
-- [Bag](/src/adts/bag/bag.js)
-- [Stats Client](/src/adts/bag/stats.client.js)
 
 #### Section 1.4 - Analysis of Algorithms
 

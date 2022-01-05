@@ -17,7 +17,6 @@ Every algorithm or ADT has a link pointing to the **authors** Java implementatio
 - Queue | [js](/src/adts/queue/queue.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Queue.java.html) |
 - ResizingArrayBag | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/ResizingArrayBag.java.html) |
 - LinkedBag | [js](/src/adts/bag/bag.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/LinkedBag.java.html) |
-- Bag | [js](/src/adts/bag/bag.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Bag.java.html) |
 - Stopwatch | [js](/src/adts/stop-watch/stop-watch.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Stopwatch.java.html) |
 - StopwatchCPU | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/StopwatchCPU.java.html) |
 - LinearRegression | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/LinearRegression.java.html) |

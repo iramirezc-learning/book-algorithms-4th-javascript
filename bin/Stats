@@ -1,18 +1,19 @@
-const { StdIn, StdOut } = require('../../libs')
-const Bag = require('./bag')
+#!/usr/bin/env node
+const reader = require('readline').createInterface({ input: process.stdin })
+const { Bag } = require('../js/lib')
 
 /**
- * Stats
- * @classdesc Bag Test client.
- * @see p. 125
+ * Bag test client.
+ * @see p.125
  */
 class Stats {
   /**
    * Create a bag and reads doubles from the StdIn.
-   * Then it calculates the Mean and the Standard Deviation.
+   * Then it calculates the mean and the standard deviation.
+   *
    * @example <caption>Mean & StdDev</caption>
    * ```sh
-   * $ ./client Stats
+   * $ ./Stats
    * > 100
    * > 99
    * > 101
@@ -28,10 +29,10 @@ class Stats {
    * Stddev: 10.51
    * ```
    */
-  static main() {
+  static run() {
     const bag = new Bag()
 
-    StdIn.read()
+    reader
       .on('line', (line) => {
         bag.add(parseFloat(line))
       })
@@ -53,10 +54,17 @@ class Stats {
 
         const stddev = Math.sqrt(sum / (n - 1))
 
-        StdOut.printf('Mean: %f\n', mean.toFixed(2))
-        StdOut.printf('Stddev: %f\n', stddev.toFixed(2))
+        console.log(`Mean: ${mean.toFixed(2)}`)
+        console.log(`Stddev: ${stddev.toFixed(2)}`)
       })
+  }
+
+  /**
+   * Main execution.
+   */
+  static main() {
+    this.run()
   }
 }
 
-module.exports = { Stats }
+Stats.main()

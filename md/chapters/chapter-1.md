@@ -43,7 +43,7 @@
 
 **Abstract Data Types:**
 
-- [ ] Bag
+- [x] [Bag](/js/lib/bag/bag.js)
 - [ ] Queue
 - [ ] Stack (fixed-capacity)
 - [ ] Stack (linked-list)
@@ -57,7 +57,7 @@
 
 - [ ] Queue
 - [ ] Stack
-- [ ] Stats
+- [x] [Stats](/bin/Stats)
 
 ## 1.4 Analysis of Algorithms
 
