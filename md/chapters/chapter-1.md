@@ -34,14 +34,30 @@
 
 **Clients:**
 
+- [x] [Accumulator](/bin/Accumulator)
 - [ ] Cat
 - [x] [Flips](/bin/Flips)
 - [x] [Rolls](/bin/Rolls)
-- [x] [Accumulator](/bin/Accumulator)
 
 ## 1.3 Bags, Queues, and Stacks
 
-> TODO
+**Abstract Data Types:**
+
+- [ ] Bag
+- [ ] Queue
+- [ ] Stack (fixed-capacity)
+- [ ] Stack (linked-list)
+- [ ] Stack (resizable-array)
+
+**Algorithms:**
+
+- [ ] Dijkstra's Two-Stack (Evaluate)
+
+**Clients:**
+
+- [ ] Queue
+- [ ] Stack
+- [ ] Stats
 
 ## 1.4 Analysis of Algorithms
 
