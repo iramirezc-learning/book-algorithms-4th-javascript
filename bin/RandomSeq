@@ -30,6 +30,7 @@ class RandomSeq {
    */
   static run(n, lo, hi) {
     for (let i = 0; i < n; i++) {
+      // @ts-ignore
       const x = Random.uniform(lo, hi)
 
       console.log(x.toFixed(2))

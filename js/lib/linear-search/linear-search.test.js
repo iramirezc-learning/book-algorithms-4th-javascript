@@ -26,6 +26,7 @@ describe('LinearSearch', () => {
       ]
 
       testCases.forEach(({ args, expected, description }) => {
+        // @ts-ignore
         expect(LinearSearch.indexOf(...args))
           .withContext(description)
           .toBe(expected)

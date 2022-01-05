@@ -6,7 +6,7 @@ const {
   sortNumbersByAscendingOrder
 } = require('./arrays')
 
-describe('utils/arrays', () => {
+describe('Utils/Arrays', () => {
   describe('.arrayToString()', () => {
     it('should return an array to string', () => {
       const expected = '[1,2,3,4,5]'
@@ -104,7 +104,7 @@ describe('utils/arrays', () => {
     })
   })
 
-  describe('callback sortNumbersByAscendingOrder', () => {
+  describe('sortNumbersByAscendingOrder callback', () => {
     it('should sort the numbers in an array in ascending order', () => {
       const a = [1, 10, 11, 100, 2, 20, 22, 200, 3, 4, 5, -1, -2, -3]
       const expected = [-3, -2, -1, 1, 2, 3, 4, 5, 10, 11, 20, 22, 100, 200]

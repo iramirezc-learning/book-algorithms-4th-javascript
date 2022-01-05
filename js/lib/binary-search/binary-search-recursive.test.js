@@ -26,6 +26,7 @@ describe('BinarySearchRecursive', () => {
       ]
 
       testCases.forEach(({ args, expected, description }) => {
+        // @ts-ignore
         expect(BinarySearchRecursive.indexOf(...args))
           .withContext(description)
           .toBe(expected)
@@ -77,6 +78,7 @@ describe('BinarySearchRecursive', () => {
       ]
 
       testCases.forEach(({ args, expected, description }) => {
+        // @ts-ignore
         expect(BinarySearchRecursive.rank(...args))
           .withContext(description)
           .toBe(expected)
@@ -125,6 +127,7 @@ describe('BinarySearchRecursive', () => {
       ]
 
       testCases.forEach(({ args, expected, description }) => {
+        // @ts-ignore
         expect(BinarySearchRecursive.count(...args))
           .withContext(description)
           .toBe(expected)

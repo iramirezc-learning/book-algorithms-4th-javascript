@@ -73,6 +73,7 @@ class Random {
    * @returns {boolean} `true` or `false` with probability of `p`.
    */
   static bernoulli(p = 0.5) {
+    // @ts-ignore
     return Random.uniform() < p
   }
 
@@ -89,6 +90,7 @@ class Random {
    * @returns {number} A random integer from a discrete distribution: `i` with probability proportional to `frequencies[i]`.
    */
   static discrete(a) {
+    // @ts-ignore
     const r = Random.uniform()
 
     let sum = 0
@@ -110,6 +112,7 @@ class Random {
 
     for (let i = 0; i < n; i++) {
       // exchange a[i] with random element in a[i..n-1]
+      // @ts-ignore
       const r = i + Random.uniform(n - i)
       const temp = a[i]
 

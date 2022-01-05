@@ -13,6 +13,7 @@ describe('Euclidean', () => {
       ]
 
       testCases.forEach(({ args, expected }) => {
+        // @ts-ignore
         expect(Euclidean.gcd(...args)).toBe(expected)
       })
     })

@@ -6,6 +6,9 @@ const fs = require('fs')
  * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/In.java.html}
  */
 class File {
+  /**
+   * @param {string} fileName
+   */
   constructor(fileName) {
     this.fileName = fileName
     this.filePath = path.resolve(this.fileName)

@@ -8,6 +8,7 @@ describe('Random', () => {
   describe('.uniform()', () => {
     it('should return a "real" number between 0 and 1', () => {
       while (this.iterations--) {
+        // @ts-ignore
         const result = Random.uniform()
 
         expect(result).toBeGreaterThan(0)
@@ -22,6 +23,7 @@ describe('Random', () => {
       const n = 5
 
       while (this.iterations--) {
+        // @ts-ignore
         const result = Random.uniform(n)
 
         expect(result).toBeGreaterThanOrEqual(0)
@@ -37,6 +39,7 @@ describe('Random', () => {
       const max = 10
 
       while (this.iterations--) {
+        // @ts-ignore
         const result = Random.uniform(min, max)
 
         expect(result).toBeGreaterThanOrEqual(min)
@@ -52,6 +55,7 @@ describe('Random', () => {
       const max = 10.98765
 
       while (this.iterations--) {
+        // @ts-ignore
         const result = Random.uniform(min, max)
 
         expect(result).toBeGreaterThanOrEqual(min)

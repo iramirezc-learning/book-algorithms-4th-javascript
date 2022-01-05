@@ -26,6 +26,7 @@ describe('BinarySearch', () => {
       ]
 
       testCases.forEach(({ args, expected, description }) => {
+        // @ts-ignore
         expect(BinarySearch.indexOf(...args))
           .withContext(description)
           .toBe(expected)
@@ -75,6 +76,7 @@ describe('BinarySearch', () => {
       ]
 
       testCases.forEach(({ args, expected, description }) => {
+        // @ts-ignore
         expect(BinarySearch.rank(...args))
           .withContext(description)
           .toBe(expected)
@@ -123,6 +125,7 @@ describe('BinarySearch', () => {
       ]
 
       testCases.forEach(({ args, expected, description }) => {
+        // @ts-ignore
         expect(BinarySearch.count(...args))
           .withContext(description)
           .toBe(expected)
