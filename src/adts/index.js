@@ -13,6 +13,5 @@ module.exports = {
   ResizableArrayStack: require('./resizable-array-stack/resizable-array-stack'),
   SequentialSearchST: require('./sequential-search-st/sequential-search-st'),
   Stack: require('./stack/stack'),
-  StopWatch: require('./stop-watch/stop-watch'),
-  Transaction: require('./transaction/transaction')
+  StopWatch: require('./stop-watch/stop-watch')
 }

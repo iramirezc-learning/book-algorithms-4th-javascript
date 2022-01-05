@@ -1,33 +1,21 @@
-const BasicDate = require('../basic-date/basic-date')
+const DateBasic = require('../date/date-basic')
 
 /**
- * Transaction
- * @classdesc An abstract data type for Transactions.
- * @implements {Comparable}
- * @see p. 79
+ * An abstract data type for transactions.
+ * @see p.79
  */
 class Transaction {
   constructor() {
-    let who, when, amount
-
     if (arguments.length === 1 && typeof arguments[0] === 'string') {
       const parts = arguments[0].split(/\s+/)
-
-      who = parts[0]
-      when = new BasicDate(parts[1])
-      amount = parseFloat(parts[2])
+      this._who = parts[0]
+      this._when = new DateBasic(parts[1])
+      this._amount = parseFloat(parts[2])
     } else if (arguments.length === 3) {
-      who = arguments[0]
-      when = arguments[1]
-      amount = arguments[2]
+      this._who = arguments[0]
+      this._when = arguments[1]
+      this._amount = arguments[2]
     }
-
-    // immutable properties
-    Object.defineProperties(this, {
-      _who: { value: who },
-      _when: { value: when },
-      _amount: { value: amount }
-    })
   }
 
   /**

@@ -5,5 +5,6 @@ module.exports = {
   DateBasic: require('./date/date-basic'),
   DateSmall: require('./date/date-small'),
   Euclidean: require('./euclidean/euclidean'),
-  LinearSearch: require('./linear-search/linear-search')
+  LinearSearch: require('./linear-search/linear-search'),
+  Transaction: require('./transaction/transaction')
 }
