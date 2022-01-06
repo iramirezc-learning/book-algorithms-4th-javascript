@@ -28,6 +28,7 @@
 - [ ] [Interval1D](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Interval1D.java.html)
 - [ ] [Interval2D](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Interval2D.java.html)
 - [ ] [Point2D](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Point2D.java.html)
+- [ ] [RectHV](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/RectHV.java.html)
 - [ ] [StaticSETofInts](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/StaticSETofInts.java.html)
 - [x] [Transaction](/js/lib/transaction/transaction.js)
 - [ ] [Vector](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Vector.java.html)
@@ -35,7 +36,7 @@
 **Clients:**
 
 - [x] [Accumulator](/bin/Accumulator)
-- [ ] Cat
+- [ ] [Cat](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Cat.java.html)
 - [x] [Flips](/bin/Flips)
 - [x] [Rolls](/bin/Rolls)
 
@@ -44,9 +45,9 @@
 **Abstract Data Types:**
 
 - [x] [Bag](/js/lib/bag/bag.js)
-- [ ] Queue
+- [x] [Queue](/js/lib/queue/queue.js)
 - [ ] Stack (fixed-capacity)
-- [ ] Stack (linked-list)
+- [x] [Stack (linked-list)](/js/lib/stack/stack.js)
 - [ ] Stack (resizable-array)
 
 **Algorithms:**
@@ -55,8 +56,8 @@
 
 **Clients:**
 
-- [ ] Queue
-- [ ] Stack
+- [x] [Queue](/bin/Queue)
+- [x] [Stack](/bin/Stack)
 - [x] [Stats](/bin/Stats)
 
 ## 1.4 Analysis of Algorithms

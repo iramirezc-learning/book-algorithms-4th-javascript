@@ -10,10 +10,6 @@
 - [Dijkstra's Two-Stack (Evaluate)](/src/algorithms/dijkstra-two-stack/dijkstra-two-stack.js)
 - [FixedCapacityStack](/src/adts/fixed-capacity-stack/fixed-capacity-stack.js)
 - [ResizingArrayStack](/src/adts/resizable-array-stack/resizable-array-stack.js)
-- [Stack (linked-list)](/src/adts/stack/stack.js)
-- [Stack Client](/src/adts/stack/stack.client.js)
-- [Queue](/src/adts/queue/queue.js)
-- [Queue Client](/src/adts/queue/queue.client.js)
 
 #### Section 1.4 - Analysis of Algorithms
 

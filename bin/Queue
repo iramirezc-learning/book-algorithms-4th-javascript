@@ -1,0 +1,45 @@
+#!/usr/bin/env node
+const reader = require('readline').createInterface({ input: process.stdin })
+const { Queue: QueueADT } = require('../js/lib')
+
+/**
+ * Queue test client.
+ * @see p.150
+ */
+class Queue {
+  /**
+   * Create a queue and enqueue/dequeue strings from the StdIn.
+   *
+   * @example <caption>To be or not to be</caption>
+   * ```sh
+   * $ ./Queue < data/tobe.txt
+   * to be or not to be (2 left on queue)
+   * ```
+   */
+  static run() {
+    const queue = new QueueADT()
+
+    reader
+      .on('line', (line) => {
+        line.split(' ').forEach((item) => {
+          if (item === '-' && !queue.isEmpty()) {
+            process.stdout.write(queue.dequeue() + ' ')
+          } else {
+            queue.enqueue(item)
+          }
+        })
+      })
+      .on('close', () => {
+        console.log(`(${queue.size()} left on queue)`)
+      })
+  }
+
+  /**
+   * Main execution.
+   */
+  static main() {
+    this.run()
+  }
+}
+
+Queue.main()

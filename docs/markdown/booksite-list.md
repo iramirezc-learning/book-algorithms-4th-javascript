@@ -8,15 +8,7 @@ Every algorithm or ADT has a link pointing to the **authors** Java implementatio
 
 ### Chapter 1. Fundamentals
   
-- RectHV | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/RectHV.java.html) |
 - ResizingArrayStack | [js](/src/adts/resizable-array-stack/resizable-array-stack.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/ResizingArrayStack.java.html) |
-- LinkedStack | [js](/src/adts/stack/stack.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/LinkedStack.java.html) |
-- Stack | [js](/src/adts/stack/stack.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Stack.java.html) |
-- ResizingArrayQueue | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/ResizingArrayQueue.java.html) |
-- LinkedQueue | [js](/src/adts/queue/queue.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/LinkedQueue.java.html) |
-- Queue | [js](/src/adts/queue/queue.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Queue.java.html) |
-- ResizingArrayBag | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/ResizingArrayBag.java.html) |
-- LinkedBag | [js](/src/adts/bag/bag.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/LinkedBag.java.html) |
 - Stopwatch | [js](/src/adts/stop-watch/stop-watch.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Stopwatch.java.html) |
 - StopwatchCPU | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/StopwatchCPU.java.html) |
 - LinearRegression | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/LinearRegression.java.html) |
