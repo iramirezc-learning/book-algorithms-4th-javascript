@@ -6,7 +6,7 @@ class Node {
   /**
    * Creates a new Node that holds
    * a single item and a pointer to
-   * the next element in the Bag.
+   * the next node in the Bag.
    */
   constructor() {
     /**
@@ -17,7 +17,7 @@ class Node {
     this.item = null
 
     /**
-     * Pointer to the next element in the Bag.
+     * Pointer to the next node in the Bag.
      * @private
      * @type {Node}
      */
@@ -97,22 +97,22 @@ class Bag {
   }
 
   /**
-   * Returns if the Bag is empty
+   * Returns if the Bag is empty.
    */
   isEmpty() {
     return this.first === null
   }
 
   /**
-   * Returns the Bags' size
+   * Returns the Bags' size.
    */
   size() {
     return this.n
   }
 
   /**
-   * Inserts an item to the Bag
-   * @param {*} item The item to be stored
+   * Inserts an item to the Bag.
+   * @param {*} item The item to be stored.
    */
   add(item) {
     const oldFirst = this.first
