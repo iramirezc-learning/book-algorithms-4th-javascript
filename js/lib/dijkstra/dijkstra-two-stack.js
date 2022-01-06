@@ -1,11 +1,10 @@
-const { Stack } = require('../../adts')
+const Stack = require('../stack/stack')
 
 /**
- * Dijkstra'sTwoStackExpressionEvaluation
- * @classdesc Algorithm developed by E. W. Dijkstra
+ * Algorithm developed by E. W. Dijkstra
  * in the 1960's to evaluate arithmetic expressions
- * with 2 Stacks.
- * @see p. 129
+ * with 2 stacks.
+ * @see p.129
  */
 class DijkstraTwoStack {
   static evaluate(expression = '') {

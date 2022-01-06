@@ -52,7 +52,7 @@
 
 **Algorithms:**
 
-- [ ] Dijkstra's Two-Stack (Evaluate)
+- [x] [Dijkstra's Two-Stack (Evaluate)](/js/lib/dijkstra/dijkstra-two-stack.js)
 
 **Clients:**
 

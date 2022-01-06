@@ -4,11 +4,6 @@
 
 ### Chapter 1 - Fundamentals
 
-#### Section 1.3 - Bags, Queues, and Stacks
-k
-
-- [Dijkstra's Two-Stack (Evaluate)](/src/algorithms/dijkstra-two-stack/dijkstra-two-stack.js)
-
 #### Section 1.4 - Analysis of Algorithms
 
 - [ThreeSum](/src/algorithms/three-sum/three-sum.js)

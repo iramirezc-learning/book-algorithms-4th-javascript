@@ -6,6 +6,7 @@ module.exports = {
   Counter: require('./counter/counter'),
   DateBasic: require('./date/date-basic'),
   DateSmall: require('./date/date-small'),
+  DijkstraTwoStack: require('./dijkstra/dijkstra-two-stack'),
   Euclidean: require('./euclidean/euclidean'),
   LinearSearch: require('./linear-search/linear-search'),
   Queue: require('./queue/queue'),

@@ -1,7 +1,6 @@
 /** @module algorithms */
 
 module.exports = {
-  DijkstraEvaluate: require('./dijkstra-two-stack/dijkstra-two-stack'),
   HeapSort: require('./heap-sort/heap-sort'),
   InsertionSort: require('./insertion-sort/insertion-sort'),
   MergeSort: require('./merge-sort/merge-sort'),
