@@ -10,5 +10,6 @@ module.exports = {
   LinearSearch: require('./linear-search/linear-search'),
   Queue: require('./queue/queue'),
   Stack: require('./stack/stack'),
+  StackFixedCapacity: require('./stack/stack-fixed-capacity'),
   Transaction: require('./transaction/transaction')
 }

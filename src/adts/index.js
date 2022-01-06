@@ -3,7 +3,6 @@
 module.exports = {
   BinarySearchST: require('./binary-search-st/binary-search-st'),
   BinarySearchTreeST: require('./binary-search-tree-st/binary-search-tree-st'),
-  FixedCapacityStack: require('./fixed-capacity-stack/fixed-capacity-stack'),
   IndexMinPQ: require('./index-min-priority-queue/index-min-priority-queue'),
   MaxPQ: require('./max-priority-queue/max-priority-queue'),
   MinPQ: require('./min-priority-queue/min-priority-queue'),

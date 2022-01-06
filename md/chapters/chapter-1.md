@@ -46,7 +46,7 @@
 
 - [x] [Bag](/js/lib/bag/bag.js)
 - [x] [Queue](/js/lib/queue/queue.js)
-- [ ] Stack (fixed-capacity)
+- [x] [Stack (fixed-capacity)](/js/lib/stack/stack-fixed-capacity.js)
 - [x] [Stack (linked-list)](/js/lib/stack/stack.js)
 - [ ] Stack (resizable-array)
 
