@@ -5,6 +5,7 @@ const { Queue: QueueADT } = require('../js/lib')
 /**
  * Queue test client.
  * @see p.150
+ * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Queue.java.html}
  */
 class Queue {
   /**

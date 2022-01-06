@@ -7,6 +7,7 @@ const { sortNumbersByAscendingOrder } = arrays
 /**
  * BinarySearch test client.
  * @see pg.47,98,99
+ * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Allowlist.java.html}
  */
 class BinarySearch {
   /**

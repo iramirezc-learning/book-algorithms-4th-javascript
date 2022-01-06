@@ -5,6 +5,7 @@ const { Random } = require('../js/util')
 /**
  * Accumulator test client.
  * @see p.93
+ * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Accumulator.java.html}
  */
 class Accumulator {
   /**

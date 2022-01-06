@@ -3,6 +3,7 @@ const DateBasic = require('../date/date-basic')
 /**
  * An abstract data type for transactions.
  * @see p.79
+ * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Transaction.java.html}
  */
 class Transaction {
   constructor() {

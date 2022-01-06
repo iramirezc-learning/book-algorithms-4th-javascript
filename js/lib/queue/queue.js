@@ -87,6 +87,7 @@ class NodeIterator {
  * Generic Queue implementation based on linked-lists.
  * @implements {NodeIterator}
  * @see pg.151,155
+ * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Queue.java.html}
  */
 class Queue {
   constructor() {

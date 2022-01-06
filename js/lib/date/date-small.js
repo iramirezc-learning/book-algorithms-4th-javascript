@@ -1,6 +1,7 @@
 /**
  * An abstract data type for Dates (alternative version).
  * @see pg.79,91,103,247
+ * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Date.java.html}
  */
 class DateSmall {
   constructor(m, d, y) {

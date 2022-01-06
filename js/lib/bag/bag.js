@@ -87,6 +87,7 @@ class NodeIterator {
  * Generic Bag implementation based on linked-lists.
  * @implements {NodeIterator}
  * @see p.155
+ * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Bag.java.html}
  */
 class Bag {
   constructor() {

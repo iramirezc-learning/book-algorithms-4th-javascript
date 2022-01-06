@@ -1,6 +1,7 @@
 /**
  * An abstract data type for a simple counter.
  * @see p.85
+ * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Counter.java.html}
  */
 class Counter {
   /**

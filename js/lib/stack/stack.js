@@ -87,6 +87,7 @@ class NodeIterator {
  * Generic Stack implementation based on linked-lists.
  * @implements {NodeIterator}
  * @see p.147,149,155
+ * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Stack.java.html}
  */
 class Stack {
   constructor() {

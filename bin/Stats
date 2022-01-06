@@ -5,6 +5,7 @@ const { Bag } = require('../js/lib')
 /**
  * Bag test client.
  * @see p.125
+ * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Bag.java.html}
  */
 class Stats {
   /**

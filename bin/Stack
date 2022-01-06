@@ -5,6 +5,7 @@ const { Stack: StackADT } = require('../js/lib')
 /**
  * Stack test client.
  * @see p.147,148
+ * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Stack.java.html}
  */
 class Stack {
   /**
