@@ -11,5 +11,6 @@ module.exports = {
   Queue: require('./queue/queue'),
   Stack: require('./stack/stack'),
   StackFixedCapacity: require('./stack/stack-fixed-capacity'),
+  StackResizableArray: require('./stack/stack-resizable-array'),
   Transaction: require('./transaction/transaction')
 }

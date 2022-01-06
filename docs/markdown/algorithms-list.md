@@ -5,10 +5,9 @@
 ### Chapter 1 - Fundamentals
 
 #### Section 1.3 - Bags, Queues, and Stacks
-
+k
 
 - [Dijkstra's Two-Stack (Evaluate)](/src/algorithms/dijkstra-two-stack/dijkstra-two-stack.js)
-- [ResizingArrayStack](/src/adts/resizable-array-stack/resizable-array-stack.js)
 
 #### Section 1.4 - Analysis of Algorithms
 

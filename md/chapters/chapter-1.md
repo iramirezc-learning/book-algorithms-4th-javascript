@@ -48,7 +48,7 @@
 - [x] [Queue](/js/lib/queue/queue.js)
 - [x] [Stack (fixed-capacity)](/js/lib/stack/stack-fixed-capacity.js)
 - [x] [Stack (linked-list)](/js/lib/stack/stack.js)
-- [ ] Stack (resizable-array)
+- [x] [Stack (resizable-array)](/js/lib/stack/stack-resizable-array.js)
 
 **Algorithms:**
 

@@ -8,7 +8,6 @@ Every algorithm or ADT has a link pointing to the **authors** Java implementatio
 
 ### Chapter 1. Fundamentals
   
-- ResizingArrayStack | [js](/src/adts/resizable-array-stack/resizable-array-stack.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/ResizingArrayStack.java.html) |
 - Stopwatch | [js](/src/adts/stop-watch/stop-watch.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Stopwatch.java.html) |
 - StopwatchCPU | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/StopwatchCPU.java.html) |
 - LinearRegression | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/LinearRegression.java.html) |
