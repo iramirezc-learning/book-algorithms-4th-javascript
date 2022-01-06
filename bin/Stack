@@ -24,7 +24,7 @@ class Stack {
       .on('line', (line) => {
         line.split(' ').forEach((item) => {
           if (item === '-' && !stack.isEmpty()) {
-            console.log(stack.pop() + ' ')
+            process.stdout.write(stack.pop() + ' ')
           } else {
             stack.push(item)
           }
