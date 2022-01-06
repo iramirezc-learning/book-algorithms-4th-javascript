@@ -62,7 +62,27 @@
 
 ## 1.4 Analysis of Algorithms
 
-> TODO
+**Abstract Data Types:**
+
+- [x] [StopWatch](/js/lib/stop-watch/stop-watch.js)
+
+**Algorithms:**
+
+- [ ] ThreeSum
+- [ ] ThreeSumFast
+- [ ] TwoSumFast
+
+**Clients:**
+
+- [ ] StopWatch
+- [ ] ThreeSum
+- [ ] ThreeSumFast
+- [ ] TwoSumFast
+
+**Experiments:**
+
+- [ ] DoublingRatio
+- [ ] DoublingTest
 
 ## 1.5 Case Study: Union-Find
 

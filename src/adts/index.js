@@ -6,6 +6,5 @@ module.exports = {
   IndexMinPQ: require('./index-min-priority-queue/index-min-priority-queue'),
   MaxPQ: require('./max-priority-queue/max-priority-queue'),
   MinPQ: require('./min-priority-queue/min-priority-queue'),
-  SequentialSearchST: require('./sequential-search-st/sequential-search-st'),
-  StopWatch: require('./stop-watch/stop-watch')
+  SequentialSearchST: require('./sequential-search-st/sequential-search-st')
 }
