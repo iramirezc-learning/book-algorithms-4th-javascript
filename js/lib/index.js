@@ -8,5 +8,6 @@ module.exports = {
   DateSmall: require('./date/date-small'),
   Euclidean: require('./euclidean/euclidean'),
   LinearSearch: require('./linear-search/linear-search'),
+  Stack: require('./stack/stack'),
   Transaction: require('./transaction/transaction')
 }

@@ -1,0 +1,45 @@
+#!/usr/bin/env node
+const reader = require('readline').createInterface({ input: process.stdin })
+const { Stack: StackADT } = require('../js/lib')
+
+/**
+ * Stack test client.
+ * @see p.147,148
+ */
+class Stack {
+  /**
+   * Create a stack and push/pop strings from the StdIn.
+   *
+   * @example <caption>To be or not to be</caption>
+   * ```sh
+   * $ ./Stack < data/tobe.txt
+   * to be not that or be (2 left on stack)
+   * ```
+   */
+  static run() {
+    const stack = new StackADT()
+
+    reader
+      .on('line', (line) => {
+        line.split(' ').forEach((item) => {
+          if (item === '-' && !stack.isEmpty()) {
+            console.log(stack.pop() + ' ')
+          } else {
+            stack.push(item)
+          }
+        })
+      })
+      .on('close', () => {
+        console.log(`(${stack.size()} left on stack)`)
+      })
+  }
+
+  /**
+   * Main execution.
+   */
+  static main() {
+    this.run()
+  }
+}
+
+Stack.main()
