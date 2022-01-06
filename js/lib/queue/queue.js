@@ -36,7 +36,7 @@ class Node {
 class NodeIterator {
   /**
    * Creates a new NodeIterator.
-   * @param {Node} [node=null] - The first node to start the iteration.
+   * @param {Node} [node=null] The first node to start the iteration.
    */
   constructor(node = null) {
     /**
@@ -68,7 +68,7 @@ class NodeIterator {
   /**
    * Returns an object implementing the iterator protocol.
    * @see [The iterator protocol]{@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol}
-   * @returns {Object} The object iterator.
+   * @returns {object} The object iterator.
    */
   next() {
     if (this.hasNext()) {
