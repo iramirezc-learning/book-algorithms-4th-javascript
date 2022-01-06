@@ -1,6 +1,6 @@
 const Random = require('./random')
 
-describe('Random', () => {
+describe('Utils/Random', () => {
   beforeEach(() => {
     this.iterations = 100
   })
