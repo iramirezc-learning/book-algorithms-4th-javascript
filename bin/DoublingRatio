@@ -1,0 +1,73 @@
+#!/usr/bin/env node
+const { StopWatch, ThreeSum } = require('../js/lib')
+const {
+  Random,
+  strings: { pad }
+} = require('../js/util')
+
+/**
+ * Runs experiments counting time for ThreeSum algorithm.
+ * @see pg.177,192
+ */
+class DoublingRatio {
+  /**
+   * Returns the time elapsed counting the triplets in `n` random ints.
+   * @param {number} n Array size for the test.
+   */
+  static timeTrial(n) {
+    const MAX = 1000000
+    const a = []
+
+    for (let i = 0; i < n; i++) {
+      // @ts-ignore
+      a[i] = Random.uniform(-MAX, MAX)
+    }
+
+    const timer = new StopWatch()
+
+    ThreeSum.count(a)
+
+    return timer.elapsedTime()
+  }
+
+  /**
+   * Calculates the ratio of each running time with the previous one when
+   * executing the ThreeSum algorithm, doubling the input size every time.
+   *
+   * @example
+   * ```sh
+   * $ ./DoublingRatio
+   *    250     0.0     2.8
+   *    500     0.0     3.5
+   *   1000     0.3     6.5
+   *   2000     1.8     6.9
+   *   4000    14.5     8.2
+   *   8000    96.4     6.7
+   *  16000   768.1     8.0
+   * ...
+   * ```
+   */
+  static run() {
+    let prev = this.timeTrial(125)
+
+    for (let n = 250; ; n *= 2) {
+      const time = this.timeTrial(n)
+      const str_n = pad(String(n), 7)
+      const str_time = pad(time.toFixed(1), 7)
+      const str_ratio = pad((time / prev).toFixed(1), 7)
+
+      console.log(`${str_n} ${str_time} ${str_ratio}`)
+
+      prev = time
+    }
+  }
+
+  /**
+   * Main execution.
+   */
+  static main() {
+    this.run()
+  }
+}
+
+DoublingRatio.main()

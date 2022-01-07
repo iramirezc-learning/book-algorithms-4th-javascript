@@ -81,7 +81,7 @@
 
 **Experiments:**
 
-- [ ] DoublingRatio
+- [x] [DoublingRatio](/bin/DoublingRatio)
 - [ ] DoublingTest
 
 ## 1.5 Case Study: Union-Find

@@ -7,7 +7,6 @@
 #### Section 1.4 - Analysis of Algorithms
 
 - [DoublingTest Experiment](/src/clients/doubling-test.client.js)
-- [DoublingRatio Experiment](/src/clients/doubling-ratio.client.js)
 
 #### Section 1.5 - Case Study: Union-Find
 
