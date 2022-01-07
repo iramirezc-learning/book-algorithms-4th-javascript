@@ -1,0 +1,51 @@
+#!/usr/bin/env node
+const { StopWatch: StopWatchADT, ThreeSum } = require('../js/lib')
+const { Random } = require('../js/util')
+
+/**
+ * StopWatch test client.
+ * @see p.175
+ */
+class StopWatch {
+  /**
+   * Tracks the time of ThreeSum algorithm.
+   * @param {number} n The total of random numbers.
+   *
+   * @example <caption>time counting the triplets in 1000 random ints</caption>
+   * ```sh
+   * $ ./StopWatch 1000
+   * 61 triplets 0.374 seconds
+   * ```
+   *
+   * @example <caption>time counting the triplets in 2000 random ints</caption>
+   * ```sh
+   * $ ./StopWatch 2000
+   * 474 triplets 2.807 seconds
+   * ```
+   */
+  static run(n) {
+    const a = []
+
+    for (let i = 0; i < n; i++) {
+      // @ts-ignore
+      a[i] = Random.uniform(-1000000, 1000000)
+    }
+
+    const timer = new StopWatchADT()
+    const count = ThreeSum.count(a)
+    const time = timer.elapsedTime()
+    console.log(`${count} triplets ${time} seconds`)
+  }
+
+  /**
+   * Main execution.
+   * @param {Array<string>} args Arguments form the command line.
+   */
+  static main(args) {
+    const n = parseInt(args[0], 10)
+
+    this.run(n)
+  }
+}
+
+StopWatch.main(process.argv.slice(2))
