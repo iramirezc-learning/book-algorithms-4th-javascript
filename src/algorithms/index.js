@@ -9,7 +9,6 @@ module.exports = {
   QuickSort: require('./quick-sort/quick-sort'),
   SelectionSort: require('./selection-sort/selection-sort'),
   ShellSort: require('./shell-sort/shell-sort'),
-  ThreeSum: require('./three-sum/three-sum'),
   ThreeSumFast: require('./three-sum-fast/three-sum-fast'),
   TwoSumFast: require('./two-sum-fast/two-sum-fast'),
   UnionFind: require('./union-find/union-find'),

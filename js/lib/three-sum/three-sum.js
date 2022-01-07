@@ -1,13 +1,12 @@
 /**
- * ThreeSum
- * > Running Time: n^3
- * @classdesc Counts the triplets in an array that sum 0.
- * @see p. 173
+ * Counts the triplets in an array that sum 0.
+ * @note Running Time: n^3
+ * @see p.173
  */
 class ThreeSum {
   /**
    * Returns the count of triplets in an array that sum 0.
-   * @param {[]} a The array of integers
+   * @param {Array<number>} a The array of integers
    */
   static count(a) {
     const n = a.length

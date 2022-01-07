@@ -14,5 +14,6 @@ module.exports = {
   StackFixedCapacity: require('./stack/stack-fixed-capacity'),
   StackResizableArray: require('./stack/stack-resizable-array'),
   StopWatch: require('./stop-watch/stop-watch'),
+  ThreeSum: require('./three-sum/three-sum'),
   Transaction: require('./transaction/transaction')
 }
