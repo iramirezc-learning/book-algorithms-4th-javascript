@@ -68,16 +68,16 @@
 
 **Algorithms:**
 
-- [ ] ThreeSum
+- [x] [ThreeSum](/js/lib/three-sum/three-sum.js)
 - [ ] ThreeSumFast
-- [ ] TwoSumFast
+- [x] [TwoSumFast](/js/lib/two-sum/two-sum-fast.js)
 
 **Clients:**
 
-- [ ] StopWatch
-- [ ] ThreeSum
+- [x] [StopWatch](/bin/StopWatch)
+- [x] [ThreeSum](/bin/ThreeSum)
 - [ ] ThreeSumFast
-- [ ] TwoSumFast
+- [x] [TwoSumFast](/bin/TwoSumFast)
 
 **Experiments:**
 

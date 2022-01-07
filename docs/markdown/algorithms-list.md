@@ -6,13 +6,7 @@
 
 #### Section 1.4 - Analysis of Algorithms
 
-- [ThreeSum](/src/algorithms/three-sum/three-sum.js)
-- [ThreeSum Client](/src/algorithms/three-sum/three-sum.client.js)
-- [StopWatch](/src/adts/stop-watch/stop-watch.js)
-- [StopWatch Client](/src/adts/stop-watch/stop-watch.client.js)
 - [DoublingTest Experiment](/src/clients/doubling-test.client.js)
-- [TwoSumFast](/src/algorithms/two-sum-fast/two-sum-fast.js)
-- [TwoSumFast Client](/src/algorithms/two-sum-fast/two-sum-fast.client.js)
 - [ThreeSumFast](/src/algorithms/three-sum-fast/three-sum-fast.js)
 - [ThreeSumFast Client](/src/algorithms/three-sum-fast/three-sum-fast.client.js)
 - [DoublingRatio Experiment](/src/clients/doubling-ratio.client.js)
