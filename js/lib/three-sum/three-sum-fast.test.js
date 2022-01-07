@@ -1,11 +1,11 @@
 const ThreeSumFast = require('./three-sum-fast')
 
-describe('Unit Tests: ThreeSumFast Algorithm', () => {
+describe('ThreeSumFast', () => {
   beforeEach(() => {
     this.array = [-3, -2, -1, 0, 1, 2, 3]
   })
 
-  describe('static count method', () => {
+  describe('.count()', () => {
     it('should return the count of triplets that sum to 0', () => {
       /**
        * 1. [-3, 0, 3]

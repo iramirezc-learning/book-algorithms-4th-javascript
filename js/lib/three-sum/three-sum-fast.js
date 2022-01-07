@@ -1,19 +1,21 @@
-const { numbersByAscendingOrder } = require('../../utils')
-const { BinarySearch } = require('../../../js/lib')
+const BinarySearch = require('../binary-search/binary-search-recursive')
+const {
+  arrays: { sortNumbersByAscendingOrder }
+} = require('../../util')
 
 /**
- * ThreeSumFast
- * > Running Time: n^2log(n)
- * @classdesc Counts the non-duplicate triplets in an array that sum 0.
- * @see p. 190
+ * Counts the non-duplicate triplets in an array that sum 0.
+ * @note Running Time: n^2log(n)
+ * @see p.190
  */
 class ThreeSumFast {
   /**
    * Returns the count of triplets in an array that sum 0.
-   * @param {[]} a The array of integers
+   * @param {Array<number>} a The array of integers.
    */
   static count(a) {
-    a.sort(numbersByAscendingOrder)
+    a.sort(sortNumbersByAscendingOrder)
+
     const n = a.length
     let count = 0
 

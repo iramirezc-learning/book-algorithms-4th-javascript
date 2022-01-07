@@ -15,6 +15,7 @@ module.exports = {
   StackResizableArray: require('./stack/stack-resizable-array'),
   StopWatch: require('./stop-watch/stop-watch'),
   ThreeSum: require('./three-sum/three-sum'),
+  ThreeSumFast: require('./three-sum/three-sum-fast'),
   Transaction: require('./transaction/transaction'),
   TwoSumFast: require('./two-sum/two-sum-fast')
 }

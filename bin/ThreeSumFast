@@ -1,0 +1,56 @@
+#!/usr/bin/env node
+const { ThreeSumFast: ThreeSumFastAlgorithm } = require('../js/lib')
+const { File } = require('../js/util')
+
+/**
+ * ThreeSumFast test
+ * @see p.190
+ */
+class ThreeSumFast {
+  /**
+   * Counts the Triplets that sum to 0.
+   * @param {string} file The name of the file.
+   *
+   * @example <caption>1K ints</caption>
+   * ```sh
+   * $ ./ThreeSumFast data/1Kints.txt
+   * 70
+   * ```
+   *
+   * @example <caption>2K ints</caption>
+   * ```sh
+   * $ ./ThreeSumFast data/2Kints.txt
+   * 528
+   * ```
+   *
+   * @example <caption>4K ints</caption>
+   * ```sh
+   * $ ./ThreeSumFast data/4Kints.txt
+   * 4039
+   * ```
+   *
+   * @example <caption>8K ints</caption>
+   * ```sh
+   * $ ./ThreeSumFast data/8Kints.txt
+   * 32074
+   * ```
+   */
+  static run(file) {
+    const input = new File(file)
+    const a = input.readAllInts()
+
+    console.log(ThreeSumFastAlgorithm.count(a))
+  }
+
+  /**
+   * Main execution.
+   * @param {Array<string>} args Arguments form the command line.
+   */
+  static main(args) {
+    const file = args[0]
+
+    this.run(file)
+  }
+}
+
+ThreeSumFast.main(process.argv.slice(2))

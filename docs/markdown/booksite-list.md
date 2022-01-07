@@ -10,7 +10,6 @@ Every algorithm or ADT has a link pointing to the **authors** Java implementatio
 
 - StopwatchCPU | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/StopwatchCPU.java.html) |
 - LinearRegression | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/LinearRegression.java.html) |
-- ThreeSumFast | [js](/src/algorithms/three-sum-fast/three-sum-fast.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/ThreeSumFast.java.html) |
 - DoublingTest | [js](/src/examples/experiments/doubling-test.experiment.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/DoublingTest.java.html) |
 - DoublingRatio | [js](/src/examples/experiments/doubling-ratio.experiment.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/DoublingRatio.java.html) |
 - QuickFindUF | [js](/src/algorithms/union-find/union-find.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/QuickFindUF.java.html) |
