@@ -8,8 +8,8 @@ const { File } = require('../js/util')
  */
 class ThreeSum {
   /**
-   * Counts the Triplets that sum to 0
-   * @param {string} file The name of the file
+   * Counts the Triplets that sum to 0.
+   * @param {string} file The name of the file.
    *
    * @example <caption>1K ints</caption>
    * ```sh
