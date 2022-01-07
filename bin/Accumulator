@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-const { Accumulator: Acc } = require('../js/lib')
+const { Accumulator: AccumulatorADT } = require('../js/lib')
 const { Random } = require('../js/util')
 
 /**
@@ -19,7 +19,7 @@ class Accumulator {
    * ```
    */
   static run(trials) {
-    const accumulator = new Acc()
+    const accumulator = new AccumulatorADT()
 
     for (let t = 0; t < trials; t++) {
       // @ts-ignore
