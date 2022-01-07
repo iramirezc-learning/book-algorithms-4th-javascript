@@ -13,7 +13,7 @@ The time invested in each section takes into account the following activities:
 - Refactoring.
 - Manual testing.
 - Consulting external sources.
-- Solving exercises
+- Solving exercises (or not).
 
 > _A note about the exercises. I' have decided not to spend more time on solving all the exercises! It is too much already 😥. For now, I just want to understand the implementation of the most basic algorithms and then, if I have the time, I'll come back and continue solving them._
 
@@ -21,9 +21,9 @@ These are my stats:
 
 | Section                     | Started on   | Completed on | Total time       |
 |-----------------------------|--------------|--------------|------------------|
-| 1.1 Basic Programming Model | Apr 18, 2020 | May 18, 2020 | ~4 hours, 10 min |
-| 1.2 Data Abstraction        | May 18, 2020 | May 24, 2020 | ~4 hours, 10 min |
-| 1.3 Bags, Queues and Stacks | May 25, 2020 | Aug 3, 2020  | ~6 hours, 15 min |
+| 1.1 Basic Programming Model | Apr 18, 2020 | May 18, 2020 | ~6 hours, 40 min |
+| 1.2 Data Abstraction        | May 18, 2020 | May 24, 2020 | ~6 hours, 40 min |
+| 1.3 Bags, Queues and Stacks | May 25, 2020 | Aug 3, 2020  | ~8 hours, 45 min |
 | 1.4 Analysis of Algorithms  | Aug 3, 2020  | Sep 12, 2020 | ~4 hours, 10 min |
 | 1.5 Case Study: Union-Find  | Sep 12, 2020 | Sep 20, 2020 | ~4 hours, 10 min |
 | 2.1 Elementary Sorts        | Sep 22, 2020 | Sep 28, 2020 | ~3 hours, 20 min |
