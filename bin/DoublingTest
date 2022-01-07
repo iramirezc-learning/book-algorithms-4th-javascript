@@ -1,0 +1,67 @@
+#!/usr/bin/env node
+const { StopWatch, ThreeSum } = require('../js/lib')
+const {
+  Random,
+  strings: { pad }
+} = require('../js/util')
+
+/**
+ * Runs experiments counting time for ThreeSum algorithm.
+ * @see p.177
+ */
+class DoublingTest {
+  /**
+   * Returns the time elapsed counting the triplets in `n` random ints.
+   * @param {number} n Array size for the test.
+   */
+  static timeTrial(n) {
+    const MAX = 1000000
+    const a = []
+
+    for (let i = 0; i < n; i++) {
+      // @ts-ignore
+      a[i] = Random.uniform(-MAX, MAX)
+    }
+
+    const timer = new StopWatch()
+
+    ThreeSum.count(a)
+
+    return timer.elapsedTime()
+  }
+
+  /**
+   * Tracks the time of ThreeSum algorithm doubling the size of array `a` every time.
+   *
+   * @example
+   * ```sh
+   * $ ./DoublingTest
+   *     250   0.013
+   *     500   0.043
+   *    1000   0.298
+   *    2000   2.418
+   *    4000  19.371
+   *    8000  96.712
+   *   16000 722.276
+   * ...
+   * ```
+   */
+  static run() {
+    for (let i = 250; ; i *= 2) {
+      const time = this.timeTrial(i)
+      const str_n = pad(String(i), 7)
+      const str_time = pad(String(time), 7)
+
+      console.log(`${str_n} ${str_time}`)
+    }
+  }
+
+  /**
+   * Main execution.
+   */
+  static main() {
+    this.run()
+  }
+}
+
+DoublingTest.main()

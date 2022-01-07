@@ -3,11 +3,6 @@
 ## List of Algorithms, ADTs and Clients implementations in JS
 
 ### Chapter 1 - Fundamentals
-
-#### Section 1.4 - Analysis of Algorithms
-
-- [DoublingTest Experiment](/src/clients/doubling-test.client.js)
-
 #### Section 1.5 - Case Study: Union-Find
 
 - [UnionFind](/src/algorithms/union-find/union-find.js)
