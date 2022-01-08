@@ -45,7 +45,9 @@
 **Abstract Data Types:**
 
 - [x] [Bag](/js/lib/bag/bag.js)
+- [ ] [Bag (resizable-array)](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/ResizingArrayBag.java.html)
 - [x] [Queue](/js/lib/queue/queue.js)
+- [ ] [Queue (resizable-array)](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/ResizingArrayQueue.java.html)
 - [x] [Stack (fixed-capacity)](/js/lib/stack/stack-fixed-capacity.js)
 - [x] [Stack (linked-list)](/js/lib/stack/stack.js)
 - [x] [Stack (resizable-array)](/js/lib/stack/stack-resizable-array.js)
@@ -65,9 +67,11 @@
 **Abstract Data Types:**
 
 - [x] [StopWatch](/js/lib/stop-watch/stop-watch.js)
+- [ ] [StopWatchCPU](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/StopwatchCPU.java.html)
 
 **Algorithms:**
 
+- [ ] [LinearRegression](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/LinearRegression.java.html)
 - [x] [ThreeSum](/js/lib/three-sum/three-sum.js)
 - [x] [ThreeSumFast](/js/lib/three-sum/three-sum-fast.js)
 - [x] [TwoSumFast](/js/lib/two-sum/two-sum-fast.js)

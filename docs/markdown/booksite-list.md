@@ -8,8 +8,6 @@ Every algorithm or ADT has a link pointing to the **authors** Java implementatio
 
 ### Chapter 1. Fundamentals
 
-- StopwatchCPU | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/StopwatchCPU.java.html) |
-- LinearRegression | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/LinearRegression.java.html) |
 - QuickFindUF | [js](/src/algorithms/union-find/union-find.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/QuickFindUF.java.html) |
 - QuickUnionUF | [js](/src/algorithms/union-find-quick/union-find-quick.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/QuickUnionUF.java.html) |
 - WeightedQuickUnionUF | [js](/src/algorithms/union-find-weighted/union-find-weighted.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/WeightedQuickUnionUF.java.html) |
