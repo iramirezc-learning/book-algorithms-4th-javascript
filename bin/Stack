@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 const reader = require('readline').createInterface({ input: process.stdin })
-const { Stack: StackADT } = require('../js/lib')
+const { Stack } = require('../js/lib')
 
 /**
  * Stack test client.
  * @see p.147,148
  * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Stack.java.html}
  */
-class Stack {
+class StackClient {
   /**
    * Create a stack and push/pop strings from the StdIn.
    *
@@ -18,7 +18,7 @@ class Stack {
    * ```
    */
   static run() {
-    const stack = new StackADT()
+    const stack = new Stack()
 
     reader
       .on('line', (line) => {
@@ -43,4 +43,4 @@ class Stack {
   }
 }
 
-Stack.main()
+StackClient.main()

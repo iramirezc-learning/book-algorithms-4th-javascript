@@ -1,12 +1,12 @@
 #!/usr/bin/env node
-const { TwoSumFast: TwoSumFastAlgorithm } = require('../js/lib')
+const { TwoSumFast } = require('../js/lib')
 const { File } = require('../js/util')
 
 /**
  * TwoSumFast test client.
  * @see p.189
  */
-class TwoSumFast {
+class TwoSumFastClient {
   /**
    * Counts the non-duplicated pairs that sum to 0.
    * @param {string} file The name of the file.
@@ -45,7 +45,7 @@ class TwoSumFast {
     const input = new File(file)
     const a = input.readAllInts()
 
-    console.log(TwoSumFastAlgorithm.count(a))
+    console.log(TwoSumFast.count(a))
   }
 
   /**
@@ -59,4 +59,4 @@ class TwoSumFast {
   }
 }
 
-TwoSumFast.main(process.argv.slice(2))
+TwoSumFastClient.main(process.argv.slice(2))

@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 const reader = require('readline').createInterface({ input: process.stdin })
-const { Queue: QueueADT } = require('../js/lib')
+const { Queue } = require('../js/lib')
 
 /**
  * Queue test client.
  * @see p.150
  * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Queue.java.html}
  */
-class Queue {
+class QueueClient {
   /**
    * Create a queue and enqueue/dequeue strings from the StdIn.
    *
@@ -18,7 +18,7 @@ class Queue {
    * ```
    */
   static run() {
-    const queue = new QueueADT()
+    const queue = new Queue()
 
     reader
       .on('line', (line) => {
@@ -43,4 +43,4 @@ class Queue {
   }
 }
 
-Queue.main()
+QueueClient.main()

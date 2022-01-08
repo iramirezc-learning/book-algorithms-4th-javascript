@@ -1,12 +1,12 @@
 #!/usr/bin/env node
-const { ThreeSum: ThreeSumAlgorithm } = require('../js/lib')
+const { ThreeSum } = require('../js/lib')
 const { File } = require('../js/util')
 
 /**
  * ThreeSum test client.
  * @see p.173
  */
-class ThreeSum {
+class ThreeSumClient {
   /**
    * Counts the Triplets that sum to 0.
    * @param {string} file The name of the file.
@@ -39,7 +39,7 @@ class ThreeSum {
     const input = new File(file)
     const a = input.readAllInts()
 
-    console.log(ThreeSumAlgorithm.count(a))
+    console.log(ThreeSum.count(a))
   }
 
   /**
@@ -53,4 +53,4 @@ class ThreeSum {
   }
 }
 
-ThreeSum.main(process.argv.slice(2))
+ThreeSumClient.main(process.argv.slice(2))
