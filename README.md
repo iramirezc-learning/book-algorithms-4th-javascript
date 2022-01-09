@@ -8,8 +8,8 @@ Personal notes and JavaScript code for the book Algorithms (4th edition) by Robe
 
 ## Chapters
 
-- [ ] [Chapter 1. Fundamentals](/md/chapters/chapter-1.md)
-- [ ] Chapter 2. Sorting
+- [x] [Chapter 1. Fundamentals](/md/chapters/chapter-1.md)
+- [ ] [Chapter 2. Sorting](/md/chapters/chapter-2.md)
 - [ ] Chapter 3. Searching
 - [ ] Chapter 4. Graphs
 - [ ] Chapter 5. Strings

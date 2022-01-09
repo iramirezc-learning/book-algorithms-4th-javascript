@@ -19,13 +19,15 @@ The time invested in each section takes into account the following activities:
 
 These are my stats:
 
+> NOTE: Chapter 1 and 2 have less time compare to the other chapters because I had already been through the lessons implementing the code in Java. The implementation in JavaScript was quick except of the unit tests.
+
 | Section                     | Started on   | Completed on | Total time       |
 |-----------------------------|--------------|--------------|------------------|
 | 1.1 Basic Programming Model | Apr 18, 2020 | May 18, 2020 | ~6 hours, 40 min |
 | 1.2 Data Abstraction        | May 18, 2020 | May 24, 2020 | ~6 hours, 40 min |
 | 1.3 Bags, Queues and Stacks | May 25, 2020 | Aug 3, 2020  | ~8 hours, 45 min |
-| 1.4 Analysis of Algorithms  | Aug 3, 2020  | Sep 12, 2020 | ~4 hours, 10 min |
-| 1.5 Case Study: Union-Find  | Sep 12, 2020 | Sep 20, 2020 | ~4 hours, 10 min |
+| 1.4 Analysis of Algorithms  | Aug 3, 2020  | Sep 12, 2020 | ~5 hours, 25 min |
+| 1.5 Case Study: Union-Find  | Sep 12, 2020 | Sep 20, 2020 | ~5 hours, 25 min |
 | 2.1 Elementary Sorts        | Sep 22, 2020 | Sep 28, 2020 | ~3 hours, 20 min |
 | 2.2 Mergesort               | Sep 28, 2020 | Oct 14, 2020 | ~1 hour, 40 min  |
 | 2.3 Quicksort               | Oct 14, 2020 | Oct 18, 2020 | ~2 hours, 30 min |
