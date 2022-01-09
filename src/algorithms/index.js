@@ -9,6 +9,5 @@ module.exports = {
   QuickSort: require('./quick-sort/quick-sort'),
   SelectionSort: require('./selection-sort/selection-sort'),
   ShellSort: require('./shell-sort/shell-sort'),
-  UnionFindQuick: require('./union-find-quick/union-find-quick'),
   WeightedQuickUnionUF: require('./union-find-weighted/union-find-weighted')
 }

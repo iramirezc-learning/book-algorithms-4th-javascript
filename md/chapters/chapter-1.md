@@ -93,12 +93,12 @@
 **Abstract Data Types:**
 
 - [x] [UnionFind (quick-find)](/js/lib/union-find/union-find.js)
-- [ ] UnionFindQuick (quick-union)
+- [x] [UnionFindQuick (quick-union)](/js/lib/union-find/union-find-quick.js)
 - [ ] UnionFindWeighted (weighted-quick-union)
 - [ ] [UnionFindRank](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/UF.java.html)
 
 **Clients:**
 
 - [x] [UnionFind](/bin/UnionFind)
-- [ ] UnionFindQuick
+- [x] [UnionFindQuick](/bin/UnionFindQuick)
 - [ ] UnionFindWeighted

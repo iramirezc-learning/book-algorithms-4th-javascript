@@ -18,5 +18,6 @@ module.exports = {
   ThreeSumFast: require('./three-sum/three-sum-fast'),
   Transaction: require('./transaction/transaction'),
   TwoSumFast: require('./two-sum/two-sum-fast'),
-  UnionFind: require('./union-find/union-find')
+  UnionFind: require('./union-find/union-find'),
+  UnionFindQuick: require('./union-find/union-find-quick')
 }

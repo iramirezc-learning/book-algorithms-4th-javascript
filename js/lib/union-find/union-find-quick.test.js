@@ -1,6 +1,6 @@
-const UFQ = require('./union-find-quick')
+const UnionFindQuick = require('./union-find-quick')
 
-describe('Unit Tests: Union Find Quick Algorithm', () => {
+describe('UnionFindQuick', () => {
   beforeEach(() => {
     this.sites = 10
     this.pairs = [
@@ -16,38 +16,38 @@ describe('Unit Tests: Union Find Quick Algorithm', () => {
       [1, 0],
       [6, 7]
     ]
-    this.ufq = new UFQ(this.sites)
+    this.ufq = new UnionFindQuick(this.sites)
   })
 
-  describe('when initialized', () => {
-    it('should have a prop `_id` which is an array initialized with different components', () => {
-      const expectedIds = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  it('should have a prop `id` which is an array initialized with different components', () => {
+    const expectedIds = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-      expect(this.ufq._id).toEqual(expectedIds)
-    })
-
-    it('should have a property `_count` equal to the number of sites', () => {
-      expect(this.ufq._count).toBe(this.sites)
-    })
-
-    it('should not be extensible', () => {
-      const expectedProps = ['_id', '_count']
-
-      this.ufq.newProp = 'hello'
-
-      const actualProps = Object.getOwnPropertyNames(this.ufq)
-      expect(actualProps).toEqual(expectedProps)
-      expect(this.ufq.newProp).toBeUndefined()
-    })
+    expect(this.ufq.id).toEqual(expectedIds)
   })
 
-  describe('count method', () => {
+  it('should have a property `_count` equal to the number of sites', () => {
+    expect(this.ufq._count).toBe(this.sites)
+  })
+
+  it('should not be extensible', () => {
+    const expectedProps = ['id', '_count']
+
+    // @ts-ignore
+    this.ufq.newProp = 'hello'
+
+    const actualProps = Object.getOwnPropertyNames(this.ufq)
+    expect(actualProps).toEqual(expectedProps)
+    // @ts-ignore
+    expect(this.ufq.newProp).toBeUndefined()
+  })
+
+  describe('.count()', () => {
     it('should return the count to be the initial components count', () => {
       expect(this.ufq.count()).toBe(this.sites)
     })
   })
 
-  describe('find method', () => {
+  describe('.find()', () => {
     it('should return the same component id as the site index when initialized', () => {
       const sites = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -59,17 +59,17 @@ describe('Unit Tests: Union Find Quick Algorithm', () => {
     it('should return the new component id if changed for a site', () => {
       const siteIndex = 0
       const newComponentId = 5
-      this.ufq._id[siteIndex] = newComponentId // change the componentId for site 0
+      this.ufq.id[siteIndex] = newComponentId // change the componentId for site 0
 
       expect(this.ufq.find(siteIndex)).toBe(newComponentId)
     })
   })
 
-  describe('connected method', () => {
+  describe('.connected()', () => {
     it('should return true if `p` and `q` have the same component id', () => {
       const p = 0 // first site
       const q = 9 // last site
-      this.ufq._id[0] = 9 // force site with index 0 to have the same component id as site with index 9
+      this.ufq.id[0] = 9 // force site with index 0 to have the same component id as site with index 9
 
       expect(this.ufq.connected(p, q)).toBeTrue()
     })
@@ -82,7 +82,7 @@ describe('Unit Tests: Union Find Quick Algorithm', () => {
     })
   })
 
-  describe('union method', () => {
+  describe('.union()', () => {
     it('should connect two sites by assigning them the same component id', () => {
       const p = 0 // first site
       const q = 9 // last site
@@ -90,7 +90,7 @@ describe('Unit Tests: Union Find Quick Algorithm', () => {
 
       this.ufq.union(p, q)
 
-      expect(this.ufq._id).toEqual(expectedIds)
+      expect(this.ufq.id).toEqual(expectedIds)
     })
 
     it('should decrement the count of components by 1', () => {
@@ -110,7 +110,7 @@ describe('Unit Tests: Union Find Quick Algorithm', () => {
       this.ufq.union(p, q)
       this.ufq.union(q, p)
 
-      expect(this.ufq._id).toEqual(expectedIds)
+      expect(this.ufq.id).toEqual(expectedIds)
       expect(this.ufq.count()).toBe(expectedCount)
     })
 
@@ -132,7 +132,7 @@ describe('Unit Tests: Union Find Quick Algorithm', () => {
         this.ufq.union(p, q)
       })
 
-      expect(this.ufq._id).toEqual(expectedIds)
+      expect(this.ufq.id).toEqual(expectedIds)
     })
   })
 })
