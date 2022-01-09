@@ -90,4 +90,15 @@
 
 ## 1.5 Case Study: Union-Find
 
-> TODO
+**Abstract Data Types:**
+
+- [x] [UnionFind (quick-find)](/js/lib/union-find/union-find.js)
+- [ ] UnionFindQuick (quick-union)
+- [ ] UnionFindWeighted (weighted-quick-union)
+- [ ] [UnionFindRank](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/UF.java.html)
+
+**Clients:**
+
+- [x] [UnionFind](/bin/UnionFind)
+- [ ] UnionFindQuick
+- [ ] UnionFindWeighted

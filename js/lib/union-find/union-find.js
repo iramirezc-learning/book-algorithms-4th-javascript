@@ -1,21 +1,19 @@
 const assert = require('assert')
 
 /**
- * UF
- * @classdesc Union Find - Quick-Find implementation.
- * @see p.221, 222
+ * Union Find (quick-find) implementation.
+ * @see pg.221,222
  */
-class UF {
+class UnionFind {
   constructor(n) {
     assert(typeof n === 'number', 'n should be a number')
 
-    // access to component id (site indexed)
-    this._id = []
-    // number of components
-    this._count = parseInt(n, 10)
+    this.id = [] // access to component id (site indexed)
+    this._count = n // number of components
+
     // initialize component id array
-    for (let i = 0; i < this._count; i++) {
-      this._id[i] = i
+    for (let i = 0; i < n; i++) {
+      this.id[i] = i
     }
 
     Object.seal(this)
@@ -30,8 +28,8 @@ class UF {
 
   /**
    * Returns `true` if `p` and `q` are in the same component.
-   * @param {number} p Site 1
-   * @param {number} q Site 2
+   * @param {number} p Site 1.
+   * @param {number} q Site 2.
    */
   connected(p, q) {
     assert(typeof p === 'number', 'p should be a number')
@@ -41,19 +39,19 @@ class UF {
   }
 
   /**
-   * Returns the component identifier for `p` (0 to n-1)
-   * @param {number} p Site
+   * Returns the component identifier for `p` (0 to n-1).
+   * @param {number} p Site.
    */
   find(p) {
     assert(typeof p === 'number', 'p should be a number')
 
-    return this._id[p]
+    return this.id[p]
   }
 
   /**
    * Adds connection between `p` and `q`.
-   * @param {number} p Site 1
-   * @param {number} q Site 2
+   * @param {number} p Site 1.
+   * @param {number} q Site 2.
    */
   union(p, q) {
     assert(typeof p === 'number', 'p should be a number')
@@ -65,10 +63,10 @@ class UF {
     // nothing to do if already connected (same component id)
     if (pId === qId) return
 
-    // change the componentId from _id[p] to _id[q]
-    for (let i = 0; i < this._id.length; i++) {
-      if (this._id[i] === pId) {
-        this._id[i] = qId
+    // change the componentId from id[p] to id[q]
+    for (let i = 0; i < this.id.length; i++) {
+      if (this.id[i] === pId) {
+        this.id[i] = qId
       }
     }
 
@@ -76,4 +74,4 @@ class UF {
   }
 }
 
-module.exports = UF
+module.exports = UnionFind

@@ -1,17 +1,18 @@
-const { StdIn, StdOut } = require('../../libs')
-const UF = require('./union-find')
+#!/usr/bin/env node
+const reader = require('readline').createInterface({ input: process.stdin })
+const { UnionFind } = require('../js/lib')
 
 /**
- * UFClient
- * @classdesc Union-Find Test client.
- * @see p. 221
+ * Union-Find test client.
+ * @see p.221
  */
-class UFClient {
+class UnionFindClient {
   /**
    * Solves dynamic connectivity problem on StdIn.
+   *
    * @example <caption>Tiny UF</caption>
    * ```sh
-   * $ ./client UFClient < algs4-data/tinyUF.txt
+   * $ ./UnionFind < data/tinyUF.txt
    * 4 3
    * 3 8
    * 6 5
@@ -22,9 +23,10 @@ class UFClient {
    * 6 1
    * 2 components
    * ```
+   *
    * @example <caption>Medium UF</caption>
    * ```sh
-   * $ ./client UFClient < algs4-data/mediumUF.txt
+   * $ ./UnionFind < data/mediumUF.txt
    * 528 503
    * 548 523
    * 389 414
@@ -33,28 +35,27 @@ class UFClient {
    * ...
    * 3 components
    * ```
+   *
    * @example <caption>Large UF</caption>
    * ```sh
-   * $ ./client UFClient < algs4-data/largeUF.txt
+   * $ ./UnionFind < data/largeUF.txt
    * 786321 134521
    * 696834 98245
    * 135991 549478
    * 44723 265931
    * 698410 385074
    * ...
-   * ??? components
+   * ??? components # takes too much time
    * ```
    */
-  static main() {
-    let n
+  static run() {
     let uf
 
-    StdIn.read()
+    reader
       .on('line', (line) => {
-        if (!n) {
-          // read firs line
-          n = StdIn.readInt(line)
-          uf = new UF(n)
+        if (!uf) {
+          // read first line to initialize Union-Find client
+          uf = new UnionFind(parseInt(line, 10))
         } else {
           const [p, q] = line.split(' ').map((n) => parseInt(n, 10))
 
@@ -62,14 +63,22 @@ class UFClient {
             // do nothing
           } else {
             uf.union(p, q)
-            StdOut.println(`${p} ${q}`)
+            // NOTE: logging to console is expensive
+            console.log(`${p} ${q}`)
           }
         }
       })
       .on('close', () => {
-        StdOut.println(`${uf.count()} components`)
+        console.log(`${uf.count()} components`)
       })
+  }
+
+  /**
+   * Main execution.
+   */
+  static main() {
+    this.run()
   }
 }
 
-module.exports = { UFClient }
+UnionFindClient.main()
