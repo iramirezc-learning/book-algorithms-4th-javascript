@@ -19,5 +19,6 @@ module.exports = {
   Transaction: require('./transaction/transaction'),
   TwoSumFast: require('./two-sum/two-sum-fast'),
   UnionFind: require('./union-find/union-find'),
-  UnionFindQuick: require('./union-find/union-find-quick')
+  UnionFindQuick: require('./union-find/union-find-quick'),
+  UnionFindWeighted: require('./union-find/union-find-weighted')
 }

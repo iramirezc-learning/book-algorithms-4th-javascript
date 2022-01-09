@@ -1,6 +1,6 @@
-const WeightedQuickUnionUF = require('./union-find-weighted')
+const UnionFindWeighted = require('./union-find-weighted')
 
-describe('Unit Tests: Union Find Weighted Algorithm', () => {
+describe('UnionFindWeighted', () => {
   beforeEach(() => {
     this.sites = 10
     this.pairs = [
@@ -16,44 +16,44 @@ describe('Unit Tests: Union Find Weighted Algorithm', () => {
       [1, 0],
       [6, 7]
     ]
-    this.wuf = new WeightedQuickUnionUF(this.sites)
+    this.wuf = new UnionFindWeighted(this.sites)
   })
 
-  describe('when initialized', () => {
-    it('should have a prop `_id` which is an array initialized with different components', () => {
-      const expectedIds = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  it('should have a prop `id` which is an array initialized with different components', () => {
+    const expectedIds = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-      expect(this.wuf._id).toEqual(expectedIds)
-    })
-
-    it('should have a prop `_size` which is an array initialized to 1', () => {
-      const expectedSizes = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-
-      expect(this.wuf._size).toEqual(expectedSizes)
-    })
-
-    it('should have a property `_count` equal to the number of sites', () => {
-      expect(this.wuf._count).toBe(this.sites)
-    })
-
-    it('should not be extensible', () => {
-      const expectedProps = ['_id', '_size', '_count']
-
-      this.wuf.newProp = 'hello'
-
-      const actualProps = Object.getOwnPropertyNames(this.wuf)
-      expect(actualProps).toEqual(expectedProps)
-      expect(this.wuf.newProp).toBeUndefined()
-    })
+    expect(this.wuf.id).toEqual(expectedIds)
   })
 
-  describe('count method', () => {
+  it('should have a prop `size` which is an array initialized to 1', () => {
+    const expectedSizes = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+    expect(this.wuf.size).toEqual(expectedSizes)
+  })
+
+  it('should have a property `_count` equal to the number of sites', () => {
+    expect(this.wuf._count).toBe(this.sites)
+  })
+
+  it('should not be extensible', () => {
+    const expectedProps = ['id', 'size', '_count']
+
+    // @ts-ignore
+    this.wuf.newProp = 'hello'
+
+    const actualProps = Object.getOwnPropertyNames(this.wuf)
+    expect(actualProps).toEqual(expectedProps)
+    // @ts-ignore
+    expect(this.wuf.newProp).toBeUndefined()
+  })
+
+  describe('.count()', () => {
     it('should return the count to be the initial components count', () => {
       expect(this.wuf.count()).toBe(this.sites)
     })
   })
 
-  describe('find method', () => {
+  describe('.find()', () => {
     it('should return the same component id as the site index when initialized', () => {
       const sites = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -65,17 +65,17 @@ describe('Unit Tests: Union Find Weighted Algorithm', () => {
     it('should return the new component id if changed for a site', () => {
       const siteIndex = 0
       const newComponentId = 5
-      this.wuf._id[siteIndex] = newComponentId // change the componentId for site 0
+      this.wuf.id[siteIndex] = newComponentId // change the componentId for site 0
 
       expect(this.wuf.find(siteIndex)).toBe(newComponentId)
     })
   })
 
-  describe('connected method', () => {
+  describe('.connected()', () => {
     it('should return true if `p` and `q` have the same component id', () => {
       const p = 0 // first site
       const q = 9 // last site
-      this.wuf._id[0] = 9 // force site with index 0 to have the same component id as site with index 9
+      this.wuf.id[0] = 9 // force site with index 0 to have the same component id as site with index 9
 
       expect(this.wuf.connected(p, q)).toBeTrue()
     })
@@ -88,7 +88,7 @@ describe('Unit Tests: Union Find Weighted Algorithm', () => {
     })
   })
 
-  describe('union method', () => {
+  describe('.union()', () => {
     it('should connect two sites by assigning them the same component id', () => {
       const p = 0 // first site
       const q = 9 // last site
@@ -96,7 +96,7 @@ describe('Unit Tests: Union Find Weighted Algorithm', () => {
 
       this.wuf.union(p, q)
 
-      expect(this.wuf._id).toEqual(expectedIds)
+      expect(this.wuf.id).toEqual(expectedIds)
     })
 
     it('should decrement the count of components by 1', () => {
@@ -116,7 +116,7 @@ describe('Unit Tests: Union Find Weighted Algorithm', () => {
       this.wuf.union(p, q)
       this.wuf.union(q, p)
 
-      expect(this.wuf._id).toEqual(expectedIds)
+      expect(this.wuf.id).toEqual(expectedIds)
       expect(this.wuf.count()).toBe(expectedCount)
     })
 
@@ -138,7 +138,7 @@ describe('Unit Tests: Union Find Weighted Algorithm', () => {
         this.wuf.union(p, q)
       })
 
-      expect(this.wuf._id).toEqual(expectedIds)
+      expect(this.wuf.id).toEqual(expectedIds)
     })
 
     it('should increment the size for each index', () => {
@@ -149,7 +149,7 @@ describe('Unit Tests: Union Find Weighted Algorithm', () => {
         this.wuf.union(p, q)
       })
 
-      expect(this.wuf._size).toEqual(expectedSizes)
+      expect(this.wuf.size).toEqual(expectedSizes)
     })
   })
 })

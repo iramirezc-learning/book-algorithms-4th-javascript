@@ -6,11 +6,6 @@ This is the extracted list from the book site [Java Algorithms & Clients](https:
 
 Every algorithm or ADT has a link pointing to the **authors** Java implementation and **my** JavaScript implementation (if any).
 
-### Chapter 1. Fundamentals
-
-- WeightedQuickUnionUF | [js](/src/algorithms/union-find-weighted/union-find-weighted.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/WeightedQuickUnionUF.java.html) |
-- UF | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/UF.java.html) |
-
 ### Chapter 2. Sorting
 
 - Insertion | [js](/src/algorithms/insertion-sort/insertion-sort.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Insertion.java.html) |

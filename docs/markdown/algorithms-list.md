@@ -2,12 +2,6 @@
 
 ## List of Algorithms, ADTs and Clients implementations in JS
 
-### Chapter 1 - Fundamentals
-#### Section 1.5 - Case Study: Union-Find
-
-- [QuickUnionWeighted](/src/algorithms/union-find-weighted/union-find-weighted.js)
-- [QuickUnionWeighted Client](/src/algorithms/union-find-weighted/union-find-weighted.client.js)
-
 ### Chapter 2 - Sorting
 
 #### Section 2.1 - Elementary Sorts

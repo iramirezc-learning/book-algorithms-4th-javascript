@@ -94,11 +94,11 @@
 
 - [x] [UnionFind (quick-find)](/js/lib/union-find/union-find.js)
 - [x] [UnionFindQuick (quick-union)](/js/lib/union-find/union-find-quick.js)
-- [ ] UnionFindWeighted (weighted-quick-union)
+- [x] [UnionFindWeighted (weighted-quick-union)](/js/lib/union-find/union-find-weighted.js)
 - [ ] [UnionFindRank](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/UF.java.html)
 
 **Clients:**
 
 - [x] [UnionFind](/bin/UnionFind)
 - [x] [UnionFindQuick](/bin/UnionFindQuick)
-- [ ] UnionFindWeighted
+- [x] [UnionFindWeighted](/bin/UnionFindWeighted)

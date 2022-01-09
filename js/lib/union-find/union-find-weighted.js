@@ -1,24 +1,21 @@
 const assert = require('assert')
 
 /**
- * WeightedQuickUnionUF
- * @classdesc Union Find - Weighted-Quick-Find implementation.
- * @see p.221, 224, 228
+ * Union Find (weighted-quick-union) implementation.
+ * @see pg.221,224,228
  */
-class WeightedQuickUnionUF {
+class UnionFindWeighted {
   constructor(n) {
     assert(typeof n === 'number', 'n should be a number')
 
-    // access to component id (site indexed)
-    this._id = []
-    // size of component roots (site indexed)
-    this._size = []
-    // number of components
-    this._count = parseInt(n, 10)
+    this.id = [] // access to component id (site indexed)
+    this.size = [] // size of component roots (site indexed)
+    this._count = n // number of components
+
     // initialize component id array
     for (let i = 0; i < this._count; i++) {
-      this._id[i] = i
-      this._size[i] = 1
+      this.id[i] = i
+      this.size[i] = 1
     }
 
     Object.seal(this)
@@ -33,8 +30,8 @@ class WeightedQuickUnionUF {
 
   /**
    * Returns `true` if `p` and `q` are in the same component.
-   * @param {number} p Site 1
-   * @param {number} q Site 2
+   * @param {number} p Site 1.
+   * @param {number} q Site 2.
    */
   connected(p, q) {
     assert(typeof p === 'number', 'p should be a number')
@@ -44,14 +41,14 @@ class WeightedQuickUnionUF {
   }
 
   /**
-   * Returns the component identifier for `p` (0 to n-1)
-   * @param {number} p Site
+   * Returns the component identifier for `p` (0 to n-1).
+   * @param {number} p Site.
    */
   find(p) {
     assert(typeof p === 'number', 'p should be a number')
 
-    while (p !== this._id[p]) {
-      p = this._id[p]
+    while (p !== this.id[p]) {
+      p = this.id[p]
     }
 
     return p
@@ -59,8 +56,8 @@ class WeightedQuickUnionUF {
 
   /**
    * Adds connection between `p` and `q`.
-   * @param {number} p Site 1
-   * @param {number} q Site 2
+   * @param {number} p Site 1.
+   * @param {number} q Site 2.
    */
   union(p, q) {
     assert(typeof p === 'number', 'p should be a number')
@@ -73,16 +70,16 @@ class WeightedQuickUnionUF {
     if (pId === qId) return
 
     // make smaller root point to larger one
-    if (this._size[pId] < this._size[qId]) {
-      this._id[pId] = qId
-      this._size[qId] += this._size[pId]
+    if (this.size[pId] < this.size[qId]) {
+      this.id[pId] = qId
+      this.size[qId] += this.size[pId]
     } else {
-      this._id[qId] = pId
-      this._size[pId] += this._size[qId]
+      this.id[qId] = pId
+      this.size[pId] += this.size[qId]
     }
 
     this._count--
   }
 }
 
-module.exports = WeightedQuickUnionUF
+module.exports = UnionFindWeighted
