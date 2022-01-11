@@ -11,11 +11,11 @@
   "recurseDepth": 10,
   "source": {
     "include": [
-      "./src"
+      "./js/lib"
     ],
     "exclude": [],
     "includePattern": ".+\\.js(doc|x)?$",
-    "excludePattern": "(^|\\/|\\\\)_|.+\\.spec\\.js$"
+    "excludePattern": "(^|\\/|\\\\)_|.+\\.test\\.js$"
   },
   "sourceType": "module",
   "opts": {
@@ -37,11 +37,6 @@
     "monospaceLinks": false,
     "default": {
       "outputSourceFiles": true,
-      "staticFiles": {
-        "include": [
-          "./static"
-        ]
-      },
       "includeDate": false,
       "useLongnameInNav": false
     },
@@ -49,7 +44,7 @@
     "includeDate": false,
     "navType": "vertical",
     "inverseNav": false,
-    "outputSourceFiles": true,
+    "outputSourceFiles": false,
     "linenums": true,
     "sort": true
   }

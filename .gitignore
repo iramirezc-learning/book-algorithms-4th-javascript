@@ -1,7 +1,3 @@
-# docs output
-docs/html/*
-!docs/html/.gitkeep
-
 # bin folder output data
 bin/*.txt
 # symlink for books data folder
