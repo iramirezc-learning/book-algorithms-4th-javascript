@@ -20,4 +20,4 @@
 
 :bar_chart: **Drawing**
 
-![exercise x.x.x preview](/static/img/octocat.png "Octocat")
+![exercise x.x.x preview](/path/to/image.png "Octocat")

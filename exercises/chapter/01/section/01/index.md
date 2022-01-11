@@ -699,7 +699,7 @@ $ node ex-1.1.30.js 20
 
 :bar_chart: **Drawing**
 
-![exercise 1.1.31 preview](/static/img/1.1.31.png "Random Connections")
+![exercise 1.1.31 preview](/exercises/img/1.1.31.png "Random Connections")
 
 ### Exercise 1.1.32
 
@@ -707,7 +707,7 @@ $ node ex-1.1.30.js 20
 
 :bar_chart: **Drawing**
 
-![exercise 1.1.32 preview](/static/img/1.1.32.png "Histogram")
+![exercise 1.1.32 preview](/exercises/img/1.1.32.png "Histogram")
 
 ### [Exercise 1.1.33](./ex-1.1.33.js)
 
