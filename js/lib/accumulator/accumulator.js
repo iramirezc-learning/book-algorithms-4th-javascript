@@ -1,16 +1,27 @@
 /**
- * An abstract data type for accumulation data values.
+ * An abstract data type for accumulating data values.
  * @see p.93
  * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Accumulator.java.html}
  */
 class Accumulator {
   constructor() {
-    this.sum = 0
+    /**
+     * The count of the values.
+     * @type {number}
+     */
     this.n = 0
+
+    /**
+     * The sum of the values.
+     * @type {number}
+     */
+    this.sum = 0
   }
 
   /**
-   * @param {number} value Number to add
+   * Adds a new value to the accumulator.
+   * @param {number} value Number to add.
+   * @returns {void}
    */
   addDataValue(value) {
     this.n++
@@ -19,14 +30,14 @@ class Accumulator {
 
   /**
    * Returns the mean of the values accumulated.
-   * @returns {number} The computed mean
+   * @returns {number} The computed mean.
    */
   mean() {
     return this.sum / this.n
   }
 
   /**
-   * Formats accumulator as string.
+   * Formats the accumulator as a string.
    * @returns {string}
    * @example
    * // Mean (3 values): 0.12345

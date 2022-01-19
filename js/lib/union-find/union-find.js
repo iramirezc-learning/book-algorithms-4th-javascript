@@ -8,7 +8,16 @@ class UnionFind {
   constructor(n) {
     assert(typeof n === 'number', 'n should be a number')
 
+    /**
+     * Array of component ids.
+     * @type {Array<number>}
+     */
     this.id = [] // access to component id (site indexed)
+
+    /**
+     * The total number of components.
+     * @type {number}
+     */
     this._count = n // number of components
 
     // initialize component id array
@@ -21,6 +30,7 @@ class UnionFind {
 
   /**
    * Returns the total number of components.
+   * @returns {number}
    */
   count() {
     return this._count
@@ -30,6 +40,7 @@ class UnionFind {
    * Returns `true` if `p` and `q` are in the same component.
    * @param {number} p Site 1.
    * @param {number} q Site 2.
+   * @returns {boolean}
    */
   connected(p, q) {
     assert(typeof p === 'number', 'p should be a number')
@@ -41,6 +52,7 @@ class UnionFind {
   /**
    * Returns the component identifier for `p` (0 to n-1).
    * @param {number} p Site.
+   * @returns {number}
    */
   find(p) {
     assert(typeof p === 'number', 'p should be a number')
@@ -52,6 +64,7 @@ class UnionFind {
    * Adds connection between `p` and `q`.
    * @param {number} p Site 1.
    * @param {number} q Site 2.
+   * @returns {void}
    */
   union(p, q) {
     assert(typeof p === 'number', 'p should be a number')

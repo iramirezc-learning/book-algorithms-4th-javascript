@@ -33,7 +33,7 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="Accumulator.html">Accumulator</a></li><li><a href="Bag.html">Bag</a></li><li><a href="BinarySearch.html">BinarySearch</a></li><li><a href="BinarySearchRecursive.html">BinarySearchRecursive</a></li><li><a href="Counter.html">Counter</a></li><li><a href="DateBasic.html">DateBasic</a></li><li><a href="DateSmall.html">DateSmall</a></li><li><a href="DijkstraTwoStack.html">DijkstraTwoStack</a></li><li><a href="Euclidean.html">Euclidean</a></li><li><a href="LinearSearch.html">LinearSearch</a></li><li><a href="Node.html">Node</a></li><li><a href="NodeIterator.html">NodeIterator</a></li><li><a href="Queue.html">Queue</a></li><li><a href="ReversedArrayIterator.html">ReversedArrayIterator</a></li><li><a href="Stack.html">Stack</a></li><li><a href="StackFixedCapacity.html">StackFixedCapacity</a></li><li><a href="StackResizableArray.html">StackResizableArray</a></li><li><a href="StopWatch.html">StopWatch</a></li><li><a href="ThreeSum.html">ThreeSum</a></li><li><a href="ThreeSumFast.html">ThreeSumFast</a></li><li><a href="Transaction.html">Transaction</a></li><li><a href="TwoSumFast.html">TwoSumFast</a></li><li><a href="UnionFind.html">UnionFind</a></li><li><a href="UnionFindQuick.html">UnionFindQuick</a></li><li><a href="UnionFindWeighted.html">UnionFindWeighted</a></li>
+					<li><a href="Accumulator.html">Accumulator</a></li><li><a href="Bag.html">Bag</a></li><li><a href="BinarySearchRecursive.html">BinarySearchRecursive</a></li><li><a href="BinarySearch.html">BinarySearch</a></li><li><a href="Counter.html">Counter</a></li><li><a href="DateBasic.html">DateBasic</a></li><li><a href="DateSmall.html">DateSmall</a></li><li><a href="DijkstraTwoStack.html">DijkstraTwoStack</a></li><li><a href="Euclidean.html">Euclidean</a></li><li><a href="LinearSearch.html">LinearSearch</a></li><li><a href="Queue.html">Queue</a></li><li><a href="StackFixedCapacity.html">StackFixedCapacity</a></li><li><a href="StackResizableArray.html">StackResizableArray</a></li><li><a href="Stack.html">Stack</a></li><li><a href="StopWatch.html">StopWatch</a></li><li><a href="ThreeSumFast.html">ThreeSumFast</a></li><li><a href="ThreeSum.html">ThreeSum</a></li><li><a href="Transaction.html">Transaction</a></li><li><a href="TwoSumFast.html">TwoSumFast</a></li><li><a href="UnionFindQuick.html">UnionFindQuick</a></li><li><a href="UnionFindWeighted.html">UnionFindWeighted</a></li><li><a href="UnionFind.html">UnionFind</a></li>
 				</ul>
 			</li>
 			
@@ -116,13 +116,6 @@
     
 
     
-    <dt class="implements">Implements:</dt>
-    <dd class="implements"><ul>
-        
-            <li><a href="ReversedArrayIterator.html">ReversedArrayIterator</a></li>
-        
-    </ul></dd>
-    
 
     
 
@@ -192,14 +185,14 @@
             
 <hr>
 <dt class="name" id="a">
-    <h4 id="a"><span class="type-signature">&lt;private> </span>a<span class="type-signature"> :Array.&lt;*></span></h4>
+    <h4 id="a"><span class="type-signature"></span>a<span class="type-signature"> :Array.&lt;*></span></h4>
 
     
 </dt>
 <dd>
     
     <div class="description">
-        <p>A copy of the array.</p>
+        <p>The array that stores the items in the stack.</p>
     </div>
     
 
@@ -231,12 +224,76 @@
     
 
     
-    <dt class="implements">Implements:</dt>
-    <dd class="implements"><ul>
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
         
-            <li><a href="ReversedArrayIterator.html#a">ReversedArrayIterator#a</a></li>
-        
-    </ul></dd>
+            
+<hr>
+<dt class="name" id="n">
+    <h4 id="n"><span class="type-signature"></span>n<span class="type-signature"> :number</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The total items in the stack.</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">number</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
     
 
     
@@ -284,7 +341,7 @@
 
     
     <div class="description">
-        <p>Returns if the Stack is empty.</p>
+        <p>Returns if the stack is empty.</p>
     </div>
     
 
@@ -378,7 +435,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="pop"><span class="type-signature"></span>pop()</h4>
+    <h4 class="name" id="size"><span class="type-signature"></span>size()</h4>
     
     
 </dt>
@@ -386,7 +443,7 @@
 
     
     <div class="description">
-        <p>Removes and returns the last item inserted in the Stack.</p>
+        <p>Returns the number of the elements in the stack.</p>
     </div>
     
 
@@ -452,7 +509,7 @@
     
             
 <div class="param-desc">
-    <p>The item at the top of the Stack.</p>
+    <p>The stack's size.</p>
 </div>
 
 
@@ -463,7 +520,7 @@
     </dt>
     <dd>
         
-<span class="param-type">*</span>
+<span class="param-type">number</span>
 
 
 
@@ -472,134 +529,6 @@
 
 
         
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="push"><span class="type-signature"></span>push(item)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Inserts an item to the Stack.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>item</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">*</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The item to be stored.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
 
     
 </dd>
@@ -728,6 +657,26 @@
     
 
     
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">void</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
 
     
 </dd>
@@ -736,7 +685,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="size"><span class="type-signature"></span>size()</h4>
+    <h4 class="name" id="push"><span class="type-signature"></span>push(item)</h4>
     
     
 </dt>
@@ -744,7 +693,155 @@
 
     
     <div class="description">
-        <p>Returns the number of the elements in the stack.</p>
+        <p>Inserts an item to the stack.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>item</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The item to be stored.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">void</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="pop"><span class="type-signature"></span>pop()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Removes and returns the last item inserted in the stack.</p>
     </div>
     
 
@@ -810,7 +907,7 @@
     
             
 <div class="param-desc">
-    <p>Stack's size.</p>
+    <p>The item at the top of the stack.</p>
 </div>
 
 
@@ -821,7 +918,7 @@
     </dt>
     <dd>
         
-<span class="param-type">number</span>
+<span class="param-type">*</span>
 
 
 

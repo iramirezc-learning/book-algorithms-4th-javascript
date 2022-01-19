@@ -2,20 +2,28 @@ const assert = require('assert')
 
 /**
  * A generic Resizable Array Stack.
- * @implements {ReversedArrayIterator}
  * @see p.141
  * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/ResizingArrayStack.java.html}
  */
 class StackResizableArray {
   constructor() {
+    /**
+     * The array that stores the items in the stack.
+     * @type {Array<*>}
+     */
     this.a = new Array(1) // it should start with length of 1
+
+    /**
+     * The total items in the stack.
+     * @type {number}
+     */
     this.n = 0
 
     Object.seal(this)
   }
 
   /**
-   * Returns if the Stack is empty.
+   * Returns if the stack is empty.
    * @returns {boolean} Whether the stack is empty or not.
    */
   isEmpty() {
@@ -24,7 +32,7 @@ class StackResizableArray {
 
   /**
    * Returns the number of the elements in the stack.
-   * @returns {number} Stack's size.
+   * @returns {number} The stack's size.
    */
   size() {
     return this.n
@@ -33,6 +41,7 @@ class StackResizableArray {
   /**
    * Resizes the internal array `a` copying the elements from [0, n).
    * @param {number} max New size for the internal array in the stack.
+   * @returns {void}
    */
   resize(max) {
     assert(max, `'max' is required. Given: ${max}`)
@@ -47,8 +56,9 @@ class StackResizableArray {
   }
 
   /**
-   * Inserts an item to the Stack.
+   * Inserts an item to the stack.
    * @param {*} item The item to be stored.
+   * @returns {void}
    */
   push(item) {
     if (this.n === this.a.length) {
@@ -59,8 +69,8 @@ class StackResizableArray {
   }
 
   /**
-   * Removes and returns the last item inserted in the Stack.
-   * @returns {*} The item at the top of the Stack.
+   * Removes and returns the last item inserted in the stack.
+   * @returns {*} The item at the top of the stack.
    */
   pop() {
     if (this.isEmpty()) {
@@ -89,6 +99,7 @@ class StackResizableArray {
 
 /**
  * Iterable interface for Array elements in reversed order.
+ * @ignore
  * @see p.141
  * @see [Symbol.iterator]{@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator}
  */

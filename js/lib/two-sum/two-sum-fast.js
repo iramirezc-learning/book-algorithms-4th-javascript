@@ -10,8 +10,9 @@ const {
  */
 class TwoSumFast {
   /**
-   * Returns the count of non duplicate pairs of numbers in an array that sum 0.
+   * Returns the count of non-duplicate pairs of numbers in an array that sum 0.
    * @param {Array<number>} a The array of integers.
+   * @returns {number}
    */
   static count(a) {
     a.sort(sortNumbersByAscendingOrder) // sort for binary search

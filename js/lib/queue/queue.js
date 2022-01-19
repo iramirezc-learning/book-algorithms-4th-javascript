@@ -1,5 +1,102 @@
 /**
- * Generic Node element for Queue.
+ * Generic Queue implementation based on linked-lists.
+ * @see pg.151,155
+ * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Queue.java.html}
+ */
+class Queue {
+  constructor() {
+    /**
+     * The count of items in the queue.
+     * @type {number}
+     */
+    this.n = 0
+
+    /**
+     * The pointer to the first element in the queue.
+     * @type {Node}
+     */
+    this.first = null
+
+    /**
+     * The pointer to the last element in the queue.
+     * @type {Node}
+     */
+    this.last = null
+
+    Object.seal(this)
+  }
+
+  /**
+   * Returns if the queue is empty.
+   * @returns {boolean}
+   */
+  isEmpty() {
+    return this.first === null
+  }
+
+  /**
+   * Returns the queue's size.
+   * @returns {number}
+   */
+  size() {
+    return this.n
+  }
+
+  /**
+   * Inserts an item to the end of the queue.
+   * @param {*} item The item to be inserted.
+   * @returns {void}
+   */
+  enqueue(item) {
+    const oldLast = this.last
+
+    this.last = new Node()
+    this.last.item = item
+    this.last.next = null
+
+    if (this.isEmpty()) {
+      this.first = this.last
+    } else {
+      oldLast.next = this.last
+    }
+
+    this.n++
+  }
+
+  /**
+   * Removes and returns the first item
+   * inserted to the queue.
+   * @returns {*} The value of the item.
+   */
+  dequeue() {
+    if (this.isEmpty()) {
+      throw new ReferenceError('Queue is empty.')
+    }
+
+    const removedItem = this.first.item
+
+    this.first = this.first.next
+    this.n--
+
+    if (this.isEmpty()) {
+      this.last = null
+    }
+
+    return removedItem
+  }
+
+  /**
+   * Returns an NodeIterator to traverse the queue.
+   * @returns {NodeIterator}
+   */
+  [Symbol.iterator]() {
+    return new NodeIterator(this.first)
+  }
+}
+
+/**
+ * Generic Node element for Queues.
+ * @ignore
  * @see pg.142,155
  */
 class Node {
@@ -11,14 +108,12 @@ class Node {
   constructor() {
     /**
      * The node's holding item.
-     * @private
      * @type {*}
      */
     this.item = null
 
     /**
      * Pointer to the next node in the Queue.
-     * @private
      * @type {Node}
      */
     this.next = null
@@ -30,6 +125,7 @@ class Node {
 
 /**
  * Iterator for Node elements.
+ * @ignore
  * @see p.155
  * @see [Symbol.iterator]{@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator}
  */
@@ -80,85 +176,6 @@ class NodeIterator {
     }
 
     return { done: true }
-  }
-}
-
-/**
- * Generic Queue implementation based on linked-lists.
- * @implements {NodeIterator}
- * @see pg.151,155
- * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Queue.java.html}
- */
-class Queue {
-  constructor() {
-    this.n = 0
-    this.first = null
-    this.last = null
-
-    Object.seal(this)
-  }
-
-  /**
-   * Returns if the Queue is empty.
-   */
-  isEmpty() {
-    return this.first === null
-  }
-
-  /**
-   * Returns the Queue's size.
-   */
-  size() {
-    return this.n
-  }
-
-  /**
-   * Inserts an item to the end of the Queue.
-   * @param {*} item The item to be stored.
-   */
-  enqueue(item) {
-    const oldLast = this.last
-
-    this.last = new Node()
-    this.last.item = item
-    this.last.next = null
-
-    if (this.isEmpty()) {
-      this.first = this.last
-    } else {
-      oldLast.next = this.last
-    }
-
-    this.n++
-  }
-
-  /**
-   * Removes and returns the first item
-   * inserted to the Queue.
-   */
-  dequeue() {
-    if (this.isEmpty()) {
-      throw new ReferenceError('Queue is empty.')
-    }
-
-    const removedItem = this.first.item
-
-    this.first = this.first.next
-    this.n--
-
-    if (this.isEmpty()) {
-      this.last = null
-    }
-
-    return removedItem
-  }
-
-  /**
-   * Returns an NodeIterator to traverse the Queue.
-   * @returns {NodeIterator}
-   */
-  [Symbol.iterator]() {
-    return new NodeIterator(this.first)
   }
 }
 

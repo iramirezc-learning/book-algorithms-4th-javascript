@@ -5,15 +5,25 @@
  */
 class Counter {
   /**
-   * @param {string} id
+   * @param {string} id The name for the counter.
    */
   constructor(id) {
+    /**
+     * The counter's identifier (name).
+     * @type {string}
+     */
     this.id = id
+
+    /**
+     * The total count.
+     * @type {number}
+     */
     this.count = 0
   }
 
   /**
-   * Increments the internal count
+   * Increments the count.
+   * @returns {void}
    */
   increment() {
     this.count++
@@ -21,15 +31,15 @@ class Counter {
 
   /**
    * Returns the total count.
-   * @returns {number} The total count
+   * @returns {number} The total count.
    */
   tally() {
     return this.count
   }
 
   /**
-   * Returns the tally and the Counter's id as String.
-   * @returns {string} The tally + id as string.
+   * Returns the tally (the count) and the counter's id as string.
+   * @returns {string} The tally and the counter's id as string.
    * @example
    * // 3 heads
    */

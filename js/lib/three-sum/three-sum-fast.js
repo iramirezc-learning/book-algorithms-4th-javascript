@@ -12,6 +12,7 @@ class ThreeSumFast {
   /**
    * Returns the count of triplets in an array that sum 0.
    * @param {Array<number>} a The array of integers.
+   * @returns {number}
    */
   static count(a) {
     a.sort(sortNumbersByAscendingOrder)

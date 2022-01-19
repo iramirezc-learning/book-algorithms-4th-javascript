@@ -1,34 +1,45 @@
 /**
  * A generic Fixed Capacity Stack based on arrays of limited size.
- * @implements {ReversedArrayIterator}
  * @see pg.133,135,141
  * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Stack.java.html}
  */
 class StackFixedCapacity {
   constructor(size) {
+    /**
+     * The array that stores the items in the stack.
+     * @type {Array<*>}
+     */
     this.a = new Array(size)
+
+    /**
+     * The total items in the stack.
+     * @type {number}
+     */
     this.n = 0
 
     Object.seal(this)
   }
 
   /**
-   * Returns if the Stack is empty.
+   * Returns if the stack is empty.
+   * @returns {boolean}
    */
   isEmpty() {
     return this.n === 0
   }
 
   /**
-   * Returns the Stacks' size.
+   * Returns the stacks' size.
+   * @returns {number}
    */
   size() {
     return this.n
   }
 
   /**
-   * Inserts an item to the Stack.
-   * @param {*} item The item to be stored.
+   * Inserts an new item in to the stack.
+   * @param {*} item The item to be inserted.
+   * @returns {void}
    */
   push(item) {
     this.a[this.n++] = item
@@ -36,7 +47,8 @@ class StackFixedCapacity {
 
   /**
    * Removes and returns the last inserted
-   * item from the Stack.
+   * item in the stack.
+   * @returns {*} The value of the item removed.
    */
   pop() {
     if (this.isEmpty()) {
@@ -57,6 +69,7 @@ class StackFixedCapacity {
 
 /**
  * Iterable interface for Array elements in reversed order.
+ * @ignore
  * @see p.141
  * @see [Symbol.iterator]{@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator}
  */

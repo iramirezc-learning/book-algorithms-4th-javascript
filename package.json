@@ -5,6 +5,7 @@
   "author": "Isaac Ramirez <iramirezc@live.com.mx>",
   "license": "ISC",
   "scripts": {
+    "predocs": "rm -rf docs/html",
     "docs": "jsdoc -c docs/conf.json --pedantic --verbose -a all",
     "format": "prettier --write \"./**/*.js\"",
     "lint": "eslint \"./**/*.js\" --quiet",

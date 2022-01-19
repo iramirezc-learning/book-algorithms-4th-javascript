@@ -1,5 +1,67 @@
 /**
+ * Generic Bag implementation based on linked-lists.
+ * @see p.155
+ * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Bag.java.html}
+ */
+class Bag {
+  constructor() {
+    /**
+     * The count of items in the bag.
+     * @type {number}
+     */
+    this.n = 0
+
+    /**
+     * The first element in the bag.
+     * @type {Node}
+     */
+    this.first = null
+
+    Object.seal(this)
+  }
+
+  /**
+   * Returns if the bag is empty.
+   * @returns {boolean}
+   */
+  isEmpty() {
+    return this.first === null
+  }
+
+  /**
+   * Returns the bags' size.
+   * @returns {number}
+   */
+  size() {
+    return this.n
+  }
+
+  /**
+   * Inserts an item to the bag.
+   * @param {*} item The item to be inserted.
+   * @returns {void}
+   */
+  add(item) {
+    const oldFirst = this.first
+
+    this.first = new Node()
+    this.first.item = item
+    this.first.next = oldFirst
+    this.n++
+  }
+
+  /**
+   * Returns a NodeIterator to traverse the bag.
+   * @returns {NodeIterator}
+   */
+  [Symbol.iterator]() {
+    return new NodeIterator(this.first)
+  }
+}
+
+/**
  * Generic Node element for Bags.
+ * @ignore
  * @see pg.142,155
  */
 class Node {
@@ -11,14 +73,12 @@ class Node {
   constructor() {
     /**
      * The node's holding item.
-     * @private
      * @type {*}
      */
     this.item = null
 
     /**
      * Pointer to the next node in the Bag.
-     * @private
      * @type {Node}
      */
     this.next = null
@@ -30,6 +90,7 @@ class Node {
 
 /**
  * Iterator for Node elements.
+ * @ignore
  * @see p.155
  * @see [Symbol.iterator]{@link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator}
  */
@@ -80,56 +141,6 @@ class NodeIterator {
     }
 
     return { done: true }
-  }
-}
-
-/**
- * Generic Bag implementation based on linked-lists.
- * @implements {NodeIterator}
- * @see p.155
- * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Bag.java.html}
- */
-class Bag {
-  constructor() {
-    this.n = 0
-    this.first = null
-
-    Object.seal(this)
-  }
-
-  /**
-   * Returns if the Bag is empty.
-   */
-  isEmpty() {
-    return this.first === null
-  }
-
-  /**
-   * Returns the Bags' size.
-   */
-  size() {
-    return this.n
-  }
-
-  /**
-   * Inserts an item to the Bag.
-   * @param {*} item The item to be stored.
-   */
-  add(item) {
-    const oldFirst = this.first
-
-    this.first = new Node()
-    this.first.item = item
-    this.first.next = oldFirst
-    this.n++
-  }
-
-  /**
-   * Returns an NodeIterator to traverse the bag.
-   * @returns {NodeIterator}
-   */
-  [Symbol.iterator]() {
-    return new NodeIterator(this.first)
   }
 }
 

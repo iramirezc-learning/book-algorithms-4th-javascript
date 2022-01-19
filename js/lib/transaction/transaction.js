@@ -20,37 +20,32 @@ class Transaction {
   }
 
   /**
-   * Returns the who owns the transaction
+   * Returns who owns the transaction.
+   * @returns {string}
    */
   who() {
     return this._who
   }
 
   /**
-   * Returns the date of the transaction
+   * Returns the date of the transaction.
+   * @returns {DateBasic}
    */
   when() {
     return this._when
   }
 
   /**
-   * Returns the amount of the transaction
+   * Returns the amount of the transaction.
+   * @returns {number}
    */
   amount() {
     return this._amount
   }
 
   /**
-   * Returns the transaction as string
-   */
-  toString() {
-    return `${this.who()} ${this.when()} ${this.amount()}`
-  }
-
-  /**
-   * Returns if this transaction is equal to
-   * another transaction.
-   * @param {Transaction} target The target Transaction
+   * Returns if this transaction is equal to another transaction.
+   * @param {Transaction} target The target transaction.
    * @returns {boolean}
    */
   equals(target) {
@@ -68,14 +63,24 @@ class Transaction {
    * Compares if this transaction
    * is greater (+1), smaller (-1) or equal (0)
    * to another transaction.
-   * @param {Transaction} target The target Transaction
-   * @returns {number} +1 (is greater), -1 (is smaller), 0 (is equal)
+   * @param {Transaction} target The target transaction.
+   * @returns {number} +1 (if greater), -1 (if smaller), 0 (if equal).
    */
   compareTo(target) {
     if (this.amount() > target.amount()) return +1
     if (this.amount() < target.amount()) return -1
 
     return 0
+  }
+
+  /**
+   * Returns the transaction as string.
+   * @returns {string}
+   * @example
+   * // 'Isaac 9/27/1987 999.99'
+   */
+  toString() {
+    return `${this.who()} ${this.when()} ${this.amount()}`
   }
 }
 

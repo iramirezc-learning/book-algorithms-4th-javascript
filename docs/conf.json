@@ -46,6 +46,6 @@
     "inverseNav": false,
     "outputSourceFiles": false,
     "linenums": true,
-    "sort": true
+    "sort": false
   }
 }
