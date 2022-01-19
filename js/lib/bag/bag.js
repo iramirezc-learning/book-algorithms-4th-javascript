@@ -102,7 +102,6 @@ class NodeIterator {
   constructor(node = null) {
     /**
      * The current node of the iterator.
-     * @private
      * @type {Node}
      */
     this.current = node

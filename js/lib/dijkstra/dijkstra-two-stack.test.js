@@ -51,7 +51,9 @@ describe('DijkstraTwoStack', () => {
 
     describe('with StackFixedCapacity', () => {
       beforeAll(() => {
+        // @ts-ignore
         this.originalStack = DijkstraTwoStack.Stack
+        // @ts-ignore
         DijkstraTwoStack.Stack = StackFixedCapacity
       })
 
@@ -60,6 +62,7 @@ describe('DijkstraTwoStack', () => {
       })
 
       it('should be using the StackFixedCapacity implementation', () => {
+        // @ts-ignore
         expect(DijkstraTwoStack.Stack).toBe(StackFixedCapacity)
       })
 
@@ -75,7 +78,9 @@ describe('DijkstraTwoStack', () => {
 
     describe('with StackResizableArray', () => {
       beforeAll(() => {
+        // @ts-ignore
         this.originalStack = DijkstraTwoStack.Stack
+        // @ts-ignore
         DijkstraTwoStack.Stack = StackResizableArray
       })
 
@@ -84,6 +89,7 @@ describe('DijkstraTwoStack', () => {
       })
 
       it('should be using the StackResizableArray implementation', () => {
+        // @ts-ignore
         expect(DijkstraTwoStack.Stack).toBe(StackResizableArray)
       })
 

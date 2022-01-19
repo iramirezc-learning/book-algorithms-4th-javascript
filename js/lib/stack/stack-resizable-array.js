@@ -112,14 +112,12 @@ class ReversedArrayIterator {
   constructor(array, n) {
     /**
      * The current index position in the array of the iterator.
-     * @private
      * @type {number}
      */
     this.current = n - 1
 
     /**
      * A copy of the array.
-     * @private
      * @type {Array<*>}
      */
     this.a = [...array]

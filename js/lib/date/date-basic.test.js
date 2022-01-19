@@ -59,6 +59,7 @@ describe('DateBasic', () => {
 
   describe('.equals()', () => {
     beforeEach(() => {
+      // @ts-ignore
       this.sourceDate = new DateBasic(9, 27, 1987)
     })
 
@@ -81,6 +82,7 @@ describe('DateBasic', () => {
     it('should return false when objects have different class', () => {
       const targetDate = new Date(1987, 8, 27)
 
+      // @ts-ignore
       const isEqual = this.sourceDate.equals(targetDate)
 
       expect(isEqual).toBe(false)
@@ -137,6 +139,7 @@ describe('DateBasic', () => {
 
   describe('.compareTo()', () => {
     beforeEach(() => {
+      // @ts-ignore
       this.sourceDate = new DateBasic(9, 27, 1987)
     })
 

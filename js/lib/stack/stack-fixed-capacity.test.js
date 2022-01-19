@@ -27,16 +27,19 @@ describe('StackFixedCapacity', () => {
   it('should not be extensible', () => {
     const expectedProps = ['a', 'n']
 
+    // @ts-ignore
     this.stack.newProp = 'hello'
 
     const actualProps = Object.getOwnPropertyNames(this.stack)
     expect(actualProps).toEqual(expectedProps)
+    // @ts-ignore
     expect(this.stack.newProp).toBeUndefined()
   })
 
   describe('.push()', () => {
     describe('when inserting the first item', () => {
       beforeEach(() => {
+        // @ts-ignore
         this.firstItem = Random.uniform(10)
       })
 
@@ -62,8 +65,10 @@ describe('StackFixedCapacity', () => {
 
     describe('when inserting 2 items', () => {
       beforeEach(() => {
+        // @ts-ignore
         const firstItem = Random.uniform(10)
         this.stack.push(firstItem)
+        // @ts-ignore
         this.secondItem = Random.uniform(10)
       })
 
@@ -114,6 +119,7 @@ describe('StackFixedCapacity', () => {
 
     describe('when removing the only item in the stack', () => {
       beforeEach(() => {
+        // @ts-ignore
         this.firstItem = Random.uniform(10)
         this.stack.push(this.firstItem)
       })
@@ -133,10 +139,10 @@ describe('StackFixedCapacity', () => {
 
     describe('when removing the last item in the stack', () => {
       beforeEach(() => {
-        // first item
+        // @ts-ignore
         this.firstItem = Random.uniform(10)
         this.stack.push(this.firstItem)
-        // second item
+        // @ts-ignore
         this.secondItem = Random.uniform(10)
         this.stack.push(this.secondItem)
       })
@@ -226,18 +232,20 @@ describe('StackFixedCapacity', () => {
     it('should not be extensible', () => {
       const expectedProps = ['current', 'a']
 
+      // @ts-ignore
       this.iterator.newProp = null
 
       const actualProps = Object.getOwnPropertyNames(this.iterator)
       expect(actualProps).toEqual(expectedProps)
+      // @ts-ignore
       expect(this.iterator.newProp).toBeUndefined()
     })
 
     describe('.hasNext()', () => {
       it('should return false when it has no items', () => {
-        this.iterator = new ReversedArrayIterator([], 0)
+        const iterator = new ReversedArrayIterator([], 0)
 
-        const result = this.iterator.hasNext()
+        const result = iterator.hasNext()
 
         expect(result).toBeFalse()
       })

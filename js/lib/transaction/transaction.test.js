@@ -77,6 +77,7 @@ describe('Transaction', () => {
 
       const targetTransaction = new OtherTransaction()
 
+      // @ts-ignore
       const isEqual = this.transaction1.equals(targetTransaction)
 
       expect(isEqual).toBe(false)

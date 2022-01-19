@@ -29,16 +29,19 @@ describe('Queue', () => {
   it('should not be extensible', () => {
     const expectedProps = ['n', 'first', 'last']
 
+    // @ts-ignore
     this.queue.newProp = 'hello'
 
     const actualProps = Object.getOwnPropertyNames(this.queue)
     expect(actualProps).toEqual(expectedProps)
+    // @ts-ignore
     expect(this.queue.newProp).toBeUndefined()
   })
 
   describe('.enqueue()', () => {
     describe('when inserting the first item', () => {
       beforeEach(() => {
+        // @ts-ignore
         this.firstItem = Random.uniform(10)
       })
 
@@ -71,7 +74,9 @@ describe('Queue', () => {
       it('should set the first item to be last', () => {
         this.queue.enqueue(this.firstItem)
 
-        expect(this.first).toBe(this.last)
+        expect(this.queue.first).not.toBeNull()
+        expect(this.queue.last).not.toBeNull()
+        expect(this.queue.first).toBe(this.queue.last)
       })
 
       it('should not be empty', () => {
@@ -83,10 +88,10 @@ describe('Queue', () => {
 
     describe('when inserting 2 items', () => {
       beforeEach(() => {
+        // @ts-ignore
         const firstItem = Random.uniform(10)
         this.queue.enqueue(firstItem)
-        this.firstNode = this.queue.first
-        this.oldLastNode = this.queue.last
+        // @ts-ignore
         this.secondItem = Random.uniform(10)
       })
 
@@ -110,9 +115,11 @@ describe('Queue', () => {
       })
 
       it('should set the oldLastNode.next to be the new last', () => {
+        const oldLastNode = this.queue.last
+
         this.queue.enqueue(this.secondItem)
 
-        expect(this.oldLastNode.next).toBe(this.queue.last)
+        expect(oldLastNode.next).toBe(this.queue.last)
       })
     })
 
@@ -160,6 +167,7 @@ describe('Queue', () => {
 
     describe('when removing the only item in the queue', () => {
       beforeEach(() => {
+        // @ts-ignore
         this.firstItem = Random.uniform(10)
         this.queue.enqueue(this.firstItem)
       })
@@ -197,11 +205,11 @@ describe('Queue', () => {
 
     describe('when removing the last item in the queue', () => {
       beforeEach(() => {
-        // first item
+        // @ts-ignore
         this.firstItem = Random.uniform(10)
         this.queue.enqueue(this.firstItem)
         this.firstNode = this.queue.first
-        // second item
+        // @ts-ignore
         this.secondItem = Random.uniform(10)
         this.queue.enqueue(this.secondItem)
         this.secondNode = this.queue.last
@@ -290,10 +298,12 @@ describe('Queue', () => {
     it('should not be extensible', () => {
       const expectedProps = ['item', 'next']
 
+      // @ts-ignore
       this.node.newProp = null
 
       const actualProps = Object.getOwnPropertyNames(this.node)
       expect(actualProps).toEqual(expectedProps)
+      // @ts-ignore
       expect(this.node.newProp).toBeUndefined()
     })
   })
@@ -301,41 +311,43 @@ describe('Queue', () => {
   describe('Queue.NodeIterator', () => {
     const NodeIterator = Queue.NodeIterator
 
-    beforeEach(() => {
-      this.iterator = new NodeIterator()
-    })
-
     it('should have a prop `current` equal to null by default', () => {
-      expect(this.iterator.current).toBeNull()
+      const iterator = new NodeIterator()
+
+      expect(iterator.current).toBeNull()
     })
 
     it('should set `current` to be the node passed to the constructor', () => {
       const node = new Queue.Node()
+      const iterator = new NodeIterator(node)
 
-      this.iterator = new NodeIterator(node)
-
-      expect(this.iterator.current).toBe(node)
+      expect(iterator.current).toBe(node)
     })
 
     it('should not be extensible', () => {
       const expectedProps = ['current']
+      const iterator = new NodeIterator()
 
-      this.iterator.newProp = null
+      // @ts-ignore
+      iterator.newProp = null
 
-      const actualProps = Object.getOwnPropertyNames(this.iterator)
+      const actualProps = Object.getOwnPropertyNames(iterator)
       expect(actualProps).toEqual(expectedProps)
-      expect(this.iterator.newProp).toBeUndefined()
+      // @ts-ignore
+      expect(iterator.newProp).toBeUndefined()
     })
 
     describe('.hasNext()', () => {
       it('should return false when current is null', () => {
-        expect(this.iterator.hasNext()).toBeFalse()
+        const iterator = new NodeIterator()
+
+        expect(iterator.hasNext()).toBeFalse()
       })
 
       it('should return true when there is a node', () => {
-        this.iterator = new NodeIterator(new Queue.Node())
+        const iterator = new NodeIterator(new Queue.Node())
 
-        const result = this.iterator.hasNext()
+        const result = iterator.hasNext()
 
         expect(result).toBeTrue()
       })
@@ -344,10 +356,10 @@ describe('Queue', () => {
         const node = new Queue.Node()
         node.item = 1
         node.next = null
-        this.iterator = new NodeIterator(node)
-        this.iterator.current = this.iterator.current.next
+        const iterator = new NodeIterator(node)
+        iterator.current = iterator.current.next
 
-        const result = this.iterator.hasNext()
+        const result = iterator.hasNext()
 
         expect(result).toBeFalse()
       })
@@ -358,9 +370,9 @@ describe('Queue', () => {
         const node = new Queue.Node()
         node.item = 1
         node.next = null
-        this.iterator = new NodeIterator(node)
+        const iterator = new NodeIterator(node)
 
-        const result = this.iterator.next()
+        const result = iterator.next()
 
         expect(result).toEqual({
           value: node.item,
@@ -375,15 +387,15 @@ describe('Queue', () => {
         node1.next = node2
         node2.item = 2
         node2.next = null
-        this.iterator = new NodeIterator(node1)
+        const iterator = new NodeIterator(node1)
 
-        this.iterator.next()
+        iterator.next()
 
-        expect(this.iterator.current).toBe(node2)
+        expect(iterator.current).toBe(node2)
 
-        this.iterator.next()
+        iterator.next()
 
-        expect(this.iterator.current).toBeNull()
+        expect(iterator.current).toBeNull()
       })
 
       it('should return an object with `done` false when there are no more elements', () => {
@@ -393,12 +405,12 @@ describe('Queue', () => {
         node1.next = node2
         node2.item = 2
         node2.next = null
-        this.iterator = new NodeIterator(node1)
+        const iterator = new NodeIterator(node1)
 
-        this.iterator.next()
-        this.iterator.next()
+        iterator.next()
+        iterator.next()
 
-        expect(this.iterator.next()).toEqual({ done: true })
+        expect(iterator.next()).toEqual({ done: true })
       })
     })
   })
