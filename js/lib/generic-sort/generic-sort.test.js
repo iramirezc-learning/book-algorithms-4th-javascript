@@ -95,7 +95,7 @@ describe('GenericSort', () => {
   describe('.sort()', () => {
     it('should throw an exception as is not implemented', () => {
       expect(() => {
-        GenericSort.sort()
+        GenericSort.sort([])
       }).toThrowError('sort method not implemented.')
     })
   })

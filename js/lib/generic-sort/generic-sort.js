@@ -7,7 +7,7 @@ class GenericSort {
    * Returns whether `a` is less than `b`.
    * @note The book uses a comparator function to compare different objects.
    * I am just going to keep it simple and just compare numbers.
-   * @param {number} a - Number `a`.
+   * @param {number} a Number `a`.
    * @param {number} b Number `b`.
    * @returns {boolean} Returns if `a` is less than `b`.
    */
@@ -56,9 +56,11 @@ class GenericSort {
   /**
    * Should sort the array `a` using the sorting algorithm of your choice.
    * @abstract
+   * @param {Array<number>} a The array of numbers to be sort.
    * @throws {SyntaxError} This function should be implemented by the client.
    */
-  static sort() {
+  /* eslint-disable no-unused-vars */
+  static sort(a) {
     throw new SyntaxError('sort method not implemented.')
   }
 }
