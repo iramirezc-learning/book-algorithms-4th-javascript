@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /**
  * A generic abstract class for sorting algorithms.
  * @abstract
@@ -59,7 +60,6 @@ class GenericSort {
    * @param {Array<number>} a The array of numbers to be sort.
    * @throws {SyntaxError} This function should be implemented by the client.
    */
-  /* eslint-disable no-unused-vars */
   static sort(a) {
     throw new SyntaxError('sort method not implemented.')
   }
