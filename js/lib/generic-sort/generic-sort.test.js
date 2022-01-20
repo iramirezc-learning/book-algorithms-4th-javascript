@@ -78,6 +78,14 @@ describe('GenericSort', () => {
       expect(array.length).toBe(A_MILLION)
       expect(GenericSort.isSorted(array)).toBeFalse()
     })
+
+    it('should work with string letters', () => {
+      const orderedArray = ['A', 'B', 'C']
+      const unorderedArray = ['Z', 'X', 'Y']
+
+      expect(GenericSort.isSorted(orderedArray)).toBe(true)
+      expect(GenericSort.isSorted(unorderedArray)).toBe(false)
+    })
   })
 
   describe('.show()', () => {

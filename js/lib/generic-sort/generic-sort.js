@@ -33,7 +33,7 @@ class GenericSort {
 
   /**
    * Returns if the provided array is sorted.
-   * @param {Array<number>} a The array of values.
+   * @param {Array<*>} a The array of values.
    * @returns {boolean} Whether the array is sorted or not.
    */
   static isSorted(a) {
