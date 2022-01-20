@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Documentation Class: UnionFindQuick</title>
+	<title>Documentation Class: GenericSort</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -65,16 +65,16 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: UnionFindQuick</h1>
+	<h1 class="page-title">Class: GenericSort</h1>
 <section>
 
 <header>
     
         <h2>
-        UnionFindQuick
+        GenericSort
         </h2>
         
-            <div class="class-description"><p>Union Find (quick-union) implementation.</p></div>
+            <div class="class-description"><p>A generic abstract class for sorting algorithms.</p></div>
         
     
 </header>
@@ -86,7 +86,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="UnionFindQuick"><span class="type-signature"></span>new UnionFindQuick()</h4>
+    <h4 class="name" id="GenericSort"><span class="type-signature">&lt;abstract> </span>new GenericSort()</h4>
     
     
 </dt>
@@ -136,13 +136,6 @@
 	
 
 	
-	<dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
-	<dd class="tag-see">
-		<ul>
-			<li>pg.221,224</li>
-			</ul>
-	</dd>
-	
 
 	
 </dl>
@@ -176,152 +169,6 @@
 
     
 
-    
-        <h3 class="subsection-title">Members</h3>
-
-        <dl>
-            
-<hr>
-<dt class="name" id="id">
-    <h4 id="id"><span class="type-signature"></span>id<span class="type-signature"> :Array.&lt;number></span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>Array of component ids.</p>
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">Array.&lt;number></span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt class="name" id="_count">
-    <h4 id="_count"><span class="type-signature"></span>_count<span class="type-signature"> :number</span></h4>
-
-    
-</dt>
-<dd>
-    
-    <div class="description">
-        <p>The total number of components.</p>
-    </div>
-    
-
-    
-        <h5>Type:</h5>
-        <ul>
-            <li>
-                
-<span class="param-type">number</span>
-
-
-
-            </li>
-        </ul>
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-</dd>
-
-        </dl>
     
 
     
@@ -331,7 +178,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="count"><span class="type-signature"></span>count()</h4>
+    <h4 class="name" id=".less"><span class="type-signature">&lt;static> </span>less(a, b)</h4>
     
     
 </dt>
@@ -339,105 +186,8 @@
 
     
     <div class="description">
-        <p>Returns the total number of components.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">number</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="connected"><span class="type-signature"></span>connected(p, q)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Returns <code>true</code> if <code>p</code> and <code>q</code> are in the same component.</p>
+        <p>Returns whether <code>a</code> is less than <code>b</code>.<p><em><strong>NOTE:</strong> The book uses a comparator function to compare different objects.
+I am just going to keep it simple and just compare numbers.</em></p></p>
     </div>
     
 
@@ -472,7 +222,7 @@
 
         <tr>
             
-                <td class="name"><code>p</code></td>
+                <td class="name"><code>a</code></td>
             
 
             <td class="type">
@@ -489,14 +239,14 @@
 
             
 
-            <td class="description last"><p>Site 1.</p></td>
+            <td class="description last"><p>Number <code>a</code>.</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>q</code></td>
+                <td class="name"><code>b</code></td>
             
 
             <td class="type">
@@ -513,7 +263,7 @@
 
             
 
-            <td class="description last"><p>Site 2.</p></td>
+            <td class="description last"><p>Number <code>b</code>.</p></td>
         </tr>
 
     
@@ -576,6 +326,10 @@
     <h5>Returns:</h5>
     
             
+<div class="param-desc">
+    <p>Returns if <code>a</code> is less than <code>b</code>.</p>
+</div>
+
 
 
 <dl>
@@ -601,7 +355,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="find"><span class="type-signature"></span>find(p)</h4>
+    <h4 class="name" id=".exchange"><span class="type-signature">&lt;static> </span>exchange(a, i, j)</h4>
     
     
 </dt>
@@ -609,7 +363,7 @@
 
     
     <div class="description">
-        <p>Returns the component identifier for <code>p</code> (0 to n-1).</p>
+        <p>Interchanges the values located at indexes <code>i</code> and <code>j</code> for the given array <code>a</code>.</p>
     </div>
     
 
@@ -644,13 +398,13 @@
 
         <tr>
             
-                <td class="name"><code>p</code></td>
+                <td class="name"><code>a</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">number</span>
+<span class="param-type">Array.&lt;number></span>
 
 
 
@@ -661,162 +415,14 @@
 
             
 
-            <td class="description last"><p>Site.</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">number</span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="union"><span class="type-signature"></span>union(p, q)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Adds connection between <code>p</code> and <code>q</code>.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>p</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>Site 1.</p></td>
+            <td class="description last"><p>The array of numbers.</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>q</code></td>
+                <td class="name"><code>i</code></td>
             
 
             <td class="type">
@@ -833,7 +439,31 @@
 
             
 
-            <td class="description last"><p>Site 2.</p></td>
+            <td class="description last"><p>Index of the first element.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>j</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Index of the second element.</p></td>
         </tr>
 
     
@@ -913,6 +543,412 @@
 
 
         
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".isSorted"><span class="type-signature">&lt;static> </span>isSorted(a)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Returns if the provided array is sorted.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>a</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;number></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The array of values.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>Whether the array is sorted or not.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".show"><span class="type-signature">&lt;static> </span>show(a)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Prints out the contents of the array <code>a</code>.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>a</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;number></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The array of values.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">void</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id=".sort"><span class="type-signature">&lt;abstract, static> </span>sort()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Should sort the array <code>a</code> using the sorting algorithm of your choice.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Throws:</h5>
+    
+            
+
+<dl>
+    <dt>
+        <div class="param-desc">
+        <p>This function should be implemented by the client.</p>
+        </div>
+    </dt>
+    <dt>
+        <dl>
+            <dt>
+                Type
+            </dt>
+            <dd>
+                
+<span class="param-type">SyntaxError</span>
+
+
+
+            </dd>
+        </dl>
+    </dt>
+</dl>
+
+
+        
+
+    
 
     
 </dd>
