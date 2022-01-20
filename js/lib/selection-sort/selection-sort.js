@@ -10,6 +10,7 @@ class SelectionSort extends GenericSort {
   /**
    * Sorts the `array` using the Selection Sort algorithm.
    * @param {Array<*>} array Array of values.
+   * @returns {void}
    */
   static sort(array) {
     const n = array.length
