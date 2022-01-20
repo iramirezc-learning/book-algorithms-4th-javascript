@@ -1,9 +1,11 @@
 const Selection = require('./selection-sort')
-const { newArrayOf } = require('../../utils')
-const { StdRandom } = require('../../libs')
+const {
+  arrays: { newArrayOf },
+  Random
+} = require('../../util')
 
-describe('Unit Tests: Selection Sort Algorithm', () => {
-  describe('static sort method', () => {
+describe('SelectionSort', () => {
+  describe('.sort()', () => {
     it('should sort an ordered array', () => {
       const orderedArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
       const expectedArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -22,7 +24,7 @@ describe('Unit Tests: Selection Sort Algorithm', () => {
       expect(reversedArray).toEqual(expectedArray)
     })
 
-    it('should sort a unordered array', () => {
+    it('should sort an unordered array', () => {
       const unorderedArray = [0, 9, 5, 2, 1, 8, 7, 6, 4, 3]
       const expectedArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
@@ -42,8 +44,9 @@ describe('Unit Tests: Selection Sort Algorithm', () => {
 
     it('should sort a small random array', () => {
       // considering that Selection Sort is slow...
-      const n = 1000 // a thousand
-      const array = newArrayOf(n, () => StdRandom.uniform(n))
+      const n = A_THOUSAND
+      // @ts-ignore
+      const array = newArrayOf(n, () => Random.uniform(n))
 
       Selection.sort(array)
 
@@ -64,6 +67,7 @@ describe('Unit Tests: Selection Sort Algorithm', () => {
 
         Selection.sort(array)
 
+        // @ts-ignore
         expect(Selection.exchange.calls.allArgs()).toEqual(expectedCallsArgs)
       })
 

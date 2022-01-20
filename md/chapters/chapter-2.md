@@ -4,15 +4,16 @@
 
 **Algorithms:**
 
+- [ ] [BinaryInsertion](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/BinaryInsertion.java.html)
 - [x] [Insertion Sort](/js/lib/insertion-sort/insertion-sort.js)
 - [ ] [InsertionX](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/InsertionX.java.html)
-- [ ] Selection Sort
+- [x] [Selection Sort](/js/lib/selection-sort/selection-sort.js)
 - [ ] Shell Sort
 
 **Clients:**
 
 - [x] [InsertionSort](/bin/InsertionSort)
-- [ ] SelectionSort
+- [x] [SelectionSort](/bin/SelectionSort)
 - [ ] ShellSort
 - [ ] SortCompare
 

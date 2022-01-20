@@ -9,7 +9,7 @@ const GenericSort = require('../generic-sort/generic-sort')
 class InsertionSort extends GenericSort {
   /**
    * Sorts the `array` using the Insertion Sort algorithm.
-   * @param {Array<number>} array Array of numbers.
+   * @param {Array<*>} array Array of values.
    * @returns {void}
    */
   static sort(array) {

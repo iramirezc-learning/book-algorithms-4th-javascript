@@ -1,0 +1,53 @@
+#!/usr/bin/env node
+const reader = require('readline').createInterface({ input: process.stdin })
+const { SelectionSort } = require('../js/lib')
+
+/**
+ * Selection Sort test client.
+ * @see pg.245,249
+ * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Selection.java.html}
+ */
+class SelectionSortClient {
+  /**
+   * Runs the selection sort algorithm with the input provided.
+   *
+   * @example <caption>Tiny Example</caption>
+   * ```sh
+   * $ ./SelectionSort < data/tiny.txt
+   * A E E L M O P R S T X
+   * ```
+   *
+   * @example <caption>Words3 Example</caption>
+   * ```sh
+   * $ ./SelectionSort < data/words3.txt
+   * all bad bed bug dad ... yes yet zoo
+   * ```
+   */
+  static run() {
+    let array = []
+
+    // read all strings from standard input.
+    reader
+      .on('line', (line) => {
+        array = array.concat(line.trim().split(' '))
+      })
+      .on('close', () => {
+        SelectionSort.sort(array)
+
+        if (!SelectionSort.isSorted(array)) {
+          throw new Error('array is NOT sorted')
+        }
+
+        SelectionSort.show(array)
+      })
+  }
+
+  /**
+   * Main execution.
+   */
+  static main() {
+    this.run()
+  }
+}
+
+SelectionSortClient.main()

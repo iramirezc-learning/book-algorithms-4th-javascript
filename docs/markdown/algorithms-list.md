@@ -6,8 +6,6 @@
 
 #### Section 2.1 - Elementary Sorts
 
-- [SelectionSort](/src/algorithms/selection-sort/selection-sort.js)
-- [SelectionSort Client](/src/algorithms/selection-sort/selection-sort.client.js)
 - [SortCompare Client](/src/clients/sort-compare.client.js)
 - [ShellSort](/src/algorithms/shell-sort/shell-sort.js)
 - [ShellSort Client](/src/algorithms/shell-sort/shell-sort.client.js)

@@ -8,8 +8,6 @@ Every algorithm or ADT has a link pointing to the **authors** Java implementatio
 
 ### Chapter 2. Sorting
 
-- BinaryInsertion | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/BinaryInsertion.java.html) |
-- Selection | [js](/src/algorithms/selection-sort/selection-sort.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Selection.java.html) |
 - Shell | [js](/src/algorithms/shell-sort/shell-sort.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Shell.java.html) |
 - Merge | [js](/src/algorithms/merge-sort/merge-sort.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Merge.java.html) |
 - MergeBU | [js](/src/algorithms/merge-sort-bu/merge-sort-bu.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/MergeBU.java.html) |

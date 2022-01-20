@@ -7,10 +7,9 @@ class GenericSort {
   /**
    * Returns whether `a` is less than `b`.
    * @note The book uses a comparator function to compare different objects.
-   * I am just going to keep it simple and just compare numbers.
-   * @note This comparator seems to work with strings and numbers so far.
-   * @param {number} a Number `a`.
-   * @param {number} b Number `b`.
+   * For now, this comparator function works well with numbers and strings.
+   * @param {*} a Value `a`.
+   * @param {*} b Value `b`.
    * @returns {boolean} Returns if `a` is less than `b`.
    */
   static less(a, b) {
@@ -19,7 +18,7 @@ class GenericSort {
 
   /**
    * Interchanges the values located at indexes `i` and `j` for the given array `a`.
-   * @param {Array<number>} a The array of numbers.
+   * @param {Array<*>} a The array of values.
    * @param {number} i Index of the first element.
    * @param {number} j Index of the second element.
    * @returns {void}
@@ -48,7 +47,7 @@ class GenericSort {
 
   /**
    * Prints out the contents of the array `a`.
-   * @param {Array<number>} a The array of values.
+   * @param {Array<*>} a The array of values.
    * @returns {void}
    */
   static show(a) {
@@ -58,7 +57,7 @@ class GenericSort {
   /**
    * Should sort the array `a` using the sorting algorithm of your choice.
    * @abstract
-   * @param {Array<number>} a The array of numbers to be sort.
+   * @param {Array<*>} a The array of values to be sort.
    * @throws {SyntaxError} This function should be implemented by the client.
    */
   static sort(a) {
