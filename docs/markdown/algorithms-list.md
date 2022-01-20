@@ -8,8 +8,6 @@
 
 - [SelectionSort](/src/algorithms/selection-sort/selection-sort.js)
 - [SelectionSort Client](/src/algorithms/selection-sort/selection-sort.client.js)
-- [InsertionSort](/src/algorithms/insertion-sort/insertion-sort.js)
-- [InsertionSort Client](/src/algorithms/insertion-sort/insertion-sort.client.js)
 - [SortCompare Client](/src/clients/sort-compare.client.js)
 - [ShellSort](/src/algorithms/shell-sort/shell-sort.js)
 - [ShellSort Client](/src/algorithms/shell-sort/shell-sort.client.js)

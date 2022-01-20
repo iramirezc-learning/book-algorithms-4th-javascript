@@ -4,13 +4,14 @@
 
 **Algorithms:**
 
-- [ ] Insertion Sort
+- [x] [Insertion Sort](/js/lib/insertion-sort/insertion-sort.js)
+- [ ] [InsertionX](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/InsertionX.java.html)
 - [ ] Selection Sort
 - [ ] Shell Sort
 
 **Clients:**
 
-- [ ] InsertionSort
+- [x] [InsertionSort](/bin/InsertionSort)
 - [ ] SelectionSort
 - [ ] ShellSort
 - [ ] SortCompare

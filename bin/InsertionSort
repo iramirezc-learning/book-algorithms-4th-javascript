@@ -1,0 +1,53 @@
+#!/usr/bin/env node
+const reader = require('readline').createInterface({ input: process.stdin })
+const { InsertionSort } = require('../js/lib')
+
+/**
+ * Insertion Sort test client.
+ * @see pg.245,251
+ * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Insertion.java.html}
+ */
+class InsertionSortClient {
+  /**
+   * Runs the insertion sort algorithm with the input provided.
+   *
+   * @example <caption>Tiny Example</caption>
+   * ```sh
+   * $ ./InsertionSort < data/tiny.txt
+   * A E E L M O P R S T X
+   * ```
+   *
+   * @example <caption>Words3 Example</caption>
+   * ```sh
+   * $ ./InsertionSort < data/words3.txt
+   * all bad bed bug dad ... yes yet zoo
+   * ```
+   */
+  static run() {
+    let array = []
+
+    // read all strings from standard input.
+    reader
+      .on('line', (line) => {
+        array = array.concat(line.trim().split(' '))
+      })
+      .on('close', () => {
+        InsertionSort.sort(array)
+
+        if (!InsertionSort.isSorted(array)) {
+          throw new Error('array is NOT sorted')
+        }
+
+        InsertionSort.show(array)
+      })
+  }
+
+  /**
+   * Main execution.
+   */
+  static main() {
+    this.run()
+  }
+}
+
+InsertionSortClient.main()

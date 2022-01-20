@@ -2,7 +2,6 @@
 
 module.exports = {
   HeapSort: require('./heap-sort/heap-sort'),
-  InsertionSort: require('./insertion-sort/insertion-sort'),
   MergeSort: require('./merge-sort/merge-sort'),
   MergeBUSort: require('./merge-sort-bu/merge-sort-bu'),
   Quick3waySort: require('./quick-3way-sort/quick-3way-sort'),

@@ -1,9 +1,11 @@
 const Insertion = require('./insertion-sort')
-const { newArrayOf } = require('../../utils')
-const { StdRandom } = require('../../libs')
+const {
+  arrays: { newArrayOf },
+  Random
+} = require('../../util')
 
-describe('Unit Tests: Insertion Sort Algorithm', () => {
-  describe('static sort method', () => {
+describe('InsertionSort', () => {
+  describe('.sort()', () => {
     it('should sort an ordered array', () => {
       const orderedArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
       const expectedArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -42,8 +44,9 @@ describe('Unit Tests: Insertion Sort Algorithm', () => {
 
     it('should sort a small random array', () => {
       // considering that Insertion Sort is slow...
-      const n = 1000 // a thousand
-      const array = newArrayOf(n, () => StdRandom.uniform(n))
+      const n = A_THOUSAND
+      // @ts-ignore
+      const array = newArrayOf(n, () => Random.uniform(n))
 
       Insertion.sort(array)
 
@@ -67,6 +70,7 @@ describe('Unit Tests: Insertion Sort Algorithm', () => {
 
         Insertion.sort(array)
 
+        // @ts-ignore
         expect(Insertion.exchange.calls.allArgs()).toEqual(expectedCallsArgs)
       })
 

@@ -8,6 +8,7 @@ module.exports = {
   DateSmall: require('./date/date-small'),
   DijkstraTwoStack: require('./dijkstra/dijkstra-two-stack'),
   Euclidean: require('./euclidean/euclidean'),
+  InsertionSort: require('./insertion-sort/insertion-sort'),
   LinearSearch: require('./linear-search/linear-search'),
   Queue: require('./queue/queue'),
   Stack: require('./stack/stack'),
