@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Documentation Class: LinearSearch</title>
+	<title>Documentation Class: InsertionSort</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -65,16 +65,16 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: LinearSearch</h1>
+	<h1 class="page-title">Class: InsertionSort</h1>
 <section>
 
 <header>
     
         <h2>
-        LinearSearch
+        InsertionSort
         </h2>
         
-            <div class="class-description"><p>Linear Search (brute-force).</p></div>
+            <div class="class-description"><p>Insertion Sort.</p></div>
         
     
 </header>
@@ -86,7 +86,7 @@
         
 <hr>
 <dt>
-    <h4 class="name" id="LinearSearch"><span class="type-signature"></span>new LinearSearch()</h4>
+    <h4 class="name" id="InsertionSort"><span class="type-signature"></span>new InsertionSort()</h4>
     
     
 </dt>
@@ -139,7 +139,9 @@
 	<dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
 	<dd class="tag-see">
 		<ul>
-			<li>p.48</li>
+			<li>pg.245,251</li>
+			
+			<li><a href="https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Insertion.java.html">https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Insertion.java.html</a></li>
 			</ul>
 	</dd>
 	
@@ -167,6 +169,17 @@
     </div>
 
     
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="GenericSort.html">GenericSort</a></li>
+    </ul>
+
+
+    
 
     
 
@@ -185,7 +198,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id=".indexOf"><span class="type-signature">&lt;static> </span>indexOf(a, key)</h4>
+    <h4 class="name" id=".sort"><span class="type-signature">&lt;static> </span>sort(array)</h4>
     
     
 </dt>
@@ -193,8 +206,7 @@
 
     
     <div class="description">
-        <p>Returns the index of a number <code>key</code> found in the array <code>a</code>,
-if <code>key</code> is not found, then it returns <code>-1</code>.</p>
+        <p>Sorts the <code>array</code> using the Insertion Sort algorithm.</p>
     </div>
     
 
@@ -229,7 +241,7 @@ if <code>key</code> is not found, then it returns <code>-1</code>.</p>
 
         <tr>
             
-                <td class="name"><code>a</code></td>
+                <td class="name"><code>array</code></td>
             
 
             <td class="type">
@@ -246,31 +258,7 @@ if <code>key</code> is not found, then it returns <code>-1</code>.</p>
 
             
 
-            <td class="description last"><p>The unsorted array of numbers to search into.</p></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>key</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">number</span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>The target key to search for.</p></td>
+            <td class="description last"><p>Array of numbers.</p></td>
         </tr>
 
     
@@ -333,10 +321,6 @@ if <code>key</code> is not found, then it returns <code>-1</code>.</p>
     <h5>Returns:</h5>
     
             
-<div class="param-desc">
-    <p>The index of the <code>key</code> in the array <code>a</code> or <code>-1</code> if not found.</p>
-</div>
-
 
 
 <dl>
@@ -345,7 +329,7 @@ if <code>key</code> is not found, then it returns <code>-1</code>.</p>
     </dt>
     <dd>
         
-<span class="param-type">number</span>
+<span class="param-type">void</span>
 
 
 
@@ -354,24 +338,6 @@ if <code>key</code> is not found, then it returns <code>-1</code>.</p>
 
 
         
-
-    
-        <h5>Examples</h5>
-        
-        <p class="code-caption">The key 3 exists.</p>
-    
-    <pre class="sunlight-highlight-javascript">const a = [5, 4, 3, 2, 1]
-LinearSearch.indexOf(a, 3)
-// will return
-2</pre>
-
-        <p class="code-caption">The key 0 does not exist.</p>
-    
-    <pre class="sunlight-highlight-javascript">const a = [5, 4, 3, 2, 1]
-LinearSearch.indexOf(a, 0)
-// will return
--1</pre>
-
 
     
 </dd>

@@ -6,7 +6,7 @@ const GenericSort = require('../generic-sort/generic-sort')
  * @see pg.245,251
  * @see {@link https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Insertion.java.html}
  */
-class Insertion extends GenericSort {
+class InsertionSort extends GenericSort {
   /**
    * Sorts the `array` using the Insertion Sort algorithm.
    * @param {Array<number>} array Array of numbers.
@@ -23,4 +23,4 @@ class Insertion extends GenericSort {
   }
 }
 
-module.exports = Insertion
+module.exports = InsertionSort
