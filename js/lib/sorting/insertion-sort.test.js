@@ -50,6 +50,7 @@ describe('InsertionSort', () => {
 
       Insertion.sort(array)
 
+      expect(array.length).toBe(A_THOUSAND)
       expect(Insertion.isSorted(array)).toBeTrue()
     })
 

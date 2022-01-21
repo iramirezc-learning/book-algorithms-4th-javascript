@@ -50,6 +50,7 @@ describe('SelectionSort', () => {
 
       Selection.sort(array)
 
+      expect(array.length).toBe(A_THOUSAND)
       expect(Selection.isSorted(array)).toBeTrue()
     })
 

@@ -1,4 +1,4 @@
-const GenericSort = require('../generic-sort/generic-sort')
+const GenericSort = require('./generic-sort')
 
 /**
  * Selection Sort.
