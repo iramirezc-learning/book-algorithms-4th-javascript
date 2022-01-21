@@ -10,6 +10,7 @@ module.exports = {
   Euclidean: require('./euclidean/euclidean'),
   InsertionSort: require('./sorting/insertion-sort'),
   LinearSearch: require('./linear-search/linear-search'),
+  MergeSort: require('./sorting/merge-sort'),
   Queue: require('./queue/queue'),
   SelectionSort: require('./sorting/selection-sort'),
   ShellSort: require('./sorting/shell-sort'),

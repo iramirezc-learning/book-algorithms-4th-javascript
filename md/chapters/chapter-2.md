@@ -22,13 +22,13 @@
 **Algorithms:**
 
 - [ ] [Inversions](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Inversions.java.html)
-- [ ] Merge Sort (top-down)
+- [x] [Merge Sort (top-down)](/js/lib/sorting/merge-sort.js)
 - [ ] Merge Sort (bottom-up)
 - [ ] [MergeX (optimized Merge Sort)](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/MergeX.java.html)
 
 **Clients:**
 
-- [ ] MergeSort
+- [x] [MergeSort](/bin/MergeSort)
 - [ ] MergeSortBU
 
 ## 2.3 Quick Sort

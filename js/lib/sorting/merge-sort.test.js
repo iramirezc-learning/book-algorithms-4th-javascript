@@ -1,18 +1,24 @@
 const Merge = require('./merge-sort')
-const { newArrayOf } = require('../../utils')
-const { StdRandom } = require('../../libs')
+const {
+  arrays: { newArrayOf },
+  Random
+} = require('../../util')
 
-describe('Unit Tests: Merge Sort Algorithm', () => {
-  describe('static merge method', () => {
+describe('MergeSort', () => {
+  describe('.merge()', () => {
     beforeEach(() => {
       /**
-       * All test also pass without this line
+       * All tests also pass without this line
        * but I'm adding it as a simulation of the
        * memory allocation that `sort` function
        * does before calling `merge`.
-       * All test will use an array of length 10.
+       * All tests will use an array of length 10.
        */
       Merge._aux = new Array(10)
+    })
+
+    afterEach(() => {
+      delete Merge._aux
     })
 
     it('should merge the two sorted halves', () => {
@@ -64,7 +70,7 @@ describe('Unit Tests: Merge Sort Algorithm', () => {
     })
   })
 
-  describe('static sort method', () => {
+  describe('.sort()', () => {
     it('should sort an ordered array', () => {
       const orderedArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
       const expectedArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -102,31 +108,37 @@ describe('Unit Tests: Merge Sort Algorithm', () => {
     })
 
     it('should sort a small random array', () => {
-      const n = 10000 // ten thousand
-      const array = newArrayOf(n, () => StdRandom.uniform(n))
+      const n = A_THOUSAND
+      // @ts-ignore
+      const array = newArrayOf(n, () => Random.uniform(n))
 
       Merge.sort(array)
 
+      expect(array.length).toBe(A_THOUSAND)
       expect(Merge.isSorted(array)).toBeTrue()
     })
 
     it('should sort a medium random array', () => {
-      const n = 100000 // a hundred thousand
-      const array = newArrayOf(n, () => StdRandom.uniform(n))
+      const n = A_HUNDRED_THOUSAND
+      // @ts-ignore
+      const array = newArrayOf(n, () => Random.uniform(n))
 
       Merge.sort(array)
 
+      expect(array.length).toBe(A_HUNDRED_THOUSAND)
       expect(Merge.isSorted(array)).toBeTrue()
     })
 
     it('should sort a large random array', () => {
-      const n = 1000000 // a million!
-      const array = newArrayOf(n, () => StdRandom.uniform(n))
+      const n = A_MILLION
+      // @ts-ignore
+      const array = newArrayOf(n, () => Random.uniform(n))
 
       Merge.sort(array)
 
+      expect(array.length).toBe(A_MILLION)
       expect(Merge.isSorted(array)).toBeTrue()
-    })
+    }, 500)
 
     describe('implementation details', () => {
       it('should allocate space in the _aux array', () => {
@@ -138,50 +150,51 @@ describe('Unit Tests: Merge Sort Algorithm', () => {
       })
 
       it('should call private static `_sort` method n times', () => {
+        // @ts-ignore
         spyOn(Merge, '_sort').and.callThrough()
         const a = [9, 8, 6, 5, 7, 4]
-        const comparator = (a, b) => a - b
         const expectedCallsArgs = [
-          [a, 0, 5, comparator], // initial call 0       : [9, 8, 6, 5, 7, 4]
-          [a, 0, 2, comparator], // recursive call 1     : [9, 8, 6]
-          [a, 0, 1, comparator], //   recursive call 2   : [9, 8]
-          [a, 0, 0, comparator], //     recursive call 3 : [9]
-          [a, 1, 1, comparator], //     recursive call 4 :    [8]
-          [a, 2, 2, comparator], //   recursive call 5   :       [6]
-          [a, 3, 5, comparator], // recursive call 6     :          [5, 7, 4]
-          [a, 3, 4, comparator], //   recursive call 7   :          [5, 7]
-          [a, 3, 3, comparator], //     recursive call 8 :          [5]
-          [a, 4, 4, comparator], //     recursive call 9 :             [7]
-          [a, 5, 5, comparator] //    recursive call 10  :                [4]
+          [a, 0, 5], // initial call 0       : [9, 8, 6, 5, 7, 4]
+          [a, 0, 2], // recursive call 1     : [9, 8, 6]
+          [a, 0, 1], //   recursive call 2   : [9, 8]
+          [a, 0, 0], //     recursive call 3 : [9]
+          [a, 1, 1], //     recursive call 4 :    [8]
+          [a, 2, 2], //   recursive call 5   :       [6]
+          [a, 3, 5], // recursive call 6     :          [5, 7, 4]
+          [a, 3, 4], //   recursive call 7   :          [5, 7]
+          [a, 3, 3], //     recursive call 8 :          [5]
+          [a, 4, 4], //     recursive call 9 :             [7]
+          [a, 5, 5] //    recursive call 10  :                [4]
         ]
 
-        Merge.sort(a, comparator)
+        Merge.sort(a)
 
+        // @ts-ignore
         expect(Merge._sort.calls.allArgs()).toEqual(expectedCallsArgs)
       })
 
       it('should call static `merge` method n times', () => {
         spyOn(Merge, 'merge').and.callThrough()
         const a = [9, 8, 6, 5, 7, 4]
-        const comparator = (a, b) => a - b
         const expectedCallsArgs = [
-          [a, 0, 0, 1, comparator], // merge [9, 8]
-          [a, 0, 1, 2, comparator], // merge [8, 9, 6]
-          [a, 3, 3, 4, comparator], // merge [5, 7]
-          [a, 3, 4, 5, comparator], // merge [5, 7, 4]
-          [a, 0, 2, 5, comparator] //  merge [6, 8, 9, 4, 5, 7]
+          [a, 0, 0, 1], // merge [9, 8]
+          [a, 0, 1, 2], // merge [8, 9, 6]
+          [a, 3, 3, 4], // merge [5, 7]
+          [a, 3, 4, 5], // merge [5, 7, 4]
+          [a, 0, 2, 5] //  merge [6, 8, 9, 4, 5, 7]
         ]
 
-        Merge.sort(a, comparator)
+        Merge.sort(a)
 
+        // @ts-ignore
         expect(Merge.merge.calls.allArgs()).toEqual(expectedCallsArgs)
       })
 
       it('should mutate the array', () => {
         const mutations = []
         const originalImplementation = Merge.merge.bind(Merge)
-        spyOn(Merge, 'merge').and.callFake((array, lo, mid, hi, comparator) => {
-          originalImplementation(array, lo, mid, hi, comparator)
+        spyOn(Merge, 'merge').and.callFake((array, lo, mid, hi) => {
+          originalImplementation(array, lo, mid, hi)
           mutations.push([...array])
         })
         const a = [9, 8, 6, 5, 7, 4]

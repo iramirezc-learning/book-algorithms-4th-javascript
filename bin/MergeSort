@@ -1,0 +1,51 @@
+#!/usr/bin/env node
+const reader = require('readline').createInterface({ input: process.stdin })
+const { MergeSort } = require('../js/lib')
+
+/**
+ * Merge Sort test client.
+ * @see pg.245,273
+ */
+class MergeSortClient {
+  /**
+   * Runs the Merge Sort Algorithm with the input provided.
+   * @example <caption>Tiny Example</caption>
+   * ```sh
+   * $ ./MergeSort < data/tiny.txt
+   * A E E L M O P R S T X
+   * ```
+   *
+   * @example <caption>Words3 Example</caption>
+   * ```sh
+   * $ ./MergeSort < data/words3.txt
+   * all bad bed bug dad ... yes yet zoo
+   * ```
+   */
+  static run() {
+    let array = []
+
+    // read all strings from standard input.
+    reader
+      .on('line', (line) => {
+        array = array.concat(line.trim().split(' '))
+      })
+      .on('close', () => {
+        MergeSort.sort(array)
+
+        if (!MergeSort.isSorted(array)) {
+          throw new Error('array is NOT sorted')
+        }
+
+        MergeSort.show(array)
+      })
+  }
+
+  /**
+   * Main execution.
+   */
+  static main() {
+    this.run()
+  }
+}
+
+MergeSortClient.main()
