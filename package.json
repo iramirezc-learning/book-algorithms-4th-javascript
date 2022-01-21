@@ -19,6 +19,7 @@
     "kevin-wayne"
   ],
   "devDependencies": {
+    "@types/node": "^17.0.10",
     "d3": "^5.15.1",
     "eslint": "^7.20.0",
     "eslint-config-prettier": "^7.2.0",
