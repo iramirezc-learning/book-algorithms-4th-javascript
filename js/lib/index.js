@@ -12,6 +12,7 @@ module.exports = {
   LinearSearch: require('./linear-search/linear-search'),
   Queue: require('./queue/queue'),
   SelectionSort: require('./sorting/selection-sort'),
+  ShellSort: require('./sorting/shell-sort'),
   Stack: require('./stack/stack'),
   StackFixedCapacity: require('./stack/stack-fixed-capacity'),
   StackResizableArray: require('./stack/stack-resizable-array'),

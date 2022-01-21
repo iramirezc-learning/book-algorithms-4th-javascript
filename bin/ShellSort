@@ -1,0 +1,52 @@
+#!/usr/bin/env node
+const reader = require('readline').createInterface({ input: process.stdin })
+const { ShellSort } = require('../js/lib')
+
+/**
+ * Shell Sort test client.
+ * @see pg.245,259
+ */
+class ShellSortClient {
+  /**
+   * Runs the Shell Sort Algorithm with the input provided.
+   *
+   * @example <caption>Tiny Example</caption>
+   * ```sh
+   * $ ./ShellSort < data/tiny.txt
+   * A E E L M O P R S T X
+   * ```
+   *
+   * @example <caption>Words3 Example</caption>
+   * ```sh
+   * $ ./ShellSort < data/words3.txt
+   * all bad bed bug dad ... yes yet zoo
+   * ```
+   */
+  static run() {
+    let array = []
+
+    // read all strings from standard input.
+    reader
+      .on('line', (line) => {
+        array = array.concat(line.trim().split(' '))
+      })
+      .on('close', () => {
+        ShellSort.sort(array)
+
+        if (!ShellSort.isSorted(array)) {
+          throw new Error('array is NOT sorted')
+        }
+
+        ShellSort.show(array)
+      })
+  }
+
+  /**
+   * Main execution.
+   */
+  static main() {
+    this.run()
+  }
+}
+
+ShellSortClient.main()

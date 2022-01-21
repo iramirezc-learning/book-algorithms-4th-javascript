@@ -4,11 +4,6 @@
 
 ### Chapter 2 - Sorting
 
-#### Section 2.1 - Elementary Sorts
-
-- [ShellSort](/src/algorithms/shell-sort/shell-sort.js)
-- [ShellSort Client](/src/algorithms/shell-sort/shell-sort.client.js)
-
 #### Section 2.2 - Merge Sort
 
 - [MergeSort](/src/algorithms/merge-sort/merge-sort.js)

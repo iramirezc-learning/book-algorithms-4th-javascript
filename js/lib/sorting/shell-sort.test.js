@@ -1,9 +1,11 @@
 const Shell = require('./shell-sort')
-const { newArrayOf } = require('../../utils')
-const { StdRandom } = require('../../libs')
+const {
+  arrays: { newArrayOf },
+  Random
+} = require('../../util')
 
-describe('Unit Tests: Shell Sort Algorithm', () => {
-  describe('static sort method', () => {
+describe('ShellSort', () => {
+  describe('.sort()', () => {
     it('should sort an ordered array', () => {
       const orderedArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
       const expectedArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -41,31 +43,37 @@ describe('Unit Tests: Shell Sort Algorithm', () => {
     })
 
     it('should sort a small random array', () => {
-      const n = 10000 // ten thousand
-      const array = newArrayOf(n, () => StdRandom.uniform(n))
+      const n = A_THOUSAND
+      // @ts-ignore
+      const array = newArrayOf(n, () => Random.uniform(n))
 
       Shell.sort(array)
 
+      expect(array.length).toBe(A_THOUSAND)
       expect(Shell.isSorted(array)).toBeTrue()
     })
 
     it('should sort a medium random array', () => {
-      const n = 100000 // a hundred thousand
-      const array = newArrayOf(n, () => StdRandom.uniform(n))
+      const n = A_HUNDRED_THOUSAND
+      // @ts-ignore
+      const array = newArrayOf(n, () => Random.uniform(n))
 
       Shell.sort(array)
 
+      expect(array.length).toBe(A_HUNDRED_THOUSAND)
       expect(Shell.isSorted(array)).toBeTrue()
     })
 
     it('should sort a large random array', () => {
-      const n = 1000000 // a million!
-      const array = newArrayOf(n, () => StdRandom.uniform(n))
+      const n = A_MILLION
+      // @ts-ignore
+      const array = newArrayOf(n, () => Random.uniform(n))
 
       Shell.sort(array)
 
+      expect(array.length).toBe(A_MILLION)
       expect(Shell.isSorted(array)).toBeTrue()
-    })
+    }, 500)
 
     describe('implementation details', () => {
       it('should call `exchange` n times', () => {
@@ -114,6 +122,7 @@ describe('Unit Tests: Shell Sort Algorithm', () => {
 
         Shell.sort(array)
 
+        // @ts-ignore
         expect(Shell.exchange.calls.allArgs()).toEqual(expectedCallsArgs)
       })
 
