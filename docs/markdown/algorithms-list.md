@@ -4,13 +4,6 @@
 
 ### Chapter 2 - Sorting
 
-#### Section 2.2 - Merge Sort
-
-- [MergeSort](/src/algorithms/merge-sort/merge-sort.js)
-- [MergeSort Client](/src/algorithms/merge-sort/merge-sort.client.js)
-- [MergeSortBU](/src/algorithms/merge-sort-bu/merge-sort-bu.js)
-- [MergeSortBU Client](/src/algorithms/merge-sort-bu/merge-sort-bu.client.js)
-
 #### Section 2.3 - Quick Sort
 
 - [QuickSort](/src/algorithms/quick-sort/quick-sort.js)

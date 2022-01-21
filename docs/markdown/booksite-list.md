@@ -8,10 +8,6 @@ Every algorithm or ADT has a link pointing to the **authors** Java implementatio
 
 ### Chapter 2. Sorting
 
-- Merge | [js](/src/algorithms/merge-sort/merge-sort.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Merge.java.html) |
-- MergeBU | [js](/src/algorithms/merge-sort-bu/merge-sort-bu.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/MergeBU.java.html) |
-- MergeX | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/MergeX.java.html) |
-- Inversions | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Inversions.java.html) |
 - Quick | [js](/src/algorithms/quick-sort/quick-sort.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Quick.java.html) |
 - Quick3way | [js](/src/algorithms/quick-3way-sort/quick-3way-sort.js) | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Quick3way.java.html) |
 - QuickX | js | [java](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/QuickX.java.html) |

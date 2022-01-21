@@ -19,7 +19,17 @@
 
 ## 2.2 Merge Sort
 
-> TODO
+**Algorithms:**
+
+- [ ] [Inversions](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/Inversions.java.html)
+- [ ] Merge Sort (top-down)
+- [ ] Merge Sort (bottom-up)
+- [ ] [MergeX (optimized Merge Sort)](https://algs4.cs.princeton.edu/code/edu/princeton/cs/algs4/MergeX.java.html)
+
+**Clients:**
+
+- [ ] MergeSort
+- [ ] MergeSortBU
 
 ## 2.3 Quick Sort
 
