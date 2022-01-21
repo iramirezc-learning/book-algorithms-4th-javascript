@@ -15,7 +15,7 @@
 - [x] [InsertionSort](/bin/InsertionSort)
 - [x] [SelectionSort](/bin/SelectionSort)
 - [ ] ShellSort
-- [ ] SortCompare
+- [x] [SortCompare](/bin/SortCompare)
 
 ## 2.2 Merge Sort
 
