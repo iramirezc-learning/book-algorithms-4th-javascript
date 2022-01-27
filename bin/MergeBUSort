@@ -1,23 +1,23 @@
 #!/usr/bin/env node
 const reader = require('readline').createInterface({ input: process.stdin })
-const { MergeSort } = require('../js/lib')
+const { MergeBUSort } = require('../js/lib')
 
 /**
- * Merge Sort test client.
- * @see pg.245,273
+ * Merge Sort Bottom-Up test client.
+ * @see pg.273,278
  */
-class MergeSortClient {
+class MergeBUSortClient {
   /**
-   * Runs the Merge Sort algorithm with the input provided.
+   * Runs the Merge Sort Bottom-Up algorithm with the input provided.
    * @example <caption>Tiny Example</caption>
    * ```sh
-   * $ ./MergeSort < data/tiny.txt
+   * $ ./MergeBUSort < data/tiny.txt
    * A E E L M O P R S T X
    * ```
    *
    * @example <caption>Words3 Example</caption>
    * ```sh
-   * $ ./MergeSort < data/words3.txt
+   * $ ./MergeBUSort < data/words3.txt
    * all bad bed bug dad ... yes yet zoo
    * ```
    */
@@ -30,13 +30,13 @@ class MergeSortClient {
         array = array.concat(line.trim().split(' '))
       })
       .on('close', () => {
-        MergeSort.sort(array)
+        MergeBUSort.sort(array)
 
-        if (!MergeSort.isSorted(array)) {
+        if (!MergeBUSort.isSorted(array)) {
           throw new Error('array is NOT sorted')
         }
 
-        MergeSort.show(array)
+        MergeBUSort.show(array)
       })
   }
 
@@ -48,4 +48,4 @@ class MergeSortClient {
   }
 }
 
-MergeSortClient.main()
+MergeBUSortClient.main()

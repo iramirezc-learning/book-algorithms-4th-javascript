@@ -1,9 +1,11 @@
-const MergeBU = require('./merge-sort-bu')
-const { newArrayOf } = require('../../utils')
-const { StdRandom } = require('../../libs')
+const MergeBU = require('./merge-bu-sort')
+const {
+  arrays: { newArrayOf },
+  Random
+} = require('../../util')
 
-describe('Unit Tests: Bottom-Up MergeBU Sort Algorithm', () => {
-  describe('static merge method', () => {
+describe('MergeBUSort', () => {
+  describe('.merge()', () => {
     beforeEach(() => {
       /**
        * All test also pass without this line
@@ -13,6 +15,10 @@ describe('Unit Tests: Bottom-Up MergeBU Sort Algorithm', () => {
        * All test will use an array of length 10.
        */
       MergeBU._aux = new Array(10)
+    })
+
+    afterEach(() => {
+      delete MergeBU._aux
     })
 
     it('should merge the two sorted halves', () => {
@@ -64,7 +70,7 @@ describe('Unit Tests: Bottom-Up MergeBU Sort Algorithm', () => {
     })
   })
 
-  describe('static sort method', () => {
+  describe('.sort()', () => {
     it('should sort an ordered array', () => {
       const orderedArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
       const expectedArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -102,31 +108,37 @@ describe('Unit Tests: Bottom-Up MergeBU Sort Algorithm', () => {
     })
 
     it('should sort a small random array', () => {
-      const n = 10000 // ten thousand
-      const array = newArrayOf(n, () => StdRandom.uniform(n))
+      const n = A_THOUSAND
+      // @ts-ignore
+      const array = newArrayOf(n, () => Random.uniform(n))
 
       MergeBU.sort(array)
 
+      expect(array.length).toBe(A_THOUSAND)
       expect(MergeBU.isSorted(array)).toBeTrue()
     })
 
     it('should sort a medium random array', () => {
-      const n = 100000 // a hundred thousand
-      const array = newArrayOf(n, () => StdRandom.uniform(n))
+      const n = A_HUNDRED_THOUSAND
+      // @ts-ignore
+      const array = newArrayOf(n, () => Random.uniform(n))
 
       MergeBU.sort(array)
 
+      expect(array.length).toBe(A_HUNDRED_THOUSAND)
       expect(MergeBU.isSorted(array)).toBeTrue()
     })
 
     it('should sort a large random array', () => {
-      const n = 1000000 // a million!
-      const array = newArrayOf(n, () => StdRandom.uniform(n))
+      const n = A_MILLION
+      // @ts-ignore
+      const array = newArrayOf(n, () => Random.uniform(n))
 
       MergeBU.sort(array)
 
+      expect(array.length).toBe(A_MILLION)
       expect(MergeBU.isSorted(array)).toBeTrue()
-    })
+    }, 500)
 
     describe('implementation details', () => {
       it('should allocate space in the _aux array', () => {
@@ -137,32 +149,30 @@ describe('Unit Tests: Bottom-Up MergeBU Sort Algorithm', () => {
         expect(MergeBU._aux.length).toBe(a.length)
       })
 
-      it('should call static `merge` method x times', () => {
+      it('should call static `merge` method n times', () => {
         spyOn(MergeBU, 'merge').and.callThrough()
         const a = [9, 8, 6, 5, 7, 4] // n = 6
-        const comparator = (a, b) => a - b
         const expectedCallsArgs = [
-          [a, 0, 0, 1, comparator], // len = 1; n - len = 5; lo = 0; mid = 0; hi = 1
-          [a, 2, 2, 3, comparator], // len = 1; n - len = 5; lo = 2; mid = 2; hi = 3
-          [a, 4, 4, 5, comparator], // len = 1; n - len = 5; lo = 4; mid = 4; hi = 5
-          [a, 0, 1, 3, comparator], // len = 2; n - len = 4; lo = 0; mid = 1; hi = 3
-          [a, 0, 3, 5, comparator] //  len = 4; n - len = 2; lo = 0; mid = 3; hi = 5
+          [a, 0, 0, 1], // len = 1; n - len = 5; lo = 0; mid = 0; hi = 1
+          [a, 2, 2, 3], // len = 1; n - len = 5; lo = 2; mid = 2; hi = 3
+          [a, 4, 4, 5], // len = 1; n - len = 5; lo = 4; mid = 4; hi = 5
+          [a, 0, 1, 3], // len = 2; n - len = 4; lo = 0; mid = 1; hi = 3
+          [a, 0, 3, 5] //  len = 4; n - len = 2; lo = 0; mid = 3; hi = 5
         ]
 
-        MergeBU.sort(a, comparator)
+        MergeBU.sort(a)
 
+        // @ts-ignore
         expect(MergeBU.merge.calls.allArgs()).toEqual(expectedCallsArgs)
       })
 
       it('should mutate the array', () => {
         const mutations = []
         const originalImplementation = MergeBU.merge.bind(MergeBU)
-        spyOn(MergeBU, 'merge').and.callFake(
-          (array, lo, mid, hi, comparator) => {
-            originalImplementation(array, lo, mid, hi, comparator)
-            mutations.push([...array])
-          }
-        )
+        spyOn(MergeBU, 'merge').and.callFake((array, lo, mid, hi) => {
+          originalImplementation(array, lo, mid, hi)
+          mutations.push([...array])
+        })
         const a = [9, 8, 6, 5, 7, 4]
         // see test about calls to `merge` function
         const expectedMutations = [

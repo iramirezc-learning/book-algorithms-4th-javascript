@@ -11,6 +11,7 @@ module.exports = {
   InsertionSort: require('./sorting/insertion-sort'),
   LinearSearch: require('./linear-search/linear-search'),
   MergeSort: require('./sorting/merge-sort'),
+  MergeBUSort: require('./sorting/merge-bu-sort'),
   Queue: require('./queue/queue'),
   SelectionSort: require('./sorting/selection-sort'),
   ShellSort: require('./sorting/shell-sort'),

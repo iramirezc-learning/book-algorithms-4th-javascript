@@ -29,7 +29,7 @@ These are my stats:
 | 1.4 Analysis of Algorithms  | Aug 3, 2020  | Sep 12, 2020 | ~5 hours, 25 min |
 | 1.5 Case Study: Union-Find  | Sep 12, 2020 | Sep 20, 2020 | ~5 hours, 25 min |
 | 2.1 Elementary Sorts        | Sep 22, 2020 | Sep 28, 2020 | ~7 hours, 20 min |
-| 2.2 Mergesort               | Sep 28, 2020 | Oct 14, 2020 | ~2 hours, 40 min |
+| 2.2 Mergesort               | Sep 28, 2020 | Oct 14, 2020 | ~4 hours, 40 min |
 | 2.3 Quicksort               | Oct 14, 2020 | Oct 18, 2020 | ~2 hours, 30 min |
 | 2.4 Priority Queues         | Oct 21, 2020 | Nov 17, 2020 | ~9 hours, 10 min |
 | 2.5 Applications            | Nov 18, 2020 | Nov 18, 2020 | ~2 hours, 5 min  |
